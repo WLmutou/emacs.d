@@ -1,0 +1,46 @@
+;; Object spiders/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "spiders/"
+  :tables
+  (list
+    (semanticdb-table "tencent_spider.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("re" include nil nil [41 50])
+            ("json" include nil nil [51 62])
+            ("scrapy.selector" include nil nil [65 101])
+            ("try" code nil nil [102 206])
+            ("scrapy.utils.response" include nil nil [207 253])
+            ("scrapy.utils.url" include nil nil [254 294])
+            ("scrapy.spiders" include nil nil [295 339])
+            ("scrapy.linkextractors.sgml" include nil nil [413 476])
+            ("zhaopin.items" include nil nil [478 515])
+            ("TencentSpider" type
+               (:superclasses ("CrawlSpider")
+                :members 
+                  ( ("name" variable nil (reparse-symbol indented_block_body) [590 606])
+                    ("allowed_domains" variable nil (reparse-symbol indented_block_body) [611 644])
+                    ("start_urls" variable nil (reparse-symbol indented_block_body) [649 714])
+                    ("ruls" variable nil (reparse-symbol indented_block_body) [719 828])
+                    ("parse_item" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [848 852])
+                            ("response" variable nil (reparse-symbol function_parameters) [854 862]))                          )
+                        (reparse-symbol indented_block_body) [833 2453])
+                    ("_process_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2479 2483])
+                            ("request" variable nil (reparse-symbol function_parameters) [2485 2492]))                          )
+                        (reparse-symbol indented_block_body) [2458 2557]))                  
+                :type "class")
+                nil [552 2557]))          
+      :file "tencent_spider.py"
+      :pointmax 2573
+      :fsize 2572
+      :lastmodtime '(22446 52754 53790 551000)
+      :unmatched-syntax nil))
+  :file "!home!wood!python!scrapy!zhaopin!zhaopin!spiders!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

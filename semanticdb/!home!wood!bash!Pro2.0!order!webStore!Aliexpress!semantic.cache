@@ -1,0 +1,415 @@
+;; Object Aliexpress/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Aliexpress/"
+  :tables
+  (list
+    (semanticdb-table "aliexpress.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("copy" include nil nil [25 36])
+            ("hmac" include nil nil [37 48])
+            ("json" include nil nil [49 60])
+            ("os" include nil nil [61 70])
+            ("requests" include nil nil [71 86])
+            ("sys" include nil nil [87 97])
+            ("time" include nil nil [98 109])
+            ("urllib" include nil nil [110 123])
+            ("binascii" include nil nil [124 155])
+            ("hashlib" include nil nil [157 181])
+            ("xml.dom.minidom" include nil nil [182 218])
+            ("conf" include nil nil [279 312])
+            ("reload" code nil nil [313 324])
+            ("sys" code nil nil [325 356])
+            ("create_xml_node_list" function (:arguments 
+              ( ("name" variable nil (reparse-symbol function_parameters) [384 388])
+                ("param_list" variable nil (reparse-symbol function_parameters) [390 401]))              ) nil [359 1062])
+            ("create_xml_node_dict" function (:arguments 
+              ( ("name" variable nil (reparse-symbol function_parameters) [1089 1093])
+                ("param_dict" variable nil (reparse-symbol function_parameters) [1095 1107]))              ) nil [1064 1776])
+            ("doc" variable nil nil [1778 1794])
+            ("Aliexpress" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''
+    对速卖通的接口api做一个整合，主要设计到产品上架相关接口
+    以及之后需要处理的订单下载接口
+    '''" code nil (reparse-symbol indented_block_body) [1826 1891])
+                    ("app_key" variable nil (reparse-symbol indented_block_body) [1897 1916])
+                    ("secret_key" variable nil (reparse-symbol indented_block_body) [1921 1946])
+                    ("refresh_token" variable nil (reparse-symbol indented_block_body) [1951 1982])
+                    ("refresh_token_timeout" variable nil (reparse-symbol indented_block_body) [1987 2034])
+                    ("access_token" variable nil (reparse-symbol indented_block_body) [2039 2068])
+                    ("code" variable nil (reparse-symbol indented_block_body) [2073 2086])
+                    ("redirect_uri" variable nil (reparse-symbol indented_block_body) [2092 2153])
+                    ("site" variable nil (reparse-symbol indented_block_body) [2158 2177])
+                    ("state" variable nil (reparse-symbol indented_block_body) [2182 2200])
+                    ("service" variable nil (reparse-symbol indented_block_body) [2207 2366])
+                    ("class_command" variable nil (reparse-symbol indented_block_body) [2372 2484])
+                    ("command" variable nil (reparse-symbol indented_block_body) [2490 2633])
+                    ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [3894 4941]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3802 3806])
+                            ("app_key" variable nil (reparse-symbol function_parameters) [3808 3815])
+                            ("secret_key" variable nil (reparse-symbol function_parameters) [3822 3832])
+                            ("refresh_token" variable nil (reparse-symbol function_parameters) [3839 3852])
+                            ("access_token" variable nil (reparse-symbol function_parameters) [3859 3871])
+                            ("code" variable nil (reparse-symbol function_parameters) [3878 3882]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3789 4945])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4963 4967]))                          )
+                        (reparse-symbol indented_block_body) [4951 5126])
+                    ("__calc_signature" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5152 5156])
+                            ("command" variable nil (reparse-symbol function_parameters) [5158 5165])
+                            ("params_map" variable nil (reparse-symbol function_parameters) [5167 5177]))                          
+                        :documentation "Calculate MWS signature to interface with Amazon
+        ")
+                        (reparse-symbol indented_block_body) [5131 5606])
+                    ("__make_call" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5627 5631])
+                            ("url" variable nil (reparse-symbol function_parameters) [5633 5636])
+                            ("data" variable nil (reparse-symbol function_parameters) [5638 5642])
+                            ("header" variable nil (reparse-symbol function_parameters) [5649 5655]))                          
+                        :documentation "
+        :param url:需要调用的url
+        :return:返回通过post请求，得到对于的url的返回值
+        ")
+                        (reparse-symbol indented_block_body) [5611 5902])
+                    ("__make_call_deal" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5928 5932])
+                            ("service_type" variable nil (reparse-symbol function_parameters) [5934 5946])
+                            ("function_type" variable nil (reparse-symbol function_parameters) [5948 5961])
+                            ("params" variable nil (reparse-symbol function_parameters) [5963 5969]))                          
+                        :documentation "
+        主要对各调用的一个封装，将请求之类的参数之类的通过公共参数给配置好，方便以后的修改
+        :param args:传入的list
+        :param kwargs: 传入的dict
+        :return:返回请求的结果
+        ")
+                        (reparse-symbol indented_block_body) [5907 7344])
+                    ("get_authorize_url" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7371 7375]))                          
+                        :documentation "
+        :return:返回alibaba授权的url
+        授权成功之后得到一个url： self.redirect_uri + state=self.state&code=ede9c269-10d3-44ca-88d6-53030311de04
+        ")
+                        (reparse-symbol indented_block_body) [7349 8137])
+                    ("get_token" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8157 8161])
+                            ("params" variable nil (reparse-symbol function_parameters) [8163 8171]))                          
+                        :documentation "
+        :param params:
+            {
+                'grant_type':\"authorization_code\",
+                'need_refresh_token':'true',
+                'redirect_uri': self.redirect_uri,
+                'code':code,
+            }
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [8143 9016])
+                    ("refresh_access_token" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9046 9050])
+                            ("params" variable nil (reparse-symbol function_parameters) [9052 9060]))                          
+                        :documentation "
+        :param params:
+            {
+                'grant_type':\"refresh_token\",
+                'need_refresh_token':'true',
+            }
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [9021 9682])
+                    ("set_refresh_token_postpone_token" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9724 9728])
+                            ("params" variable nil (reparse-symbol function_parameters) [9730 9738]))                          
+                        :documentation "
+        :param params:
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [9687 10341])
+                    ("get_child_attributes_result_cateory_id_and_path" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10398 10402])
+                            ("params" variable nil (reparse-symbol function_parameters) [10404 10412]))                          
+                        :documentation "
+        :param params:
+            {
+                'cateId':\"category_id\",
+                'parentAttrValueList':'parentAttrValueList',
+            }
+        :return:返回属性列表，抓取状态
+        ")
+                        (reparse-symbol indented_block_body) [10346 10884])
+                    ("list_freight_template" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10983 10987])
+                            ("params" variable nil (reparse-symbol function_parameters) [10989 10997]))                          
+                        :documentation "
+        :param params:
+            {}
+        :return:返回本店的运费模板信息，抓取状态，错误描述
+        ")
+                        (reparse-symbol indented_block_body) [10957 11338])
+                    ("get_product_group_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11487 11491])
+                            ("params" variable nil (reparse-symbol function_parameters) [11493 11501]))                          
+                        :documentation "
+        :param params:
+            {}
+        :return:返回本店的运费模板信息，抓取状态，错误描述
+        ")
+                        (reparse-symbol indented_block_body) [11460 11841])
+                    ("get_image_group_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11960 11964])
+                            ("params" variable nil (reparse-symbol function_parameters) [11966 11974]))                          
+                        :documentation "
+        :param params:
+            {}
+        :return:返回本店的运费模板信息，抓取状态，错误描述
+        ")
+                        (reparse-symbol indented_block_body) [11935 12312])
+                    ("query_promise_template_id" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12437 12441])
+                            ("params" variable nil (reparse-symbol function_parameters) [12443 12451]))                          
+                        :documentation "
+        :param params:
+            {'TemplateId' : '-1}
+        :return:返回本店的服务模板信息
+        ")
+                        (reparse-symbol indented_block_body) [12407 12804])
+                    ("post_aliexpress_product" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12883 12887])
+                            ("params" variable nil (reparse-symbol function_parameters) [12889 12897]))                          
+                        :documentation "
+        :param **params:传入的产品信息的字典
+        :return:返回上传之后的产品ID，和上传状态
+        ")
+                        (reparse-symbol indented_block_body) [12855 13233])
+                    ("size_model_required" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13329 13333])
+                            ("params" variable nil (reparse-symbol function_parameters) [13335 13343]))                          
+                        :documentation "
+        :param params:需要抓取的品类ID
+            {'cateId' : 'cateId'}
+        :return:返回属性列表，抓取状态
+        ")
+                        (reparse-symbol indented_block_body) [13305 13705])
+                    ("get_children_category" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13804 13808])
+                            ("params" variable nil (reparse-symbol function_parameters) [13810 13818]))                          
+                        :documentation "
+        :param params:
+         {'cateId':'0'}
+        :return:
+        返回该品类的子品类信息
+        ")
+                        (reparse-symbol indented_block_body) [13778 14166])
+                    ("upload_temp_image" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14271 14275])
+                            ("image_data" variable nil (reparse-symbol function_parameters) [14276 14286])
+                            ("params" variable nil (reparse-symbol function_parameters) [14288 14296]))                          
+                        :documentation "
+        :param params:
+         {'srcFileName':'51m-uHIMGjL.jpg'}
+        :return:
+        上传一个图片到速卖通上去，返回url值信息
+        ")
+                        (reparse-symbol indented_block_body) [14249 14937])
+                    ("upload_image" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15090 15094])
+                            ("image_data" variable nil (reparse-symbol function_parameters) [15096 15106])
+                            ("params" variable nil (reparse-symbol function_parameters) [15108 15116]))                          
+                        :documentation "
+        :param params:
+         {'srcFileName':'51m-uHIMGjL.jpg'}
+        :return:
+        上传一个图片到速卖通上去，返回url值信息，这里还有点问题，不知道图片数据参与不参与签名，所以用临时的先吧。
+        ")
+                        (reparse-symbol indented_block_body) [15073 15944])
+                    ("get_order_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16083 16087])
+                            ("params" variable nil (reparse-symbol function_parameters) [16089 16097]))                          
+                        :documentation "
+        :param params:
+            {}
+        :return:返回本店的运费模板信息，抓取状态，错误描述
+        ")
+                        (reparse-symbol indented_block_body) [16064 16429])
+                    ("get_order" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16538 16542])
+                            ("params" variable nil (reparse-symbol function_parameters) [16544 16552]))                          
+                        :documentation "
+        :param params:
+            {}
+        :return:返回本店的运费模板信息，抓取状态，错误描述
+        ")
+                        (reparse-symbol indented_block_body) [16524 16879])
+                    ("get_print_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16992 16996])
+                            ("params" variable nil (reparse-symbol function_parameters) [16998 17006]))                          
+                        :documentation "
+        :param params:
+            {}
+        :return:返回本店的运费模板信息，抓取状态，错误描述
+        ")
+                        (reparse-symbol indented_block_body) [16973 17338])
+                    ("get_category_tree" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17365 17369])
+                            ("cateId" variable nil (reparse-symbol function_parameters) [17371 17377]))                          
+                        :documentation "
+        :return:获取站点的品类结构
+        ")
+                        (reparse-symbol indented_block_body) [17343 18847])
+                    ("get_category_xml_node" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18878 18882])
+                            ("cateId" variable nil (reparse-symbol function_parameters) [18884 18890])
+                            ("deep" variable nil (reparse-symbol function_parameters) [18894 18898]))                          
+                        :documentation "
+        通过品类ID，找到对于的子结点信息，并将其封装进入xml的node结点，并返回，
+        由于用的是深度遍历，用的迭代算法，不好控制层数，这里最好可以改成广度遍历，就好控制遍历的层数
+        :param cateId: 入口的品类ID
+        :param deep: 是否便利超过1层
+        :return: 返回xml的结点
+        ")
+                        (reparse-symbol indented_block_body) [18852 20592])
+                    ("create_category_xml" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20621 20625])
+                            ("cateId" variable nil (reparse-symbol function_parameters) [20627 20633])
+                            ("deep" variable nil (reparse-symbol function_parameters) [20637 20641]))                          
+                        :documentation "
+        根据品类ID，获取对应的自节点信息，并写成xml文件
+        :param cateId: 入口的品类ID
+        :param deep: 是否便利超过1层
+        :return: 返回xml文件名称
+        ")
+                        (reparse-symbol indented_block_body) [20597 21390])
+                    ("set_product_defalut_values" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21426 21430]))                          )
+                        (reparse-symbol indented_block_body) [21395 23920])
+                    ("__get_product_id" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23989 23993])
+                            ("product" variable nil (reparse-symbol function_parameters) [23995 24002]))                          )
+                        (reparse-symbol indented_block_body) [23968 24048])
+                    ("__get_store_promise_freight_template" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24094 24098])
+                            ("store" variable nil (reparse-symbol function_parameters) [24100 24105]))                          )
+                        (reparse-symbol indented_block_body) [24053 24261])
+                    ("test_upload_product" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24290 24294]))                          )
+                        (reparse-symbol indented_block_body) [24266 25805])
+                    ("tran_internal_product_aliexpress_product" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25856 25860])
+                            ("internal_product" variable nil (reparse-symbol function_parameters) [25862 25878]))                          )
+                        (reparse-symbol indented_block_body) [25811 27306])
+                    ("upload_temp_image_type" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27338 27342]))                          
+                        :documentation "
+        :param templateId:传入的服务模板的ID，默认-1为查询店铺的全部服务模板信息
+        :return:返回本店的模板信息
+        ")
+                        (reparse-symbol indented_block_body) [27311 27873])
+                    ("findAeProductDetailModuleListByQurey" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27919 27923])
+                            ("params" variable nil (reparse-symbol function_parameters) [27924 27932]))                          
+                        :documentation "
+        :param params:
+            {
+                'cateId':\"category_id\",
+                'parentAttrValueList':'parentAttrValueList',
+            }
+        :return:返回属性列表，抓取状态
+        ")
+                        (reparse-symbol indented_block_body) [27878 28483])
+                    ("__del_function__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28509 28513]))                          )
+                        (reparse-symbol indented_block_body) [28488 28529]))                  
+                :type "class")
+                nil [1796 28529])
+            ("if" code nil nil [41034 43795]))          
+      :file "aliexpress.py"
+      :pointmax 43796
+      :fsize 46699
+      :lastmodtime '(22265 54817 454235 616000)
+      :unmatched-syntax nil)
+    (semanticdb-table "conf.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__author__" variable nil nil [17 37])
+            ("STORE_DICT_LIST" variable nil nil [40 6500])
+            ("STATIC_DETAIL" variable nil nil [6502 11480])
+            ("BRAND_LIST" variable nil nil [11482 36751]))          
+      :file "conf.py"
+      :pointmax 36752
+      :fsize 36888
+      :lastmodtime '(22265 54460 514248 698000)
+      :unmatched-syntax nil))
+  :file "!home!wood!bash!Pro2.0!order!webStore!Aliexpress!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

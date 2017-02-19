@@ -1,0 +1,26 @@
+;; Object Pro2.0/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Pro2.0/"
+  :tables
+  (list
+    (semanticdb-table "getChild.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("csv" include nil nil [41 51])
+            ("collections" include nil nil [52 83])
+            ("pro_db_models.models.internal_product_models" include nil nil [84 187])
+            ("GetChildCate" function (:arguments 
+              ( ("toys" variable nil (reparse-symbol function_parameters) [209 213])
+                ("childObject" variable nil (reparse-symbol function_parameters) [215 226]))              ) nil [192 2953])
+            ("get_child" function (:arguments 
+              ( ("childObject" variable nil (reparse-symbol function_parameters) [2972 2983]))              ) nil [2958 3087])
+            ("parent_child" function (:arguments 
+              ( ("category_cn_name" variable nil (reparse-symbol function_parameters) [3121 3137]))              ) nil [3104 3666]))          
+      :file "getChild.py"
+      :pointmax 3666
+      :fsize 3673
+      :lastmodtime '(22421 62242 101217 383000)
+      :unmatched-syntax nil))
+  :file "!home!wood!Pro2!Pro2.0!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

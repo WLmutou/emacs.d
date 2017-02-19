@@ -1,0 +1,276 @@
+
+
+div#name.one.two
+
+and follow that with the zen-coding plugin keystroke (CMD+E in TextMate), the plugin will reformat the line as:
+
+<div id="name" class="one two"></div>
+
+
+Let’s get a bit more advanced, typing:
+
+ul#name>li.item
+will result in:
+
+<ul id="name">
+    <li class="item"></li>
+</ul>
+
+
+Last, but not least:
+
+p.one+p.two
+will result in:
+
+<p class="one"></p>
+<p class="two"></p>
+
+
+
+
+
+Element multiplication and variables
+
+A really fascinating feature of the CSS selector abilities comes from element multiplication. Perhaps one of the most tedious things to mark up (when not working from existing copy) is a list (or eight). zen-coding does its part to lighten the load, quite a bit:
+
+
+
+ul#name>li.item*3
+provides:
+
+<ul id="name">
+    <li class="item"></li>
+    <li class="item"></li>
+    <li class="item"></li>
+</ul>
+
+
+
+
+The other really interesting implementation deals with variables in snippet output, which is neat:
+
+select>option#item-$*3
+gives you:
+
+<select>
+    <option id="item-1"></option>
+    <option id="item-2"></option>
+    <option id="item-3"></option>
+</select>
+
+
+
+Basic tags
+
+a                        <a></a>
+a.x                      <a class="x"></a>
+a#q.x                    <a id="q" class="x"></a>
+a#q.x.y.z                <a id="q" class="x y z"></a>
+#q                       <div id="q">
+                         </div>
+.x                       <div class="x">
+                         </div>
+#q.x                     <div id="q" class="x">
+                         </div>
+#q.x.y.z                 <div id="q" class="x y z">
+                         </div>
+Empty tags
+
+a/                       <a/>
+a/.x                     <a class="x"/>
+a/#q.x                   <a id="q" class="x"/>
+a/#q.x.y.z               <a id="q" class="x y z"/>
+Self-closing tags
+
+input type=text          <input type="text"/>
+img                      <img/>
+img>metadata/*2          <img>
+                             <metadata/>
+                             <metadata/>
+                         </img>
+Siblings
+
+a+b                      <a></a>
+                         <b></b>
+a+b+c                    <a></a>
+                         <b></b>
+                         <c></c>
+a.x+b                    <a class="x"></a>
+                         <b></b>
+a#q.x+b                  <a id="q" class="x"></a>
+                         <b></b>
+a#q.x.y.z+b              <a id="q" class="x y z"></a>
+                         <b></b>
+a#q.x.y.z+b#p.l.m.n      <a id="q" class="x y z"></a>
+                         <b id="p" class="l m n"></b>
+Tag expansion
+
+table+                   <table>
+                             <tr>
+                                 <td>
+                                 </td>
+                             </tr>
+                         </table>
+dl+                      <dl>
+                             <dt></dt>
+                             <dd></dd>
+                         </dl>
+ul+                      <ul>
+                             <li></li>
+                         </ul>
+ul++ol+                  <ul>
+                             <li></li>
+                         </ul>
+                         <ol>
+                             <li></li>
+                         </ol>
+ul#q.x.y m=l+            <ul id="q" class="x y" m="l">
+                             <li></li>
+                         </ul>
+Parent > child
+
+a>b                      <a><b></b></a>
+a>b>c                    <a><b><c></c></b></a>
+a.x>b                    <a class="x"><b></b></a>
+a#q.x>b                  <a id="q" class="x"><b></b></a>
+a#q.x.y.z>b              <a id="q" class="x y z"><b></b></a>
+a#q.x.y.z>b#p.l.m.n      <a id="q" class="x y z"><b id="p" class="l m n"></b></a>
+#q>.x                    <div id="q">
+                             <div class="x">
+                             </div>
+                         </div>
+a>b+c                    <a>
+                             <b></b>
+                             <c></c>
+                         </a>
+a>b+c>d                  <a>
+                             <b></b>
+                             <c><d></d></c>
+                         </a>
+Multiplication
+
+a*1                      <a></a>
+a*2                      <a></a>
+                         <a></a>
+a/*2                     <a/>
+                         <a/>
+a*2+b*2                  <a></a>
+                         <a></a>
+                         <b></b>
+                         <b></b>
+a*2>b*2                  <a>
+                             <b></b>
+                             <b></b>
+                         </a>
+                         <a>
+                             <b></b>
+                             <b></b>
+                         </a>
+a>b*2                    <a>
+                             <b></b>
+                             <b></b>
+                         </a>
+a#q.x>b#q.x*2            <a id="q" class="x">
+                             <b id="q" class="x"></b>
+                             <b id="q" class="x"></b>
+                         </a>
+a#q.x>b/#q.x*2           <a id="q" class="x">
+                             <b id="q" class="x"/>
+                             <b id="q" class="x"/>
+                         </a>
+Properties
+
+a x                      <a x=""></a>
+a x=                     <a x=""></a>
+a x=""                   <a x=""></a>
+a x=y                    <a x="y"></a>
+a x="y"                  <a x="y"></a>
+a x="()"                 <a x="()"></a>
+a x m                    <a x="" m=""></a>
+a x= m=""                <a x="" m=""></a>
+a x=y m=l                <a x="y" m="l"></a>
+a/ x=y m=l               <a x="y" m="l"/>
+a#foo x=y m=l            <a id="foo" x="y" m="l"></a>
+a.foo x=y m=l            <a class="foo" x="y" m="l"></a>
+a#foo.bar.mu x=y m=l     <a id="foo" class="bar mu" x="y" m="l"></a>
+a/#foo.bar.mu x=y m=l    <a id="foo" class="bar mu" x="y" m="l"/>
+a x=y+b                  <a x="y"></a>
+                         <b></b>
+a x=y+b x=y              <a x="y"></a>
+                         <b x="y"></b>
+a x=y>b                  <a x="y"><b></b></a>
+a x=y>b x=y              <a x="y"><b x="y"></b></a>
+a x=y>b x=y+c x=y        <a x="y">
+                             <b x="y"></b>
+                             <c x="y"></c>
+                         </a>
+Parentheses
+
+(a)                      <a></a>
+(a)+(b)                  <a></a>
+                         <b></b>
+a>(b)                    <a><b></b></a>
+(a>b)>c                  <a><b></b></a>
+(a>b)+c                  <a><b></b></a>
+                         <c></c>
+z+(a>b)+c+k              <z></z>
+                         <a><b></b></a>
+                         <c></c>
+                         <k></k>
+(a)*2                    <a></a>
+                         <a></a>
+((a)*2)                  <a></a>
+                         <a></a>
+((a))*2                  <a></a>
+                         <a></a>
+(a>b)*2                  <a><b></b></a>
+                         <a><b></b></a>
+(a+b)*2                  <a></a>
+                         <b></b>
+                         <a></a>
+                         <b></b>
+Filter: HTML with comments
+
+a.b|c                    <!-- .b -->
+                         <a class="b"></a>
+                         <!-- /.b -->
+#a>.b|c                  <!-- #a -->
+                         <div id="a">
+                             <!-- .b -->
+                             <div class="b">
+                             </div>
+                             <!-- /.b -->
+                         </div>
+                         <!-- /#a -->
+Filter: HAML
+
+a|haml                   %a
+a#q.x.y.z|haml           %a#q.x.y.z
+a#q.x x=y m=l|haml       %a#q.x{:x => "y", :m => "l"}
+div|haml                 %div
+div.footer|haml          .footer
+.footer|haml             .footer
+p>a href=#+br|haml       %p
+                             %a{:href => "#"}
+                             %br
+Filter: Hiccup
+
+a|hic                    [:a]
+a#q.x.y.z|hic            [:a#q.x.y.z]
+a#q.x x=y m=l|hic        [:a#q.x {:x "y", :m "l"}]
+.footer|hic              [:div.footer]
+p>a href=#+br|hic        [:p
+                             [:a {:href "#"}]
+                             [:br]]
+#q>(a*2>b)+p>b|hic       [:div#q
+                             [:a [:b]]
+                             [:a [:b]]
+                             [:p
+                                 [:b]]]
+Filter: escape
+
+script src=&quot;|e      &lt;script src="&amp;quot;"&gt;
+                         &lt;/script&gt;
+
+
+

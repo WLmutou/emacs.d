@@ -1,0 +1,16 @@
+;; Object python3.6/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python3.6/"
+  :tables
+  (list
+    (semanticdb-table "app.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "app.py"
+      :pointmax 616
+      :fsize 615
+      :lastmodtime '(22623 37358 816315 820000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python3.6!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,84 @@
+;; Object templates/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "templates/"
+  :tables
+  (list
+    (semanticdb-table "index.html"
+      :major-mode 'html-mode
+      :tags nil
+      :file "index.html"
+      :pointmax 8475
+      :fsize 8899
+      :lastmodtime '(22446 38210 636801 431000)
+      :unmatched-syntax nil)
+    (semanticdb-table "clients.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("文件列表" anchor nil nil [2522 2525])
+            ("$(document).ready(function(){
+            var tmp_option =  $(\"#u_client\", navTab.getCurrentPanel()).attr(\"uploaderOption\");
+            var csrf_token = $(\"[name='csrfmiddlewaretoken']\",navTab.getCurrentPanel()).val();
+            if (tmp_option != undefined){
+               tmp_option = tmp_option.replace(\"csrf_token\", csrf_token);
+            }else{
+               tmp_option = \"\".replace(\"csrf_token\",csrf_token);
+            }
+            $(\"#u_client\", navTab.getCurrentPanel()).attr(\"uploaderOption\",tmp_option);
+
+});
+
+$(document).ready(function(){
+    var csrf_token = $(\"[name='csrfmiddlewaretoken']\",navTab.getCurrentPanel()).val();
+    $.ajax({
+        url: \"/clients/get_clients/\",
+        type: \"POST\",
+        data: {\"csrfmiddlewaretoken\":csrf_token},
+        dataType: \"json\",
+        success: function(data){
+            $.each(data, function(index, value){
+                $(\"#upload_file_id\", navTab.getCurrentPanel()).append(
+                    \"<tr height='30px' rel='1'>\" +
+                    \"<td width='5%'>\" + index+ \"" section (:members 
+              ( ("下载" anchor nil nil [4704 4707])
+                ("删除" anchor nil nil [4870 4873]))              ) nil [3515 6003]))          
+      :file "clients.html"
+      :pointmax 6003
+      :fsize 6072
+      :lastmodtime '(22446 41188 575480 984000)
+      :unmatched-syntax nil)
+    (semanticdb-table "w_uploadify.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("表单上传" section nil nil [24 566])
+            ("先选择文件，再点击start upload (可以先多选文件再上传)" section (:members 
+              ( ("已经上传的文件列表" anchor nil nil [2628 2631]))              ) nil [566 3626])
+            ("$(document).ready(function(){
+            var tmp_option =  $(\"#FileInput\", navTab.getCurrentPanel()).attr(\"uploaderOption\");
+            var csrf_token = $(\"[name='csrfmiddlewaretoken']\",navTab.getCurrentPanel()).val();
+            tmp_option = tmp_option.replace('csrf_token', csrf_token);
+            $(\"#FileInput\", navTab.getCurrentPanel()).attr(\"uploaderOption\",tmp_option);
+
+});
+
+$(document).ready(function(){
+    var csrf_token = $(\"[name='csrfmiddlewaretoken']\",navTab.getCurrentPanel()).val();
+    $.ajax({
+        url: \"/get_file_list/\",
+        type: \"POST\",
+        data: {\"csrfmiddlewaretoken\":csrf_token},
+        dataType: \"json\",
+        success: function(data){
+            $.each(data, function(index, value){
+                $(\"#upload_file_id\", navTab.getCurrentPanel()).append(
+                    \"<tr height='30px' rel='1'>\" +
+                    \"<td width='5%'>\" + index+ \"" section (:members 
+              ( ("下载" anchor nil nil [4668 4671])
+                ("删除" anchor nil nil [4834 4837]))              ) nil [3626 5993]))          
+      :file "w_uploadify.html"
+      :pointmax 5993
+      :fsize 6118
+      :lastmodtime '(22446 39326 569476 448000)
+      :unmatched-syntax nil))
+  :file "!home!wood!python!Django!autoEbay!autoWork!templates!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

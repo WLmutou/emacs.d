@@ -1,0 +1,27 @@
+;; Object getChild/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "getChild/"
+  :tables
+  (list
+    (semanticdb-table "getToys.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pro_db_models.models.internal_product_models" include nil nil [40 215])
+            ("toys" variable nil nil [218 301])
+            ("toys_child_one_level" variable nil nil [305 365])
+            ("id_list" variable nil nil [368 380])
+            ("get_child_category" function (:arguments 
+              ( ("searchResult" variable nil (reparse-symbol function_parameters) [406 418])
+                ("category_id" variable nil (reparse-symbol function_parameters) [420 431]))              ) nil [383 489])
+            ("get_child" function (:arguments 
+              ( ("childObject" variable nil (reparse-symbol function_parameters) [512 523]))              ) nil [498 627])
+            ("get_category_id" function (:arguments 
+              ( ("child_level" variable nil (reparse-symbol function_parameters) [649 660]))              ) nil [629 1076]))          
+      :file "getToys.py"
+      :pointmax 1087
+      :fsize 1090
+      :lastmodtime '(22339 62990 988708 212000)
+      :unmatched-syntax nil))
+  :file "!home!wood!python!getChild!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,149 @@
+;; Object 2g_online_service(1)/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "2g_online_service(1)/"
+  :tables
+  (list
+    (semanticdb-table "my_config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [26 39])
+            ("os" include nil nil [26 39])
+            ("ConfigParser" include nil nil [40 59])
+            ("logging" include nil nil [60 86])
+            ("platform" include nil nil [87 102])
+            ("path" variable nil nil [104 125])
+            ("if" code nil nil [126 186])
+            ("configFile" variable nil nil [186 241])
+            ("config" code nil nil [242 271])
+            ("MyConfig" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [332 352])
+                            ("self" variable nil (reparse-symbol indented_block_body) [361 383])
+                            ("self" variable nil (reparse-symbol indented_block_body) [392 429])
+                            ("self" code nil (reparse-symbol indented_block_body) [438 461]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [308 312])
+                            ("confHead" variable nil (reparse-symbol function_parameters) [313 321]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [295 462])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [475 479])
+                            ("name" variable nil (reparse-symbol function_parameters) [480 484])
+                            ("default" variable nil (reparse-symbol function_parameters) [485 492]))                          )
+                        (reparse-symbol indented_block_body) [467 607])
+                    ("set" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [620 624])
+                            ("key" variable nil (reparse-symbol function_parameters) [625 628])
+                            ("value" variable nil (reparse-symbol function_parameters) [629 634])
+                            ("head" variable nil (reparse-symbol function_parameters) [635 639]))                          )
+                        (reparse-symbol indented_block_body) [612 861]))                  
+                :type "class")
+                nil [273 861]))          
+      :file "my_config.py"
+      :pointmax 861
+      :fsize 894
+      :lastmodtime '(21808 28020 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "service.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__version__" variable nil nil [24 43])
+            ("tornado.tcpserver" include nil nil [45 84])
+            ("tornado.ioloop" include nil nil [85 118])
+            ("struct" include nil nil [119 132])
+            ("time" include nil nil [133 144])
+            ("public_method" include nil nil [146 177])
+            ("business" include nil nil [178 225])
+            ("my_config" include nil nil [226 256])
+            ("logging" include nil nil [257 271])
+            ("mycfg" variable nil nil [272 297])
+            ("mylog" variable nil nil [298 334])
+            ("STRUCT_U_H" variable nil nil [336 354])
+            ("STRUCT_U_E" variable nil nil [404 422])
+            ("STEUCT_D_H" variable nil nil [500 518])
+            ("STEUCT_D_E" variable nil nil [536 553])
+            ("timeout" variable nil nil [571 609])
+            ("ChatServer" type
+               (:superclasses ("TCPServer")
+                :members 
+                  ( ("handle_stream" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [661 665])
+                            ("stream" variable nil (reparse-symbol function_parameters) [667 673])
+                            ("address" variable nil (reparse-symbol function_parameters) [675 682]))                          )
+                        (reparse-symbol indented_block_body) [643 1042]))                  
+                :type "class")
+                nil [610 1042])
+            ("clientDict" variable nil nil [1042 1055])
+            ("Connection" type
+               (:superclasses ("object")
+                :members 
+                  ( ("clients" variable nil (reparse-symbol indented_block_body) [1086 1101])
+                    ("__init__" function
+                       (:suite 
+                          ( ("Connection" code nil (reparse-symbol indented_block_body) [1151 1179])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1188 1209])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1218 1241])
+                            ("self" code nil (reparse-symbol indented_block_body) [1250 1296])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1305 1347])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1356 1371])
+                            ("self" code nil (reparse-symbol indented_block_body) [1380 1399]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1119 1123])
+                            ("stream" variable nil (reparse-symbol function_parameters) [1125 1131])
+                            ("address" variable nil (reparse-symbol function_parameters) [1133 1140]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1106 1400])
+                    ("read_message" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1422 1426]))                          )
+                        (reparse-symbol indented_block_body) [1405 1537])
+                    ("broadcast_messages" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1565 1569])
+                            ("data" variable nil (reparse-symbol function_parameters) [1571 1575]))                          )
+                        (reparse-symbol indented_block_body) [1542 3707])
+                    ("send_message" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3803 3807])
+                            ("data" variable nil (reparse-symbol function_parameters) [3808 3812])
+                            ("boxid" variable nil (reparse-symbol function_parameters) [3813 3818]))                          )
+                        (reparse-symbol indented_block_body) [3786 4182])
+                    ("on_close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4200 4204]))                          )
+                        (reparse-symbol indented_block_body) [4187 4365]))                  
+                :type "class")
+                nil [1056 4365])
+            ("getopt_dispose" function nil nil [4368 4833])
+            ("help_print" function nil nil [4834 5089])
+            ("if" code nil nil [5090 5513]))          
+      :file "service.py"
+      :pointmax 5513
+      :fsize 5746
+      :lastmodtime '(22190 54292 847261 128000)
+      :unmatched-syntax '((NAME 3553 . 3562) (IF 3571 . 3573) (ELSE 3594 . 3598) (NAME 2199 . 2200) (IF 2222 . 2224) (ELSE 2246 . 2250)))
+    (semanticdb-table "public_method.py"
+      :file "public_method.py"
+      :fsize 6878
+      :lastmodtime '(21808 28020 0 0))
+    (semanticdb-table "business.py"
+      :file "business.py"
+      :fsize 37460
+      :lastmodtime '(21808 28020 0 0)))
+  :file "!home!wood!python!2g_online_service1!2g_online_service(1)!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

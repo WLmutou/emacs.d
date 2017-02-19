@@ -1,0 +1,36 @@
+;; Object requests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "requests/"
+  :tables
+  (list
+
+    (semanticdb-table "request_test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("requests" include nil nil [39 54])
+            ("json" include nil nil [55 66])
+            ("time" include nil nil [67 78])
+            ("server_ip, server_port" code nil nil [81 128])
+            ("login_username, login_password" code nil nil [130 184])
+            ("post_url" code nil nil [185 246])
+            ("login_url" code nil nil [247 309])
+            ("wget_url" code nil nil [310 368])
+            ("post_result" function (:arguments 
+              ( ("resultJson" variable nil (reparse-symbol function_parameters) [386 396])
+                ("rsession" variable nil (reparse-symbol function_parameters) [397 405]))              ) nil [370 711])
+            ("loop_post" function
+               (:documentation "如果没提交成功。则3秒后继续提交"
+                :arguments 
+                  ( ("resultJson" variable nil (reparse-symbol function_parameters) [746 756]))                  )
+                nil [732 944])
+            ("getInfo" function (:arguments 
+              ( ("rsession" variable nil (reparse-symbol function_parameters) [961 969]))              ) nil [949 1140])
+            ("login_session" function nil nil [1141 1391]))          
+      :file "request_test.py"
+      :pointmax 1391
+      :fsize 1436
+      :lastmodtime '(22234 14020 713394 976000)
+      :unmatched-syntax nil))
+  :file "!home!wood!python!requests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

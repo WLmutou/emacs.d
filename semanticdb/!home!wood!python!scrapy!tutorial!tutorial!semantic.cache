@@ -1,0 +1,26 @@
+;; Object tutorial/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tutorial/"
+  :tables
+  (list
+    (semanticdb-table "items.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("scrapy" include nil nil [153 166])
+            ("TutorialItem" type
+               (:superclasses ("scrapy.Item")
+                :members 
+                  ( ("title" variable nil (reparse-symbol indented_block_body) [282 304])
+                    ("link" variable nil (reparse-symbol indented_block_body) [309 330])
+                    ("desc" variable nil (reparse-symbol indented_block_body) [335 356])
+                    ("pass" code nil (reparse-symbol indented_block_body) [366 370]))                  
+                :type "class")
+                nil [168 371]))          
+      :file "items.py"
+      :pointmax 372
+      :fsize 371
+      :lastmodtime '(22449 11195 283756 145000)
+      :unmatched-syntax '((INDENT_BLOCK 331 . 371) (INDENT_BLOCK 306 . 333) (NEWLINE 305 . 306) (NAME 283 . 288) (NEWLINE 298 . 299))))
+  :file "!home!wood!python!scrapy!tutorial!tutorial!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

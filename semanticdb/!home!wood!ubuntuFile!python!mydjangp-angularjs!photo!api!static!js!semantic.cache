@@ -1,0 +1,17 @@
+;; Object js/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "js/"
+  :tables
+  (list
+    (semanticdb-table "myjs.js"
+      :major-mode 'js-mode
+      :tags 
+        '( ("show_login" function nil nil [2 57]))          
+      :file "myjs.js"
+      :pointmax 58
+      :fsize 57
+      :lastmodtime '(22665 30379 331364 662000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python!mydjangp-angularjs!photo!api!static!js!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

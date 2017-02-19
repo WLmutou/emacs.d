@@ -1,0 +1,69 @@
+;; Object js/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "js/"
+  :tables
+  (list
+    (semanticdb-table "angular-resource.js"
+      :major-mode 'js-mode
+      :tags nil
+      :file "angular-resource.js"
+      :pointmax 17149
+      :fsize 17164
+      :lastmodtime '(22633 8148 901901 495000)
+      :unmatched-syntax '((PAREN_BLOCK 17122 . 17146) (PAREN_BLOCK 105 . 17122)))
+    (semanticdb-table "angular.js"
+      :major-mode 'js-mode
+      :tags nil
+      :file "angular.js"
+      :pointmax 489906
+      :fsize 490074
+      :lastmodtime '(22633 8971 453902 409000)
+      :unmatched-syntax nil)
+    (semanticdb-table "app.js"
+      :major-mode 'js-mode
+      :tags 
+        '( ("StoryListController" function (:arguments 
+              ( ("$scope" variable nil (reparse-symbol FormalParameterList) [831 837])
+                ("Story" variable nil (reparse-symbol FormalParameterList) [839 844]))              ) nil [802 890])
+            ("StoryCreateController" function (:arguments 
+              ( ("$scope" variable nil (reparse-symbol FormalParameterList) [923 929])
+                ("$routeParams" variable nil (reparse-symbol FormalParameterList) [931 943])
+                ("$location" variable nil (reparse-symbol FormalParameterList) [945 954])
+                ("Story" variable nil (reparse-symbol FormalParameterList) [956 961]))              ) nil [892 1181])
+            ("StoryDetailController" function (:arguments 
+              ( ("$scope" variable nil (reparse-symbol FormalParameterList) [1215 1221])
+                ("$routeParams" variable nil (reparse-symbol FormalParameterList) [1223 1235])
+                ("$location" variable nil (reparse-symbol FormalParameterList) [1237 1246])
+                ("Story" variable nil (reparse-symbol FormalParameterList) [1248 1253]))              ) nil [1184 1354]))          
+      :file "app.js"
+      :pointmax 1355
+      :fsize 1354
+      :lastmodtime '(22633 8200 549901 553000)
+      :unmatched-syntax '((PAREN_BLOCK 387 . 799) (DOT 375 . 376) (VARIABLE 318 . 325) (PAREN_BLOCK 332 . 375) (PAREN_BLOCK 69 . 315) (DOT 56 . 57) (PAREN_BLOCK 15 . 56)))
+    (semanticdb-table "bootstrap.js"
+      :major-mode 'js-mode
+      :tags nil
+      :file "bootstrap.js"
+      :pointmax 1
+      :fsize 61754
+      :lastmodtime '(22633 8222 361901 577000)
+      :unmatched-syntax nil)
+    (semanticdb-table "jquery-1.9.1.js"
+      :major-mode 'js-mode
+      :tags nil
+      :file "jquery-1.9.1.js"
+      :pointmax 1
+      :fsize 268381
+      :lastmodtime '(22633 8249 529901 607000)
+      :unmatched-syntax nil)
+    (semanticdb-table "toastr.js"
+      :major-mode 'js-mode
+      :tags nil
+      :file "toastr.js"
+      :pointmax 8904
+      :fsize 8908
+      :lastmodtime '(22633 8270 637901 631000)
+      :unmatched-syntax '((PAREN_BLOCK 372 . 8901))))
+  :file "!home!wood!ubuntuFile!30Day!tornado-angularjs!static!js!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

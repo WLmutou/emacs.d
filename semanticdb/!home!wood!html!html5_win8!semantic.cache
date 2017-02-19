@@ -1,0 +1,199 @@
+;; Object html5_win8/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "html5_win8/"
+  :tables
+  (list
+    (semanticdb-table "html5_win8.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("Windows 8 Animations" section nil nil [172 274])
+            ("Demo====================================================-->
+<div class=\"demo-wrapper\">
+  <div class=\"login-screen\">
+    <p>Log In" section (:members 
+              ( ("My Todos" section nil nil [651 1153])
+                ("Some Awesome App!" section nil nil [1153 4030]))              ) nil [274 4030])
+            ("function showDashBoard(){
+      for(var i = 1; i <= 3; i++) {
+        $('.col'+i).each(function(){
+            $(this).addClass('fadeInForward-'+i).removeClass('fadeOutback');
+        });
+      }
+    }
+
+    function fadeDashBoard(){
+      for(var i = 1; i <= 3; i++) {
+        $('.col'+i).addClass('fadeOutback').removeClass('fadeInForward-'+i);
+      }
+    }
+    
+   
+    $(\".lock-thumb\").click(function(){
+        fadeDashBoard();
+        $('.login-screen').addClass('slidePageInFromLeft').removeClass('slidePageBackLeft');
+    });
+    
+    $('#unlock-button').click(function(){
+          $('.login-screen').removeClass('slidePageInFromLeft').addClass('slidePageBackLeft');
+          showDashBoard();
+    });
+
+  $('.big, .small').each(function(){
+    var $this= $(this),
+        page = $this.data('page');
+    $this.on('click',function(){
+      $('.page.'+page).addClass('openpage');
+      fadeDashBoard();
+    })
+  });
+  $('.close-button').click(function(){
+    $(this).parent().addClass('slidePageLeft')
+          .one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+                $(this).removeClass('slidePageLeft').removeClass('openpage');
+              });
+      showDashBoard();
+  });
+  $('.view-demo-button').click(function(){
+    $(this).parent().addClass('slideDemoOverlayUp');
+      showDashBoard();
+  });" section nil nil [4030 4079])
+            ("function showDashBoard(){
+      for(var i = 1; i <= 3; i++) {
+        $('.col'+i).each(function(){
+            $(this).addClass('fadeInForward-'+i).removeClass('fadeOutback');
+        });
+      }
+    }
+
+    function fadeDashBoard(){
+      for(var i = 1; i <= 3; i++) {
+        $('.col'+i).addClass('fadeOutback').removeClass('fadeInForward-'+i);
+      }
+    }
+    
+   
+    $(\".lock-thumb\").click(function(){
+        fadeDashBoard();
+        $('.login-screen').addClass('slidePageInFromLeft').removeClass('slidePageBackLeft');
+    });
+    
+    $('#unlock-button').click(function(){
+          $('.login-screen').removeClass('slidePageInFromLeft').addClass('slidePageBackLeft');
+          showDashBoard();
+    });
+
+  $('.big, .small').each(function(){
+    var $this= $(this),
+        page = $this.data('page');
+    $this.on('click',function(){
+      $('.page.'+page).addClass('openpage');
+      fadeDashBoard();
+    })
+  });
+  $('.close-button').click(function(){
+    $(this).parent().addClass('slidePageLeft')
+          .one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+                $(this).removeClass('slidePageLeft').removeClass('openpage');
+              });
+      showDashBoard();
+  });
+  $('.view-demo-button').click(function(){
+    $(this).parent().addClass('slideDemoOverlayUp');
+      showDashBoard();
+  });" section nil nil [4079 4129])
+            ("function showDashBoard(){
+      for(var i = 1; i <= 3; i++) {
+        $('.col'+i).each(function(){
+            $(this).addClass('fadeInForward-'+i).removeClass('fadeOutback');
+        });
+      }
+    }
+
+    function fadeDashBoard(){
+      for(var i = 1; i <= 3; i++) {
+        $('.col'+i).addClass('fadeOutback').removeClass('fadeInForward-'+i);
+      }
+    }
+    
+   
+    $(\".lock-thumb\").click(function(){
+        fadeDashBoard();
+        $('.login-screen').addClass('slidePageInFromLeft').removeClass('slidePageBackLeft');
+    });
+    
+    $('#unlock-button').click(function(){
+          $('.login-screen').removeClass('slidePageInFromLeft').addClass('slidePageBackLeft');
+          showDashBoard();
+    });
+
+  $('.big, .small').each(function(){
+    var $this= $(this),
+        page = $this.data('page');
+    $this.on('click',function(){
+      $('.page.'+page).addClass('openpage');
+      fadeDashBoard();
+    })
+  });
+  $('.close-button').click(function(){
+    $(this).parent().addClass('slidePageLeft')
+          .one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+                $(this).removeClass('slidePageLeft').removeClass('openpage');
+              });
+      showDashBoard();
+  });
+  $('.view-demo-button').click(function(){
+    $(this).parent().addClass('slideDemoOverlayUp');
+      showDashBoard();
+  });" section nil nil [4129 4176])
+            ("function showDashBoard(){
+      for(var i = 1; i <= 3; i++) {
+        $('.col'+i).each(function(){
+            $(this).addClass('fadeInForward-'+i).removeClass('fadeOutback');
+        });
+      }
+    }
+
+    function fadeDashBoard(){
+      for(var i = 1; i <= 3; i++) {
+        $('.col'+i).addClass('fadeOutback').removeClass('fadeInForward-'+i);
+      }
+    }
+    
+   
+    $(\".lock-thumb\").click(function(){
+        fadeDashBoard();
+        $('.login-screen').addClass('slidePageInFromLeft').removeClass('slidePageBackLeft');
+    });
+    
+    $('#unlock-button').click(function(){
+          $('.login-screen').removeClass('slidePageInFromLeft').addClass('slidePageBackLeft');
+          showDashBoard();
+    });
+
+  $('.big, .small').each(function(){
+    var $this= $(this),
+        page = $this.data('page');
+    $this.on('click',function(){
+      $('.page.'+page).addClass('openpage');
+      fadeDashBoard();
+    })
+  });
+  $('.close-button').click(function(){
+    $(this).parent().addClass('slidePageLeft')
+          .one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+                $(this).removeClass('slidePageLeft').removeClass('openpage');
+              });
+      showDashBoard();
+  });
+  $('.view-demo-button').click(function(){
+    $(this).parent().addClass('slideDemoOverlayUp');
+      showDashBoard();
+  });" section nil nil [4176 5572]))          
+      :file "html5_win8.html"
+      :pointmax 5572
+      :fsize 5571
+      :lastmodtime '(22296 38910 775838 851000)
+      :unmatched-syntax nil))
+  :file "!home!wood!html!html5_win8!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

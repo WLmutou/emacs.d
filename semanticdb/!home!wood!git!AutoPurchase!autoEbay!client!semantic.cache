@@ -1,0 +1,149 @@
+;; Object client/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "client/"
+  :tables
+  (list
+    (semanticdb-table "autoClient.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("SocketServer" include nil nil [36 55])
+            ("time" include nil nil [56 67])
+            ("os" include nil nil [68 77])
+            ("threading" include nil nil [78 94])
+            ("socket" include nil nil [95 108])
+            ("socket" include nil nil [109 129])
+            ("struct" include nil nil [130 143])
+            ("json" include nil nil [144 155])
+            ("tkMessageBox" include nil nil [156 175])
+            ("sys" include nil nil [177 187])
+            ("typecode" variable nil nil [188 226])
+            ("reload" code nil nil [227 238])
+            ("sys" code nil nil [239 271])
+            ("sys" code nil nil [273 309])
+            ("autoPurchaseEbay" include nil nil [310 367])
+            ("writeEbayLog" include nil nil [368 400])
+            ("listen_port" variable nil nil [729 761])
+            ("addr" variable nil nil [763 794])
+            ("global" code nil nil [795 811])
+            ("headstr" variable nil nil [854 881])
+            ("nowtime" variable nil nil [882 934])
+            ("nowfiletime" variable nil nil [997 1055])
+            ("BUFSIZE" variable nil nil [1058 1072])
+            ("STRUCT_U_H" variable nil nil [1096 1122])
+            ("STRUCT_D_H" variable nil nil [1123 1146])
+            ("STRUCT_J_H" variable nil nil [1147 1167])
+            ("STRUCT_T_H" variable nil nil [1168 1186])
+            ("buflen" variable nil nil [1214 1227])
+            ("typeSize" variable nil nil [1230 1273])
+            ("FILEINFO_SIZE" variable nil nil [1274 1317])
+            ("json_size" variable nil nil [1318 1361])
+            ("MyTCPHandler" type
+               (:superclasses ("SocketServer.StreamRequestHandler")
+                :members 
+                  ( ("recvPath" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1436 1440]))                          )
+                        (reparse-symbol indented_block_body) [1423 1603])
+                    ("handle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1624 1628]))                          )
+                        (reparse-symbol indented_block_body) [1612 2261])
+                    ("handleAlive" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2290 2294]))                          )
+                        (reparse-symbol indented_block_body) [2274 2342])
+                    ("handleJson" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2370 2374]))                          )
+                        (reparse-symbol indented_block_body) [2355 3090])
+                    ("handleFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3110 3114]))                          )
+                        (reparse-symbol indented_block_body) [3095 4290])
+                    ("start_chrome" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4320 4324])
+                            ("infoList" variable nil (reparse-symbol function_parameters) [4326 4334])
+                            ("filename" variable nil (reparse-symbol function_parameters) [4336 4344]))                          )
+                        (reparse-symbol indented_block_body) [4303 4665]))                  
+                :type "class")
+                nil [1363 4665])
+            ("SendFile" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("global" code nil (reparse-symbol indented_block_body) [4725 4741])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4750 4795]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4710 4714]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4697 4796])
+                    ("send_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4824 4828])
+                            ("basename" variable nil (reparse-symbol function_parameters) [4829 4837]))                          )
+                        (reparse-symbol indented_block_body) [4809 5822])
+                    ("sendInfoList" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5852 5856])
+                            ("infoList" variable nil (reparse-symbol function_parameters) [5857 5865])
+                            ("filename" variable nil (reparse-symbol function_parameters) [5866 5874]))                          )
+                        (reparse-symbol indented_block_body) [5835 6837])
+                    ("sendstr" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6862 6866])
+                            ("strs" variable nil (reparse-symbol function_parameters) [6867 6871]))                          )
+                        (reparse-symbol indented_block_body) [6850 7358]))                  
+                :type "class")
+                nil [4675 7358])
+            ("mythread" type
+               (:members 
+                  ( ("juesstStart" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7406 7410])
+                            ("infoList" variable nil (reparse-symbol function_parameters) [7411 7419])
+                            ("filename" variable nil (reparse-symbol function_parameters) [7422 7430]))                          )
+                        (reparse-symbol indented_block_body) [7390 8384])
+                    ("autoStart" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8403 8407])
+                            ("infoList" variable nil (reparse-symbol function_parameters) [8408 8416])
+                            ("filename" variable nil (reparse-symbol function_parameters) [8417 8425]))                          )
+                        (reparse-symbol indented_block_body) [8389 8583])
+                    ("reactAlive" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8603 8607]))                          )
+                        (reparse-symbol indented_block_body) [8588 8687]))                  
+                :type "class")
+                nil [7368 8687])
+            ("main" function nil nil [8697 8988])
+            ("if" code nil nil [8998 9036]))          
+      :file "autoClient.py"
+      :pointmax 9037
+      :fsize 9132
+      :lastmodtime '(22214 31775 751715 432000)
+      :unmatched-syntax nil)
+    (semanticdb-table "autoEbay.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "autoEbay.py"
+      :pointmax 41
+      :fsize 40
+      :lastmodtime '(22218 33430 682372 373000)
+      :unmatched-syntax nil))
+  :file "!home!wood!git!AutoPurchase!autoEbay!client!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

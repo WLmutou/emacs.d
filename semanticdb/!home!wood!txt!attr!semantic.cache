@@ -1,0 +1,16 @@
+;; Object attr/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "attr/"
+  :tables
+  (list
+    (semanticdb-table "get_attr.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "get_attr.py"
+      :pointmax 0
+      :fsize 963
+      :lastmodtime '(22421 40479 95213 180000)
+      :unmatched-syntax nil))
+  :file "!home!wood!txt!attr!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

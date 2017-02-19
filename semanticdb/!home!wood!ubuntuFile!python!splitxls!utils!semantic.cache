@@ -1,0 +1,218 @@
+;; Object utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utils/"
+  :tables
+  (list
+    (semanticdb-table "splitxls.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("time" include nil nil [41 52])
+            ("os" include nil nil [53 62])
+            ("xlrd" include nil nil [63 74])
+            ("csv" include nil nil [75 85])
+            ("sys" include nil nil [86 96])
+            ("name2name" include nil nil [98 129])
+            ("reload" code nil nil [131 142])
+            ("sys" code nil nil [143 174])
+            ("GetContent" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [245 271])
+                            ("self" variable nil (reparse-symbol indented_block_body) [280 310])
+                            ("self" variable nil (reparse-symbol indented_block_body) [319 350])
+                            ("self" variable nil (reparse-symbol indented_block_body) [359 392]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [220 224])
+                            ("file_name" variable nil (reparse-symbol function_parameters) [225 234]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [207 393])
+                    ("read_excel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [414 418])
+                            ("file_name" variable nil (reparse-symbol function_parameters) [419 428]))                          )
+                        (reparse-symbol indented_block_body) [399 920])
+                    ("readdesc" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [938 942]))                          )
+                        (reparse-symbol indented_block_body) [925 1494])
+                    ("get_header" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1518 1522]))                          )
+                        (reparse-symbol indented_block_body) [1503 1719])
+                    ("get_content" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1744 1748]))                          )
+                        (reparse-symbol indented_block_body) [1728 1951])
+                    ("mytest" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1972 1976]))                          )
+                        (reparse-symbol indented_block_body) [1961 2032])
+                    ("myjudge" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2049 2053]))                          )
+                        (reparse-symbol indented_block_body) [2037 2472])
+                    ("jewel_write_images_csv" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2505 2509])
+                            ("image_csv_name" variable nil (reparse-symbol function_parameters) [2511 2525]))                          )
+                        (reparse-symbol indented_block_body) [2478 3947])
+                    ("jewel_write_configure_csv" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3982 3986])
+                            ("configure_filename" variable nil (reparse-symbol function_parameters) [3988 4006]))                          )
+                        (reparse-symbol indented_block_body) [3952 8874])
+                    ("write_images_csv" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8908 8912])
+                            ("image_csv_name" variable nil (reparse-symbol function_parameters) [8914 8928]))                          )
+                        (reparse-symbol indented_block_body) [8887 11424])
+                    ("write_configure_product" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11490 11494])
+                            ("configure_filename" variable nil (reparse-symbol function_parameters) [11496 11514]))                          )
+                        (reparse-symbol indented_block_body) [11462 17483])
+                    ("get_line_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17523 17527])
+                            ("line" variable nil (reparse-symbol function_parameters) [17529 17533])
+                            ("name_i_dict" variable nil (reparse-symbol function_parameters) [17535 17546])
+                            ("tmp_used_attribute" variable nil (reparse-symbol function_parameters) [17548 17566])
+                            ("tmp_child_products_sku" variable nil (reparse-symbol function_parameters) [17572 17594])
+                            ("tmp_super_attribute_value" variable nil (reparse-symbol function_parameters) [17601 17626]))                          )
+                        (reparse-symbol indented_block_body) [17505 20085])
+                    ("judge_header" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20106 20110])
+                            ("line" variable nil (reparse-symbol function_parameters) [20112 20116])
+                            ("typename" variable nil (reparse-symbol function_parameters) [20118 20126])
+                            ("name_i_dict" variable nil (reparse-symbol function_parameters) [20128 20139]))                          )
+                        (reparse-symbol indented_block_body) [20089 21967]))                  
+                :type "class")
+                nil [177 21967])
+            ("splitFile" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [21991 21999])
+                ("upload_path" variable nil (reparse-symbol function_parameters) [22001 22012]))              ) nil [21977 23773])
+            ("if" code nil nil [23792 24199]))          
+      :file "splitxls.py"
+      :pointmax 24223
+      :fsize 24394
+      :lastmodtime '(22466 46457 600089 65000)
+      :unmatched-syntax nil)
+    (semanticdb-table "name2name.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cate_strs" variable nil nil [42 11278])
+            ("cate_dict" variable nil nil [11282 21800])
+            ("create_dict" function (:documentation " 生成字典,最后再把字典贴到cate_dict ") nil [21804 22990])
+            ("find_cate" function (:arguments 
+              ( ("cate_type" variable nil (reparse-symbol function_parameters) [23016 23025])
+                ("cate_name" variable nil (reparse-symbol function_parameters) [23026 23035]))              ) nil [23002 23213])
+            ("if" code nil nil [23224 23582]))          
+      :file "name2name.py"
+      :pointmax 23663
+      :fsize 23692
+      :lastmodtime '(22453 4883 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "views.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [41 50])
+            ("json" include nil nil [51 62])
+            ("tornado.web" include nil nil [63 81])
+            ("time" include nil nil [82 93])
+            ("urllib" include nil nil [95 108])
+            ("splitxls" include nil nil [109 139])
+            ("sys" include nil nil [141 151])
+            ("reload" code nil nil [152 163])
+            ("sys" code nil nil [164 195])
+            ("BaseHandler" type
+               (:superclasses ("tornado.web.RequestHandler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("tornado" code nil (reparse-symbol indented_block_body) [298 356]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [266 270])
+                            ("args" variable nil (reparse-symbol function_parameters) [272 277])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [279 287]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [253 357]))                  
+                :type "class")
+                nil [202 357])
+            ("ErrorHandler" type
+               (:superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [403 407]))                          )
+                        (reparse-symbol indented_block_body) [395 440])
+                    ("write_error" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [460 464])
+                            ("status_code" variable nil (reparse-symbol function_parameters) [465 476])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [478 486]))                          )
+                        (reparse-symbol indented_block_body) [444 535]))                  
+                :type "class")
+                nil [358 535])
+            ("IndexHandler" type
+               (:superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [581 585]))                          )
+                        (reparse-symbol indented_block_body) [573 622]))                  
+                :type "class")
+                nil [536 622])
+            ("UpFileHandler" type
+               (:superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [678 682]))                          )
+                        (reparse-symbol indented_block_body) [670 712])
+                    ("post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [725 729]))                          )
+                        (reparse-symbol indented_block_body) [716 2347]))                  
+                :type "class")
+                nil [632 2347])
+            ("DownloadHandler" type
+               (:superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2401 2405]))                          )
+                        (reparse-symbol indented_block_body) [2393 3217]))                  
+                :type "class")
+                nil [2353 3217])
+            ("try_upload_path" function nil nil [3218 3564]))          
+      :file "views.py"
+      :pointmax 3564
+      :fsize 3578
+      :lastmodtime '(22466 33439 32331 324000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python!splitxls!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

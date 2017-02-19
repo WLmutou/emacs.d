@@ -1,0 +1,1076 @@
+;; Object server/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "server/"
+  :tables
+  (list
+    (semanticdb-table "handlerData.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("MySQLdb" include nil nil [41 55])
+            ("sys" include nil nil [56 66])
+            ("werkzeug.security" include nil nil [67 119])
+            ("my_config" include nil nil [120 159])
+            ("xlrd" include nil nil [181 197])
+            ("csv" include nil nil [181 197])
+            ("os" include nil nil [198 207])
+            ("chardet" include nil nil [208 222])
+            ("types" include nil nil [223 235])
+            ("json" include nil nil [236 247])
+            ("typecode" variable nil nil [249 287])
+            ("reload" code nil nil [288 299])
+            ("sys" code nil nil [300 332])
+            ("get_file_coding" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [354 362]))              ) nil [334 664])
+            ("mysql_km" variable nil nil [666 697])
+            ("con_Dict" variable nil nil [699 971])
+            ("con_mysql" function nil nil [974 1592])
+            ("UserDB" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1641 1664]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1626 1630]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1613 1665])
+                    ("close_con" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1683 1687]))                          )
+                        (reparse-symbol indented_block_body) [1669 1800])
+                    ("conn_user" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1818 1822])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [1823 1832]))                          )
+                        (reparse-symbol indented_block_body) [1804 2294]))                  
+                :type "class")
+                nil [1593 2294])
+            ("CreateUser" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2347 2370]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2332 2336]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2319 2371])
+                    ("close_con" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2389 2393]))                          )
+                        (reparse-symbol indented_block_body) [2375 2506])
+                    ("create_user" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2526 2530])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [2531 2540])
+                            ("username" variable nil (reparse-symbol function_parameters) [2541 2549])
+                            ("passwd" variable nil (reparse-symbol function_parameters) [2550 2556]))                          )
+                        (reparse-symbol indented_block_body) [2510 3049]))                  
+                :type "class")
+                nil [2295 3049])
+            ("HandlerData" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3104 3127]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3089 3093]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3076 3128])
+                    ("close_con" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3147 3151]))                          )
+                        (reparse-symbol indented_block_body) [3133 3265])
+                    ("lock_table" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3285 3289])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [3291 3300]))                          
+                        :documentation "锁表")
+                        (reparse-symbol indented_block_body) [3270 3413])
+                    ("unlock_table" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3435 3439]))                          
+                        :documentation " 解锁")
+                        (reparse-symbol indented_block_body) [3418 3539])
+                    ("insert_basedata" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3564 3568])
+                            ("basedata" variable nil (reparse-symbol function_parameters) [3569 3577]))                          
+                        :documentation "插入基本数据")
+                        (reparse-symbol indented_block_body) [3544 4234])
+                    ("insert_return_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4262 4266])
+                            ("return_data" variable nil (reparse-symbol function_parameters) [4267 4278]))                          
+                        :documentation "插入非基本数据")
+                        (reparse-symbol indented_block_body) [4239 4630])
+                    ("execute_sql" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4651 4655])
+                            ("sql_str" variable nil (reparse-symbol function_parameters) [4656 4663])
+                            ("basedata" variable nil (reparse-symbol function_parameters) [4664 4672]))                          
+                        :documentation "执行sql语句")
+                        (reparse-symbol indented_block_body) [4635 5597])
+                    ("exe_commit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5617 5621]))                          )
+                        (reparse-symbol indented_block_body) [5602 5746])
+                    ("update_return_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5775 5779])
+                            ("return_data" variable nil (reparse-symbol function_parameters) [5780 5791]))                          )
+                        (reparse-symbol indented_block_body) [5752 6094])
+                    ("query_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6114 6118])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [6119 6128])
+                            ("limit_n" variable nil (reparse-symbol function_parameters) [6129 6136])
+                            ("offset_n" variable nil (reparse-symbol function_parameters) [6141 6149]))                          )
+                        (reparse-symbol indented_block_body) [6099 6782])
+                    ("query_current_id" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6808 6812])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [6813 6822]))                          
+                        :documentation "获取为0的状态的第一条记录的id")
+                        (reparse-symbol indented_block_body) [6787 7012])
+                    ("query_info_count" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7038 7042])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [7043 7052]))                          
+                        :documentation "查询总共有多少条记录")
+                        (reparse-symbol indented_block_body) [7017 7236])
+                    ("query_head_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7261 7265])
+                            ("database_name" variable nil (reparse-symbol function_parameters) [7266 7279])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [7280 7289]))                          
+                        :documentation "查询表字段")
+                        (reparse-symbol indented_block_body) [7241 7564])
+                    ("update_statue" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7588 7592])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [7593 7602])
+                            ("setstr" variable nil (reparse-symbol function_parameters) [7603 7609])
+                            ("idstr" variable nil (reparse-symbol function_parameters) [7610 7615]))                          
+                        :documentation "更新状态，是否已经被获取了")
+                        (reparse-symbol indented_block_body) [7570 7988])
+                    ("query_last_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8013 8017])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [8018 8027])
+                            ("lastnum" variable nil (reparse-symbol function_parameters) [8028 8035]))                          
+                        :documentation "查询最后num条记录")
+                        (reparse-symbol indented_block_body) [7993 8355])
+                    ("query_filename" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8379 8383])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [8384 8393])
+                            ("limit_n" variable nil (reparse-symbol function_parameters) [8394 8401]))                          
+                        :documentation "查询最近更像到数据库的文件名")
+                        (reparse-symbol indented_block_body) [8360 8733])
+                    ("delete_from_filename" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8763 8767])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [8768 8777])
+                            ("filename" variable nil (reparse-symbol function_parameters) [8778 8786]))                          
+                        :documentation "根据文件名来删除对应的数据")
+                        (reparse-symbol indented_block_body) [8738 9005])
+                    ("query_already_update" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9035 9039])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [9040 9049])
+                            ("filename" variable nil (reparse-symbol function_parameters) [9050 9058]))                          
+                        :documentation "根据文件名,查询还未被获取的条数")
+                        (reparse-symbol indented_block_body) [9010 9274]))                  
+                :type "class")
+                nil [3051 9274])
+            ("RewriteData" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [9329 9352]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9314 9318]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9301 9353])
+                    ("close_con" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9371 9375]))                          )
+                        (reparse-symbol indented_block_body) [9357 9502])
+                    ("execute_sql" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9523 9527])
+                            ("sql_str" variable nil (reparse-symbol function_parameters) [9528 9535]))                          
+                        :documentation "执行sql语句")
+                        (reparse-symbol indented_block_body) [9507 10157])
+                    ("update_return_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10185 10189])
+                            ("update_sql_str" variable nil (reparse-symbol function_parameters) [10190 10204])
+                            ("where_str" variable nil (reparse-symbol function_parameters) [10205 10214]))                          )
+                        (reparse-symbol indented_block_body) [10162 10486])
+                    ("rewrite_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10508 10512])
+                            ("resultJson" variable nil (reparse-symbol function_parameters) [10513 10523]))                          
+                        :documentation "更新 return_data中的购买价格，购买日期账户等")
+                        (reparse-symbol indented_block_body) [10491 10963])
+                    ("rewrite_goodJson" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10989 10993])
+                            ("goodList" variable nil (reparse-symbol function_parameters) [10994 11002]))                          )
+                        (reparse-symbol indented_block_body) [10968 12075])
+                    ("rewrite_notgoodJson" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12104 12108])
+                            ("notgoodList" variable nil (reparse-symbol function_parameters) [12109 12120]))                          )
+                        (reparse-symbol indented_block_body) [12080 12992]))                  
+                :type "class")
+                nil [9276 12992])
+            ("ExportDataDB" type
+               (:documentation "导出数据"
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [13062 13085]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13047 13051]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13034 13086])
+                    ("close_con" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13104 13108]))                          )
+                        (reparse-symbol indented_block_body) [13090 13221])
+                    ("export_data_useId" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13248 13252])
+                            ("idn" variable nil (reparse-symbol function_parameters) [13253 13256])
+                            ("qdate" variable nil (reparse-symbol function_parameters) [13257 13262]))                          )
+                        (reparse-symbol indented_block_body) [13226 14449])
+                    ("export_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14470 14474])
+                            ("fileTime_dict" variable nil (reparse-symbol function_parameters) [14475 14488]))                          )
+                        (reparse-symbol indented_block_body) [14454 16580]))                  
+                :type "class")
+                nil [12993 16580])
+            ("HandlerInfoDict" type
+               (:documentation "将被获取的内容记录到数据库，待post返回时候,状态更改为1.未返回的就将记录在这里!"
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [16751 16774])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16783 16809]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16726 16730])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [16731 16740]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [16713 16810])
+                    ("close_con" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16828 16832]))                          )
+                        (reparse-symbol indented_block_body) [16814 16945])
+                    ("insert_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16966 16970])
+                            ("ip" variable nil (reparse-symbol function_parameters) [16971 16973])
+                            ("autokey" variable nil (reparse-symbol function_parameters) [16974 16981])
+                            ("content" variable nil (reparse-symbol function_parameters) [16982 16989]))                          )
+                        (reparse-symbol indented_block_body) [16950 17643])
+                    ("update_statue" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17666 17670])
+                            ("resultJson" variable nil (reparse-symbol function_parameters) [17671 17681]))                          
+                        :documentation "更像状态为1")
+                        (reparse-symbol indented_block_body) [17648 18975])
+                    ("del_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18995 18999])
+                            ("ip" variable nil (reparse-symbol function_parameters) [19000 19002])
+                            ("autokey" variable nil (reparse-symbol function_parameters) [19003 19010]))                          )
+                        (reparse-symbol indented_block_body) [18982 19499])
+                    ("query_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19519 19523])
+                            ("putDate" variable nil (reparse-symbol function_parameters) [19524 19531]))                          )
+                        (reparse-symbol indented_block_body) [19504 20120]))                  
+                :type "class")
+                nil [16630 20120])
+            ("get_repeat" function nil nil [20123 20185])
+            ("need_head_list" variable nil nil [20187 20887])
+            ("get_csv_file" function nil nil [20890 21231])
+            ("get_iDict" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [21351 21377]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21326 21330])
+                            ("dataFrame" variable nil (reparse-symbol function_parameters) [21331 21340]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [21313 21378])
+                    ("get_all_head" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21439 21443]))                          
+                        :documentation "取得所有头部名称成列表")
+                        (reparse-symbol indented_block_body) [21422 21662])
+                    ("get_name" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21680 21684])
+                            ("header_list" variable nil (reparse-symbol function_parameters) [21685 21696])
+                            ("name" variable nil (reparse-symbol function_parameters) [21697 21701])
+                            ("n" variable nil (reparse-symbol function_parameters) [21702 21703]))                          )
+                        (reparse-symbol indented_block_body) [21667 21852])
+                    ("get_name_index" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21876 21880])
+                            ("header_list" variable nil (reparse-symbol function_parameters) [21881 21892])
+                            ("name" variable nil (reparse-symbol function_parameters) [21893 21897]))                          
+                        :documentation "获取一个头部名称在列表第几个")
+                        (reparse-symbol indented_block_body) [21857 22381])
+                    ("all_name_index" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22405 22409]))                          
+                        :documentation "获取列表所有的头部位置")
+                        (reparse-symbol indented_block_body) [22386 22767])
+                    ("other_info_head" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22792 22796])
+                            ("iDict" variable nil (reparse-symbol function_parameters) [22797 22802])
+                            ("header_list" variable nil (reparse-symbol function_parameters) [22803 22814]))                          )
+                        (reparse-symbol indented_block_body) [22772 23052])
+                    ("get_other_iDcit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23077 23081])
+                            ("header_list" variable nil (reparse-symbol function_parameters) [23082 23093])
+                            ("other_head" variable nil (reparse-symbol function_parameters) [23094 23104]))                          )
+                        (reparse-symbol indented_block_body) [23057 23294]))                  
+                :type "class")
+                nil [21290 23294])
+            ("csvRead" function (:arguments 
+              ( ("csvfilename" variable nil (reparse-symbol function_parameters) [23308 23319]))              ) nil [23296 23500])
+            ("xlrdRead" function (:arguments 
+              ( ("xlrdfilename" variable nil (reparse-symbol function_parameters) [23514 23526]))              ) nil [23501 23757])
+            ("loopStart" function (:arguments 
+              ( ("csvFileList" variable nil (reparse-symbol function_parameters) [23773 23784]))              ) nil [23759 26237])
+            ("WriteData" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [26291 26295]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26276 26280]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [26263 26296])
+                    ("nan_to_null" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26316 26320])
+                            ("info_list" variable nil (reparse-symbol function_parameters) [26321 26330]))                          )
+                        (reparse-symbol indented_block_body) [26300 26655])
+                    ("insertData" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26675 26679])
+                            ("filename" variable nil (reparse-symbol function_parameters) [26680 26688])
+                            ("need_info" variable nil (reparse-symbol function_parameters) [26689 26698])
+                            ("other_info" variable nil (reparse-symbol function_parameters) [26699 26709]))                          )
+                        (reparse-symbol indented_block_body) [26660 29386]))                  
+                :type "class")
+                nil [26240 29386])
+            ("insertAllData" function nil nil [29388 29550])
+            ("if" code nil nil [29552 29599]))          
+      :file "handlerData.py"
+      :pointmax 29599
+      :fsize 30364
+      :lastmodtime '(22295 16200 647073 20000)
+      :unmatched-syntax nil)
+    (semanticdb-table "server.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [38 47])
+            ("tornado.httpserver" include nil nil [48 73])
+            ("tornado.ioloop" include nil nil [77 98])
+            ("tornado.options" include nil nil [102 124])
+            ("tornado.web" include nil nil [128 146])
+            ("tornado.options" include nil nil [150 193])
+            ("logpath" variable nil nil [196 211])
+            ("if" code nil nil [212 262])
+            ("handlerData" include nil nil [263 297])
+            ("view" include nil nil [329 384])
+            ("view" include nil nil [385 436])
+            ("view" include nil nil [437 495])
+            ("view" include nil nil [496 548])
+            ("view" include nil nil [549 608])
+            ("view" include nil nil [609 647])
+            ("my_config" include nil nil [649 687])
+            ("mycfg" variable nil nil [689 716])
+            ("mysql_km" variable nil nil [717 748])
+            ("user" variable nil nil [749 784])
+            ("define" code nil nil [787 872])
+            ("listen_ip" variable nil nil [873 919])
+            ("default_user" variable nil nil [921 1040])
+            ("Init_server" type
+               (:members 
+                  ( ("init_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1083 1087]))                          )
+                        (reparse-symbol indented_block_body) [1069 1324])
+                    ("add_root_user" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1346 1350]))                          )
+                        (reparse-symbol indented_block_body) [1328 1540]))                  
+                :type "class")
+                nil [1044 1540])
+            ("settings" variable nil nil [1550 1843])
+            ("handlers" variable nil nil [1844 2842])
+            ("main" function nil nil [2844 3294])
+            ("if" code nil nil [3303 3341]))          
+      :file "server.py"
+      :pointmax 3341
+      :fsize 2543
+      :lastmodtime '(22296 19994 488532 122000)
+      :unmatched-syntax nil)
+    (semanticdb-table "view.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("tornado.web" include nil nil [39 57])
+            ("json" include nil nil [59 70])
+            ("time" include nil nil [71 82])
+            ("datetime" include nil nil [83 98])
+            ("types" include nil nil [99 111])
+            ("chardet" include nil nil [112 126])
+            ("werkzeug.security" include nil nil [127 176])
+            ("urllib" include nil nil [177 203])
+            ("os" include nil nil [204 213])
+            ("handlerData" include nil nil [275 329])
+            ("handlerData" include nil nil [330 369])
+            ("control" include nil nil [372 436])
+            ("control" include nil nil [437 496])
+            ("control" include nil nil [497 527])
+            ("my_config" include nil nil [528 566])
+            ("order_date" variable nil nil [568 623])
+            ("up_path" variable nil nil [659 692])
+            ("public_Path" variable nil nil [693 753])
+            ("today_file_path" variable nil nil [754 808])
+            ("limitn" variable nil nil [812 840])
+            ("limit_n" variable nil nil [841 877])
+            ("global" code nil nil [893 917])
+            ("CURRENT_N, NEXT_ID" code nil nil [918 941])
+            ("global" code nil nil [943 970])
+            ("global" code nil nil [971 982])
+            ("LOCK" variable nil nil [984 996])
+            ("HEAD_LIST, INFO_COUNT" code nil nil [997 1024])
+            ("BaseHandler" type
+               (:superclasses ("tornado.web.RequestHandler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("tornado" code nil (reparse-symbol indented_block_body) [1120 1176]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1090 1094])
+                            ("args" variable nil (reparse-symbol function_parameters) [1095 1100])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1101 1109]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1077 1177])
+                    ("get_current_user" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1202 1206]))                          )
+                        (reparse-symbol indented_block_body) [1181 1257]))                  
+                :type "class")
+                nil [1026 1257])
+            ("ReverseHandler" type
+               (:documentation "下单请求"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1352 1356]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1313 3467])
+                    ("update_statue" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3494 3498])
+                            ("hander" variable nil (reparse-symbol function_parameters) [3499 3505])
+                            ("remote_ip" variable nil (reparse-symbol function_parameters) [3506 3515])
+                            ("current_id" variable nil (reparse-symbol function_parameters) [3516 3526])
+                            ("next_id" variable nil (reparse-symbol function_parameters) [3527 3534]))                          
+                        :documentation "更新已经被获取了的单")
+                        (reparse-symbol indented_block_body) [3476 3952]))                  
+                :type "class")
+                nil [1259 3952])
+            ("WrapHandler" type
+               (:documentation "接收post请求，提交最后的下单结果"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4071 4075]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4032 4112])
+                    ("post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4125 4129]))                          )
+                        (reparse-symbol indented_block_body) [4116 5132]))                  
+                :type "class")
+                nil [3967 5132])
+            ("LoginHandler" type
+               (:documentation "登录处理"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5198 5202]))                          )
+                        (reparse-symbol indented_block_body) [5190 5255])
+                    ("post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5268 5272]))                          )
+                        (reparse-symbol indented_block_body) [5259 6839]))                  
+                :type "class")
+                nil [5138 6839])
+            ("LogOutHandler" type
+               (:documentation "登出，清除cookie"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6997 7001]))                          
+                        :decorators 
+                          ( ("tornado.gen.coroutine" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [6960 7093])
+                    ("post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7106 7110])
+                            ("path" variable nil (reparse-symbol function_parameters) [7111 7115]))                          )
+                        (reparse-symbol indented_block_body) [7097 7253]))                  
+                :type "class")
+                nil [6852 7253])
+            ("Manager" type
+               (:superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7431 7435]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil)
+                            ("tornado.gen.coroutine" function (:type "decorator") nil nil)
+                            ("tornado.web.asynchronous" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7335 7503]))                  
+                :type "class")
+                nil [7259 7503])
+            ("UpdateFile" type
+               (:documentation "获取更新了的文件列表"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7659 7663]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil)
+                            ("tornado.web.asynchronous" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [7590 8249]))                  
+                :type "class")
+                nil [7534 8249])
+            ("Action" type
+               (:superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8359 8363])
+                            ("args" variable nil (reparse-symbol function_parameters) [8364 8369])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [8370 8378]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [8281 8447]))                  
+                :type "class")
+                nil [8250 8447])
+            ("FileList" type
+               (:documentation "列出文件"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8539 8543])
+                            ("args" variable nil (reparse-symbol function_parameters) [8544 8549])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [8550 8558]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [8500 8736]))                  
+                :type "class")
+                nil [8452 8736])
+            ("InsertData" type
+               (:documentation "插入数据"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8861 8865])
+                            ("args" variable nil (reparse-symbol function_parameters) [8866 8871])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [8872 8880]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil)
+                            ("tornado.web.authenticated" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [8791 9462]))                  
+                :type "class")
+                nil [8741 9462])
+            ("DeleteFile" type
+               (:documentation "删除文件 "
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9627 9631])
+                            ("args" variable nil (reparse-symbol function_parameters) [9633 9638])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [9639 9647]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil)
+                            ("tornado.web.asynchronous" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [9558 9902]))                  
+                :type "class")
+                nil [9507 9902])
+            ("UploadFileHandler" type
+               (:documentation "a上传文件"
+                :superclasses ("tornado.web.RequestHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10071 10075]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil)
+                            ("tornado.web.asynchronous" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [9990 10113])
+                    ("post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10126 10130]))                          )
+                        (reparse-symbol indented_block_body) [10117 10745]))                  
+                :type "class")
+                nil [9917 10745])
+            ("ErrorHandler" type
+               (:documentation "错误处理"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10824 10828]))                          )
+                        (reparse-symbol indented_block_body) [10816 10861])
+                    ("write_error" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10881 10885])
+                            ("status_code" variable nil (reparse-symbol function_parameters) [10886 10897])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [10899 10907]))                          )
+                        (reparse-symbol indented_block_body) [10865 11101]))                  
+                :type "class")
+                nil [10764 11101])
+            ("DownloadFile" type
+               (:documentation "下载文件"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11235 11239])
+                            ("filename" variable nil (reparse-symbol function_parameters) [11240 11248]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil)
+                            ("tornado.web.asynchronous" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [11154 11923]))                  
+                :type "class")
+                nil [11102 11923])
+            ("QueryData" type
+               (:documentation "查询信息"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12063 12067]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil)
+                            ("tornado.web.asynchronous" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [11982 12271]))                  
+                :type "class")
+                nil [11933 12271])
+            ("DeleteFromFile" type
+               (:documentation "根据文件名称，来删除数据库记录"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12377 12381]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [12337 12749]))                  
+                :type "class")
+                nil [12272 12749])
+            ("InfoDict" type
+               (:documentation "获取未传下单结果回来的单"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12814 12818]))                          )
+                        (reparse-symbol indented_block_body) [12806 13188]))                  
+                :type "class")
+                nil [12750 13188])
+            ("Result" type
+               (:documentation "获取下单的结果,导出数据"
+                :superclasses ("BaseHandler")
+                :members 
+                  ( ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13322 13326]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [13252 13617])
+                    ("post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13630 13634]))                          )
+                        (reparse-symbol indented_block_body) [13621 15236]))                  
+                :type "class")
+                nil [13198 15236])
+            ("DownInfoDict" type
+               (:superclasses ("BaseHandler")
+                :members 
+                  ( ("post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15314 15318]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [15274 16611]))                  
+                :type "class")
+                nil [15237 16611])
+            ("AddUser" type
+               (:superclasses ("BaseHandler")
+                :members 
+                  ( ("post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16694 16698]))                          
+                        :decorators 
+                          ( ("tornado.web.authenticated" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [16654 16803]))                  
+                :type "class")
+                nil [16621 16803])
+            ("none_to_str" function (:arguments 
+              ( ("line_str" variable nil (reparse-symbol function_parameters) [16831 16839]))              ) nil [16815 16968])
+            ("unicode_to_str" function (:arguments 
+              ( ("unistr" variable nil (reparse-symbol function_parameters) [16988 16994]))              ) nil [16969 17329])
+            ("arrange_data" function
+               (:documentation "根据select语句，还原对应的行"
+                :arguments 
+                  ( ("line" variable nil (reparse-symbol function_parameters) [17347 17351]))                  )
+                nil [17330 22531])
+            ("header_line" function nil nil [22532 23493]))          
+      :file "view.py"
+      :pointmax 23493
+      :fsize 24319
+      :lastmodtime '(22296 20287 732521 375000)
+      :unmatched-syntax '((INDENT_BLOCK 15301 . 16611) (INDENT_BLOCK 15301 . 16602) (INDENT_BLOCK 15301 . 16595) (INDENT_BLOCK 15301 . 16607) (INDENT_BLOCK 15301 . 16604) (INDENT_BLOCK 15301 . 16493) (INDENT_BLOCK 15301 . 16403) (INDENT_BLOCK 15301 . 16399) (INDENT_BLOCK 15301 . 16390) (INDENT_BLOCK 15301 . 16399) (INDENT_BLOCK 15301 . 16393) (INDENT_BLOCK 15301 . 16413) (INDENT_BLOCK 15301 . 16275) (INDENT_BLOCK 15301 . 16113) (INDENT_BLOCK 15301 . 16107) (INDENT_BLOCK 15301 . 16017) (INDENT_BLOCK 15301 . 16030) (INDENT_BLOCK 15301 . 16007) (INDENT_BLOCK 15301 . 15998) (INDENT_BLOCK 15301 . 15991) (INDENT_BLOCK 15301 . 15938)))
+    (semanticdb-table "control.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [41 50])
+            ("time" include nil nil [51 62])
+            ("multiprocessing" include nil nil [63 85])
+            ("json" include nil nil [86 97])
+            ("my_config" include nil nil [98 136])
+            ("handlerData" include nil nil [138 197])
+            ("handlerData" include nil nil [198 231])
+            ("order_date" variable nil nil [233 288])
+            ("up_path" variable nil nil [289 322])
+            ("public_Path" variable nil nil [323 383])
+            ("today_file_path" variable nil nil [384 438])
+            ("Uploader" type
+               (:documentation "处理上传的文件 "
+                :members 
+                  ( ("write_recv_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [501 505])
+                            ("filestr" variable nil (reparse-symbol function_parameters) [506 513])
+                            ("filename" variable nil (reparse-symbol function_parameters) [514 522]))                          )
+                        (reparse-symbol indented_block_body) [481 1041])
+                    ("thread_write_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1076 1080])
+                            ("filestr" variable nil (reparse-symbol function_parameters) [1081 1088])
+                            ("filename" variable nil (reparse-symbol function_parameters) [1089 1097]))                          )
+                        (reparse-symbol indented_block_body) [1054 1215]))                  
+                :type "class")
+                nil [440 1215])
+            ("ListFile" type
+               (:documentation "列出已经上传的文件"
+                :members 
+                  ( ("list_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1282 1286]))                          )
+                        (reparse-symbol indented_block_body) [1268 1460]))                  
+                :type "class")
+                nil [1226 1460])
+            ("HandlerFile" type
+               (:documentation " web界面执行插入数据库"
+                :members 
+                  ( ("insert_to_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1534 1538])
+                            ("filename" variable nil (reparse-symbol function_parameters) [1539 1547]))                          )
+                        (reparse-symbol indented_block_body) [1515 2391])
+                    ("delete_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2420 2424])
+                            ("filename" variable nil (reparse-symbol function_parameters) [2425 2433]))                          
+                        :documentation "删除文件")
+                        (reparse-symbol indented_block_body) [2404 2846]))                  
+                :type "class")
+                nil [1466 2846])
+            ("QueryBaseData" type
+               (:documentation "查询基本的信息"
+                :members 
+                  ( ("query_base_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2921 2925])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [2926 2935])
+                            ("lastnum" variable nil (reparse-symbol function_parameters) [2936 2943]))                          )
+                        (reparse-symbol indented_block_body) [2901 3510]))                  
+                :type "class")
+                nil [2856 3510])
+            ("ExportData" type
+               (:documentation "导出数据"
+                :members 
+                  ( ("export_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3567 3571])
+                            ("filename" variable nil (reparse-symbol function_parameters) [3572 3580])
+                            ("qdate" variable nil (reparse-symbol function_parameters) [3586 3591]))                          )
+                        (reparse-symbol indented_block_body) [3551 4259]))                  
+                :type "class")
+                nil [3512 4259])
+            ("query_filename" function
+               (:documentation "处理查询到的文件名结果"
+                :arguments 
+                  ( ("limit_n" variable nil (reparse-symbol function_parameters) [4280 4287]))                  )
+                nil [4261 4563])
+            ("query_status0" function
+               (:documentation "根据文件名，查询还有多少没有被获取"
+                :arguments 
+                  ( ("filename" variable nil (reparse-symbol function_parameters) [4582 4590]))                  )
+                nil [4564 4837])
+            ("infoDictId" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [6234 6267])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6276 6306]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6205 6209])
+                            ("infoDicts_set" variable nil (reparse-symbol function_parameters) [6210 6223]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6192 6315])
+                    ("infoDict_id" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6335 6339]))                          )
+                        (reparse-symbol indented_block_body) [6319 6592])
+                    ("close_con" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6611 6615]))                          )
+                        (reparse-symbol indented_block_body) [6597 6652])
+                    ("query_info_useId" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6682 6686])
+                            ("idi" variable nil (reparse-symbol function_parameters) [6687 6690]))                          )
+                        (reparse-symbol indented_block_body) [6661 7079]))                  
+                :type "class")
+                nil [6168 7079]))          
+      :file "control.py"
+      :pointmax 7107
+      :fsize 7474
+      :lastmodtime '(22295 36240 454338 573000)
+      :unmatched-syntax nil)
+    (semanticdb-table "my_config.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [40 53])
+            ("os" include nil nil [40 53])
+            ("ConfigParser" include nil nil [54 73])
+            ("logging" include nil nil [74 100])
+            ("logging" include nil nil [101 115])
+            ("logger" variable nil nil [116 153])
+            ("path" variable nil nil [154 173])
+            ("configFile" variable nil nil [174 231])
+            ("config" code nil nil [232 261])
+            ("MyConfig" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [362 384])
+                            ("self" variable nil (reparse-symbol indented_block_body) [393 418])
+                            ("self" variable nil (reparse-symbol indented_block_body) [427 464])
+                            ("self" code nil (reparse-symbol indented_block_body) [473 496]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [299 303])
+                            ("confHead" variable nil (reparse-symbol function_parameters) [304 312]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [286 458])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [471 475])
+                            ("name" variable nil (reparse-symbol function_parameters) [476 480])
+                            ("default" variable nil (reparse-symbol function_parameters) [481 488]))                          )
+                        (reparse-symbol indented_block_body) [463 605])
+                    ("set" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [618 622])
+                            ("key" variable nil (reparse-symbol function_parameters) [623 626])
+                            ("value" variable nil (reparse-symbol function_parameters) [627 632])
+                            ("head" variable nil (reparse-symbol function_parameters) [633 637]))                          )
+                        (reparse-symbol indented_block_body) [610 848]))                  
+                :type "class")
+                nil [264 848])
+            ("logInfo" function (:arguments 
+              ( ("strs" variable nil (reparse-symbol function_parameters) [862 866]))              ) nil [850 898]))          
+      :file "my_config.py"
+      :pointmax 952
+      :fsize 951
+      :lastmodtime '(22231 41938 566253 814000)
+      :unmatched-syntax nil)
+    (semanticdb-table "model.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sqlalchemy" include nil nil [24 53])
+            ("sqlalchemy.types" include nil nil [54 104])
+            ("sqlalchemy.ext.declarative" include nil nil [105 160])
+            ("sqlalchemy" include nil nil [161 199])
+            ("sqlalchemy" include nil nil [202 238])
+            ("sqlalchemy.orm" include nil nil [239 278])
+            ("db_connect_str" variable nil nil [280 352])
+            ("engine" variable nil nil [353 403])
+            ("db_session" variable nil nil [404 442])
+            ("session" variable nil nil [443 465])
+            ("BaseModel" variable nil nil [468 498])
+            ("init_db" function nil nil [500 557])
+            ("drop_db" function nil nil [558 613])
+            ("User" type
+               (:superclasses ("BaseModel")
+                :members 
+                  ( ("__tablename__" variable nil (reparse-symbol indented_block_body) [645 667])
+                    ("id" variable nil (reparse-symbol indented_block_body) [673 713])
+                    ("name" variable nil (reparse-symbol indented_block_body) [718 741]))                  
+                :type "class")
+                nil [614 766])
+            ("init_db" code nil nil [767 776])
+            ("new_user" variable nil nil [778 805])
+            ("session" code nil nil [806 827])
+            ("query" variable nil nil [936 963])
+            ("print" code nil nil [965 976])
+            ("print" code nil nil [978 990])
+            ("for" code nil nil [991 1030])
+            ("print" code nil nil [1030 1042])
+            ("print" code nil nil [1043 1060])
+            ("print" code nil nil [1061 1085])
+            ("print" code nil nil [1086 1131])
+            ("print" code nil nil [1133 1145])
+            ("print" code nil nil [1146 1169])
+            ("print" code nil nil [1170 1211])
+            ("query2" variable nil nil [1213 1246])
+            ("print" code nil nil [1247 1265])
+            ("print" code nil nil [1266 1293])
+            ("print" code nil nil [1294 1322])
+            ("print" code nil nil [1323 1361])
+            ("print" code nil nil [1363 1433]))          
+      :file "model.py"
+      :pointmax 1434
+      :fsize 1433
+      :lastmodtime '(22296 24308 776374 6000)
+      :unmatched-syntax nil))
+  :file "!home!wood!git!AutoPurchase!autoEbay!python_auto!server!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

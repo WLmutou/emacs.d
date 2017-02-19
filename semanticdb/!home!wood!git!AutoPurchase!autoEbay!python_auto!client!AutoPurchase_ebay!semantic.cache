@@ -1,0 +1,356 @@
+;; Object AutoPurchase_ebay/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "AutoPurchase_ebay/"
+  :tables
+  (list
+    (semanticdb-table "autoPurchaseEbay.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("selenium" include nil nil [40 70])
+            ("selenium.webdriver.common.action_chains" include nil nil [71 135])
+            ("getpass" include nil nil [136 155])
+            ("time" include nil nil [136 155])
+            ("sys" include nil nil [156 178])
+            ("os" include nil nil [156 178])
+            ("platform" include nil nil [156 178])
+            ("string" include nil nil [179 192])
+            ("tkMessageBox" include nil nil [194 213])
+            ("requests" include nil nil [214 229])
+            ("json" include nil nil [230 241])
+            ("writeEbayLog" include nil nil [243 275])
+            ("getUSstate" include nil nil [308 340])
+            ("methods" include nil nil [375 396])
+            ("readFileEbay" include nil nil [397 457])
+            ("readFileEbay" include nil nil [459 494])
+            ("findColor" include nil nil [495 526])
+            ("checkAsinSku" include nil nil [560 597])
+            ("typecode" variable nil nil [641 679])
+            ("reload" code nil nil [680 691])
+            ("sys" code nil nil [692 724])
+            ("global" code nil nil [760 807])
+            ("userEmail" variable nil nil [808 824])
+            ("passWord" variable nil nil [850 866])
+            ("server_ip" variable nil nil [888 904])
+            ("ebay_user, ebay_pass" code nil nil [906 936])
+            ("info_server_ip, autokey" code nil nil [937 967])
+            ("configFileName" variable nil nil [969 998])
+            ("if" code nil nil [999 1620])
+            ("global" code nil nil [1622 1642])
+            ("purchasePrice" variable nil nil [1643 1660])
+            ("if" code nil nil [1662 1718])
+            ("server_port" variable nil nil [1718 1738])
+            ("login_username, login_password" code nil nil [1740 1794])
+            ("post_url" code nil nil [1795 1861])
+            ("login_url" code nil nil [1862 1929])
+            ("wget_url" code nil nil [1930 1993])
+            ("system_, sysUser" code nil nil [1996 2050])
+            ("profilePath" variable nil nil [2051 2067])
+            ("if" code nil nil [2068 2792])
+            ("if" code nil nil [2808 2868])
+            ("if" code nil nil [2869 2974])
+            ("profileName, files" code nil nil [2975 3000])
+            ("endWith" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [3013 3014])
+                ("endstring" variable nil (reparse-symbol function_parameters) [3015 3025]))              ) nil [3001 3124])
+            ("if" code nil nil [3126 3379])
+            ("messages" variable nil nil [3443 3500])
+            ("openBrowser" function (:documentation "首先尝试打开phantomjs,再尝试打开chrome，如果无法打开chrome再打开火狐浏览器 ") nil [3852 4848])
+            ("closeBrowser" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [4866 4872]))              ) nil [4849 4974])
+            ("getDigit" function (:arguments 
+              ( ("strs" variable nil (reparse-symbol function_parameters) [5076 5080]))              ) nil [5063 5383])
+            ("clickSelect" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [5401 5407])
+                ("select_id" variable nil (reparse-symbol function_parameters) [5408 5417])
+                ("infoName" variable nil (reparse-symbol function_parameters) [5418 5426])
+                ("infoDict" variable nil (reparse-symbol function_parameters) [5427 5435]))              ) nil [5385 7040])
+            ("is_num" function (:arguments 
+              ( ("strs" variable nil (reparse-symbol function_parameters) [7074 7078]))              ) nil [7063 7173])
+            ("findGoods" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [7268 7274])
+                ("infoDict" variable nil (reparse-symbol function_parameters) [7275 7283]))              ) nil [7254 12693])
+            ("clickChangeAddress" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [12797 12803])
+                ("changeAddress" variable nil (reparse-symbol function_parameters) [12804 12817]))              ) nil [12774 13663])
+            ("changeAddress" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [13757 13763])
+                ("infoDict" variable nil (reparse-symbol function_parameters) [13764 13772]))              ) nil [13739 21050])
+            ("isExistsFrame" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [21155 21161])
+                ("frame_id" variable nil (reparse-symbol function_parameters) [21162 21170])
+                ("chAddr" variable nil (reparse-symbol function_parameters) [21172 21178]))              ) nil [21137 21495])
+            ("\"\"\"
+def clickRecaddr(driver):
+    clickRecaddr = False
+    try:
+        driver.switch_to_default_content()
+    except Exception,e: logInfo(\"clickRecaddr switch to default Error,%s\"%e)
+    try:
+        driver.switch_to_frame(0)
+        clickRecaddr(driver)
+        clickRecaddr = True
+    except Exception,e:
+        logInfo(\"click Recaddr switch to frame 0 Error,%s\"%e)
+    if not clickRecaddr:
+        try:
+            driver.switch_to_frame(1)
+            clickRecaddr(driver)
+            clickRecaddr = True
+        except Exception,e:
+            logInfo(\"click Recaddr switch to frame 1 Error,%s\"%e)
+\"\"\"" code nil nil [21495 22103])
+            ("clickRecaddr" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [22122 22128]))              ) nil [22105 22369])
+            ("continuePay" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [22471 22477]))              ) nil [22455 23318])
+            ("payOnlyThis" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [23403 23409]))              ) nil [23387 24188])
+            ("addMessage" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [24290 24296]))              ) nil [24275 27890])
+            ("iframePay" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [27983 27989]))              ) nil [27969 30658])
+            ("confirmAndPay" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [30777 30783]))              ) nil [30759 31566])
+            ("selectPay" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [31651 31657])
+                ("userName" variable nil (reparse-symbol function_parameters) [31658 31666])
+                ("passWord" variable nil (reparse-symbol function_parameters) [31667 31675]))              ) nil [31637 37022])
+            ("move_to_element" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [37043 37049])
+                ("selector" variable nil (reparse-symbol function_parameters) [37051 37059]))              ) nil [37023 37224])
+            ("continueAbovefold" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [37304 37310]))              ) nil [37282 37781])
+            ("loginEbay" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [37896 37902])
+                ("ebay_user" variable nil (reparse-symbol function_parameters) [37903 37912])
+                ("ebay_pass" variable nil (reparse-symbol function_parameters) [37913 37922]))              ) nil [37882 40502])
+            ("submitLogin" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [40519 40525]))              ) nil [40503 43239])
+            ("judgeSuccessError" function
+               (:documentation "
+    ### 这根据purchasehistory的url来判断是否是同一个产品 ###
+    purchaseHistory_url = \"http://www.ebay.com/myb/PurchaseHistory\"
+    driver.get(purchaseHistory_url)
+    cur_url = driver.current_url
+    time_start = time.time()
+    while True:
+        if cur_url == purchaseHistory_url: break
+        time.sleep(3)
+        cur_url = driver.current_url
+        time_end = time.time()
+        if abs(time_end - time_start) > 60: break  #如果一分钟还没有跳转,则继续
+
+    item_div_css = \"div.order-r.my-row-r.item-list-all\"
+    
+    item_title_css = \"a.vip.item-title\"
+    purchase_success = False    
+    items,item_title, history_1_url = [],\"\",\"\"
+    items = fElementsByCss(driver,item_div_css)
+    if items: item_div = items[0]
+    if item_div:item_title = findElementByCss(driver,item_title_css,item_div)
+    if item_title:
+        history_1_url = item_title.get_attribute(\"href\")
+        logInfo(\"href: %s\"%history_1_url)
+    if history_1_url:
+        infoDict_url , url_order_id= \"\",\"\"
+        try: infoDict_url = infoDict.get(\"url\").split(\"?\")[0]
+        except Exception,e:logInfo(\"infoDcit url Error...,%s\"%e)
+        if infoDict_url:
+            url_order_id = infoDict_url.split(\"/\")[-1]
+        if url_order_id in history_1_url or infoDict_url in history_1_url :
+             purchase_success = True
+    return purchase_success
+    "
+                :arguments 
+                  ( ("driver" variable nil (reparse-symbol function_parameters) [43263 43269])
+                    ("infoDict" variable nil (reparse-symbol function_parameters) [43270 43278]))                  )
+                nil [43241 47283])
+            ("CheckAsinSkuIsExists" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [47424 47459]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [47410 47414]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [47397 47519])
+                    ("getcheck" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [47536 47540]))                          )
+                        (reparse-symbol indented_block_body) [47523 47641])
+                    ("checkRC" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [47657 47661])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [47662 47671])
+                            ("Asin" variable nil (reparse-symbol function_parameters) [47672 47676])
+                            ("skuname" variable nil (reparse-symbol function_parameters) [47685 47692])
+                            ("Order_id" variable nil (reparse-symbol function_parameters) [47700 47708])
+                            ("url" variable nil (reparse-symbol function_parameters) [47716 47719]))                          )
+                        (reparse-symbol indented_block_body) [47645 48340])
+                    ("insertRecord" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [48378 48382])
+                            ("Asin" variable nil (reparse-symbol function_parameters) [48383 48387])
+                            ("skuname" variable nil (reparse-symbol function_parameters) [48388 48395])
+                            ("url" variable nil (reparse-symbol function_parameters) [48396 48399])
+                            ("Order_id" variable nil (reparse-symbol function_parameters) [48400 48408]))                          )
+                        (reparse-symbol indented_block_body) [48361 48655])
+                    ("closeConn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [48779 48783]))                          )
+                        (reparse-symbol indented_block_body) [48765 48825]))                  
+                :type "class")
+                nil [47363 48825])
+            ("getPurchasePrice" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [48848 48854]))              ) nil [48827 50111])
+            ("LoopPurchaseEbay" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [50207 50227])
+                            ("self" variable nil (reparse-symbol indented_block_body) [50236 50260]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [50235 50239])
+                            ("infoList" variable nil (reparse-symbol function_parameters) [50240 50248])
+                            ("driver" variable nil (reparse-symbol function_parameters) [50249 50255]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [50222 50320])
+                    ("loopStart" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [50381 50385]))                          )
+                        (reparse-symbol indented_block_body) [50367 58035]))                  
+                :type "class")
+                nil [50192 58035])
+            ("csvFileList" function nil nil [58041 58284])
+            ("post_result" function (:arguments 
+              ( ("resultJson" variable nil (reparse-symbol function_parameters) [58302 58312]))              ) nil [58286 58652])
+            ("loop_post" function
+               (:documentation "如果没提交成功。则3秒后继续提交"
+                :arguments 
+                  ( ("resultJson" variable nil (reparse-symbol function_parameters) [58687 58697]))                  )
+                nil [58673 58885])
+            ("getInfo" function (:arguments 
+              ( ("rsession" variable nil (reparse-symbol function_parameters) [58902 58910]))              ) nil [58890 59140])
+            ("login_session" function nil nil [59141 59395])
+            ("getInfo_from_server_main" function nil nil [59459 60498])
+            ("if" code nil nil [60503 60561]))          
+      :file "autoPurchaseEbay.py"
+      :pointmax 60567
+      :fsize 62218
+      :lastmodtime '(22237 13522 315321 970000)
+      :unmatched-syntax nil)
+    (semanticdb-table "readFileEbay.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("writeEbayLog" include nil nil [40 72])
+            ("csv" include nil nil [73 83])
+            ("os" include nil nil [84 93])
+            ("chardet" include nil nil [94 108])
+            ("sys" include nil nil [109 119])
+            ("time" include nil nil [120 131])
+            ("xlrd" include nil nil [132 143])
+            ("datetime" include nil nil [144 159])
+            ("typecode" variable nil nil [162 200])
+            ("reload" code nil nil [201 212])
+            ("sys" code nil nil [213 245])
+            ("setCoding" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [261 269]))              ) nil [247 506])
+            ("filename" variable nil nil [508 526])
+            ("global" code nil nil [527 544])
+            ("global" code nil nil [545 571])
+            ("csvdata, goodCsvData" code nil nil [572 600])
+            ("order_date" variable nil nil [602 669])
+            ("server_ip" variable nil nil [671 701])
+            ("ebay_user" variable nil nil [702 731])
+            ("global" code nil nil [738 750])
+            ("iDict" variable nil nil [751 1439])
+            ("infoDict_list" function (:arguments 
+              ( ("infoDict" variable nil (reparse-symbol function_parameters) [1460 1468])
+                ("good" variable nil (reparse-symbol function_parameters) [1469 1473]))              ) nil [1442 2613])
+            ("writeNotGoodJson" function (:arguments 
+              ( ("infoDict" variable nil (reparse-symbol function_parameters) [2640 2648])
+                ("timenow" variable nil (reparse-symbol function_parameters) [2649 2656]))              ) nil [2619 3568])
+            ("writeCompletedJson" function (:arguments 
+              ( ("infoDict" variable nil (reparse-symbol function_parameters) [3592 3600])
+                ("completedDict" variable nil (reparse-symbol function_parameters) [3601 3614])
+                ("timenow" variable nil (reparse-symbol function_parameters) [3615 3622]))              ) nil [3569 4711])
+            ("readConfig" function (:arguments 
+              ( ("configFileName" variable nil (reparse-symbol function_parameters) [4734 4748]))              ) nil [4719 5183])
+            ("main" function nil nil [5185 5285])
+            ("if" code nil nil [5287 5325]))          
+      :file "readFileEbay.py"
+      :pointmax 5331
+      :fsize 5340
+      :lastmodtime '(22234 50132 541211 122000)
+      :unmatched-syntax nil)
+    (semanticdb-table "writeEbayLog.py"
+      :file "writeEbayLog.py"
+      :fsize 810
+      :lastmodtime '(22191 13015 250372 0))
+    (semanticdb-table "getUSstate.py"
+      :file "getUSstate.py"
+      :fsize 2556
+      :lastmodtime '(22191 13015 250372 0))
+    (semanticdb-table "findColor.py"
+      :file "findColor.py"
+      :fsize 1253
+      :lastmodtime '(22191 13015 250372 0))
+    (semanticdb-table "checkAsinSku.py"
+      :file "checkAsinSku.py"
+      :fsize 5087
+      :lastmodtime '(22209 18782 943419 0))
+    (semanticdb-table "methods.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("writeEbayLog" include nil nil [40 72])
+            ("clickByCss" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [164 170])
+                ("cssSelector" variable nil (reparse-symbol function_parameters) [172 183])
+                ("cssSelectorNode" variable nil (reparse-symbol function_parameters) [185 200]))              ) nil [149 486])
+            ("clickByXpath" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [581 587])
+                ("xpathName" variable nil (reparse-symbol function_parameters) [589 598])
+                ("xpathNameNode" variable nil (reparse-symbol function_parameters) [600 613]))              ) nil [564 884])
+            ("inputByXpath" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [978 984])
+                ("xpathName" variable nil (reparse-symbol function_parameters) [986 995])
+                ("inputText" variable nil (reparse-symbol function_parameters) [997 1006])
+                ("xpathNode" variable nil (reparse-symbol function_parameters) [1008 1017]))              ) nil [961 1371])
+            ("inputByCss" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [1471 1477])
+                ("cssSelector" variable nil (reparse-symbol function_parameters) [1478 1489])
+                ("inputText" variable nil (reparse-symbol function_parameters) [1490 1499])
+                ("cssSelectorNode" variable nil (reparse-symbol function_parameters) [1501 1516]))              ) nil [1456 1906])
+            ("findElementByCss" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [2006 2012])
+                ("cssSelector" variable nil (reparse-symbol function_parameters) [2013 2024])
+                ("cssSelectorNode" variable nil (reparse-symbol function_parameters) [2026 2041]))              ) nil [1985 2388])
+            ("fElementsByCss" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [2493 2499])
+                ("cssSelector" variable nil (reparse-symbol function_parameters) [2500 2511])
+                ("cssSelectorNode" variable nil (reparse-symbol function_parameters) [2513 2528]))              ) nil [2474 2881])
+            ("findElementByXpath" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [2987 2993])
+                ("xpathName" variable nil (reparse-symbol function_parameters) [2995 3004])
+                ("xpathNameNode" variable nil (reparse-symbol function_parameters) [3006 3019]))              ) nil [2964 3337])
+            ("findElementById" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [3437 3443])
+                ("idSelector" variable nil (reparse-symbol function_parameters) [3444 3454])
+                ("idSelectorNode" variable nil (reparse-symbol function_parameters) [3456 3470]))              ) nil [3417 3826])
+            ("clickElement" function (:arguments 
+              ( ("webElement" variable nil (reparse-symbol function_parameters) [3922 3932]))              ) nil [3905 4203]))          
+      :file "methods.py"
+      :pointmax 4212
+      :fsize 4285
+      :lastmodtime '(22234 38368 553271 15000)
+      :unmatched-syntax nil))
+  :file "!home!wood!git!AutoPurchase!autoEbay!python_auto!client!AutoPurchase_ebay!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

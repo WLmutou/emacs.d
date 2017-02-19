@@ -1,0 +1,16 @@
+;; Object KDTPay/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "KDTPay/"
+  :tables
+  (list
+    (semanticdb-table "settings.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "settings.py"
+      :pointmax 0
+      :fsize 5373
+      :lastmodtime '(22620 29081 38802 142000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python!KDTPay!KDTPay!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

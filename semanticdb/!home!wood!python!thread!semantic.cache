@@ -1,0 +1,80 @@
+;; Object thread/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "thread/"
+  :tables
+  (list
+    (semanticdb-table "thread_name.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("threading" include nil nil [41 57])
+            ("multiprocessing" include nil nil [58 80])
+            ("time" include nil nil [81 92])
+            ("mylock" variable nil nil [93 119])
+            ("num" variable nil nil [120 127])
+            ("myThread" type
+               (:superclasses ("threading.Thread")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("threading" code nil (reparse-symbol indented_block_body) [201 232])
+                            ("self" variable nil (reparse-symbol indented_block_body) [241 259]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [181 185])
+                            ("name" variable nil (reparse-symbol function_parameters) [186 190]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [168 260])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [273 277]))                          )
+                        (reparse-symbol indented_block_body) [265 727]))                  
+                :type "class")
+                nil [130 727])
+            ("judge_thread_status" function (:arguments 
+              ( ("threadName" variable nil (reparse-symbol function_parameters) [751 761]))              ) nil [727 860])
+            ("nameProcess" type
+               (:members 
+                  ( ("prun" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [895 899]))                          )
+                        (reparse-symbol indented_block_body) [886 1041]))                  
+                :type "class")
+                nil [861 1041])
+            ("test" function nil nil [1041 1602])
+            ("if" code nil nil [1612 1650]))          
+      :file "thread_name.py"
+      :pointmax 1659
+      :fsize 1658
+      :lastmodtime '(22213 29789 638671 153000)
+      :unmatched-syntax nil)
+    (semanticdb-table "thread_get_info.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("threading" include nil nil [40 56])
+            ("multiprocessing" include nil nil [57 92])
+            ("requests" include nil nil [93 108])
+            ("time" include nil nil [109 120])
+            ("url" variable nil nil [122 159])
+            ("mget" function nil nil [161 220])
+            ("main" function nil nil [226 440])
+            ("if" code nil nil [441 479]))          
+      :file "thread_get_info.py"
+      :pointmax 489
+      :fsize 478
+      :lastmodtime '(22219 46044 749974 494000)
+      :unmatched-syntax nil)
+    (semanticdb-table "text.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("mylist" variable nil nil [3 3369])
+            ("print" code nil nil [3370 3387]))          
+      :file "text.py"
+      :pointmax 3388
+      :fsize 3387
+      :lastmodtime '(22219 51555 637946 437000)
+      :unmatched-syntax '((NAME 61422 . 61428) ($EOI 64807 . 64807))))
+  :file "!home!wood!python!thread!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

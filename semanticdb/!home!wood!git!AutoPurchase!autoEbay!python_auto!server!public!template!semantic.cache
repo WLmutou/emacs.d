@@ -1,0 +1,245 @@
+;; Object template/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "template/"
+  :tables
+  (list
+    (semanticdb-table "info_page.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("最近更新到数据库的文件:" section nil nil [132 336])
+            ("$(document).ready(function() {
+        $.ajax({
+        type:\"get\",
+        url: \"/Manager/UpdateFile/\",
+        datatype: \"json\",
+        success: function(data) {
+        var datas = JSON.parse(data); 
+        $.each(datas,function(index,value){
+        $(\"#UpdateFileList\").append(\"<tr>\" +
+          \"<td>文件名: <a href='#'>\" +  value.filename + \"" section (:members 
+              ( ("\" +  value.filename + \"" anchor nil nil [705 708])
+                ("\" + value.num + \"" anchor nil nil [772 775])
+                ("\"+ value.statu0 + \"" anchor nil nil [833 836]))              ) nil [336 1311])
+            ("$(\"#query_id\").click(function(){
+            $(\"#infoid\").empty();
+            $.ajax({
+            type: \"get\",
+            url: \"/QueryData/\",
+            datatype: \"json\",
+            data:{\"lastnum\":document.getElementById(\"lastnum\").value},
+            success: function (data) {
+            //alert(typeof(data));
+            //console.log(data);
+            datas = $.parseJSON(data);
+            $(\"#infoid\").append(\"<tr class='success'>\" +
+              \"<td>id" section nil nil [1311 2536]))          
+      :file "info_page.html"
+      :pointmax 2536
+      :fsize 2607
+      :lastmodtime '(22234 38500 489270 344000)
+      :unmatched-syntax nil)
+    (semanticdb-table "login.html"
+      :major-mode 'html-mode
+      :tags nil
+      :file "login.html"
+      :pointmax 1393
+      :fsize 1569
+      :lastmodtime '(22250 30897 475134 847000)
+      :unmatched-syntax nil)
+    (semanticdb-table "base.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("html,body{width:100%;}
+              body{
+              background:#d6d3d6 url(\"{{ static_url('images/o_kubrickbg.jpg')}}\") repeat-y center;
+              background-size:80%;
+              }
+              #mybody { width:82%;left:9%;position:relative;}
+              #header{ left:10%; margin:0 auto; width:100%; }
+              #main{ width:100%;text-align:center; overflow:auto;}
+        #middle{ margin-left:2%; width:96%;}" section nil nil [265 336])
+            ("html,body{width:100%;}
+              body{
+              background:#d6d3d6 url(\"{{ static_url('images/o_kubrickbg.jpg')}}\") repeat-y center;
+              background-size:80%;
+              }
+              #mybody { width:82%;left:9%;position:relative;}
+              #header{ left:10%; margin:0 auto; width:100%; }
+              #main{ width:100%;text-align:center; overflow:auto;}
+        #middle{ margin-left:2%; width:96%;}" section nil nil [336 1028])
+            ("############################ head ###############################-->
+<div class=\"row-fluid\">
+  <div class=\"span12\" id=\"header\">
+    <div class=\"navbar navbar-inverse \">
+      <div class=\"navbar-inner\">
+        <div class=\"container-fluid\">
+          <button type=\"button\" class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-collapse\">
+            <span class=\"icon-bar\">" section (:members 
+              ( ("信息" anchor nil nil [1833 1836])
+                ("上传" anchor nil nil [1877 1880])
+                ("结果" anchor nil nil [1928 1931])
+                ("退出" anchor nil nil [2034 2037]))              ) nil [1028 3081]))          
+      :file "base.html"
+      :pointmax 3081
+      :fsize 3104
+      :lastmodtime '(22233 36947 141611 910000)
+      :unmatched-syntax nil)
+    (semanticdb-table "action.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("$(function(){
+	$('#upload').html5uploader({
+		auto:false,
+		multi:true,
+		removeTimeout:9999999,
+		url:'/UploadFile/',
+		onUploadStart:function(){
+			//alert('开始上传');
+			},
+		onInit:function(){
+			//alert('初始化');
+			},
+		onUploadComplete:function(){
+                        alert('上传完成');
+                        //$(\"#error_to_pop_up\").bPopup();                        
+                        window.location = \"/Action/\"
+			}
+		});
+});" section nil nil [134 213])
+            ("$(function(){
+	$('#upload').html5uploader({
+		auto:false,
+		multi:true,
+		removeTimeout:9999999,
+		url:'/UploadFile/',
+		onUploadStart:function(){
+			//alert('开始上传');
+			},
+		onInit:function(){
+			//alert('初始化');
+			},
+		onUploadComplete:function(){
+                        alert('上传完成');
+                        //$(\"#error_to_pop_up\").bPopup();                        
+                        window.location = \"/Action/\"
+			}
+		});
+});" section nil nil [213 306])
+            ("$(function(){
+	$('#upload').html5uploader({
+		auto:false,
+		multi:true,
+		removeTimeout:9999999,
+		url:'/UploadFile/',
+		onUploadStart:function(){
+			//alert('开始上传');
+			},
+		onInit:function(){
+			//alert('初始化');
+			},
+		onUploadComplete:function(){
+                        alert('上传完成');
+                        //$(\"#error_to_pop_up\").bPopup();                        
+                        window.location = \"/Action/\"
+			}
+		});
+});" section nil nil [306 375])
+            ("$(function(){
+	$('#upload').html5uploader({
+		auto:false,
+		multi:true,
+		removeTimeout:9999999,
+		url:'/UploadFile/',
+		onUploadStart:function(){
+			//alert('开始上传');
+			},
+		onInit:function(){
+			//alert('初始化');
+			},
+		onUploadComplete:function(){
+                        alert('上传完成');
+                        //$(\"#error_to_pop_up\").bPopup();                        
+                        window.location = \"/Action/\"
+			}
+		});
+});" section (:members 
+              ( ("今天已经上传的文件列表：" section nil nil [1254 1455]))              ) nil [375 1455])
+            ("$(document).ready(function () {
+          $.ajax({
+          type: \"get\",
+          url: \"/FileList/\",
+          datatype:\"json\",
+          success: function (data){
+             datas = data.todayFileList
+            $.each(datas,function(index,value){
+            $(\"#fileList\").append(\"<tr><td>\"+
+              index+\". <a href='/Download/\"+value+\"'>\"+value+\"" section (:members 
+              ( ("\"+value+\"" anchor nil nil [1835 1838])
+                ("更新到数据库" anchor nil nil [1904 1907])
+                ("删除文件" anchor nil nil [1971 1974]))              ) nil [1455 2394])
+            ("alert(\"{{error}}\");
+  window.location = \"/Action/\";" section nil nil [2394 2534]))          
+      :file "action.html"
+      :pointmax 2534
+      :fsize 2621
+      :lastmodtime '(22233 37291 397610 158000)
+      :unmatched-syntax nil)
+    (semanticdb-table "result.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("$(function() {
+    $(\"#timeselect\").datepicker();
+  });
+  $(function() {
+    $(\"#putDate\").datepicker();
+  });" section nil nil [129 192])
+            ("$(function() {
+    $(\"#timeselect\").datepicker();
+  });
+  $(function() {
+    $(\"#putDate\").datepicker();
+  });" section nil nil [192 335])
+            ("$(function() {
+    $(\"#timeselect\").datepicker();
+  });
+  $(function() {
+    $(\"#putDate\").datepicker();
+  });" section nil nil [335 403])
+            ("$(function() {
+    $(\"#timeselect\").datepicker();
+  });
+  $(function() {
+    $(\"#putDate\").datepicker();
+  });" section nil nil [403 820])
+            ("$(document).ready(function(){
+  $(\"#ex_id\").click(function() {
+  $.post(\"/Result/\",
+  {\"filename\":\"myfile.csv\"},
+  function(data, status){
+    console.log(\"yes\");
+  }
+  );
+  });
+  });" section (:members 
+              ( ("导出数据:" section (:members 
+                  ( ("根据文件名:" section nil nil [1262 1393])
+                    ("根据时间&nbsp:" section nil nil [1393 2108]))                  ) nil [1060 2108]))              ) nil [820 2108])
+            ("$(\"#error_to_pop_up\").bPopup();" section nil nil [2108 2551])
+            ("$(document).ready(function() {
+  $.ajax({
+  type:\"get\",
+  url: \"/Result/InfoDict/\",
+  datatype: \"json\",
+  success: function (data) {
+  //alert(typeof data)
+  var datas = JSON.parse(data);
+  $(\"#infodict\").append(\"<tr>\" +
+        \"<th>id" section nil nil [2551 3320]))          
+      :file "result.html"
+      :pointmax 3320
+      :fsize 3539
+      :lastmodtime '(22242 35626 667184 416000)
+      :unmatched-syntax nil))
+  :file "!home!wood!git!AutoPurchase!autoEbay!python_auto!server!public!template!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

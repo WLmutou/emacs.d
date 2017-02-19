@@ -1,0 +1,16 @@
+;; Object Pro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Pro/"
+  :tables
+  (list
+    (semanticdb-table "product_info.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "product_info.py"
+      :pointmax 5
+      :fsize 4
+      :lastmodtime '(22275 54327 791437 174000)
+      :unmatched-syntax nil))
+  :file "!home!wood!python!Pro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

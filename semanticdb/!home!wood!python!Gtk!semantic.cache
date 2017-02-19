@@ -1,0 +1,67 @@
+;; Object Gtk/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Gtk/"
+  :tables
+  (list
+    (semanticdb-table "test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [3 12])
+            ("gi" include nil nil [13 22])
+            ("gi" code nil nil [23 55])
+            ("gi.repository" include nil nil [56 99])
+            ("GTK_Main" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("window" variable nil (reparse-symbol indented_block_body) [156 200])
+                            ("window" code nil (reparse-symbol indented_block_body) [209 241])
+                            ("window" code nil (reparse-symbol indented_block_body) [250 282])
+                            ("window" code nil (reparse-symbol indented_block_body) [291 345])
+                            ("vbox" variable nil (reparse-symbol indented_block_body) [354 371])
+                            ("window" code nil (reparse-symbol indented_block_body) [380 396])
+                            ("self" variable nil (reparse-symbol indented_block_body) [405 429])
+                            ("vbox" code nil (reparse-symbol indented_block_body) [438 481])
+                            ("self" variable nil (reparse-symbol indented_block_body) [490 523])
+                            ("self" code nil (reparse-symbol indented_block_body) [532 579])
+                            ("vbox" code nil (reparse-symbol indented_block_body) [588 609])
+                            ("window" code nil (reparse-symbol indented_block_body) [618 635])
+                            ("self" variable nil (reparse-symbol indented_block_body) [644 702])
+                            ("fakesink" variable nil (reparse-symbol indented_block_body) [711 769])
+                            ("self" code nil (reparse-symbol indented_block_body) [778 826])
+                            ("bus" variable nil (reparse-symbol indented_block_body) [835 862])
+                            ("bus" code nil (reparse-symbol indented_block_body) [871 893])
+                            ("bus" code nil (reparse-symbol indented_block_body) [902 941]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [141 145]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [128 942])
+                    ("start_stop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [961 965])
+                            ("w" variable nil (reparse-symbol function_parameters) [967 968]))                          )
+                        (reparse-symbol indented_block_body) [946 1458])
+                    ("on_message" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1494 1498])
+                            ("bus" variable nil (reparse-symbol function_parameters) [1500 1503])
+                            ("message" variable nil (reparse-symbol function_parameters) [1505 1512]))                          )
+                        (reparse-symbol indented_block_body) [1479 1894]))                  
+                :type "class")
+                nil [100 1894])
+            ("Gst" code nil nil [1908 1922])
+            ("GTK_Main" code nil nil [1923 1933])
+            ("GObject" code nil nil [1934 1956])
+            ("Gtk" code nil nil [1957 1967]))          
+      :file "test.py"
+      :pointmax 1968
+      :fsize 1967
+      :lastmodtime '(22435 57723 108016 464000)
+      :unmatched-syntax '((INDENT_BLOCK 1920 . 1962))))
+  :file "!home!wood!python!Gtk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

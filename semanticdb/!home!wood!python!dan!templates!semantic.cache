@@ -1,0 +1,438 @@
+;; Object templates/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "templates/"
+  :tables
+  (list
+    (semanticdb-table "flowchart.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("{% endblock %}
+
+{% block middle %}
+
+        <script>
+            window.onload = function () {
+                var btn = document.getElementById(\"run\"),
+                    cd = document.getElementById(\"code\"),
+                    chart;
+
+                (btn.onclick = function () {
+                    var code = cd.value;
+
+                    if (chart) {
+                      chart.clean();
+                    }
+
+                    chart = flowchart.parse(code);
+                    chart.drawSVG('canvas', {
+                      // 'x': 30,
+                      // 'y': 50,
+                      'line-width': 3,
+                      'line-length': 50,
+                      'text-margin': 10,
+                      'font-size': 14,
+                      'font': 'normal',
+                      'font-family': 'Helvetica',
+                      'font-weight': 'normal',
+                      'font-color': 'black',
+                      'line-color': 'black',
+                      'element-color': 'black',
+                      'fill': 'white',
+                      'yes-text': 'yes',
+                      'no-text': 'no',
+                      'arrow-end': 'block',
+                      'scale': 1,
+                      'symbols': {
+ 
+                        'end':{
+                          'class': 'end-element'
+                        }
+                      },
+                      'flowstate' : {
+    
+                      }
+                    });
+
+                    $('[id^=sub1]').click(function(){
+                      alert('info here');
+                    });
+                })();
+
+            };" section nil nil [46 123])
+            ("{% endblock %}
+
+{% block middle %}
+
+        <script>
+            window.onload = function () {
+                var btn = document.getElementById(\"run\"),
+                    cd = document.getElementById(\"code\"),
+                    chart;
+
+                (btn.onclick = function () {
+                    var code = cd.value;
+
+                    if (chart) {
+                      chart.clean();
+                    }
+
+                    chart = flowchart.parse(code);
+                    chart.drawSVG('canvas', {
+                      // 'x': 30,
+                      // 'y': 50,
+                      'line-width': 3,
+                      'line-length': 50,
+                      'text-margin': 10,
+                      'font-size': 14,
+                      'font': 'normal',
+                      'font-family': 'Helvetica',
+                      'font-weight': 'normal',
+                      'font-color': 'black',
+                      'line-color': 'black',
+                      'element-color': 'black',
+                      'fill': 'white',
+                      'yes-text': 'yes',
+                      'no-text': 'no',
+                      'arrow-end': 'block',
+                      'scale': 1,
+                      'symbols': {
+ 
+                        'end':{
+                          'class': 'end-element'
+                        }
+                      },
+                      'flowstate' : {
+    
+                      }
+                    });
+
+                    $('[id^=sub1]').click(function(){
+                      alert('info here');
+                    });
+                })();
+
+            };" section nil nil [123 250])
+            ("window.onload = function () {
+                var btn = document.getElementById(\"run\"),
+                    cd = document.getElementById(\"code\"),
+                    chart;
+
+                (btn.onclick = function () {
+                    var code = cd.value;
+
+                    if (chart) {
+                      chart.clean();
+                    }
+
+                    chart = flowchart.parse(code);
+                    chart.drawSVG('canvas', {
+                      // 'x': 30,
+                      // 'y': 50,
+                      'line-width': 3,
+                      'line-length': 50,
+                      'text-margin': 10,
+                      'font-size': 14,
+                      'font': 'normal',
+                      'font-family': 'Helvetica',
+                      'font-weight': 'normal',
+                      'font-color': 'black',
+                      'line-color': 'black',
+                      'element-color': 'black',
+                      'fill': 'white',
+                      'yes-text': 'yes',
+                      'no-text': 'no',
+                      'arrow-end': 'block',
+                      'scale': 1,
+                      'symbols': {
+ 
+                        'end':{
+                          'class': 'end-element'
+                        }
+                      },
+                      'flowstate' : {
+    
+                      }
+                    });
+
+                    $('[id^=sub1]').click(function(){
+                      alert('info here');
+                    });
+                })();
+
+            };" section nil nil [250 2503]))          
+      :file "flowchart.html"
+      :pointmax 2503
+      :fsize 2502
+      :lastmodtime '(22214 43215 991657 187000)
+      :unmatched-syntax nil)
+    (semanticdb-table "base.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("$(document).ready(function () {
+    $('.dropdown-toggle').dropdown();
+  });" section nil nil [134 213])
+            ("$(document).ready(function () {
+    $('.dropdown-toggle').dropdown();
+  });" section nil nil [213 295])
+            ("$(document).ready(function () {
+    $('.dropdown-toggle').dropdown();
+  });" section nil nil [295 373])
+            ("$(document).ready(function () {
+    $('.dropdown-toggle').dropdown();
+  });" section nil nil [373 457])
+            ("$(document).ready(function () {
+    $('.dropdown-toggle').dropdown();
+  });" section nil nil [457 1214])
+            ("$(document).ready(function () {
+    $('.dropdown-toggle').dropdown();
+  });" section nil nil [1214 1341])
+            ("jQuery(function($){
+        var url = \"http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=\"+Math.random();  
+        $.getJSON(url, function(data){
+            var fromIp = data.Ip;
+            var url = document.referrer;
+            //var fromIp = ip;
+            //alert(fromIp);
+    $.ajax({
+        type:\"POST\",
+        url:\"/save/FromUrl\",
+        data:{\"fromurl\":url,\"fromIp\":fromIp},
+        success: function(msg){
+       }
+    });    
+        });
+   });" section nil nil [1341 1446])
+            ("jQuery(function($){
+        var url = \"http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=\"+Math.random();  
+        $.getJSON(url, function(data){
+            var fromIp = data.Ip;
+            var url = document.referrer;
+            //var fromIp = ip;
+            //alert(fromIp);
+    $.ajax({
+        type:\"POST\",
+        url:\"/save/FromUrl\",
+        data:{\"fromurl\":url,\"fromIp\":fromIp},
+        success: function(msg){
+       }
+    });    
+        });
+   });" section nil nil [1446 1542])
+            ("jQuery(function($){
+        var url = \"http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=\"+Math.random();  
+        $.getJSON(url, function(data){
+            var fromIp = data.Ip;
+            var url = document.referrer;
+            //var fromIp = ip;
+            //alert(fromIp);
+    $.ajax({
+        type:\"POST\",
+        url:\"/save/FromUrl\",
+        data:{\"fromurl\":url,\"fromIp\":fromIp},
+        success: function(msg){
+       }
+    });    
+        });
+   });" section nil nil [1542 1640])
+            ("jQuery(function($){
+        var url = \"http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=\"+Math.random();  
+        $.getJSON(url, function(data){
+            var fromIp = data.Ip;
+            var url = document.referrer;
+            //var fromIp = ip;
+            //alert(fromIp);
+    $.ajax({
+        type:\"POST\",
+        url:\"/save/FromUrl\",
+        data:{\"fromurl\":url,\"fromIp\":fromIp},
+        success: function(msg){
+       }
+    });    
+        });
+   });" section nil nil [1640 1734])
+            ("jQuery(function($){
+        var url = \"http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=\"+Math.random();  
+        $.getJSON(url, function(data){
+            var fromIp = data.Ip;
+            var url = document.referrer;
+            //var fromIp = ip;
+            //alert(fromIp);
+    $.ajax({
+        type:\"POST\",
+        url:\"/save/FromUrl\",
+        data:{\"fromurl\":url,\"fromIp\":fromIp},
+        success: function(msg){
+       }
+    });    
+        });
+   });" section nil nil [1734 1835])
+            ("jQuery(function($){
+        var url = \"http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=\"+Math.random();  
+        $.getJSON(url, function(data){
+            var fromIp = data.Ip;
+            var url = document.referrer;
+            //var fromIp = ip;
+            //alert(fromIp);
+    $.ajax({
+        type:\"POST\",
+        url:\"/save/FromUrl\",
+        data:{\"fromurl\":url,\"fromIp\":fromIp},
+        success: function(msg){
+       }
+    });    
+        });
+   });" section nil nil [1835 1942])
+            ("jQuery(function($){
+        var url = \"http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=\"+Math.random();  
+        $.getJSON(url, function(data){
+            var fromIp = data.Ip;
+            var url = document.referrer;
+            //var fromIp = ip;
+            //alert(fromIp);
+    $.ajax({
+        type:\"POST\",
+        url:\"/save/FromUrl\",
+        data:{\"fromurl\":url,\"fromIp\":fromIp},
+        success: function(msg){
+       }
+    });    
+        });
+   });" section nil nil [1942 2046])
+            ("jQuery(function($){
+        var url = \"http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=\"+Math.random();  
+        $.getJSON(url, function(data){
+            var fromIp = data.Ip;
+            var url = document.referrer;
+            //var fromIp = ip;
+            //alert(fromIp);
+    $.ajax({
+        type:\"POST\",
+        url:\"/save/FromUrl\",
+        data:{\"fromurl\":url,\"fromIp\":fromIp},
+        success: function(msg){
+       }
+    });    
+        });
+   });" section nil nil [2046 2152])
+            ("jQuery(function($){
+        var url = \"http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=\"+Math.random();  
+        $.getJSON(url, function(data){
+            var fromIp = data.Ip;
+            var url = document.referrer;
+            //var fromIp = ip;
+            //alert(fromIp);
+    $.ajax({
+        type:\"POST\",
+        url:\"/save/FromUrl\",
+        data:{\"fromurl\":url,\"fromIp\":fromIp},
+        success: function(msg){
+       }
+    });    
+        });
+   });" section nil nil [2152 2244])
+            ("jQuery(function($){
+        var url = \"http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=\"+Math.random();  
+        $.getJSON(url, function(data){
+            var fromIp = data.Ip;
+            var url = document.referrer;
+            //var fromIp = ip;
+            //alert(fromIp);
+    $.ajax({
+        type:\"POST\",
+        url:\"/save/FromUrl\",
+        data:{\"fromurl\":url,\"fromIp\":fromIp},
+        success: function(msg){
+       }
+    });    
+        });
+   });" section (:members 
+              ( ("{% if session.userName %}
+		    <h1><a href=\"/manager/AllManage\">{{ session.userName }}" anchor nil nil [2929 2932])
+                ("{{ session.userName }}" section (:members 
+                  ( ("{{ session.userName }}" anchor nil nil [3093 3096]))                  ) nil [3089 3175])
+                ("DanMutou" section (:members 
+                  ( ("首页" anchor nil nil [3426 3429])
+                    ("首页" section (:members 
+                      ( ("分类" anchor nil nil [3490 3493]))                      ) nil [3438 3557])
+                    ("分类" section nil nil [3557 3697]))                  ) nil [3175 3697]))              ) nil [2244 3697])
+            ("$(document).ready(function () {
+			     $.ajax({
+			         url:\"/Category/get\",
+              			 success: function(data){
+			             var datas = data.trim().split(\" \");
+			             $.each(datas, function(index,value) {
+			                $(\"#dropdown_tag\").append(\"<li><a href='/category/\"+value.replace(\"/\",\"_\")+\"'>\"+value+\"" section (:members 
+              ( ("\"+value+\"" anchor nil nil [4035 4038])
+                ("Linux/Unix" anchor nil nil [4294 4297])
+                ("收藏" anchor nil nil [4408 4411])
+                ("收藏" section (:members 
+                  ( ("关于" anchor nil nil [4463 4466]))                  ) nil [4431 4480])
+                ("关于" section (:members 
+                  ( ("流程图" anchor nil nil [4530 4533]))                  ) nil [4480 4551])
+                ("流程图" section (:members 
+                  ( ("{{ session.userName }}" anchor nil nil [4683 4687]))                  ) nil [4551 4743])
+                ("{{ session.userName }}" section (:members 
+                  ( ("{{ session.userName }}" anchor nil nil [4862 4865])
+                    ("注销" anchor nil nil [4996 4999])
+                    ("登录" anchor nil nil [5074 5078]))                  ) nil [4743 5134])
+                ("登录" section (:members 
+                  ( ("登录" anchor nil nil [5233 5236])
+                    ("注册" anchor nil nil [5340 5343]))                  ) nil [5134 5677])
+                ("标题" section nil nil [5677 5819])
+                ("标题" section (:members 
+                  ( ("上一页" anchor nil nil [6064 6067])
+                    ("1" anchor nil nil [6112 6115])
+                    ("2" anchor nil nil [6158 6161])
+                    ("3" anchor nil nil [6204 6207])
+                    ("4" anchor nil nil [6250 6253])
+                    ("下一页" anchor nil nil [6297 6300]))                  ) nil [5819 6420]))              ) nil [3697 6420])
+            ("$(function(){
+		  $('button#searchBtn').bind('click', function() {
+		     $.ajax({
+			type:\"POST\",
+			url:\"/_get_search_word\",
+	                data:{words:$('input[name]=\"words\"').val()},
+	                success:function(){},
+	                dataType:\"json\"
+	            });
+	         });
+	      });" section nil nil [6420 7242])
+            ("$(document).ready(function () {
+		      $.ajax({
+		        url:\"/TagName/get\",
+              	        success: function(data){
+		           var datas = data.trim().split(\" \");
+		           $.each(datas, function(index,value) {
+		              $(\"#tag_name\").append(\"<a  href='/tagname/\"+value.replace(\"/\",\"_\")+\"'>\"+value+\"" section (:members 
+              ( ("\"+value+\"" anchor nil nil [7561 7565]))              ) nil [7242 7917])
+            ("$(document).ready(function () {
+		      $.ajax({
+		        url:\"/links/get\",
+              	        success: function(data){
+		           var datas = data.trim().split(\"\\r\\n\");
+		           $.each(datas, function(index,value) {
+		              $(\"#linkid\").append(\"<li><a  target='__blank' href='\"+value.replace(\" \",\"\")+\"'>\"+value.replace(\"http://\",\"\").replace(\"https://\",\"\")+\"" section (:members 
+              ( ("顶部" anchor nil nil [8875 8878])
+                ("Privacy DanMutou" anchor nil nil [9004 9007])
+                ("Flask" section (:members 
+                  ( ("下载" anchor nil nil [9612 9615])
+                    ("下载" anchor nil nil [9664 9667])
+                    ("下载" anchor nil nil [9737 9740])
+                    ("下载" anchor nil nil [9790 9793])
+                    ("下载" anchor nil nil [9925 9928])
+                    ("下载" anchor nil nil [10007 10010])
+                    ("下载" anchor nil nil [10069 10072])
+                    ("下载" anchor nil nil [10142 10145]))                  ) nil [9135 11213]))              ) nil [7917 11213])
+            ("" section nil nil [11213 11302])
+            ("" section nil nil [11302 11416])
+            ("" section nil nil [11416 11536])
+            ("" section nil nil [11536 11664])
+            ("" section nil nil [11664 11785]))          
+      :file "base.html"
+      :pointmax 11785
+      :fsize 12164
+      :lastmodtime '(22245 18496 948606 643000)
+      :unmatched-syntax nil))
+  :file "!home!wood!python!dan!templates!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

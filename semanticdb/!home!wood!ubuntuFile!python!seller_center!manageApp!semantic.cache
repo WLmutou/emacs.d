@@ -1,0 +1,201 @@
+;; Object manageApp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "manageApp/"
+  :tables
+  (list
+    (semanticdb-table "models.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("django.db" include nil nil [18 46])
+            ("django.utils" include nil nil [48 81])
+            ("UploadFileRecorde" type
+               (:documentation " 记录上传的文件 "
+                :superclasses ("models.Model")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [178 237])
+                    ("serial_number" variable nil (reparse-symbol indented_block_body) [242 315])
+                    ("filename" variable nil (reparse-symbol indented_block_body) [320 404])
+                    ("file_path" variable nil (reparse-symbol indented_block_body) [409 480])
+                    ("file_statue" variable nil (reparse-symbol indented_block_body) [485 557])
+                    ("error_msg" variable nil (reparse-symbol indented_block_body) [574 646])
+                    ("uploadtime" variable nil (reparse-symbol indented_block_body) [652 712])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [738 770]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [718 771])
+                    ("__unicode__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [791 795]))                          )
+                        (reparse-symbol indented_block_body) [775 827]))                  
+                :type "class")
+                nil [115 827])
+            ("InventoryUploadRecorde" type
+               (:documentation " Inventory 上传文件记录 "
+                :superclasses ("models.Model")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [908 967])
+                    ("filename" variable nil (reparse-symbol indented_block_body) [972 1056])
+                    ("file_path" variable nil (reparse-symbol indented_block_body) [1061 1132])
+                    ("file_statue" variable nil (reparse-symbol indented_block_body) [1137 1209])
+                    ("error_msg" variable nil (reparse-symbol indented_block_body) [1226 1298])
+                    ("uploadtime" variable nil (reparse-symbol indented_block_body) [1304 1364])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [1390 1427]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [1370 1428])
+                    ("__unicode__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1448 1452]))                          )
+                        (reparse-symbol indented_block_body) [1432 1484]))                  
+                :type "class")
+                nil [831 1484])
+            ("FilenameToStorename" type
+               (:documentation " 文件名与店铺的对应 "
+                :superclasses ("models.Model")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [1555 1621])
+                    ("filename" variable nil (reparse-symbol indented_block_body) [1626 1691])
+                    ("serial_number" variable nil (reparse-symbol indented_block_body) [1696 1783])
+                    ("gateway_name" variable nil (reparse-symbol indented_block_body) [1788 1863])
+                    ("storename" variable nil (reparse-symbol indented_block_body) [1891 1967])
+                    ("manager" variable nil (reparse-symbol indented_block_body) [1972 2049])
+                    ("email" variable nil (reparse-symbol indented_block_body) [2076 2165])
+                    ("new_card" variable nil (reparse-symbol indented_block_body) [2191 2268])
+                    ("kdt_card" variable nil (reparse-symbol indented_block_body) [2298 2375])
+                    ("old_card" variable nil (reparse-symbol indented_block_body) [2405 2482])
+                    ("seller_id" variable nil (reparse-symbol indented_block_body) [2487 2563])
+                    ("amazon_key_id" variable nil (reparse-symbol indented_block_body) [2568 2644])
+                    ("amazon_key" variable nil (reparse-symbol indented_block_body) [2649 2725])
+                    ("password" variable nil (reparse-symbol indented_block_body) [2730 2815])
+                    ("really_store" variable nil (reparse-symbol indented_block_body) [2820 2897])
+                    ("payment_time" variable nil (reparse-symbol indented_block_body) [2918 2995])
+                    ("create_time" variable nil (reparse-symbol indented_block_body) [3014 3078])
+                    ("update_time" variable nil (reparse-symbol indented_block_body) [3083 3147])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [3173 3207]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [3153 3208])
+                    ("__unicode__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3229 3233]))                          )
+                        (reparse-symbol indented_block_body) [3213 3265])
+                    ("get_serial_number" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3292 3296]))                          )
+                        (reparse-symbol indented_block_body) [3270 3343]))                  
+                :type "class")
+                nil [1488 3343])
+            ("StoreKeys" type
+               (:documentation " key 的"
+                :superclasses ("models.Model")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [3398 3464])
+                    ("email" variable nil (reparse-symbol indented_block_body) [3469 3558])
+                    ("storename" variable nil (reparse-symbol indented_block_body) [3563 3638])
+                    ("access_key" variable nil (reparse-symbol indented_block_body) [3644 3719])
+                    ("secret_key" variable nil (reparse-symbol indented_block_body) [3724 3799])
+                    ("account_id" variable nil (reparse-symbol indented_block_body) [3804 3879])
+                    ("mkplaceid" variable nil (reparse-symbol indented_block_body) [3884 3958])
+                    ("mws_authtoken" variable nil (reparse-symbol indented_block_body) [3963 4050])
+                    ("create_time" variable nil (reparse-symbol indented_block_body) [4056 4114])
+                    ("update_time" variable nil (reparse-symbol indented_block_body) [4119 4177])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [4203 4225]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [4183 4226])
+                    ("__unicode__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4247 4251]))                          )
+                        (reparse-symbol indented_block_body) [4231 4288]))                  
+                :type "class")
+                nil [3346 4288])
+            ("StatementView" type
+               (:documentation " date range reports 报表"
+                :superclasses ("models.Model")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [4367 4433])
+                    ("date_time" variable nil (reparse-symbol indented_block_body) [4632 4707])
+                    ("filename" variable nil (reparse-symbol indented_block_body) [4727 4803])
+                    ("settlement_id" variable nil (reparse-symbol indented_block_body) [4809 4884])
+                    ("type" variable nil (reparse-symbol indented_block_body) [4889 4965])
+                    ("order_id" variable nil (reparse-symbol indented_block_body) [4970 5046])
+                    ("sku" variable nil (reparse-symbol indented_block_body) [5051 5126])
+                    ("description" variable nil (reparse-symbol indented_block_body) [5131 5207])
+                    ("quantity" variable nil (reparse-symbol indented_block_body) [5212 5288])
+                    ("marketplace" variable nil (reparse-symbol indented_block_body) [5293 5368])
+                    ("fulfillment" variable nil (reparse-symbol indented_block_body) [5373 5448])
+                    ("order_city" variable nil (reparse-symbol indented_block_body) [5453 5528])
+                    ("order_state" variable nil (reparse-symbol indented_block_body) [5533 5608])
+                    ("order_postal" variable nil (reparse-symbol indented_block_body) [5613 5688])
+                    ("product_sales" variable nil (reparse-symbol indented_block_body) [5694 5771])
+                    ("shipping_credits" variable nil (reparse-symbol indented_block_body) [5776 5853])
+                    ("gift_wrap_credits" variable nil (reparse-symbol indented_block_body) [5858 5934])
+                    ("promotional_rebates" variable nil (reparse-symbol indented_block_body) [5939 6018])
+                    ("sales_tax_collected" variable nil (reparse-symbol indented_block_body) [6023 6102])
+                    ("selling_fees" variable nil (reparse-symbol indented_block_body) [6107 6183])
+                    ("fba_fees" variable nil (reparse-symbol indented_block_body) [6188 6264])
+                    ("other_transaction_fees" variable nil (reparse-symbol indented_block_body) [6269 6351])
+                    ("other" variable nil (reparse-symbol indented_block_body) [6356 6432])
+                    ("total" variable nil (reparse-symbol indented_block_body) [6437 6513])
+                    ("store_name" variable nil (reparse-symbol indented_block_body) [6518 6593])
+                    ("serial_number" variable nil (reparse-symbol indented_block_body) [6625 6700])
+                    ("area" variable nil (reparse-symbol indented_block_body) [6705 6781])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [6806 6833]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [6786 6834])
+                    ("__unicode__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6855 6859]))                          )
+                        (reparse-symbol indented_block_body) [6839 6893]))                  
+                :type "class")
+                nil [4295 6893]))          
+      :file "models.py"
+      :pointmax 6894
+      :fsize 7113
+      :lastmodtime '(22677 55093 223904 898000)
+      :unmatched-syntax nil)
+    (semanticdb-table "tasks.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [41 51])
+            ("reload" code nil nil [52 63])
+            ("sys" code nil nil [64 95])
+            ("logging" include nil nil [97 112])
+            ("celery" include nil nil [113 137])
+            ("celery.utils.log" include nil nil [138 182])
+            ("manageApp.models" include nil nil [184 248])
+            ("center.models" include nil nil [249 295])
+            ("manageApp.dataService.tasks_util" include nil nil [296 376])
+            ("manageApp.dataService.tasks_util" include nil nil [377 450])
+            ("manageApp.dataService.deal_xls" include nil nil [451 502])
+            ("manageApp.dataService.csv_to_excel" include nil nil [503 560])
+            ("logger" variable nil nil [562 596])
+            ("log1" variable nil nil [598 631])
+            ("" code nil nil [639 680])
+            ("import_one_file_to_statement_view" function (:arguments 
+              ( ("file_path" variable nil (reparse-symbol function_parameters) [719 728])
+                ("filename" variable nil (reparse-symbol function_parameters) [730 738]))              ) nil [681 5900])
+            ("" code nil nil [5907 5948])
+            ("inventory_import" function (:arguments 
+              ( ("datas" variable nil (reparse-symbol function_parameters) [5970 5975])
+                ("filename" variable nil (reparse-symbol function_parameters) [5977 5985]))              ) nil [5949 6681]))          
+      :file "tasks.py"
+      :pointmax 6681
+      :fsize 7403
+      :lastmodtime '(22677 55093 223904 898000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python!seller_center!manageApp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

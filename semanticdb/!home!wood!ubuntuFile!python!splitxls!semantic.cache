@@ -1,0 +1,45 @@
+;; Object splitxls/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "splitxls/"
+  :tables
+  (list
+    (semanticdb-table "service.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [41 50])
+            ("sys" include nil nil [51 61])
+            ("tornado.httpserver" include nil nil [64 89])
+            ("tornado.ioloop" include nil nil [90 111])
+            ("tornado.options" include nil nil [112 134])
+            ("tornado" include nil nil [135 158])
+            ("tornado.options" include nil nil [159 202])
+            ("utils.views" include nil nil [204 286])
+            ("define" code nil nil [288 343])
+            ("define" code nil nil [344 412])
+            ("TEMPLATE_PATH" variable nil nil [414 482])
+            ("STATIC_PATH" variable nil nil [483 546])
+            ("Application" type
+               (:superclasses ("tornado.web.Application")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("handlers" variable nil (reparse-symbol indented_block_body) [624 807])
+                            ("settings" variable nil (reparse-symbol indented_block_body) [816 953])
+                            ("tornado" code nil (reparse-symbol indented_block_body) [962 1022]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [609 613]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [596 1023]))                  
+                :type "class")
+                nil [548 1023])
+            ("main" function nil nil [1026 1311])
+            ("if" code nil nil [1322 1360]))          
+      :file "service.py"
+      :pointmax 1360
+      :fsize 1359
+      :lastmodtime '(22445 36476 0 0)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python!splitxls!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

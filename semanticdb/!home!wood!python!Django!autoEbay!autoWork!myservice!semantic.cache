@@ -1,0 +1,100 @@
+;; Object myservice/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "myservice/"
+  :tables
+  (list
+    (semanticdb-table "upload_file.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [39 48])
+            ("xlrd" include nil nil [49 60])
+            ("logging" include nil nil [61 75])
+            ("django.conf" include nil nil [78 110])
+            ("autoWork.models" include nil nil [113 161])
+            ("log" variable nil nil [163 195])
+            ("FileImport" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [248 287]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [233 237]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [220 288])
+                    ("write_excel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [309 313])
+                            ("filename" variable nil (reparse-symbol function_parameters) [314 322])
+                            ("fileChunk" variable nil (reparse-symbol function_parameters) [323 332]))                          )
+                        (reparse-symbol indented_block_body) [293 602])
+                    ("read_excel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [622 626])
+                            ("file_name" variable nil (reparse-symbol function_parameters) [628 637]))                          )
+                        (reparse-symbol indented_block_body) [607 1032])
+                    ("del_excel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1050 1054])
+                            ("file_name" variable nil (reparse-symbol function_parameters) [1056 1065]))                          )
+                        (reparse-symbol indented_block_body) [1036 1280])
+                    ("handleData" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1301 1305])
+                            ("filename" variable nil (reparse-symbol function_parameters) [1307 1315]))                          )
+                        (reparse-symbol indented_block_body) [1286 1740])
+                    ("getValues" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1759 1763])
+                            ("data" variable nil (reparse-symbol function_parameters) [1765 1769]))                          )
+                        (reparse-symbol indented_block_body) [1745 1929])
+                    ("getHead" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1946 1950])
+                            ("data" variable nil (reparse-symbol function_parameters) [1952 1956]))                          )
+                        (reparse-symbol indented_block_body) [1934 3847])
+                    ("importData" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3867 3871])
+                            ("filename" variable nil (reparse-symbol function_parameters) [3873 3881]))                          )
+                        (reparse-symbol indented_block_body) [3852 7207]))                  
+                :type "class")
+                nil [196 7207])
+            ("upload_file_list" function nil nil [7209 7753])
+            ("delete_file_xlsx" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [7776 7785]))              ) nil [7755 7961])
+            ("upload_clients" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [7982 7990])
+                ("fileChunk" variable nil (reparse-symbol function_parameters) [7992 8001]))              ) nil [7963 8525])
+            ("get_clients_list" function nil nil [8531 9035]))          
+      :file "upload_file.py"
+      :pointmax 9035
+      :fsize 9206
+      :lastmodtime '(22446 39441 467321 266000)
+      :unmatched-syntax nil)
+    (semanticdb-table "order_handle.py"
+      :file "order_handle.py"
+      :fsize 9441
+      :lastmodtime '(22414 65191 12026 676000))
+    (semanticdb-table "order_list.py"
+      :file "order_list.py"
+      :fsize 1596
+      :lastmodtime '(22404 34753 0 0))
+    (semanticdb-table "downfile.py"
+      :file "downfile.py"
+      :fsize 7278
+      :lastmodtime '(22407 46334 0 0))
+    (semanticdb-table "machine_list.py"
+      :file "machine_list.py"
+      :fsize 3219
+      :lastmodtime '(22414 62732 145437 409000)))
+  :file "!home!wood!python!Django!autoEbay!autoWork!myservice!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

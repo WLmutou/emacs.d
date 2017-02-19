@@ -1,0 +1,128 @@
+ls
+cd controllers/
+ls
+cp index.go home.go
+ls
+cd ..
+ls
+ls
+cd controllers/
+ls
+ls
+cd ..
+ls
+cd ..
+ls
+cd apiPro
+ls
+ls
+cd controllers/
+ls
+cd ../
+ls
+cd ..
+ls
+cd goblog/
+ls
+cd controllers/
+ls
+ls
+cd ..vi
+ls
+cd ../
+ls
+cd views/
+ls
+mkdir manage
+cd manage/
+ls
+cd ..
+ls
+mv edit.html  manage/
+mv new.html  manage/
+ls
+cd manage/
+ls
+ls
+cd ..
+ls
+ls
+cat manage.html
+ls
+cd ..
+ls
+cd controllers/
+ls
+cat home.go 
+ls
+cd ..
+ls
+cd views/
+ls
+rm manage.html 
+ls
+ls
+cd manage/
+ls
+cd ..
+ls
+cd ..
+ls
+cd controllers/
+ls
+cp manage.go manage_list.go
+ls
+cd controllers/
+ls
+cd ..
+ls
+cd views/
+ls
+rm -rf tplback/
+ls
+cd template/
+ls
+cd ..
+ls
+rm layout.tpl.back 
+ls
+ls
+cp index.html home.html
+ls
+cd models/
+ls
+rm model.go.back1 
+ls
+cd .
+ls
+cd ..
+ls
+cd controllers/
+ls
+cd ..
+ls
+cd routers/
+ls
+cd ..
+ls
+cd static/
+ls
+cd ..
+ls
+cd tests/
+ls
+cd ..
+ls
+cd views/
+ls
+cd template/
+ls
+cd ..
+ls
+mv template/ ../../../
+ls
+cd ~
+cd ubuntuFile/
+ls
+cd txt
+ls

@@ -1,0 +1,240 @@
+;; Object autoWork/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "autoWork/"
+  :tables
+  (list
+    (semanticdb-table "models.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("django.db" include nil nil [18 46])
+            ("datetime" include nil nil [47 62])
+            ("BaseData" type
+               (:superclasses ("models.model")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [129 184])
+                    ("filename" variable nil (reparse-symbol indented_block_body) [193 252])
+                    ("asin" variable nil (reparse-symbol indented_block_body) [261 331])
+                    ("order_id" variable nil (reparse-symbol indented_block_body) [340 414])
+                    ("url" variable nil (reparse-symbol indented_block_body) [423 478])
+                    ("unitPrice" variable nil (reparse-symbol indented_block_body) [487 547])
+                    ("product_name" variable nil (reparse-symbol indented_block_body) [556 620])
+                    ("quantity_purchased" variable nil (reparse-symbol indented_block_body) [629 698])
+                    ("recipient_name" variable nil (reparse-symbol indented_block_body) [713 778])
+                    ("ship_address1" variable nil (reparse-symbol indented_block_body) [787 852])
+                    ("ship_address2" variable nil (reparse-symbol indented_block_body) [862 927])
+                    ("ship_city" variable nil (reparse-symbol indented_block_body) [936 996])
+                    ("ship_state" variable nil (reparse-symbol indented_block_body) [1005 1066])
+                    ("ship_postal_code" variable nil (reparse-symbol indented_block_body) [1075 1142])
+                    ("ship_country" variable nil (reparse-symbol indented_block_body) [1151 1214])
+                    ("ship_phone_number" variable nil (reparse-symbol indented_block_body) [1223 1291])
+                    ("variation1" variable nil (reparse-symbol indented_block_body) [1300 1361])
+                    ("variation2" variable nil (reparse-symbol indented_block_body) [1370 1431])
+                    ("variation3" variable nil (reparse-symbol indented_block_body) [1440 1501])
+                    ("other_info" variable nil (reparse-symbol indented_block_body) [1510 1541])
+                    ("insert_time" variable nil (reparse-symbol indented_block_body) [1550 1617])
+                    ("status" variable nil (reparse-symbol indented_block_body) [1626 1682])
+                    ("get_time" variable nil (reparse-symbol indented_block_body) [1691 1757])
+                    ("send_ip" variable nil (reparse-symbol indented_block_body) [1766 1824])
+                    ("db_table" variable nil (reparse-symbol indented_block_body) [1897 1919]))                  
+                :type "class")
+                nil [91 1920])
+            ("ReturnData" type
+               (:superclasses ("models.model")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [2014 2069])
+                    ("filename" variable nil (reparse-symbol indented_block_body) [2071 2131])
+                    ("asin" variable nil (reparse-symbol indented_block_body) [2133 2202])
+                    ("purchase_price" variable nil (reparse-symbol indented_block_body) [2204 2284])
+                    ("purchase_date" variable nil (reparse-symbol indented_block_body) [2286 2355])
+                    ("purchase_ip" variable nil (reparse-symbol indented_block_body) [2357 2405])
+                    ("ebay_user" variable nil (reparse-symbol indented_block_body) [2407 2453])
+                    ("PPL_user" variable nil (reparse-symbol indented_block_body) [2455 2500])
+                    ("purchase_user" variable nil (reparse-symbol indented_block_body) [2502 2552])
+                    ("purchase_error" variable nil (reparse-symbol indented_block_body) [2554 2589])
+                    ("update_statue" variable nil (reparse-symbol indented_block_body) [2591 2654])
+                    ("base_id" variable nil (reparse-symbol indented_block_body) [2656 2724])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [2740 2764]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [2726 2765])
+                    ("__unicode__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2782 2786]))                          )
+                        (reparse-symbol indented_block_body) [2766 2808])
+                    ("pass" code nil (reparse-symbol indented_block_body) [2809 2813]))                  
+                :type "class")
+                nil [1981 2814])
+            ("User" type
+               (:superclasses ("models.model")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [2842 2897])
+                    ("username" variable nil (reparse-symbol indented_block_body) [2899 2987])
+                    ("passwd" variable nil (reparse-symbol indented_block_body) [2989 3061])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [3077 3094]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [3063 3095])
+                    ("__unicode__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3112 3116]))                          )
+                        (reparse-symbol indented_block_body) [3096 3137])
+                    ("pass" code nil (reparse-symbol indented_block_body) [3138 3142]))                  
+                :type "class")
+                nil [2815 3143])
+            ("InfoDict" type
+               (:superclasses ("models.model")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [3198 3253])
+                    ("ip" variable nil (reparse-symbol indented_block_body) [3255 3322])
+                    ("autokey" variable nil (reparse-symbol indented_block_body) [3324 3395])
+                    ("content" variable nil (reparse-symbol indented_block_body) [3397 3471])
+                    ("put_date" variable nil (reparse-symbol indented_block_body) [3473 3540])
+                    ("status" variable nil (reparse-symbol indented_block_body) [3542 3612])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [3628 3650]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [3614 3651])
+                    ("__unitcode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3667 3671]))                          )
+                        (reparse-symbol indented_block_body) [3652 3691])
+                    ("pass" code nil (reparse-symbol indented_block_body) [3692 3696]))                  
+                :type "class")
+                nil [3167 3697]))          
+      :file "models.py"
+      :pointmax 3699
+      :fsize 4500
+      :lastmodtime '(22406 3915 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 1920 . 1979) (INDENT_BLOCK 121 . 1920) (INDENT_BLOCK 1734 . 1793)))
+    (semanticdb-table "urls.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("django.conf.urls" include nil nil [17 68])
+            ("os" include nil nil [103 112])
+            ("django.conf" include nil nil [113 145])
+            ("urlpatterns" variable nil nil [149 2339])
+            ("print" code nil nil [2341 2396])
+            ("print" code nil nil [2397 2423])
+            ("if" code nil nil [2424 2618]))          
+      :file "urls.py"
+      :pointmax 2618
+      :fsize 2719
+      :lastmodtime '(22446 38378 774242 852000)
+      :unmatched-syntax nil)
+    (semanticdb-table "views.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [44 55])
+            ("logging" include nil nil [56 70])
+            ("time" include nil nil [71 82])
+            ("django.shortcuts" include nil nil [84 139])
+            ("django.contrib.auth" include nil nil [140 199])
+            ("django.template" include nil nil [201 243])
+            ("django.contrib.auth.decorators" include nil nil [244 301])
+            ("django.http" include nil nil [303 361])
+            ("django.views.decorators.csrf" include nil nil [363 415])
+            ("django.utils.http" include nil nil [417 455])
+            ("django.http" include nil nil [456 501])
+            ("myservice" include nil nil [503 532])
+            ("myservice.upload_file" include nil nil [534 648])
+            ("myservice.order_handle" include nil nil [649 708])
+            ("myservice.order_list" include nil nil [711 758])
+            ("myservice.downfile" include nil nil [759 800])
+            ("myservice.machine_list" include nil nil [802 846])
+            ("log" variable nil nil [849 881])
+            ("global" code nil nil [883 894])
+            ("Lock" variable nil nil [895 907])
+            ("client_login" function
+               (:decorators 
+                  ( ("csrf_exempt" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [939 946]))                  )
+                nil [909 1778])
+            ("get_code" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [1792 1799]))              ) nil [1779 1929])
+            ("login_view" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [1945 1952]))              ) nil [1930 3650])
+            ("index_view" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [3731 3738]))                  )
+                nil [3700 3839])
+            ("logout_view" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [3873 3880]))                  )
+                nil [3841 3951])
+            ("w_uploadify" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [4030 4037]))                  )
+                nil [3998 5012])
+            ("list_file_list" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [5048 5055]))                  )
+                nil [5013 5302])
+            ("order_list" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [5334 5341]))                  )
+                nil [5303 6242])
+            ("reverseHandler" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [6279 6286]))                  )
+                nil [6244 6808])
+            ("wrapHandler" function
+               (:decorators 
+                  ( ("csrf_exempt" function (:type "decorator") nil nil)
+                    ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [6855 6862]))                  )
+                nil [6809 7271])
+            ("download_file" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [7308 7315]))                  )
+                nil [7274 8036])
+            ("download_xlsx" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [8071 8078]))                  )
+                nil [8037 8732])
+            ("delete_xlsx" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [8766 8773]))                  )
+                nil [8734 9358])
+            ("" code nil nil [9374 9376])
+            ("machine_status" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [9396 9403]))              ) nil [9377 10412])
+            ("" code nil nil [10445 10447])
+            ("clients" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [10460 10467]))              ) nil [10448 10941])
+            ("" code nil nil [10958 10960])
+            ("get_clients" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [10977 10984]))              ) nil [10961 11197]))          
+      :file "views.py"
+      :pointmax 11197
+      :fsize 11356
+      :lastmodtime '(22446 38850 558214 43000)
+      :unmatched-syntax '(($EOI 11203 . 11203) ($EOI 11203 . 11203) (IF 10973 . 10975) (NEWLINE 10984 . 10985))))
+  :file "!home!wood!python!Django!autoEbay!autoWork!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

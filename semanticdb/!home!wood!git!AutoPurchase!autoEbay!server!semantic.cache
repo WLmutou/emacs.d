@@ -1,0 +1,332 @@
+;; Object server/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "server/"
+  :tables
+  (list
+
+    (semanticdb-table "autoServer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("socket" include nil nil [36 56])
+            ("SocketServer" include nil nil [72 91])
+            ("os.path" include nil nil [92 106])
+            ("sys" include nil nil [107 117])
+            ("threading" include nil nil [118 134])
+            ("time" include nil nil [135 146])
+            ("struct" include nil nil [147 160])
+            ("json" include nil nil [161 172])
+            ("csv" include nil nil [173 183])
+            ("tkMessageBox" include nil nil [184 203])
+            ("split_file" include nil nil [205 238])
+            ("read_ip" include nil nil [239 271])
+            ("writeLog" include nil nil [272 300])
+            ("checkAsinSku" include nil nil [301 338])
+            ("typecode" variable nil nil [340 378])
+            ("reload" code nil nil [379 390])
+            ("sys" code nil nil [391 423])
+            ("target" variable nil nil [617 628])
+            ("ipList" variable nil nil [629 651])
+            ("print" code nil nil [652 675])
+            ("listen_port" variable nil nil [676 708])
+            ("if" code nil nil [710 862])
+            ("localaddr" variable nil nil [925 962])
+            ("headstr" variable nil nil [963 990])
+            ("nowtime" variable nil nil [991 1043])
+            ("BUFSIZE" variable nil nil [1045 1059])
+            ("STRUCT_F_H" variable nil nil [1060 1086])
+            ("STRUCT_U_H" variable nil nil [1113 1139])
+            ("STRUCT_D_H" variable nil nil [1144 1167])
+            ("STRUCT_J_H" variable nil nil [1168 1188])
+            ("STRUCT_T_H" variable nil nil [1189 1207])
+            ("FILEINFO_SIZE" variable nil nil [1221 1264])
+            ("typeSize" variable nil nil [1265 1308])
+            ("FILEINFO_SIZE" variable nil nil [1309 1352])
+            ("json_size" variable nil nil [1353 1396])
+            ("buflen" variable nil nil [1410 1423])
+            ("global" code nil nil [1425 1440])
+            ("autoOver" variable nil nil [1441 1457])
+            ("global" code nil nil [1458 1477])
+            ("global" code nil nil [1478 1497])
+            ("recv_ip_list, send_ip_list" code nil nil [1498 1531])
+            ("FileRecvHandler" type
+               (:superclasses ("SocketServer.StreamRequestHandler")
+                :members 
+                  ( ("recvPath" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1609 1613]))                          )
+                        (reparse-symbol indented_block_body) [1596 1776])
+                    ("judge_client_in_recvList" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1810 1814])
+                            ("client_address" variable nil (reparse-symbol function_parameters) [1815 1829]))                          )
+                        (reparse-symbol indented_block_body) [1781 2098])
+                    ("handle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2127 2131]))                          )
+                        (reparse-symbol indented_block_body) [2115 2647])
+                    ("handleAlive" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2676 2680]))                          )
+                        (reparse-symbol indented_block_body) [2660 2747])
+                    ("handleJson" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2775 2779]))                          )
+                        (reparse-symbol indented_block_body) [2760 3801])
+                    ("handleFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3829 3833]))                          )
+                        (reparse-symbol indented_block_body) [3814 5015]))                  
+                :type "class")
+                nil [1534 5015])
+            ("ThreadDealResult" type
+               (:documentation "创建一个线程写结果"
+                :members 
+                  ( ("threadDealResult" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5088 5092])
+                            ("infoList" variable nil (reparse-symbol function_parameters) [5093 5101])
+                            ("recvFrom" variable nil (reparse-symbol function_parameters) [5102 5110]))                          )
+                        (reparse-symbol indented_block_body) [5067 5269])
+                    ("dealResult" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5297 5301])
+                            ("infoList" variable nil (reparse-symbol function_parameters) [5302 5310])
+                            ("recvFrom" variable nil (reparse-symbol function_parameters) [5312 5320]))                          )
+                        (reparse-symbol indented_block_body) [5282 5468])
+                    ("threadDealAlive" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5493 5497])
+                            ("client_address" variable nil (reparse-symbol function_parameters) [5498 5512]))                          )
+                        (reparse-symbol indented_block_body) [5473 5639])
+                    ("dealAlive" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5666 5670])
+                            ("client_address" variable nil (reparse-symbol function_parameters) [5671 5685]))                          )
+                        (reparse-symbol indented_block_body) [5652 5745]))                  
+                :type "class")
+                nil [5017 5745])
+            ("SendFile" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [5822 5844]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5798 5802])
+                            ("targetIp" variable nil (reparse-symbol function_parameters) [5803 5811]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [5785 5845])
+                    ("send_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5873 5877])
+                            ("basename" variable nil (reparse-symbol function_parameters) [5878 5886]))                          )
+                        (reparse-symbol indented_block_body) [5858 6863])
+                    ("sendInfoList" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6885 6889])
+                            ("infoList" variable nil (reparse-symbol function_parameters) [6890 6898])
+                            ("filename" variable nil (reparse-symbol function_parameters) [6899 6907]))                          )
+                        (reparse-symbol indented_block_body) [6868 7830]))                  
+                :type "class")
+                nil [5763 7830])
+            ("DealResult" type
+               (:documentation "处理结果，写入结果文件"
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [7937 7968])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7977 8003])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8012 8044]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7899 7903])
+                            ("resultList" variable nil (reparse-symbol function_parameters) [7905 7915])
+                            ("client_ip" variable nil (reparse-symbol function_parameters) [7917 7926]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7886 8045])
+                    ("writeError" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8073 8077]))                          )
+                        (reparse-symbol indented_block_body) [8058 8249])
+                    ("writeCompleted" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8273 8277]))                          )
+                        (reparse-symbol indented_block_body) [8254 8436])
+                    ("writeRepeat" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8457 8461]))                          )
+                        (reparse-symbol indented_block_body) [8441 8621])
+                    ("writefile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8648 8652])
+                            ("Json" variable nil (reparse-symbol function_parameters) [8653 8657])
+                            ("file_path_name" variable nil (reparse-symbol function_parameters) [8658 8672])
+                            ("writeType" variable nil (reparse-symbol function_parameters) [8673 8682]))                          )
+                        (reparse-symbol indented_block_body) [8634 10261])
+                    ("\"\"\"
+    def insertOrderUrl(self,infoList):
+        ASCheck = CheckAsinSkuIsExists()
+        for infoDict in infoList:
+            asin, skuname = infoDict.get(\"asin\",\"\"), infoDict.get(\"sku\",\"\")
+            Order_id ,url = infoDict.get(\"order_id\"), infoDict.get(\"url\")
+            ### not in, and insert into ###
+            ASCheck.insertRecord(asin,skuname,url,Order_id)
+        ## after check all ##
+        ASCheck.closeConn()        
+    \"\"\"" code nil (reparse-symbol indented_block_body) [10266 10711]))                  
+                :type "class")
+                nil [7840 10712])
+            ("ThreadFunc" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [10821 10841])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10850 10880]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10759 10763])
+                            ("target" variable nil (reparse-symbol function_parameters) [10764 10770])
+                            ("csvFileList" variable nil (reparse-symbol function_parameters) [10771 10782]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10746 10857])
+                    ("threadStart" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10886 10890]))                          )
+                        (reparse-symbol indented_block_body) [10870 10995])
+                    ("start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11010 11014]))                          )
+                        (reparse-symbol indented_block_body) [11000 11275])
+                    ("LoopStart" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11302 11306])
+                            ("infoList" variable nil (reparse-symbol function_parameters) [11307 11315])
+                            ("filename" variable nil (reparse-symbol function_parameters) [11317 11325]))                          )
+                        (reparse-symbol indented_block_body) [11288 12971])
+                    ("sendInfoList" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13005 13009])
+                            ("infoList" variable nil (reparse-symbol function_parameters) [13010 13018])
+                            ("ip" variable nil (reparse-symbol function_parameters) [13020 13022])
+                            ("filename" variable nil (reparse-symbol function_parameters) [13024 13032]))                          )
+                        (reparse-symbol indented_block_body) [12988 13097])
+                    ("judgePort" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13145 13149])
+                            ("ip" variable nil (reparse-symbol function_parameters) [13150 13152]))                          )
+                        (reparse-symbol indented_block_body) [13131 13517])
+                    ("checkOrderUrl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13574 13578])
+                            ("fourInfoList" variable nil (reparse-symbol function_parameters) [13579 13591])
+                            ("filename" variable nil (reparse-symbol function_parameters) [13592 13600]))                          )
+                        (reparse-symbol indented_block_body) [13556 14563])
+                    ("\"\"\"    
+    def sendFile(self,filename):
+        #SendFile().send_file(filename)
+        t = threading.Thread(target = SendFile().send_file,args=(filename,))
+        t.setDaemon(True)
+        t.start()
+    
+    def send_all_file():
+        if len(sys.argv)> 3: allfiles = sys.argv[1:]
+        else:     allfiles = os.listdir(\".\")
+        for i in allfiles:
+            print i
+            SendFile().send_file(i)
+    \"\"\"" code nil (reparse-symbol indented_block_body) [14568 14988]))                  
+                :type "class")
+                nil [10722 14989])
+            ("CheckAsinSkuIsExists" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [15200 15235]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15106 15110]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [15093 15215])
+                    ("getcheck" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15232 15236]))                          )
+                        (reparse-symbol indented_block_body) [15219 15337])
+                    ("checkRC" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15353 15357])
+                            ("tablename" variable nil (reparse-symbol function_parameters) [15358 15367])
+                            ("Asin" variable nil (reparse-symbol function_parameters) [15368 15372])
+                            ("skuname" variable nil (reparse-symbol function_parameters) [15381 15388])
+                            ("Order_id" variable nil (reparse-symbol function_parameters) [15396 15404])
+                            ("url" variable nil (reparse-symbol function_parameters) [15412 15415]))                          )
+                        (reparse-symbol indented_block_body) [15341 16036])
+                    ("insertRecord" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16074 16078])
+                            ("Asin" variable nil (reparse-symbol function_parameters) [16079 16083])
+                            ("skuname" variable nil (reparse-symbol function_parameters) [16084 16091])
+                            ("url" variable nil (reparse-symbol function_parameters) [16092 16095])
+                            ("Order_id" variable nil (reparse-symbol function_parameters) [16096 16104]))                          )
+                        (reparse-symbol indented_block_body) [16057 16285])
+                    ("closeConn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16409 16413]))                          )
+                        (reparse-symbol indented_block_body) [16395 16455]))                  
+                :type "class")
+                nil [15059 16455])
+            ("judgeOver" function nil nil [16465 16604])
+            ("officeFile" function (:arguments 
+              ( ("filename" variable nil (reparse-symbol function_parameters) [16717 16725]))              ) nil [16702 16881])
+            ("csvFileList" function nil nil [16882 17125])
+            ("main" function nil nil [17138 17822])
+            ("if" code nil nil [17831 17881]))          
+      :file "autoServer.py"
+      :pointmax 17887
+      :fsize 18268
+      :lastmodtime '(22214 36268 67692 560000)
+      :unmatched-syntax nil)
+    (semanticdb-table "split_file.py"
+      :file "split_file.py"
+      :fsize 10810
+      :lastmodtime '(22210 40235 135618 947000))
+    (semanticdb-table "read_ip.py"
+      :file "read_ip.py"
+      :fsize 760
+      :lastmodtime '(22212 18019 823064 734000))
+    (semanticdb-table "writeLog.py"
+      :file "writeLog.py"
+      :fsize 810
+      :lastmodtime '(22191 13015 250372 0))
+    (semanticdb-table "checkAsinSku.py"
+      :file "checkAsinSku.py"
+      :fsize 5680
+      :lastmodtime '(22211 52907 227220 772000)))
+  :file "!home!wood!git!AutoPurchase!autoEbay!server!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,97 @@
+;; Object getPurchaseList/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "getPurchaseList/"
+  :tables
+  (list
+    (semanticdb-table "getPurchaseList.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("selenium" include nil nil [39 69])
+            ("methods" include nil nil [70 91])
+            ("time" include nil nil [92 103])
+            ("csv" include nil nil [104 114])
+            ("getpass" include nil nil [115 138])
+            ("platform" include nil nil [115 138])
+            ("sys" include nil nil [139 152])
+            ("os" include nil nil [139 152])
+            ("tkMessageBox" include nil nil [153 172])
+            ("writeEbayLog" include nil nil [173 205])
+            ("history_url" variable nil nil [207 262])
+            ("system_, sysUser" code nil nil [267 321])
+            ("profilePath" variable nil nil [322 338])
+            ("if" code nil nil [339 1063])
+            ("if" code nil nil [1079 1139])
+            ("chrome" variable nil nil [1140 1153])
+            ("openBrowser" function (:documentation "首先尝试打开phantomjs,再尝试打开chrome，如果无法打开chrome再打开火狐浏览器 ") nil [1155 2067])
+            ("closeBrowser" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [2085 2091]))              ) nil [2068 2193])
+            ("item_find" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [2217 2223])
+                ("item" variable nil (reparse-symbol function_parameters) [2224 2228]))              ) nil [2203 4286])
+            ("main" function nil nil [4292 5883])
+            ("if" code nil nil [5884 5922]))          
+      :file "getPurchaseList.py"
+      :pointmax 5924
+      :fsize 6123
+      :lastmodtime '(22248 52 689069 1000)
+      :unmatched-syntax nil)
+    (semanticdb-table "methods.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("writeEbayLog" include nil nil [41 73])
+            ("clickByCss" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [165 171])
+                ("cssSelector" variable nil (reparse-symbol function_parameters) [173 184])
+                ("cssSelectorNode" variable nil (reparse-symbol function_parameters) [186 201]))              ) nil [150 487])
+            ("clickByXpath" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [582 588])
+                ("xpathName" variable nil (reparse-symbol function_parameters) [590 599])
+                ("xpathNameNode" variable nil (reparse-symbol function_parameters) [601 614]))              ) nil [565 885])
+            ("inputByXpath" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [979 985])
+                ("xpathName" variable nil (reparse-symbol function_parameters) [987 996])
+                ("inputText" variable nil (reparse-symbol function_parameters) [998 1007])
+                ("xpathNode" variable nil (reparse-symbol function_parameters) [1009 1018]))              ) nil [962 1372])
+            ("inputByCss" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [1472 1478])
+                ("cssSelector" variable nil (reparse-symbol function_parameters) [1479 1490])
+                ("inputText" variable nil (reparse-symbol function_parameters) [1491 1500])
+                ("cssSelectorNode" variable nil (reparse-symbol function_parameters) [1502 1517]))              ) nil [1457 1907])
+            ("findElementByCss" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [2007 2013])
+                ("cssSelector" variable nil (reparse-symbol function_parameters) [2014 2025])
+                ("cssSelectorNode" variable nil (reparse-symbol function_parameters) [2027 2042]))              ) nil [1986 2389])
+            ("fElementsByCss" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [2494 2500])
+                ("cssSelector" variable nil (reparse-symbol function_parameters) [2501 2512])
+                ("cssSelectorNode" variable nil (reparse-symbol function_parameters) [2514 2529]))              ) nil [2475 2882])
+            ("findElementByXpath" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [2988 2994])
+                ("xpathName" variable nil (reparse-symbol function_parameters) [2996 3005])
+                ("xpathNameNode" variable nil (reparse-symbol function_parameters) [3007 3020]))              ) nil [2965 3338])
+            ("findElementById" function (:arguments 
+              ( ("driver" variable nil (reparse-symbol function_parameters) [3438 3444])
+                ("idSelector" variable nil (reparse-symbol function_parameters) [3445 3455])
+                ("idSelectorNode" variable nil (reparse-symbol function_parameters) [3457 3471]))              ) nil [3418 3827])
+            ("clickElement" function (:arguments 
+              ( ("webElement" variable nil (reparse-symbol function_parameters) [3923 3933]))              ) nil [3906 4204]))          
+      :file "methods.py"
+      :pointmax 4213
+      :fsize 4286
+      :lastmodtime '(22240 53955 411316 389000)
+      :unmatched-syntax nil)
+    (semanticdb-table "writeEbayLog.py"
+      :file "writeEbayLog.py"
+      :fsize 810
+      :lastmodtime '(22240 53991 955315 50000))
+    (semanticdb-table "getHistory.exe.spec"
+      :major-mode 'python-mode
+      :tags nil
+      :file "getHistory.exe.spec"
+      :pointmax 730
+      :fsize 757
+      :lastmodtime '(22247 38764 494052 92000)
+      :unmatched-syntax nil))
+  :file "!home!wood!git!AutoPurchase!getPurchaseList!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,32 @@
+;; Object threadpool_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "threadpool_test/"
+  :tables
+  (list
+    (semanticdb-table "threadpools.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("threadpool" include nil nil [24 41])
+            ("random" include nil nil [43 61])
+            ("time" include nil nil [43 61])
+            ("threading" include nil nil [63 79])
+            ("hello" function (:arguments 
+              ( ("str" variable nil (reparse-symbol function_parameters) [91 94]))              ) nil [81 146])
+            ("print_result" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [165 172])
+                ("result" variable nil (reparse-symbol function_parameters) [174 180]))              ) nil [148 278])
+            ("j" variable nil nil [331 336])
+            ("data" variable nil nil [337 372])
+            ("print" code nil nil [373 383])
+            ("myloop" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [396 397]))              ) nil [385 861])
+            ("main" function nil nil [862 899])
+            ("if" code nil nil [905 943]))          
+      :file "threadpools.py"
+      :pointmax 943
+      :fsize 942
+      :lastmodtime '(22306 2999 459767 917000)
+      :unmatched-syntax nil))
+  :file "!home!wood!python!threadpool_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

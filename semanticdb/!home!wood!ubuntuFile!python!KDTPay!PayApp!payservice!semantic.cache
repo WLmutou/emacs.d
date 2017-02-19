@@ -1,0 +1,605 @@
+;; Object payservice/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "payservice/"
+  :tables
+  (list
+    (semanticdb-table "userInfo.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("django.contrib" include nil nil [41 72])
+            ("django.contrib.auth.models" include nil nil [73 116])
+            ("UserInfo" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [182 204])
+                            ("self" variable nil (reparse-symbol indented_block_body) [213 255])
+                            ("self" variable nil (reparse-symbol indented_block_body) [264 298])
+                            ("pass" code nil (reparse-symbol indented_block_body) [307 311]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [159 163])
+                            ("request" variable nil (reparse-symbol function_parameters) [164 171]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [146 312])
+                    ("change_password" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [337 341]))                          )
+                        (reparse-symbol indented_block_body) [317 1467]))                  
+                :type "class")
+                nil [118 1467]))          
+      :file "userInfo.py"
+      :pointmax 1472
+      :fsize 1690
+      :lastmodtime '(22624 27094 413731 231000)
+      :unmatched-syntax nil)
+    (semanticdb-table "actionShops.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "actionShops.py"
+      :pointmax 3307
+      :fsize 3462
+      :lastmodtime '(22657 23178 744751 264000)
+      :unmatched-syntax nil)
+    (semanticdb-table "detailData.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("hashlib" include nil nil [19 33])
+            ("logging" include nil nil [34 49])
+            ("time" include nil nil [51 63])
+            ("datetime" include nil nil [64 110])
+            ("django.db.models" include nil nil [112 142])
+            ("django.contrib.auth.models" include nil nil [143 187])
+            ("PayApp.models" include nil nil [189 262])
+            ("PayApp.payservice.create_xls" include nil nil [263 333])
+            ("PayApp.payservice.userInfo" include nil nil [334 381])
+            ("PayApp.payservice.data_utils" include nil nil [382 449])
+            ("log2" variable nil nil [453 486])
+            ("TradesRecordesAction" type
+               (:documentation " ²éÑ¯ÏêÏ¸½»Ò×¼ÇÂ¼ "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [587 611])
+                            ("self" variable nil (reparse-symbol indented_block_body) [620 655]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [562 566])
+                            ("username" variable nil (reparse-symbol function_parameters) [568 576]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [549 656])
+                    ("query_all_recordes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [684 688])
+                            ("post_dict" variable nil (reparse-symbol function_parameters) [690 699]))                          )
+                        (reparse-symbol indented_block_body) [661 1808])
+                    ("query_bill_details" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1836 1840]))                          )
+                        (reparse-symbol indented_block_body) [1813 1973])
+                    ("export_recordes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1999 2003])
+                            ("post_dict" variable nil (reparse-symbol function_parameters) [2005 2014]))                          
+                        :documentation " µ¼³ö¼ÇÂ¼ ")
+                        (reparse-symbol indented_block_body) [1979 3284])
+                    ("export_bill_details" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3313 3317])
+                            ("post_dict" variable nil (reparse-symbol function_parameters) [3319 3328]))                          
+                        :documentation " µ¼³öÕËµ¥Ã÷Ï¸")
+                        (reparse-symbol indented_block_body) [3289 4644]))                  
+                :type "class")
+                nil [488 4644])
+            ("WriteTradesRecordes" type
+               (:documentation " Ð´Èë½»Ò×¼ÇÂ¼ "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [4761 4785])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4794 4832]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4719 4723])
+                            ("username" variable nil (reparse-symbol function_parameters) [4725 4733])
+                            ("tracde_recordes" variable nil (reparse-symbol function_parameters) [4735 4750]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4706 4833])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4851 4855])
+                            ("args" variable nil (reparse-symbol function_parameters) [4857 4862])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [4864 4872]))                          )
+                        (reparse-symbol indented_block_body) [4838 4905])
+                    ("write_recordes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4929 4933]))                          )
+                        (reparse-symbol indented_block_body) [4910 5418])
+                    ("reckon_trade_id" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5443 5447])
+                            ("tracde_recordes" variable nil (reparse-symbol function_parameters) [5449 5464]))                          
+                        :documentation " ¸ù¾Ýuser, store_name, cart_number, trade_date¼ÆËãhashµÃµ½trade_id ")
+                        (reparse-symbol indented_block_body) [5423 5749]))                  
+                :type "class")
+                nil [4648 5749])
+            ("json_serial" function
+               (:documentation "JSON serializer for objects not serializable by default json code"
+                :arguments 
+                  ( ("obj" variable nil (reparse-symbol function_parameters) [5769 5772]))                  )
+                nil [5753 6052])
+            ("detail_datestr_to_datetime" function (:arguments 
+              ( ("date_str" variable nil (reparse-symbol function_parameters) [6088 6096]))              ) nil [6057 6246]))          
+      :file "detailData.py"
+      :pointmax 6246
+      :fsize 6502
+      :lastmodtime '(22679 8532 866209 382000)
+      :unmatched-syntax nil)
+    (semanticdb-table "enchashment.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logging" include nil nil [19 34])
+            ("re" include nil nil [35 45])
+            ("json" include nil nil [46 57])
+            ("django.db.models" include nil nil [59 89])
+            ("PayApp.models" include nil nil [181 215])
+            ("PayApp.models" include nil nil [216 250])
+            ("PayApp.payservice.detailData" include nil nil [316 376])
+            ("PayApp.models" include nil nil [379 424])
+            ("PayApp.payservice.userInfo" include nil nil [425 472])
+            ("log2" variable nil nil [474 507])
+            ("QueryEnchaShment" type
+               (:documentation " ²éÑ¯ÌåÏÖÐÅÏ¢ "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [600 624])
+                            ("self" variable nil (reparse-symbol indented_block_body) [633 663])
+                            ("self" variable nil (reparse-symbol indented_block_body) [672 696]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [577 581])
+                            ("username" variable nil (reparse-symbol function_parameters) [583 591])
+                            ("platform" variable nil (reparse-symbol function_parameters) [593 601]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [564 709])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [727 731])
+                            ("args" variable nil (reparse-symbol function_parameters) [733 738])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [740 748]))                          )
+                        (reparse-symbol indented_block_body) [714 802])
+                    ("query_kdt_cards" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [827 831]))                          )
+                        (reparse-symbol indented_block_body) [807 1448])
+                    ("find_store_availabel_money" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2970 2974])
+                            ("store" variable nil (reparse-symbol function_parameters) [2976 2981])
+                            ("platform" variable nil (reparse-symbol function_parameters) [2983 2991]))                          )
+                        (reparse-symbol indented_block_body) [2939 3834])
+                    ("find_status" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3854 3858])
+                            ("store" variable nil (reparse-symbol function_parameters) [3860 3865])
+                            ("platform" variable nil (reparse-symbol function_parameters) [3867 3875]))                          )
+                        (reparse-symbol indented_block_body) [3838 4988]))                  
+                :type "class")
+                nil [509 4988])
+            ("EnchaShment" type
+               (:documentation " ÌáÏÖ²Ù×÷ "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3489 3515])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3524 3548]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5051 5055])
+                            ("post_dict" variable nil (reparse-symbol function_parameters) [5057 5066])
+                            ("username" variable nil (reparse-symbol function_parameters) [5069 5077]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [5038 5148])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5166 5170])
+                            ("args" variable nil (reparse-symbol function_parameters) [5172 5177])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [5179 5187]))                          )
+                        (reparse-symbol indented_block_body) [5153 5238])
+                    ("is_number" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5257 5261])
+                            ("strnum" variable nil (reparse-symbol function_parameters) [5263 5269]))                          
+                        :documentation " ÅÐ¶ÏÊÇ·ñÊÇÕý³£µÄÊý×Ö:²»´ø'-'ºÅ,»òÕßÊÇÕý³£µÄÐ¡Êý")
+                        (reparse-symbol indented_block_body) [5243 5505])
+                    ("deal_money" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5525 5529])
+                            ("money_number" variable nil (reparse-symbol function_parameters) [5530 5542]))                          
+                        :documentation " ´¦ÀíÏÂ½ð¶îÊý×Ö£¬´¦ÀíÇ°Ãæ²»´ø0,
+            Èç, 0090 --> 90, 030.03 --> 30.03
+        ")
+                        (reparse-symbol indented_block_body) [5510 5801])
+                    ("enchashment_store_to_cart" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5836 5840]))                          )
+                        (reparse-symbol indented_block_body) [5806 6666])
+                    ("enchashment_api_action" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6698 6702])
+                            ("platform" variable nil (reparse-symbol function_parameters) [6703 6711])
+                            ("store_name" variable nil (reparse-symbol function_parameters) [6712 6722])
+                            ("cart_number" variable nil (reparse-symbol function_parameters) [6724 6735])
+                            ("money_number" variable nil (reparse-symbol function_parameters) [6736 6748]))                          
+                        :documentation " ÌáÏÖ , ´ÓÆ½Ì¨ÌåÏÖµ½ÒøÐÐ¿¨ ")
+                        (reparse-symbol indented_block_body) [6671 7605])
+                    ("is_arrival_money_and_write_recordes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7650 7654])
+                            ("platform" variable nil (reparse-symbol function_parameters) [7656 7664])
+                            ("store_name" variable nil (reparse-symbol function_parameters) [7666 7676])
+                            ("cart_number" variable nil (reparse-symbol function_parameters) [7678 7689])
+                            ("money_number" variable nil (reparse-symbol function_parameters) [7691 7703])
+                            ("result_dict" variable nil (reparse-symbol function_parameters) [7705 7716]))                          
+                        :documentation " ÅÐ¶ÏÊÇ·ñÈ¡ÏÖ³É¹¦£¬²¢ÇÒÐ´Èë¼ÇÂ¼ ")
+                        (reparse-symbol indented_block_body) [7610 8829])
+                    ("get_store_key" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9019 9023])
+                            ("platform" variable nil (reparse-symbol function_parameters) [9025 9033])
+                            ("store_name" variable nil (reparse-symbol function_parameters) [9035 9045]))                          )
+                        (reparse-symbol indented_block_body) [9001 9445]))                  
+                :type "class")
+                nil [4990 9445])
+            ("StoreApiGetMoney" type
+               (:documentation " »ñÈ¡Æ½Ì¨µÄ½ð¶î "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [7966 8004])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8013 8046]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9519 9523])
+                            ("store_keys_dict" variable nil (reparse-symbol function_parameters) [9525 9540])
+                            ("money_number" variable nil (reparse-symbol function_parameters) [9542 9554]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9506 9646])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9664 9668])
+                            ("args" variable nil (reparse-symbol function_parameters) [9670 9675])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [9677 9685]))                          )
+                        (reparse-symbol indented_block_body) [9651 9726])
+                    ("store_get_money" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9751 9755]))                          )
+                        (reparse-symbol indented_block_body) [9731 9852]))                  
+                :type "class")
+                nil [9450 9852])
+            ("ExtractToBank" type
+               (:documentation " ½«½ð¶îÌá½»µ½ÒøÐÐ "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [8363 8389])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8398 8430])
+                            ("pass" code nil (reparse-symbol indented_block_body) [8439 8443]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9922 9926])
+                            ("bank_cart" variable nil (reparse-symbol function_parameters) [9928 9937])
+                            ("money_number" variable nil (reparse-symbol function_parameters) [9939 9951]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9909 10043])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10061 10065])
+                            ("args" variable nil (reparse-symbol function_parameters) [10067 10072])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [10074 10082]))                          )
+                        (reparse-symbol indented_block_body) [10048 10123])
+                    ("extract_to_bank" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10148 10152]))                          )
+                        (reparse-symbol indented_block_body) [10128 10249]))                  
+                :type "class")
+                nil [9855 10249]))          
+      :file "enchashment.py"
+      :pointmax 10249
+      :fsize 14899
+      :lastmodtime '(22679 8532 866209 382000)
+      :unmatched-syntax nil)
+    (semanticdb-table "cardAction.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logging" include nil nil [19 34])
+            ("django.contrib.auth.models" include nil nil [36 79])
+            ("PayApp.models" include nil nil [80 124])
+            ("PayApp.payservice.userInfo" include nil nil [125 172])
+            ("PayApp.payservice.data_utils" include nil nil [245 304])
+            ("log2" variable nil nil [306 339])
+            ("BandCardAction" type
+               (:documentation " °ó¶¨ÒøÐÐ¿¨²Ù×÷ "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [444 470])
+                            ("self" variable nil (reparse-symbol indented_block_body) [479 504]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [408 412])
+                            ("post_dict" variable nil (reparse-symbol function_parameters) [414 423])
+                            ("username" variable nil (reparse-symbol function_parameters) [425 433]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [395 505])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [522 526])
+                            ("args" variable nil (reparse-symbol function_parameters) [527 532])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [534 542]))                          )
+                        (reparse-symbol indented_block_body) [509 581])
+                    ("add_bind_cart" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [604 608]))                          )
+                        (reparse-symbol indented_block_body) [586 2128]))                  
+                :type "class")
+                nil [341 2128])
+            ("QueryCards" type
+               (:documentation " ²éÑ¯ÒøÐÐ¿¨ "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2215 2239]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2190 2194])
+                            ("username" variable nil (reparse-symbol function_parameters) [2196 2204]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2177 2240])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2258 2262])
+                            ("args" variable nil (reparse-symbol function_parameters) [2264 2269])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [2271 2279]))                          )
+                        (reparse-symbol indented_block_body) [2245 2316])
+                    ("query_carts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2337 2341]))                          )
+                        (reparse-symbol indented_block_body) [2321 2486])
+                    ("query_card_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2512 2516])
+                            ("card_num" variable nil (reparse-symbol function_parameters) [2517 2525]))                          )
+                        (reparse-symbol indented_block_body) [2492 2962]))                  
+                :type "class")
+                nil [2129 2962]))          
+      :file "cardAction.py"
+      :pointmax 2971
+      :fsize 3066
+      :lastmodtime '(22657 23178 744751 264000)
+      :unmatched-syntax nil)
+    (semanticdb-table "userRegister.py"
+      :file "userRegister.py"
+      :fsize 8685
+      :lastmodtime '(22650 39998 632190 5000))
+    (semanticdb-table "KDTCard.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("time" include nil nil [42 53])
+            ("hashlib" include nil nil [54 68])
+            ("random" include nil nil [69 95])
+            ("PayApp.models" include nil nil [98 152])
+            ("PayApp.payservice.userInfo" include nil nil [153 200])
+            ("PayApp.payservice.data_utils" include nil nil [201 260])
+            ("application_card" function
+               (:documentation " 模拟申请kdt卡 "
+                :arguments 
+                  ( ("randomlength" variable nil (reparse-symbol function_parameters) [285 297]))                  )
+                nil [263 509])
+            ("CreateMainCards" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [585 609])
+                            ("pass" code nil (reparse-symbol indented_block_body) [618 622]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [560 564])
+                            ("username" variable nil (reparse-symbol function_parameters) [566 574]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [547 623])
+                    ("create_main_cards" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1478 1482]))                          )
+                        (reparse-symbol indented_block_body) [1456 2515])
+                    ("create_main_card_storename" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2551 2555])
+                            ("platform" variable nil (reparse-symbol function_parameters) [2557 2565]))                          )
+                        (reparse-symbol indented_block_body) [2520 3177])
+                    ("create_main_storename_and_sellerId" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3221 3225]))                          
+                        :documentation " 对于主账户，使用用户名与时间的md5作为其店铺名和卖家id")
+                        (reparse-symbol indented_block_body) [3182 3405]))                  
+                :type "class")
+                nil [512 3405])
+            ("HomeData" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2653 2677])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2686 2721]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3455 3459])
+                            ("username" variable nil (reparse-symbol function_parameters) [3461 3469]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3442 3549])
+                    ("get_main_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3572 3576]))                          )
+                        (reparse-symbol indented_block_body) [3554 4688])
+                    ("detail_get_sub_account" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4720 4724])
+                            ("main_account" variable nil (reparse-symbol function_parameters) [4726 4738]))                          )
+                        (reparse-symbol indented_block_body) [4693 5307])
+                    ("get_sub_account" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5333 5337])
+                            ("platform" variable nil (reparse-symbol function_parameters) [5339 5347]))                          )
+                        (reparse-symbol indented_block_body) [5313 6407])
+                    ("manage_main_card" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6433 6437]))                          )
+                        (reparse-symbol indented_block_body) [6412 7427])
+                    ("deal_other_main_card" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7457 7461])
+                            ("other_data_list" variable nil (reparse-symbol function_parameters) [7463 7478]))                          )
+                        (reparse-symbol indented_block_body) [7432 7813])
+                    ("query_main_cards" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7840 7844]))                          )
+                        (reparse-symbol indented_block_body) [7819 8890])
+                    ("get_other_bank_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8919 8923]))                          )
+                        (reparse-symbol indented_block_body) [8895 9334])
+                    ("query_sub_cards" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9359 9363]))                          )
+                        (reparse-symbol indented_block_body) [9339 9590]))                  
+                :type "class")
+                nil [3414 9590])
+            ("AddOneKDTCard" type
+               (:documentation " 添加一个店铺的时候，需要添加一个卡 "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [8883 8907])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8916 8940])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8949 8967])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8976 9006]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9668 9672])
+                            ("username" variable nil (reparse-symbol function_parameters) [9674 9682])
+                            ("platform" variable nil (reparse-symbol function_parameters) [9684 9692])
+                            ("store" variable nil (reparse-symbol function_parameters) [9694 9699]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9655 9834])
+                    ("application_sub_card" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9864 9868])
+                            ("username" variable nil (reparse-symbol function_parameters) [9870 9878])
+                            ("provide_card" variable nil (reparse-symbol function_parameters) [9880 9892]))                          )
+                        (reparse-symbol indented_block_body) [9839 10645])
+                    ("add_one_card" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10688 10692])
+                            ("is_enterprise" variable nil (reparse-symbol function_parameters) [10694 10707])
+                            ("kdt_cards" variable nil (reparse-symbol function_parameters) [10714 10723]))                          )
+                        (reparse-symbol indented_block_body) [10671 13149])
+                    ("add_100_money" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13174 13178])
+                            ("kdtc" variable nil (reparse-symbol function_parameters) [13180 13184]))                          )
+                        (reparse-symbol indented_block_body) [13156 13356]))                  
+                :type "class")
+                nil [9592 13356]))          
+      :file "KDTCard.py"
+      :pointmax 13358
+      :fsize 13459
+      :lastmodtime '(22680 39577 483318 964000)
+      :unmatched-syntax nil)
+    (semanticdb-table "create_xls.py"
+      :file "create_xls.py"
+      :fsize 1637
+      :lastmodtime '(22663 33003 868937 891000))
+    (semanticdb-table "data_utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("random" include nil nil [20 45])
+            ("hide_str" function (:arguments 
+              ( ("query_list" variable nil (reparse-symbol function_parameters) [61 71]))              ) nil [48 325])
+            ("hide_one_str" function (:arguments 
+              ( ("kdt_cards" variable nil (reparse-symbol function_parameters) [343 352]))              ) nil [326 473])
+            ("hide_recorde_str" function (:arguments 
+              ( ("query_list" variable nil (reparse-symbol function_parameters) [496 506]))              ) nil [475 941])
+            ("hide_enchashment_str" function (:arguments 
+              ( ("query_list" variable nil (reparse-symbol function_parameters) [971 981]))              ) nil [946 1380])
+            ("create_rand_number" function
+               (:documentation " 模拟申请kdt卡 "
+                :arguments 
+                  ( ("randomlength" variable nil (reparse-symbol function_parameters) [1413 1425]))                  )
+                nil [1390 1636])
+            ("brokerage_expense" function
+               (:documentation "获取手续费"
+                :arguments 
+                  ( ("money_str" variable nil (reparse-symbol function_parameters) [1660 1669]))                  )
+                nil [1638 1866]))          
+      :file "data_utils.py"
+      :pointmax 1866
+      :fsize 1885
+      :lastmodtime '(22663 33003 868937 891000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python!KDTPay!PayApp!payservice!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
