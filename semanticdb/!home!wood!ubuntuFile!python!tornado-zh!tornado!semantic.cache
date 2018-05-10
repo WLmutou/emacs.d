@@ -1,0 +1,947 @@
+;; Object tornado/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tornado/"
+  :tables
+  (list
+    (semanticdb-table "ioloop.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "ioloop.py"
+      :pointmax 41266
+      :fsize 41265
+      :lastmodtime '(22701 39828 176336 9000)
+      :unmatched-syntax nil)
+    (semanticdb-table "log.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "log.py"
+      :pointmax 10921
+      :fsize 10920
+      :lastmodtime '(22701 39828 176336 9000)
+      :unmatched-syntax nil)
+    (semanticdb-table "locks.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "locks.py"
+      :pointmax 13712
+      :fsize 15165
+      :lastmodtime '(22701 39828 176336 9000)
+      :unmatched-syntax nil)
+    (semanticdb-table "escape.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "escape.py"
+      :pointmax 12548
+      :fsize 14109
+      :lastmodtime '(22701 39828 172336 9000)
+      :unmatched-syntax nil)
+    (semanticdb-table "util.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "util.py"
+      :pointmax 13606
+      :fsize 13605
+      :lastmodtime '(22701 39828 184336 9000)
+      :unmatched-syntax nil)
+    (semanticdb-table "gen.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"``tornado.gen`` is a generator-based interface to make it easier to
+work in an asynchronous environment.  Code using the ``gen`` module
+is technically asynchronous, but it is written as a single generator
+instead of a collection of separate functions.
+
+For example, the following asynchronous handler:
+
+.. testcode::
+
+    class AsyncHandler(RequestHandler):
+        @asynchronous
+        def get(self):
+            http_client = AsyncHTTPClient()
+            http_client.fetch(\"http://example.com\",
+                              callback=self.on_fetch)
+
+        def on_fetch(self, response):
+            do_something_with_response(response)
+            self.render(\"template.html\")
+
+.. testoutput::
+   :hide:
+
+could be written with ``gen`` as:
+
+.. testcode::
+
+    class GenAsyncHandler(RequestHandler):
+        @gen.coroutine
+        def get(self):
+            http_client = AsyncHTTPClient()
+            response = yield http_client.fetch(\"http://example.com\")
+            do_something_with_response(response)
+            self.render(\"template.html\")
+
+.. testoutput::
+   :hide:
+
+Most asynchronous functions in Tornado return a `.Future`;
+yielding this object returns its `~.Future.result`.
+
+You can also yield a list or dict of ``Futures``, which will be
+started at the same time and run in parallel; a list or dict of results will
+be returned when they are all finished:
+
+.. testcode::
+
+    @gen.coroutine
+    def get(self):
+        http_client = AsyncHTTPClient()
+        response1, response2 = yield [http_client.fetch(url1),
+                                      http_client.fetch(url2)]
+        response_dict = yield dict(response3=http_client.fetch(url3),
+                                   response4=http_client.fetch(url4))
+        response3 = response_dict['response3']
+        response4 = response_dict['response4']
+
+.. testoutput::
+   :hide:
+
+If the `~functools.singledispatch` library is available (standard in
+Python 3.4, available via the `singledispatch
+<https://pypi.python.org/pypi/singledispatch>`_ package on older
+versions), additional types of objects may be yielded. Tornado includes
+support for ``asyncio.Future`` and Twisted's ``Deferred`` class when
+``tornado.platform.asyncio`` and ``tornado.platform.twisted`` are imported.
+See the `convert_yielded` function to extend this mechanism.
+
+.. versionchanged:: 3.2
+   Dict support added.
+
+.. versionchanged:: 4.1
+   Support added for yielding ``asyncio`` Futures and Twisted Deferreds
+   via ``singledispatch``.
+
+\"\"\"" code nil nil [1 2493])
+            ("__future__" include nil nil [2494 2574])
+            ("collections" include nil nil [2576 2594])
+            ("functools" include nil nil [2595 2611])
+            ("itertools" include nil nil [2612 2628])
+            ("os" include nil nil [2629 2638])
+            ("sys" include nil nil [2639 2649])
+            ("textwrap" include nil nil [2650 2665])
+            ("types" include nil nil [2666 2678])
+            ("tornado.concurrent" include nil nil [2680 2759])
+            ("tornado.ioloop" include nil nil [2760 2793])
+            ("tornado.log" include nil nil [2794 2825])
+            ("tornado" include nil nil [2826 2859])
+            ("tornado.util" include nil nil [2860 2899])
+            ("try" code nil nil [2901 3501])
+            ("try" code nil nil [3502 3964])
+            ("try" code nil nil [3965 4052])
+            ("KeyReuseError" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [4090 4094]))                  
+                :type "class")
+                nil [4054 4095])
+            ("UnknownKeyError" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [4135 4139]))                  
+                :type "class")
+                nil [4097 4140])
+            ("LeakedCallbackError" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [4184 4188]))                  
+                :type "class")
+                nil [4142 4189])
+            ("BadYieldError" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [4227 4231]))                  
+                :type "class")
+                nil [4191 4232])
+            ("ReturnValueIgnoredError" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [4280 4284]))                  
+                :type "class")
+                nil [4234 4285])
+            ("TimeoutError" type
+               (:documentation "Exception raised by ``with_timeout``."
+                :superclasses ("Exception")
+                :type "class")
+                nil [4287 4366])
+            ("_value_from_stopiteration" function (:arguments 
+              ( ("e" variable nil (reparse-symbol function_parameters) [4398 4399]))              ) nil [4368 4766])
+            ("engine" function
+               (:documentation "Callback-oriented decorator for asynchronous generators.
+
+    This is an older interface; for new code that does not need to be
+    compatible with versions of Tornado older than 3.0 the
+    `coroutine` decorator is recommended instead.
+
+    This decorator is similar to `coroutine`, except it does not
+    return a `.Future` and the ``callback`` argument is not treated
+    specially.
+
+    In most cases, functions decorated with `engine` should take
+    a ``callback`` argument and invoke it with their result when
+    they are finished.  One notable exception is the
+    `~tornado.web.RequestHandler` :ref:`HTTP verb methods <verbs>`,
+    which use ``self.finish()`` in place of a callback argument.
+    "
+                :arguments 
+                  ( ("func" variable nil (reparse-symbol function_parameters) [4779 4783]))                  )
+                nil [4768 6196])
+            ("coroutine" function
+               (:documentation "Decorator for asynchronous generators.
+
+    Any generator that yields objects from this module must be wrapped
+    in either this decorator or `engine`.
+
+    Coroutines may \"return\" by raising the special exception
+    `Return(value) <Return>`.  In Python 3.3+, it is also possible for
+    the function to simply use the ``return value`` statement (prior to
+    Python 3.3 generators were not allowed to also return values).
+    In all versions of Python a coroutine that simply wishes to exit
+    early may use the ``return`` statement without a value.
+
+    Functions with this decorator return a `.Future`.  Additionally,
+    they may be called with a ``callback`` keyword argument, which
+    will be invoked with the future's result when it resolves.  If the
+    coroutine fails, the callback will not be run and an exception
+    will be raised into the surrounding `.StackContext`.  The
+    ``callback`` argument is not visible inside the decorated
+    function; it is handled by the decorator itself.
+
+    From the caller's perspective, ``@gen.coroutine`` is similar to
+    the combination of ``@return_future`` and ``@gen.engine``.
+
+    .. warning::
+
+       When exceptions occur inside a coroutine, the exception
+       information will be stored in the `.Future` object. You must
+       examine the result of the `.Future` object, or the exception
+       may go unnoticed by your code. This means yielding the function
+       if called from another coroutine, using something like
+       `.IOLoop.run_sync` for top-level calls, or passing the `.Future`
+       to `.IOLoop.add_future`.
+
+    "
+                :arguments 
+                  ( ("func" variable nil (reparse-symbol function_parameters) [6212 6216])
+                    ("replace_callback" variable nil (reparse-symbol function_parameters) [6218 6234]))                  )
+                nil [6198 7915])
+            ("_make_coroutine_wrapper" function
+               (:documentation "The inner workings of ``@gen.coroutine`` and ``@gen.engine``.
+
+    The two decorators differ in their treatment of the ``callback``
+    argument, so we cannot simply implement ``@engine`` in terms of
+    ``@coroutine``.
+    "
+                :arguments 
+                  ( ("func" variable nil (reparse-symbol function_parameters) [7945 7949])
+                    ("replace_callback" variable nil (reparse-symbol function_parameters) [7951 7967]))                  )
+                nil [7917 10971])
+            ("Return" type
+               (:documentation "Special exception to return a value from a `coroutine`.
+
+    If this exception is raised, its value argument is used as the
+    result of the coroutine::
+
+        @gen.coroutine
+        def fetch_json(url):
+            response = yield AsyncHTTPClient().fetch(url)
+            raise gen.Return(json_decode(response.body))
+
+    In Python 3.3, this exception is no longer necessary: the ``return``
+    statement can be used directly to return a value (previously
+    ``yield`` and ``return`` with a value could not be combined in the
+    same function).
+
+    By analogy with the return statement, the value argument is optional,
+    but it is never necessary to ``raise gen.Return()``.  The ``return``
+    statement can be used with no arguments instead.
+    "
+                :superclasses ("Exception")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [11810 11840])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11849 11867])
+                            ("self" variable nil (reparse-symbol indented_block_body) [11952 11972]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11783 11787])
+                            ("value" variable nil (reparse-symbol function_parameters) [11789 11794]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [11770 11973]))                  
+                :type "class")
+                nil [10973 11973])
+            ("WaitIterator" type
+               (:documentation "Provides an iterator to yield the results of futures as they finish.
+
+    Yielding a set of futures like this:
+
+    ``results = yield [future1, future2]``
+
+    pauses the coroutine until both ``future1`` and ``future2``
+    return, and then restarts the coroutine with the results of both
+    futures. If either future is an exception, the expression will
+    raise that exception and all the results will be lost.
+
+    If you need to get the result of each future as soon as possible,
+    or if you need the result of some futures even if others produce
+    errors, you can use ``WaitIterator``::
+
+      wait_iterator = gen.WaitIterator(future1, future2)
+      while not wait_iterator.done():
+          try:
+              result = yield wait_iterator.next()
+          except Exception as e:
+              print(\"Error {} from {}\".format(e, wait_iterator.current_future))
+          else:
+              print(\"Result {} received from {} at {}\".format(
+                  result, wait_iterator.current_future,
+                  wait_iterator.current_index))
+
+    Because results are returned as soon as they are available the
+    output from the iterator *will not be in the same order as the
+    input arguments*. If you need to know which future produced the
+    current result, you can use the attributes
+    ``WaitIterator.current_future``, or ``WaitIterator.current_index``
+    to get the index of the future from the input list. (if keyword
+    arguments were used in the construction of the `WaitIterator`,
+    ``current_index`` will use the corresponding keyword).
+
+    On Python 3.5, `WaitIterator` implements the async iterator
+    protocol, so it can be used with the ``async for`` statement (note
+    that in this version the entire iteration is aborted if any value
+    raises an exception, while the previous example can continue past
+    individual errors)::
+
+      async for result in gen.WaitIterator(future1, future2):
+          print(\"Result {} received from {} at {}\".format(
+              result, wait_iterator.current_future,
+              wait_iterator.current_index))
+
+    .. versionadded:: 4.1
+
+    .. versionchanged:: 4.3
+       Added ``async for`` support in Python 3.5.
+
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [14263 14374])
+                            ("if" code nil (reparse-symbol indented_block_body) [14383 14626])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14635 14671])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14680 14727])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14736 14763])
+                            ("for" code nil (reparse-symbol indented_block_body) [14773 14854]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14231 14235])
+                            ("args" variable nil (reparse-symbol function_parameters) [14237 14242])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [14244 14252]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [14218 14854])
+                    ("done" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14868 14872]))                          
+                        :documentation "Returns True if this iterator has no more results.")
+                        (reparse-symbol indented_block_body) [14859 15149])
+                    ("next" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15163 15167]))                          
+                        :documentation "Returns a `.Future` that will yield the next available result.
+
+        Note that this `.Future` will not be the same object as any of
+        the inputs.
+        ")
+                        (reparse-symbol indented_block_body) [15154 15520])
+                    ("_done_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15544 15548])
+                            ("done" variable nil (reparse-symbol function_parameters) [15550 15554]))                          )
+                        (reparse-symbol indented_block_body) [15525 15718])
+                    ("_return_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15742 15746])
+                            ("done" variable nil (reparse-symbol function_parameters) [15748 15752]))                          
+                        :documentation "Called set the returned future's state that of the future
+        we yielded, and set the current future for the iterator.
+        ")
+                        (reparse-symbol indented_block_body) [15723 16042])
+                    ("__aiter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16076 16080]))                          
+                        :decorators 
+                          ( ("coroutine" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [16047 16110])
+                    ("__anext__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16129 16133]))                          )
+                        (reparse-symbol indented_block_body) [16115 16315]))                  
+                :type "class")
+                nil [11975 16315])
+            ("YieldPoint" type
+               (:documentation "Base class for objects that may be yielded from the generator.
+
+    .. deprecated:: 4.0
+       Use `Futures <.Future>` instead.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16500 16504])
+                            ("runner" variable nil (reparse-symbol function_parameters) [16506 16512]))                          
+                        :documentation "Called by the runner after the generator has yielded.
+
+        No other methods will be called on this object before ``start``.
+        ")
+                        (reparse-symbol indented_block_body) [16490 16702])
+                    ("is_ready" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16720 16724]))                          
+                        :documentation "Called by the runner to determine whether to resume the generator.
+
+        Returns a boolean; may be called more than once.
+        ")
+                        (reparse-symbol indented_block_body) [16707 16911])
+                    ("get_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16931 16935]))                          
+                        :documentation "Returns the value to use as the result of the yield expression.
+
+        This method will only be called once, and only after `is_ready`
+        has returned true.
+        ")
+                        (reparse-symbol indented_block_body) [16916 17161]))                  
+                :type "class")
+                nil [16317 17161])
+            ("Callback" type
+               (:documentation "Returns a callable object that will allow a matching `Wait` to proceed.
+
+    The key may be any value suitable for use as a dictionary key, and is
+    used to match ``Callbacks`` to their corresponding ``Waits``.  The key
+    must be unique among outstanding callbacks within a single run of the
+    generator function, but may be reused across different runs of the same
+    function (so constants generally work fine).
+
+    The callback may be called with zero or one arguments; if an argument
+    is given it will be returned by `Wait`.
+
+    .. deprecated:: 4.0
+       Use `Futures <.Future>` instead.
+    "
+                :superclasses ("YieldPoint")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [17848 17862]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17828 17832])
+                            ("key" variable nil (reparse-symbol function_parameters) [17834 17837]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [17815 17863])
+                    ("start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17878 17882])
+                            ("runner" variable nil (reparse-symbol function_parameters) [17884 17890]))                          )
+                        (reparse-symbol indented_block_body) [17868 17965])
+                    ("is_ready" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17983 17987]))                          )
+                        (reparse-symbol indented_block_body) [17970 18010])
+                    ("get_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18030 18034]))                          )
+                        (reparse-symbol indented_block_body) [18015 18090]))                  
+                :type "class")
+                nil [17163 18090])
+            ("Wait" type
+               (:documentation "Returns the argument passed to the result of a previous `Callback`.
+
+    .. deprecated:: 4.0
+       Use `Futures <.Future>` instead.
+    "
+                :superclasses ("YieldPoint")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [18301 18315]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18281 18285])
+                            ("key" variable nil (reparse-symbol function_parameters) [18287 18290]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [18268 18316])
+                    ("start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18331 18335])
+                            ("runner" variable nil (reparse-symbol function_parameters) [18337 18343]))                          )
+                        (reparse-symbol indented_block_body) [18321 18375])
+                    ("is_ready" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18393 18397]))                          )
+                        (reparse-symbol indented_block_body) [18380 18446])
+                    ("get_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18466 18470]))                          )
+                        (reparse-symbol indented_block_body) [18451 18521]))                  
+                :type "class")
+                nil [18092 18521])
+            ("WaitAll" type
+               (:documentation "Returns the results of multiple previous `Callbacks <Callback>`.
+
+    The argument is a sequence of `Callback` keys, and the result is
+    a list of results in the same order.
+
+    `WaitAll` is equivalent to yielding a list of `Wait` objects.
+
+    .. deprecated:: 4.0
+       Use `Futures <.Future>` instead.
+    "
+                :superclasses ("YieldPoint")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [18911 18927]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18890 18894])
+                            ("keys" variable nil (reparse-symbol function_parameters) [18896 18900]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [18877 18928])
+                    ("start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18943 18947])
+                            ("runner" variable nil (reparse-symbol function_parameters) [18949 18955]))                          )
+                        (reparse-symbol indented_block_body) [18933 18987])
+                    ("is_ready" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19005 19009]))                          )
+                        (reparse-symbol indented_block_body) [18992 19079])
+                    ("get_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19099 19103]))                          )
+                        (reparse-symbol indented_block_body) [19084 19172]))                  
+                :type "class")
+                nil [18523 19172])
+            ("Task" function
+               (:documentation "Adapts a callback-based asynchronous function for use in coroutines.
+
+    Takes a function (and optional additional arguments) and runs it with
+    those arguments plus a ``callback`` keyword argument.  The argument passed
+    to the callback is returned as the result of the yield expression.
+
+    .. versionchanged:: 4.0
+       ``gen.Task`` is now a function that returns a `.Future`, instead of
+       a subclass of `YieldPoint`.  It still behaves the same way when
+       yielded.
+    "
+                :arguments 
+                  ( ("func" variable nil (reparse-symbol function_parameters) [19183 19187])
+                    ("args" variable nil (reparse-symbol function_parameters) [19189 19194])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [19196 19204]))                  )
+                nil [19174 20149])
+            ("YieldFuture" type
+               (:superclasses ("YieldPoint")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Adapts a `.Future` to the `YieldPoint` interface.
+
+        .. versionchanged:: 4.1
+           The ``io_loop`` argument is deprecated.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [20236 20384])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20393 20413])
+                            ("self" code nil (reparse-symbol indented_block_body) [20422 20464]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20199 20203])
+                            ("future" variable nil (reparse-symbol function_parameters) [20205 20211])
+                            ("io_loop" variable nil (reparse-symbol function_parameters) [20213 20220]))                          
+                        :documentation "Adapts a `.Future` to the `YieldPoint` interface.
+
+        .. versionchanged:: 4.1
+           The ``io_loop`` argument is deprecated.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [20186 20465])
+                    ("start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20480 20484])
+                            ("runner" variable nil (reparse-symbol function_parameters) [20486 20492]))                          )
+                        (reparse-symbol indented_block_body) [20470 20818])
+                    ("is_ready" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20836 20840]))                          )
+                        (reparse-symbol indented_block_body) [20823 20967])
+                    ("get_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20987 20991]))                          )
+                        (reparse-symbol indented_block_body) [20972 21141]))                  
+                :type "class")
+                nil [20151 21141])
+            ("_contains_yieldpoint" function
+               (:documentation "Returns True if ``children`` contains any YieldPoints.
+
+    ``children`` may be a dict or a list, as used by `MultiYieldPoint`
+    and `multi_future`.
+    "
+                :arguments 
+                  ( ("children" variable nil (reparse-symbol function_parameters) [21168 21176]))                  )
+                nil [21143 21569])
+            ("multi" function
+               (:documentation "Runs multiple asynchronous operations in parallel.
+
+    ``children`` may either be a list or a dict whose values are
+    yieldable objects. ``multi()`` returns a new yieldable
+    object that resolves to a parallel structure containing their
+    results. If ``children`` is a list, the result is a list of
+    results in the same order; if it is a dict, the result is a dict
+    with the same keys.
+
+    That is, ``results = yield multi(list_of_futures)`` is equivalent
+    to::
+
+        results = []
+        for future in list_of_futures:
+            results.append(yield future)
+
+    If any children raise exceptions, ``multi()`` will raise the first
+    one. All others will be logged, unless they are of types
+    contained in the ``quiet_exceptions`` argument.
+
+    If any of the inputs are `YieldPoints <YieldPoint>`, the returned
+    yieldable object is a `YieldPoint`. Otherwise, returns a `.Future`.
+    This means that the result of `multi` can be used in a native
+    coroutine if and only if all of its children can be.
+
+    In a ``yield``-based coroutine, it is not normally necessary to
+    call this function directly, since the coroutine runner will
+    do it automatically when a list or dict is yielded. However,
+    it is necessary in ``await``-based coroutines, or to pass
+    the ``quiet_exceptions`` argument.
+
+    This function is available under the names ``multi()`` and ``Multi()``
+    for historical reasons.
+
+    .. versionchanged:: 4.2
+       If multiple yieldables fail, any exceptions after the first
+       (which is raised) will be logged. Added the ``quiet_exceptions``
+       argument to suppress this logging for selected exception types.
+
+    .. versionchanged:: 4.3
+       Replaced the class ``Multi`` and the function ``multi_future``
+       with a unified function ``multi``. Added support for yieldables
+       other than `YieldPoint` and `.Future`.
+
+    "
+                :arguments 
+                  ( ("children" variable nil (reparse-symbol function_parameters) [21581 21589])
+                    ("quiet_exceptions" variable nil (reparse-symbol function_parameters) [21591 21607]))                  )
+                nil [21571 23718])
+            ("Multi" variable nil nil [23719 23732])
+            ("MultiYieldPoint" type
+               (:documentation "Runs multiple asynchronous operations in parallel.
+
+    This class is similar to `multi`, but it always creates a stack
+    context even when no children require it. It is not compatible with
+    native coroutines.
+
+    .. versionchanged:: 4.2
+       If multiple ``YieldPoints`` fail, any exceptions after the first
+       (which is raised) will be logged. Added the ``quiet_exceptions``
+       argument to suppress this logging for selected exception types.
+
+    .. versionchanged:: 4.3
+       Renamed from ``Multi`` to ``MultiYieldPoint``. The name ``Multi``
+       remains as an alias for the equivalent `multi` function.
+
+    .. deprecated:: 4.3
+       Use `multi` instead.
+    "
+                :superclasses ("YieldPoint")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [24526 24542])
+                            ("if" code nil (reparse-symbol indented_block_body) [24551 24669])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24677 24695])
+                            ("for" code nil (reparse-symbol indented_block_body) [24704 24908])
+                            ("assert" code nil (reparse-symbol indented_block_body) [24916 24976])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24985 25030])
+                            ("self" variable nil (reparse-symbol indented_block_body) [25039 25079]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24480 24484])
+                            ("children" variable nil (reparse-symbol function_parameters) [24486 24494])
+                            ("quiet_exceptions" variable nil (reparse-symbol function_parameters) [24496 24512]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [24467 25080])
+                    ("start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25095 25099])
+                            ("runner" variable nil (reparse-symbol function_parameters) [25101 25107]))                          )
+                        (reparse-symbol indented_block_body) [25085 25170])
+                    ("is_ready" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25188 25192]))                          )
+                        (reparse-symbol indented_block_body) [25175 25408])
+                    ("get_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25428 25432]))                          )
+                        (reparse-symbol indented_block_body) [25413 26125]))                  
+                :type "class")
+                nil [23735 26125])
+            ("multi_future" function
+               (:documentation "Wait for multiple asynchronous futures in parallel.
+
+    This function is similar to `multi`, but does not support
+    `YieldPoints <YieldPoint>`.
+
+    .. versionadded:: 4.0
+
+    .. versionchanged:: 4.2
+       If multiple ``Futures`` fail, any exceptions after the first (which is
+       raised) will be logged. Added the ``quiet_exceptions``
+       argument to suppress this logging for selected exception types.
+
+    .. deprecated:: 4.3
+       Use `multi` instead.
+    "
+                :arguments 
+                  ( ("children" variable nil (reparse-symbol function_parameters) [26144 26152])
+                    ("quiet_exceptions" variable nil (reparse-symbol function_parameters) [26154 26170]))                  )
+                nil [26127 28007])
+            ("maybe_future" function
+               (:documentation "Converts ``x`` into a `.Future`.
+
+    If ``x`` is already a `.Future`, it is simply returned; otherwise
+    it is wrapped in a new `.Future`.  This is suitable for use as
+    ``result = yield gen.maybe_future(f())`` when you don't know whether
+    ``f()`` returns a `.Future` or not.
+
+    .. deprecated:: 4.3
+       This function only handles ``Futures``, not other yieldable objects.
+       Instead of `maybe_future`, check for the non-future result types
+       you expect (often just ``None``), and ``yield`` anything unknown.
+    "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [28026 28027]))                  )
+                nil [28009 28691])
+            ("with_timeout" function
+               (:documentation "Wraps a `.Future` in a timeout.
+
+    Raises `TimeoutError` if the input future does not complete before
+    ``timeout``, which may be specified in any form allowed by
+    `.IOLoop.add_timeout` (i.e. a `datetime.timedelta` or an absolute time
+    relative to `.IOLoop.time`)
+
+    If the wrapped `.Future` fails after it has timed out, the exception
+    will be logged unless it is of a type contained in ``quiet_exceptions``
+    (which may be an exception type or a sequence of types).
+
+    Currently only supports Futures, not other `YieldPoint` classes.
+
+    .. versionadded:: 4.0
+
+    .. versionchanged:: 4.1
+       Added the ``quiet_exceptions`` argument and the logging of unhandled
+       exceptions.
+    "
+                :arguments 
+                  ( ("timeout" variable nil (reparse-symbol function_parameters) [28710 28717])
+                    ("future" variable nil (reparse-symbol function_parameters) [28719 28725])
+                    ("io_loop" variable nil (reparse-symbol function_parameters) [28727 28734])
+                    ("quiet_exceptions" variable nil (reparse-symbol function_parameters) [28741 28757]))                  )
+                nil [28693 31219])
+            ("sleep" function
+               (:documentation "Return a `.Future` that resolves after the given number of seconds.
+
+    When used with ``yield`` in a coroutine, this is a non-blocking
+    analogue to `time.sleep` (which should not be used in coroutines
+    because it is blocking)::
+
+        yield gen.sleep(0.5)
+
+    Note that calling this function on its own does nothing; you must
+    wait on the `.Future` it returns (usually by yielding it).
+
+    .. versionadded:: 4.1
+    "
+                :arguments 
+                  ( ("duration" variable nil (reparse-symbol function_parameters) [31231 31239]))                  )
+                nil [31221 31784])
+            ("_null_future" variable nil nil [31786 31809])
+            ("_null_future" code nil nil [31810 31839])
+            ("moment" variable nil nil [31841 31858])
+            ("moment" variable nil nil [31859 32166])
+            ("moment" code nil nil [32167 32190])
+            ("Runner" type
+               (:documentation "Internal implementation of `tornado.gen.engine`.
+
+    Maintains information about pending callbacks and their results.
+
+    The results of the generator are stored in ``result_future`` (a
+    `.TracebackFuture`)
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [32509 32523])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32532 32566])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32575 32601])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32610 32633])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32642 32671])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32680 32699])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32708 32728])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32737 32758])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32767 32793])
+                            ("self" variable nil (reparse-symbol indented_block_body) [32802 32833])
+                            ("self" variable nil (reparse-symbol indented_block_body) [33159 33195])
+                            ("if" code nil (reparse-symbol indented_block_body) [33204 33264]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32459 32463])
+                            ("gen" variable nil (reparse-symbol function_parameters) [32465 32468])
+                            ("result_future" variable nil (reparse-symbol function_parameters) [32470 32483])
+                            ("first_yielded" variable nil (reparse-symbol function_parameters) [32485 32498]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [32446 33264])
+                    ("register_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33291 33295])
+                            ("key" variable nil (reparse-symbol function_parameters) [33297 33300]))                          
+                        :documentation "Adds ``key`` to the list of callbacks.")
+                        (reparse-symbol indented_block_body) [33269 33698])
+                    ("is_ready" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33716 33720])
+                            ("key" variable nil (reparse-symbol function_parameters) [33722 33725]))                          
+                        :documentation "Returns true if a result is available for ``key``.")
+                        (reparse-symbol indented_block_body) [33703 33976])
+                    ("set_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33996 34000])
+                            ("key" variable nil (reparse-symbol function_parameters) [34002 34005])
+                            ("result" variable nil (reparse-symbol function_parameters) [34007 34013]))                          
+                        :documentation "Sets the result for ``key`` and attempts to resume the generator.")
+                        (reparse-symbol indented_block_body) [33981 34427])
+                    ("pop_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34447 34451])
+                            ("key" variable nil (reparse-symbol function_parameters) [34453 34456]))                          
+                        :documentation "Returns the result for ``key`` and unregisters it.")
+                        (reparse-symbol indented_block_body) [34432 34604])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34617 34621]))                          
+                        :documentation "Starts or resumes the generator, running until it reaches a
+        yield point that is not ready.
+        ")
+                        (reparse-symbol indented_block_body) [34609 37277])
+                    ("handle_yield" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37299 37303])
+                            ("yielded" variable nil (reparse-symbol function_parameters) [37305 37312]))                          )
+                        (reparse-symbol indented_block_body) [37282 39201])
+                    ("result_callback" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39226 39230])
+                            ("key" variable nil (reparse-symbol function_parameters) [39232 39235]))                          )
+                        (reparse-symbol indented_block_body) [39206 39345])
+                    ("handle_exception" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39371 39375])
+                            ("typ" variable nil (reparse-symbol function_parameters) [39377 39380])
+                            ("value" variable nil (reparse-symbol function_parameters) [39382 39387])
+                            ("tb" variable nil (reparse-symbol function_parameters) [39389 39391]))                          )
+                        (reparse-symbol indented_block_body) [39350 39630])
+                    ("_deactivate_stack_context" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39665 39669]))                          )
+                        (reparse-symbol indented_block_body) [39635 39819]))                  
+                :type "class")
+                nil [32193 39819])
+            ("Arguments" variable nil nil [39820 39887])
+            ("_argument_adapter" function
+               (:documentation "Returns a function that when invoked runs ``callback`` with one arg.
+
+    If the function returned by this function is called with exactly
+    one argument, that argument is passed to ``callback``.  Otherwise
+    the args tuple and kwargs dict are wrapped in an `Arguments` object.
+    "
+                :arguments 
+                  ( ("callback" variable nil (reparse-symbol function_parameters) [39912 39920]))                  )
+                nil [39890 40445])
+            ("if" code nil nil [40761 42510])
+            ("convert_yielded" function
+               (:documentation "Convert a yielded object into a `.Future`.
+
+    The default implementation accepts lists, dictionaries, and Futures.
+
+    If the `~functools.singledispatch` library is available, this function
+    may be extended to support additional types. For example::
+
+        @convert_yielded.register(asyncio.Future)
+        def _(asyncio_future):
+            return tornado.platform.asyncio.to_tornado_future(asyncio_future)
+
+    .. versionadded:: 4.1
+    "
+                :arguments 
+                  ( ("yielded" variable nil (reparse-symbol function_parameters) [42532 42539]))                  )
+                nil [42512 43342])
+            ("if" code nil nil [43343 44094]))          
+      :file "gen.py"
+      :pointmax 44094
+      :fsize 44093
+      :lastmodtime '(22701 39828 172336 9000)
+      :unmatched-syntax '((INDENT_BLOCK 41338 . 42485) (NEWLINE 41337 . 41338) (COLON 41336 . 41337) (ELSE 41332 . 41336) (INDENT_BLOCK 41277 . 41324) (NEWLINE 41276 . 41277) (COLON 41275 . 41276) (TRY 41210 . 41213) (AS 41270 . 41272) (INDENT_BLOCK 36867 . 37149) (NEWLINE 36866 . 36867) (COLON 36865 . 36866) (EXCEPT 36849 . 36855) (INDENT_BLOCK 35990 . 36833) (NEWLINE 35989 . 35990) (COLON 35988 . 35989) (TRY 35029 . 35032) (AS 35984 . 35986) (INDENT_BLOCK 30198 . 30373) (NEWLINE 30197 . 30198) (COLON 30196 . 30197) (TRY 30134 . 30137) (AS 30192 . 30194) (INDENT_BLOCK 27305 . 27629) (NEWLINE 27304 . 27305) (COLON 27303 . 27304) (TRY 27210 . 27213) (AS 27299 . 27301) (INDENT_BLOCK 25619 . 25917) (NEWLINE 25618 . 25619) (COLON 25617 . 25618) (TRY 25528 . 25531) (AS 25613 . 25615) (INDENT_BLOCK 8954 . 10896) (NEWLINE 8953 . 8954) (COLON 8952 . 8953) (ELSE 8948 . 8952) (INDENT_BLOCK 8866 . 8940) (NEWLINE 8865 . 8866) (COLON 8864 . 8865) (EXCEPT 8848 . 8854) (INDENT_BLOCK 8790 . 8840) (NEWLINE 8789 . 8790) (COLON 8788 . 8789) (TRY 8697 . 8700) (AS 8784 . 8786))))
+  :file "!home!wood!ubuntuFile!python!tornado-zh!tornado!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,25 @@
+;; Object 4.1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "4.1/"
+  :tables
+  (list
+    (semanticdb-table "cv_read.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [42 60])
+            ("cv2" include nil nil [61 71])
+            ("matplotlib" include nil nil [72 108])
+            ("sys" include nil nil [110 120])
+            ("if" code nil nil [123 207])
+            ("img" variable nil nil [213 242])
+            ("plt" code nil nil [245 302])
+            ("plt, plt" code nil nil [303 333])
+            ("plt" code nil nil [334 344]))          
+      :file "cv_read.py"
+      :pointmax 416
+      :fsize 415
+      :lastmodtime '(22790 39797 24008 307000)
+      :unmatched-syntax '(($EOI 416 . 416) ($EOI 371 . 371) ($EOI 373 . 373) ($EOI 365 . 365) ($EOI 351 . 351) ($EOI 310 . 310))))
+  :file "!home!wood!ubuntuFile!python!opencv!4!4.1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

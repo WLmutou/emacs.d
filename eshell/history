@@ -1,128 +1,128 @@
 ls
-cd controllers/
-ls
-cp index.go home.go
-ls
 cd ..
 ls
-ls
-cd controllers/
-ls
-ls
-cd ..
-ls
-cd ..
-ls
-cd apiPro
+sqlite3 joke.db 
 ls
 ls
-cd controllers/
-ls
-cd ../
-ls
-cd ..
-ls
-cd goblog/
-ls
-cd controllers/
-ls
-ls
-cd ..vi
-ls
-cd ../
-ls
-cd views/
-ls
-mkdir manage
-cd manage/
-ls
-cd ..
-ls
-mv edit.html  manage/
-mv new.html  manage/
-ls
-cd manage/
+cd schema/
 ls
 ls
 cd ..
 ls
 ls
-cat manage.html
-ls
-cd ..
-ls
-cd controllers/
-ls
-cat home.go 
-ls
-cd ..
-ls
-cd views/
-ls
-rm manage.html 
-ls
-ls
-cd manage/
-ls
-cd ..
-ls
-cd ..
-ls
-cd controllers/
-ls
-cp manage.go manage_list.go
-ls
-cd controllers/
-ls
-cd ..
-ls
-cd views/
-ls
-rm -rf tplback/
-ls
-cd template/
-ls
-cd ..
-ls
-rm layout.tpl.back 
-ls
-ls
-cp index.html home.html
-ls
-cd models/
-ls
-rm model.go.back1 
-ls
-cd .
-ls
-cd ..
-ls
-cd controllers/
-ls
-cd ..
-ls
-cd routers/
-ls
-cd ..
-ls
-cd static/
-ls
-cd ..
-ls
-cd tests/
-ls
-cd ..
-ls
-cd views/
-ls
-cd template/
-ls
-cd ..
-ls
-mv template/ ../../../
+python joke_sample.py 
 ls
 cd ~
-cd ubuntuFile/
 ls
-cd txt
+cd go/
+ls
+cd src/
+ls
+cd github.com/
+ls
+cd WLmutou/
+ls
+cd qgroup/
+ls
+cd plugins/
+ls
+pwd
+git add --all
+git commit -m "添加异常处理"
+git push
+ls
+python mymutilprocess.py 
+python mymutilprocess.py 
+python mymutilprocess.py 
+python mymutilprocess.py 
+ls
+go run main.go 
+go run main.go 
+go run main.go 
+go run main.go 
+go run main.go 
+go run main.go 
+go run main.go 
+ls
+cd ..
+ls
+git add --all
+git commit -m "z"
+git push
+ls
+ls
+cd posts/
+ls
+cd 2018
+ls
+mv hexo-vue.md hexo_vue.md
+ls
+cd ..
+ls
+cd ..
+ls
+ls
+cd posts/
+ls
+cd 2018/
+ls
+mv hexo_vue.md  /tmp/
+ls
+cd ..
+ls
+cd ..
+ls
+cd posts/2018
+ls
+cp /tmp/hexo_vue.md ./
+ls
+cd ..
+ls
+cd ..
+ls
+ls
+cd components/
+ls
+ls
+cd ..
+ls
+cd router/
+ls
+ls
+cd userdata/
+ls
+cd posts/
+ls
+cd 2018/
+ls
+ls
+cat hexo_vue.md 
+-------------------------------------
+ls
+ls
+rm hexo_vue.md 
+ls
+ls
+ls
+cd ~
+ls
+cd python/
+ls
+cd test/
+ls
+ls
+cd ..
+ls
+cd api/
+ls
+cd ..
+ls
+cd utils/
+ls
+ls
+cd Nodejs/
+ls
+cd hexo/
+ls
+cd hexo-blog/
 ls

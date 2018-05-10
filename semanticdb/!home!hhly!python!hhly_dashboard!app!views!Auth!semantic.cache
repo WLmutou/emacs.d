@@ -1,0 +1,46 @@
+;; Object Auth/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Auth/"
+  :tables
+  (list
+    (semanticdb-table "Auth.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("requests" include nil nil [41 56])
+            ("falcon" include nil nil [57 70])
+            ("json" include nil nil [71 82])
+            ("app.app" include nil nil [86 130])
+            ("app.utils.CheckAuth" include nil nil [131 171])
+            ("AuthResource" type
+               (:superclasses ("object")
+                :members 
+                  ( ("on_post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [218 222])
+                            ("req" variable nil (reparse-symbol function_parameters) [224 227])
+                            ("resp" variable nil (reparse-symbol function_parameters) [229 233]))                          )
+                        (reparse-symbol indented_block_body) [206 1071])
+                    ("_authentification" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1112 1116])
+                            ("username" variable nil (reparse-symbol function_parameters) [1118 1126])
+                            ("password" variable nil (reparse-symbol function_parameters) [1128 1136]))                          )
+                        (reparse-symbol indented_block_body) [1090 2007])
+                    ("_get_tenant" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2028 2032])
+                            ("token" variable nil (reparse-symbol function_parameters) [2034 2039]))                          )
+                        (reparse-symbol indented_block_body) [2012 2316]))                  
+                :type "class")
+                nil [174 2316]))          
+      :file "Auth.py"
+      :pointmax 2316
+      :fsize 2315
+      :lastmodtime '(23030 29123 48694 99000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!hhly_dashboard!app!views!Auth!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

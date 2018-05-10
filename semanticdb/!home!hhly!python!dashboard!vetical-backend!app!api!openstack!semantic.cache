@@ -1,0 +1,193 @@
+;; Object openstack/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "openstack/"
+  :tables (list 
+   (semanticdb-table "billing.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("__future__" include nil nil [42 79])
+            ("try" code nil nil [80 154])
+            ("datetime" include nil nil [156 185])
+            ("os" include nil nil [186 205])
+            ("os" include nil nil [206 215])
+            ("sys" include nil nil [216 226])
+            ("csv" include nil nil [227 237])
+            ("logging" include nil nil [238 252])
+            ("argparse" include nil nil [253 268])
+            ("socket" include nil nil [269 282])
+            ("glob" include nil nil [283 304])
+            ("requests" include nil nil [305 320])
+            ("settings.app" include nil nil [322 354])
+            ("settings.app" include nil nil [355 392])
+            ("app.utils.log" include nil nil [394 426])
+            ("app.utils.admin_request" include nil nil [427 478])
+            ("app.api.openstack.API" include nil nil [480 523])
+            ("app.models.DataBase" include nil nil [525 568])
+            ("app.models.DataBase" include nil nil [569 606])
+            ("headerTemplate" code nil nil [612 873])
+            ("rowTemplate" variable nil nil [875 1000])
+            ("rowTemplate2" variable nil nil [1001 1127])
+            ("sumTemplate" variable nil nil [1128 1204])
+            ("footerTemplate" code nil nil [1205 1231])
+            ("csvHeaderTpl" variable nil nil [1233 1370])
+            ("cmpDic" variable nil nil [1372 1622])
+            ("headerGen" function (:arguments 
+              ( ("company" variable nil (reparse-symbol function_parameters) [1640 1647])
+                ("tpl" variable nil (reparse-symbol function_parameters) [1649 1652]))              ) nil [1626 1777])
+            ("rowGen" function (:arguments 
+              ( ("lis" variable nil (reparse-symbol function_parameters) [1790 1793])
+                ("tpl" variable nil (reparse-symbol function_parameters) [1795 1798]))              ) nil [1779 1910])
+            ("sumGen" function (:arguments 
+              ( ("lis" variable nil (reparse-symbol function_parameters) [1923 1926])
+                ("tpl" variable nil (reparse-symbol function_parameters) [1928 1931]))              ) nil [1912 2106])
+            ("Billing" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2173 2194])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2203 2221])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2230 2248])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2257 2278])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2287 2309])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2318 2372])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2381 2399])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2414 2432])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2441 2468]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2151 2155])
+                            ("token" variable nil (reparse-symbol function_parameters) [2157 2162]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2138 2469])
+                    ("projectMap" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("projects" variable nil (reparse-symbol function_parameters) [2511 2519]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2478 2693])
+                    ("flavorMap" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("flavors" variable nil (reparse-symbol function_parameters) [2738 2745]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2706 2972])
+                    ("dataDiskList" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("volumes" variable nil (reparse-symbol function_parameters) [3016 3023]))                          
+                        :documentation " get data-disk of every server
+        Args:
+            volumes: list of volumes from openstack api /volumes/detail
+
+        Returns:
+            A list contain dict with server_id and disk-seiz
+
+            [{\"server_id1\": 100}, {\"server_id2\": 200}]
+        ")
+                        (reparse-symbol indented_block_body) [2981 3580])
+                    ("getaddr" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("address" variable nil (reparse-symbol function_parameters) [3615 3622]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [3585 3838])
+                    ("flavorGet" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3857 3861])
+                            ("flavorID" variable nil (reparse-symbol function_parameters) [3863 3871]))                          )
+                        (reparse-symbol indented_block_body) [3843 4143])
+                    ("fetch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4167 4171])
+                            ("all_project" variable nil (reparse-symbol function_parameters) [4173 4184])
+                            ("project" variable nil (reparse-symbol function_parameters) [4192 4199]))                          )
+                        (reparse-symbol indented_block_body) [4157 6846])
+                    ("billing" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6884 6888]))                          )
+                        (reparse-symbol indented_block_body) [6872 7787])
+                    ("fTime" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("date" variable nil (reparse-symbol function_parameters) [7819 7823])
+                            ("form" variable nil (reparse-symbol function_parameters) [7825 7829]))                          
+                        :documentation " return the string of specified time
+        ")
+                        (reparse-symbol indented_block_body) [7791 7986])
+                    ("pTime" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("timeStr" variable nil (reparse-symbol function_parameters) [8027 8034])
+                            ("form" variable nil (reparse-symbol function_parameters) [8036 8040]))                          
+                        :documentation " parse the time string and return datetime object
+        ")
+                        (reparse-symbol indented_block_body) [7999 8216])
+                    ("chkSame" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8241 8245])
+                            ("newServer" variable nil (reparse-symbol function_parameters) [8247 8256])
+                            ("oldData" variable nil (reparse-symbol function_parameters) [8258 8265]))                          )
+                        (reparse-symbol indented_block_body) [8229 8544])
+                    ("updateDayAndBill" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8570 8574])
+                            ("server" variable nil (reparse-symbol function_parameters) [8576 8582]))                          )
+                        (reparse-symbol indented_block_body) [8549 9176])
+                    ("compareData" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9206 9210])
+                            ("newData" variable nil (reparse-symbol function_parameters) [9212 9219])
+                            ("oldData" variable nil (reparse-symbol function_parameters) [9221 9228]))                          )
+                        (reparse-symbol indented_block_body) [9190 10116])
+                    ("hisLoad" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10141 10145])
+                            ("project" variable nil (reparse-symbol function_parameters) [10147 10154]))                          )
+                        (reparse-symbol indented_block_body) [10129 10782]))                  
+                :type "class")
+                nil [2111 10782])
+            ("ex_project" variable nil nil [10795 10817])
+            ("update_billing_data" function (:arguments 
+              ( ("now_date" variable nil (reparse-symbol function_parameters) [10851 10859])
+                ("project" variable nil (reparse-symbol function_parameters) [10861 10868])
+                ("ret" variable nil (reparse-symbol function_parameters) [10870 10873]))              ) nil [10827 11697])
+            ("create_billing_data" function (:arguments 
+              ( ("project" variable nil (reparse-symbol function_parameters) [11723 11730])
+                ("ret" variable nil (reparse-symbol function_parameters) [11732 11735]))              ) nil [11699 12196])
+            ("billing_funcall" function (:arguments 
+              ( ("op_token" variable nil (reparse-symbol function_parameters) [12218 12226])
+                ("username" variable nil (reparse-symbol function_parameters) [12233 12241])
+                ("project" variable nil (reparse-symbol function_parameters) [12248 12255]))              ) nil [12198 13109]))          
+    :file "billing.py"
+    :pointmax 13098
+    :fsize 13209
+    :lastmodtime '(23141 14794 179312 227000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "API.py"
+    :file "API.py"
+    :fsize 12498
+    :lastmodtime '(23128 26956 906549 0)
+    )
+   )
+  :file "!home!hhly!python!dashboard!vetical-backend!app!api!openstack!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,45 @@
+;; Object mytensorflow/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mytensorflow/"
+  :tables
+  (list
+    (semanticdb-table "test_tf.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("tensorflow" include nil nil [44 67])
+            ("numpy" include nil nil [68 86])
+            ("x_data" variable nil nil [88 134])
+            ("y_data" code nil nil [135 162])
+            ("W" variable nil nil [164 214])
+            ("b" variable nil nil [215 245])
+            ("y" code nil nil [246 264])
+            ("loss" variable nil nil [266 310])
+            ("optimizer" variable nil nil [311 362])
+            ("train" variable nil nil [363 395])
+            ("init" variable nil nil [435 475])
+            ("sess" variable nil nil [477 496])
+            ("sess" code nil nil [498 512])
+            ("for" code nil nil [514 628]))          
+      :file "test_tf.py"
+      :pointmax 630
+      :fsize 629
+      :lastmodtime '(22762 57479 739156 734000)
+      :unmatched-syntax nil)
+    (semanticdb-table "test_tf_2.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("tensorflow" include nil nil [44 67])
+            ("state" variable nil nil [88 126])
+            ("one" variable nil nil [136 156])
+            ("new_value" variable nil nil [158 188])
+            ("update" variable nil nil [189 225])
+            ("init_op" variable nil nil [275 318])
+            ("with" code nil nil [330 570]))          
+      :file "test_tf_2.py"
+      :pointmax 571
+      :fsize 664
+      :lastmodtime '(22763 42118 812155 879000)
+      :unmatched-syntax '(($EOI 571 . 571) ($EOI 557 . 557))))
+  :file "!home!wood!ubuntuFile!python3.6!mytensorflow!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

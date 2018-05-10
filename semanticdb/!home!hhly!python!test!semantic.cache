@@ -1,0 +1,24 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [42 51])
+            ("sys" include nil nil [52 62])
+            ("shutil" include nil nil [63 76])
+            ("rm_node_modules" function (:arguments 
+              ( ("root" variable nil (reparse-symbol function_parameters) [98 102]))              ) nil [78 443])
+            ("main" function nil nil [452 625])
+            ("if" code nil nil [630 668]))          
+      :file "rmnodemodule.py"
+      :pointmax 673
+      :fsize 672
+      :lastmodtime '(23283 44794 685674 468000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

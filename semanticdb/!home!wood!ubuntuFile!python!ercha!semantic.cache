@@ -1,0 +1,82 @@
+;; Object ercha/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ercha/"
+  :tables
+  (list
+
+    (semanticdb-table "newtree.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("TreeNode" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [98 112])
+                            ("self" variable nil (reparse-symbol indented_block_body) [121 140])
+                            ("self" variable nil (reparse-symbol indented_block_body) [149 168]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [83 87]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [70 169]))                  
+                :type "class")
+                nil [42 169])
+            ("Tree" type
+               (:superclasses ("TreeNode")
+                :members 
+                  ( ("create_tree" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [221 225])
+                            ("tree" variable nil (reparse-symbol function_parameters) [227 231])
+                            ("lst" variable nil (reparse-symbol function_parameters) [233 236]))                          )
+                        (reparse-symbol indented_block_body) [205 687]))                  
+                :type "class")
+                nil [179 687])
+            ("mylist" variable nil nil [688 738])
+            ("t" variable nil nil [739 753])
+            ("tree" variable nil nil [754 767])
+            ("mtree" variable nil nil [768 803]))          
+      :file "newtree.py"
+      :pointmax 812
+      :fsize 811
+      :lastmodtime '(22706 15519 228009 717000)
+      :unmatched-syntax '(($EOI 779 . 779)))
+    (semanticdb-table "myTree.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "myTree.py"
+      :pointmax 1
+      :fsize 1754
+      :lastmodtime '(22706 38901 918711 985000)
+      :unmatched-syntax nil)
+    (semanticdb-table "mysort.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("time" include nil nil [41 52])
+            ("random" include nil nil [53 66])
+            ("traceback" include nil nil [67 83])
+            ("rumtime" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [97 101]))              ) nil [85 441])
+            ("mysearch" function (:arguments 
+              ( ("mlst" variable nil (reparse-symbol function_parameters) [466 470])
+                ("mlst_b" variable nil (reparse-symbol function_parameters) [471 477])
+                ("n" variable nil (reparse-symbol function_parameters) [479 480]))              ) nil [453 774])
+            ("quickorder" function
+               (:decorators 
+                  ( ("rumtime" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("mlst" variable nil (reparse-symbol function_parameters) [808 812]))                  )
+                nil [776 1044])
+            ("quicksort" function (:arguments 
+              ( ("mlst" variable nil (reparse-symbol function_parameters) [1072 1076]))              ) nil [1058 1338])
+            ("if" code nil nil [1370 1871]))          
+      :file "mysort.py"
+      :pointmax 1871
+      :fsize 1878
+      :lastmodtime '(22706 41839 798715 249000)
+      :unmatched-syntax '((PRINT 662 . 667) (IF 687 . 689) (ELSE 701 . 705) (NAME 621 . 625) (IF 630 . 632) (ELSE 646 . 650) (NAME 529 . 533) (IF 550 . 552) (ELSE 571 . 575))))
+  :file "!home!wood!ubuntuFile!python!ercha!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

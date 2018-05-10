@@ -1,0 +1,18 @@
+;; Object tmp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tmp/"
+  :tables (list 
+   (semanticdb-table "scheme.json"
+    :major-mode 'js-mode
+    :tags nil
+    :file "scheme.json"
+    :pointmax 1295
+    :fsize 1294
+    :lastmodtime '(23141 26437 998539 105000)
+    :unmatched-syntax '((END_BLOCK 88 . 89))
+    )
+   )
+  :file "!home!hhly!python!dashboard!my-backend!tmp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

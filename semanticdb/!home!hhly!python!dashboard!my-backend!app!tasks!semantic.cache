@@ -1,0 +1,93 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("__future__" include nil nil [47 85])
+            ("celery" include nil nil [86 111])
+            ("app" variable nil nil [113 167])
+            ("app" code nil nil [169 211])
+            ("if" code nil nil [216 259]))          
+      :file "celery.py"
+      :pointmax 261
+      :fsize 260
+      :lastmodtime '(23143 63899 39818 672000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("__future__" include nil nil [47 85])
+            ("celery.schedules" include nil nil [87 123])
+            ("settings.app" include nil nil [126 182])
+            ("settings.app" include nil nil [183 239])
+            ("settings.app" include nil nil [240 275])
+            ("datetime" include nil nil [276 306])
+            ("CELERY_RESULT_BACKEND" variable nil nil [309 414])
+            ("BROKER_URL" variable nil nil [415 509])
+            ("CELERY_TIMEZONE" variable nil nil [513 546])
+            ("CELERYBEAT_SCHEDULE" variable nil nil [552 807])
+            ("\"\"\"
+    'billfech-3600-secondes': {
+        'task': 'app.tasks.tasks.bill_fetch',
+        'schedule':  timedelta(seconds=60),  #run at 24:00 everyday 
+        'args': (),
+    },
+    'add-every-3600-seconds': {
+         'task': 'app.tasks.tasks.add',
+         'schedule': timedelta(seconds=3600),
+         'args': (16, 16)
+    },
+\"\"\"" code nil nil [812 1144]))          
+      :file "config.py"
+      :pointmax 1146
+      :fsize 1493
+      :lastmodtime '(23208 63778 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("__future__" include nil nil [47 92])
+            ("app.tasks.celery" include nil nil [93 126])
+            ("app.api.openstack.billing" include nil nil [128 198])
+            ("app.tasks.execute_task.send_mail_task" include nil nil [199 271])
+            ("app.tasks.execute_task.create_machine_task" include nil nil [272 349])
+            ("app.tasks.execute_task.monthly_bill_task" include nil nil [350 425])
+            ("bill_fetch" function (:decorators 
+              ( ("app.task" function (:type "decorator") nil nil))              ) nil [429 479])
+            ("send_mail" function
+               (:decorators 
+                  ( ("app.task" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("token_id" variable nil (reparse-symbol function_parameters) [509 517])
+                    ("ticket_id" variable nil (reparse-symbol function_parameters) [519 528])
+                    ("action_type" variable nil (reparse-symbol function_parameters) [530 541])
+                    ("mail_type" variable nil (reparse-symbol function_parameters) [543 552]))                  )
+                nil [484 654])
+            ("create_machine" function
+               (:decorators 
+                  ( ("app.task" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("username" variable nil (reparse-symbol function_parameters) [685 693])
+                    ("enable_id" variable nil (reparse-symbol function_parameters) [695 704])
+                    ("init_script_name" variable nil (reparse-symbol function_parameters) [706 722]))                  )
+                nil [655 796])
+            ("monthly_bill" function (:decorators 
+              ( ("app.task" function (:type "decorator") nil nil))              ) nil [798 856])
+            ("add" function
+               (:decorators 
+                  ( ("app.task" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [877 878])
+                    ("y" variable nil (reparse-symbol function_parameters) [880 881]))                  )
+                nil [859 923]))          
+      :file "tasks.py"
+      :pointmax 923
+      :fsize 922
+      :lastmodtime '(23257 44939 829652 951000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!dashboard!my-backend!app!tasks!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

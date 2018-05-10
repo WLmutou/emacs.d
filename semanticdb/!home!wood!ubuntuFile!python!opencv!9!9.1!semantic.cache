@@ -1,0 +1,25 @@
+;; Object 9.1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "9.1/"
+  :tables
+  (list
+    (semanticdb-table "numpy_img.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [42 52])
+            ("numpy" include nil nil [53 71])
+            ("sys" include nil nil [72 82])
+            ("if" code nil nil [84 202])
+            ("img" variable nil nil [204 230])
+            ("px" variable nil nil [232 251])
+            ("print" code nil nil [252 262])
+            ("blue" variable nil nil [264 286])
+            ("print" code nil nil [287 297]))          
+      :file "numpy_img.py"
+      :pointmax 300
+      :fsize 299
+      :lastmodtime '(22790 41636 376010 350000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python!opencv!9!9.1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

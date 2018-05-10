@@ -1,0 +1,66 @@
+;; Object OpenStackApi/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "OpenStackApi/"
+  :tables
+  (list
+    (semanticdb-table "OpenStackApi.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("requests" include nil nil [96 111])
+            ("app.app" include nil nil [113 139])
+            ("OpenStackApi" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [223 247])
+                            ("self" variable nil (reparse-symbol indented_block_body) [467 493])
+                            ("pass" code nil (reparse-symbol indented_block_body) [502 506]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [187 191])
+                            ("token_id" variable nil (reparse-symbol function_parameters) [193 201])
+                            ("tenant_id" variable nil (reparse-symbol function_parameters) [203 212]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [174 507])
+                    ("returnResult" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [529 533])
+                            ("req" variable nil (reparse-symbol function_parameters) [535 538]))                          )
+                        (reparse-symbol indented_block_body) [512 727])
+                    ("listNetwork" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [748 752]))                          )
+                        (reparse-symbol indented_block_body) [732 1118])
+                    ("flavorsDetails" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1142 1146]))                          )
+                        (reparse-symbol indented_block_body) [1123 1602])
+                    ("volumesDetail" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1625 1629]))                          )
+                        (reparse-symbol indented_block_body) [1607 2223])
+                    ("OsVolumesBoot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2246 2250])
+                            ("net_id" variable nil (reparse-symbol function_parameters) [2252 2258])
+                            ("snapshot_id" variable nil (reparse-symbol function_parameters) [2260 2271])
+                            ("flavor_id" variable nil (reparse-symbol function_parameters) [2273 2282]))                          
+                        :documentation "创建虚拟机")
+                        (reparse-symbol indented_block_body) [2228 3425]))                  
+                :type "class")
+                nil [142 3425])
+            ("if" code nil nil [3431 3486]))          
+      :file "OpenStackApi.py"
+      :pointmax 3486
+      :fsize 3503
+      :lastmodtime '(23030 65181 612314 142000)
+      :unmatched-syntax '((INDENT_BLOCK 618 . 662) (NEWLINE 617 . 618) (COLON 616 . 617) (TRY 549 . 552) (AS 612 . 614))))
+  :file "!home!hhly!python!hhly_dashboard!app!OpenStackApi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

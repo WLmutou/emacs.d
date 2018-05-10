@@ -1,0 +1,57 @@
+;; Object api/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "api/"
+  :tables (list 
+   (semanticdb-table "Auth.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("requests" include nil nil [42 57])
+            ("falcon" include nil nil [58 71])
+            ("json" include nil nil [72 83])
+            ("app.models.DataBase" include nil nil [85 122])
+            ("app.utils.log" include nil nil [124 156])
+            ("app.utils.confile" include nil nil [157 191])
+            ("app.utils.opClient" include nil nil [192 231])
+            ("app.utils.token" include nil nil [232 268])
+            ("PersonDoesNotExist" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [354 376]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [325 329])
+                            ("message" variable nil (reparse-symbol function_parameters) [331 338]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [312 377])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [398 402]))                          )
+                        (reparse-symbol indented_block_body) [386 534]))                  
+                :type "class")
+                nil [271 534])
+            ("AuthResource" type
+               (:superclasses ("object")
+                :members 
+                  ( ("on_post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [582 586])
+                            ("req" variable nil (reparse-symbol function_parameters) [588 591])
+                            ("resp" variable nil (reparse-symbol function_parameters) [593 597]))                          )
+                        (reparse-symbol indented_block_body) [570 2354]))                  
+                :type "class")
+                nil [538 2354]))          
+    :file "Auth.py"
+    :pointmax 2057
+    :fsize 2353
+    :lastmodtime '(23096 35380 37676 643000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!hhly!python!dashboard!vertical-backend!app!api!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,48 @@
+;; Object sdk_python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sdk_python/"
+  :tables (list 
+   (semanticdb-table "connet.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [41 51])
+            ("openstack" include nil nil [52 79])
+            ("openstack" include nil nil [80 109])
+            ("openstack" include nil nil [110 142])
+            ("utils" code nil nil [144 198])
+            ("create_connection" function (:arguments 
+              ( ("auth_url" variable nil (reparse-symbol function_parameters) [222 230])
+                ("region" variable nil (reparse-symbol function_parameters) [232 238])
+                ("project_name" variable nil (reparse-symbol function_parameters) [240 252])
+                ("username" variable nil (reparse-symbol function_parameters) [254 262])
+                ("password" variable nil (reparse-symbol function_parameters) [264 272]))              ) nil [200 562])
+            ("list_images" function (:arguments 
+              ( ("conn" variable nil (reparse-symbol function_parameters) [580 584]))              ) nil [564 662])
+            ("list_servers" function (:arguments 
+              ( ("conn" variable nil (reparse-symbol function_parameters) [680 684]))              ) nil [663 846])
+            ("list_flavors" function (:arguments 
+              ( ("conn" variable nil (reparse-symbol function_parameters) [864 868]))              ) nil [847 978])
+            ("list_networks" function (:arguments 
+              ( ("conn" variable nil (reparse-symbol function_parameters) [997 1001]))              ) nil [979 1124])
+            ("list_network_agents" function (:arguments 
+              ( ("conn" variable nil (reparse-symbol function_parameters) [1150 1154]))              ) nil [1126 1253])
+            ("list_security_groups" function (:arguments 
+              ( ("conn" variable nil (reparse-symbol function_parameters) [1279 1283]))              ) nil [1254 1389])
+            ("myconn" variable nil nil [1399 1520])
+            ("list_images" code nil nil [1524 1543])
+            ("list_servers" code nil nil [1544 1564])
+            ("list_flavors" code nil nil [1565 1585])
+            ("list_networks" code nil nil [1586 1607])
+            ("list_network_agents" code nil nil [1608 1635])
+            ("list_security_groups" code nil nil [1636 1664]))          
+    :file "connet.py"
+    :pointmax 1665
+    :fsize 1664
+    :lastmodtime '(23144 15411 890818 735000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!hhly!python!sdk_python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

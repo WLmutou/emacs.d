@@ -1,0 +1,398 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("__future__" include nil nil [41 78])
+            ("os" include nil nil [79 88])
+            ("json" include nil nil [89 100])
+            ("datetime" include nil nil [102 117])
+            ("settings.app" include nil nil [167 202])
+            ("settings.app" include nil nil [203 238])
+            ("settings.app" include nil nil [240 277])
+            ("settings.app" include nil nil [278 317])
+            ("settings.app" include nil nil [318 353])
+            ("settings.app" include nil nil [355 394])
+            ("peewee" include nil nil [396 436])
+            ("peewee" include nil nil [438 470])
+            ("peewee" include nil nil [471 528])
+            ("peewee" include nil nil [529 560])
+            ("peewee" include nil nil [561 589])
+            ("peewee" include nil nil [590 624])
+            ("peewee" include nil nil [625 659])
+            ("database" variable nil nil [667 832])
+            ("BaseModel" type
+               (:superclasses ("Model")
+                :members 
+                  ( ("Meta" type
+                       (:members 
+                          ( ("database" variable nil (reparse-symbol indented_block_body) [947 966]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [927 967]))                  
+                :type "class")
+                nil [899 967])
+            ("DateEncoder" type
+               (:superclasses ("json.JSONEncoder")
+                :members 
+                  ( ("default" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1054 1058])
+                            ("obj" variable nil (reparse-symbol function_parameters) [1060 1063]))                          )
+                        (reparse-symbol indented_block_body) [1042 1381]))                  
+                :type "class")
+                nil [1001 1381])
+            ("JSONField" type
+               (:superclasses ("TextField")
+                :members 
+                  ( ("db_value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1443 1447])
+                            ("value" variable nil (reparse-symbol function_parameters) [1449 1454]))                          )
+                        (reparse-symbol indented_block_body) [1430 1507])
+                    ("python_value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1529 1533])
+                            ("value" variable nil (reparse-symbol function_parameters) [1535 1540]))                          )
+                        (reparse-symbol indented_block_body) [1512 1610]))                  
+                :type "class")
+                nil [1398 1610])
+            ("Users" type
+               (:documentation "
+    "
+                :superclasses ("BaseModel")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [1659 1690])
+                    ("name" variable nil (reparse-symbol indented_block_body) [1695 1733])
+                    ("zh_name" variable nil (reparse-symbol indented_block_body) [1738 1773])
+                    ("role" variable nil (reparse-symbol indented_block_body) [1869 1894])
+                    ("password" variable nil (reparse-symbol indented_block_body) [1900 1925])
+                    ("date_joined" variable nil (reparse-symbol indented_block_body) [2000 2060])
+                    ("last_login" variable nil (reparse-symbol indented_block_body) [2086 2146])
+                    ("email" variable nil (reparse-symbol indented_block_body) [2170 2204])
+                    ("avatar" variable nil (reparse-symbol indented_block_body) [2209 2256]))                  
+                :type "class")
+                nil [1615 2314])
+            ("Regiones" type
+               (:documentation "
+    #cur_regione: {\"name\": \"dg\", \"zh_name\": \"东莞\" }
+    "
+                :superclasses ("BaseModel")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [2418 2449])
+                    ("user" variable nil (reparse-symbol indented_block_body) [2454 2550])
+                    ("cur_regione" variable nil (reparse-symbol indented_block_body) [2555 2591]))                  
+                :type "class")
+                nil [2320 2592])
+            ("UserProjects" type
+               (:documentation "
+        # 用户在区域对应的 项目
+        # regione: {\"name\": \"dg\", \"zh_name\": \"东莞\" }
+    "
+                :superclasses ("BaseModel")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [2794 2826])
+                    ("user" variable nil (reparse-symbol indented_block_body) [2831 2918])
+                    ("regione" variable nil (reparse-symbol indented_block_body) [2923 2959])
+                    ("project" variable nil (reparse-symbol indented_block_body) [2964 2990])
+                    ("zh_project" variable nil (reparse-symbol indented_block_body) [2995 3021])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [3047 3073]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [3027 3074]))                  
+                :type "class")
+                nil [2665 3074])
+            ("LogicProject" type
+               (:superclasses ("BaseModel")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [3175 3208])
+                    ("name" variable nil (reparse-symbol indented_block_body) [3213 3240])
+                    ("zh_name" variable nil (reparse-symbol indented_block_body) [3245 3272])
+                    ("network" variable nil (reparse-symbol indented_block_body) [3277 3304])
+                    ("prefix_name" variable nil (reparse-symbol indented_block_body) [3309 3336])
+                    ("sub_company" variable nil (reparse-symbol indented_block_body) [3341 3368])
+                    ("regione" variable nil (reparse-symbol indented_block_body) [3379 3405])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [3485 3511]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [3465 3512]))                  
+                :type "class")
+                nil [3140 3512])
+            ("Tickets" type
+               (:documentation "
+    #detail: 
+    # [{
+    #   \"image\": {\"name\": \"Centos7\", \"id\": \"9e402544-e0b3-453a-a02e-00ee09b20702\"}, 
+    #   \"host\": \"534543\",
+    #   \"num\": \"1\",
+    #   \"statement\": \"345345345\", 
+    #   \"flavor\": {\"size\": \"1-2\", \"name\": \"1\\u68382G\", \"id\": \"fa6fb839-7436-4d80-a676-ab633f8dcb66\"}, 
+    #   \"networks\": {\"name\": \"10.37.14.0/24\", \"id\": \"a27e36a0-3813-494e-848d-78e449bdeae2\"},
+    #   \"dataDisk\": \"100\"
+    # }]
+    "
+                :superclasses ("BaseModel")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [4196 4227])
+                    ("user" variable nil (reparse-symbol indented_block_body) [4232 4308])
+                    ("catelog" variable nil (reparse-symbol indented_block_body) [4313 4338])
+                    ("project" variable nil (reparse-symbol indented_block_body) [4350 4375])
+                    ("regione" variable nil (reparse-symbol indented_block_body) [4384 4409])
+                    ("types" variable nil (reparse-symbol indented_block_body) [4419 4444])
+                    ("created" variable nil (reparse-symbol indented_block_body) [4450 4510])
+                    ("status" variable nil (reparse-symbol indented_block_body) [4516 4541])
+                    ("detail" variable nil (reparse-symbol indented_block_body) [4546 4581])
+                    ("statement" variable nil (reparse-symbol indented_block_body) [4593 4618])
+                    ("initscript" variable nil (reparse-symbol indented_block_body) [4627 4662])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [4782 4802]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [4762 4803]))                  
+                :type "class")
+                nil [3730 4803])
+            ("ApplyData" type
+               (:documentation "
+        重建或者申请退定时候的数据
+    "
+                :superclasses ("BaseModel")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [4876 4906])
+                    ("ticket_id" variable nil (reparse-symbol indented_block_body) [4911 4938])
+                    ("server_id" variable nil (reparse-symbol indented_block_body) [4943 4967])
+                    ("datas" variable nil (reparse-symbol indented_block_body) [4972 4996])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [5021 5044]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [5001 5045]))                  
+                :type "class")
+                nil [4806 5045])
+            ("BillingData" type
+               (:superclasses ("BaseModel")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [5081 5113])
+                    ("regione" variable nil (reparse-symbol indented_block_body) [5119 5144])
+                    ("project" variable nil (reparse-symbol indented_block_body) [5170 5196])
+                    ("server_name" variable nil (reparse-symbol indented_block_body) [5201 5227])
+                    ("server_ip" variable nil (reparse-symbol indented_block_body) [5232 5258])
+                    ("flavor" variable nil (reparse-symbol indented_block_body) [5263 5289])
+                    ("flavor_price" variable nil (reparse-symbol indented_block_body) [5294 5320])
+                    ("data_disk" variable nil (reparse-symbol indented_block_body) [5325 5351])
+                    ("disk_price" variable nil (reparse-symbol indented_block_body) [5356 5382])
+                    ("server_billing" variable nil (reparse-symbol indented_block_body) [5387 5415])
+                    ("disk_billing" variable nil (reparse-symbol indented_block_body) [5420 5448])
+                    ("sum_price" variable nil (reparse-symbol indented_block_body) [5453 5481])
+                    ("start_time" variable nil (reparse-symbol indented_block_body) [5486 5549])
+                    ("end_time" variable nil (reparse-symbol indented_block_body) [5554 5617])
+                    ("days" variable nil (reparse-symbol indented_block_body) [5622 5653])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [5683 5708]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [5663 5709]))                  
+                :type "class")
+                nil [5047 5709])
+            ("ExtBillProject" type
+               (:superclasses ("BaseModel")
+                :members 
+                  ( ("'''
+        # 不计算费的项目记录在这里
+    '''" code nil (reparse-symbol indented_block_body) [5751 5785])
+                    ("id" variable nil (reparse-symbol indented_block_body) [5790 5824])
+                    ("regione" variable nil (reparse-symbol indented_block_body) [5829 5857])
+                    ("project" variable nil (reparse-symbol indented_block_body) [5862 5890])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [5920 5949]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [5900 5950]))                  
+                :type "class")
+                nil [5714 5950])
+            ("MaillingList" type
+               (:superclasses ("BaseModel")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [5989 6017])
+                    ("task" variable nil (reparse-symbol indented_block_body) [6022 6044])
+                    ("zh_task" variable nil (reparse-symbol indented_block_body) [6049 6071])
+                    ("send_to" variable nil (reparse-symbol indented_block_body) [6076 6098])
+                    ("copy_to" variable nil (reparse-symbol indented_block_body) [6103 6125])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [6155 6181]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [6135 6182]))                  
+                :type "class")
+                nil [5954 6182])
+            ("ConfigRegione" type
+               (:documentation "
+        区域环境表
+    "
+                :superclasses ("BaseModel")
+                :members 
+                  ( ("id" variable nil (reparse-symbol indented_block_body) [6252 6284])
+                    ("name" variable nil (reparse-symbol indented_block_body) [6289 6328])
+                    ("zh_name" variable nil (reparse-symbol indented_block_body) [6333 6360])
+                    ("host" variable nil (reparse-symbol indented_block_body) [6365 6404])
+                    ("available" variable nil (reparse-symbol indented_block_body) [6409 6448])
+                    ("username" variable nil (reparse-symbol indented_block_body) [6453 6480])
+                    ("password" variable nil (reparse-symbol indented_block_body) [6485 6512])
+                    ("tenant" variable nil (reparse-symbol indented_block_body) [6517 6544])
+                    ("time_out" variable nil (reparse-symbol indented_block_body) [6550 6589])
+                    ("proxy_on" variable nil (reparse-symbol indented_block_body) [6595 6635])
+                    ("proxy_host" variable nil (reparse-symbol indented_block_body) [6640 6668])
+                    ("monitor_host" variable nil (reparse-symbol indented_block_body) [6676 6705])
+                    ("monitor_host_on" variable nil (reparse-symbol indented_block_body) [6710 6751])
+                    ("Meta" type
+                       (:members 
+                          ( ("db_table" variable nil (reparse-symbol indented_block_body) [6777 6804]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [6757 6805]))                  
+                :type "class")
+                nil [6186 6805])
+            ("if" code nil nil [6813 7608]))          
+      :file "DataBase.py"
+      :pointmax 7614
+      :fsize 7817
+      :lastmodtime '(23257 44349 205376 528000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("app.utils.log" include nil nil [41 73])
+            ("app.models.DataBase" include nil nil [74 119])
+            ("app.utils.ciphers" include nil nil [121 168])
+            ("get_one_regione" function (:arguments 
+              ( ("regione_name" variable nil (reparse-symbol function_parameters) [244 256])
+                ("id" variable nil (reparse-symbol function_parameters) [258 260]))              ) nil [224 685])
+            ("get_all_regione" function nil nil [688 1150])
+            ("get_config_regione" function (:arguments 
+              ( ("limit" variable nil (reparse-symbol function_parameters) [1175 1180])
+                ("market" variable nil (reparse-symbol function_parameters) [1185 1191])
+                ("available" variable nil (reparse-symbol function_parameters) [1195 1204]))              ) nil [1152 2502])
+            ("add_config_regione" function (:arguments 
+              ( ("name" variable nil (reparse-symbol function_parameters) [2537 2541])
+                ("zh_name" variable nil (reparse-symbol function_parameters) [2549 2556])
+                ("host" variable nil (reparse-symbol function_parameters) [2561 2565])
+                ("username" variable nil (reparse-symbol function_parameters) [2575 2583])
+                ("password" variable nil (reparse-symbol function_parameters) [2587 2595])
+                ("tenant" variable nil (reparse-symbol function_parameters) [2599 2605])
+                ("time_out" variable nil (reparse-symbol function_parameters) [2615 2623])
+                ("proxy_host" variable nil (reparse-symbol function_parameters) [2627 2637])
+                ("monitor_host" variable nil (reparse-symbol function_parameters) [2639 2651])
+                ("proxy_on" variable nil (reparse-symbol function_parameters) [2661 2669]))              ) nil [2504 3359])
+            ("update_config_regione" function (:arguments 
+              ( ("id" variable nil (reparse-symbol function_parameters) [3397 3399])
+                ("name" variable nil (reparse-symbol function_parameters) [3409 3413])
+                ("zh_name" variable nil (reparse-symbol function_parameters) [3421 3428])
+                ("host" variable nil (reparse-symbol function_parameters) [3440 3444])
+                ("username" variable nil (reparse-symbol function_parameters) [3452 3460])
+                ("password" variable nil (reparse-symbol function_parameters) [3464 3472])
+                ("tenant" variable nil (reparse-symbol function_parameters) [3483 3489])
+                ("time_out" variable nil (reparse-symbol function_parameters) [3495 3503])
+                ("proxy_host" variable nil (reparse-symbol function_parameters) [3516 3526])
+                ("monitor_host" variable nil (reparse-symbol function_parameters) [3529 3541])
+                ("proxy_on" variable nil (reparse-symbol function_parameters) [3552 3560]))              ) nil [3362 4231])
+            ("delete_config_regione" function (:arguments 
+              ( ("id" variable nil (reparse-symbol function_parameters) [4264 4266]))              ) nil [4238 4557])
+            ("proxy_on" function (:arguments 
+              ( ("id" variable nil (reparse-symbol function_parameters) [4577 4579]))              ) nil [4564 4891])
+            ("proxy_off" function (:arguments 
+              ( ("id" variable nil (reparse-symbol function_parameters) [4907 4909]))              ) nil [4893 5220]))          
+      :file "config_regione.py"
+      :pointmax 5221
+      :fsize 5232
+      :lastmodtime '(23255 63704 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 5118 . 5184) (NEWLINE 5117 . 5118) (COLON 5116 . 5117) (TRY 4955 . 4958) (AS 5112 . 5114) (INDENT_BLOCK 4789 . 4855) (NEWLINE 4788 . 4789) (COLON 4787 . 4788) (TRY 4625 . 4628) (AS 4783 . 4785) (INDENT_BLOCK 4455 . 4521) (NEWLINE 4454 . 4455) (COLON 4453 . 4454) (TRY 4312 . 4315) (AS 4449 . 4451) (INDENT_BLOCK 4129 . 4195) (NEWLINE 4128 . 4129) (COLON 4127 . 4128) (TRY 3615 . 3618) (AS 4123 . 4125) (INDENT_BLOCK 3187 . 3323) (NEWLINE 3186 . 3187) (COLON 3185 . 3186) (TRY 2728 . 2731) (AS 3181 . 3183) (INDENT_BLOCK 2312 . 2484) (NEWLINE 2311 . 2312) (COLON 2310 . 2311) (TRY 1346 . 1349) (AS 2306 . 2308) (INDENT_BLOCK 1080 . 1150) (NEWLINE 1079 . 1080) (COLON 1078 . 1079) (TRY 733 . 736) (AS 1074 . 1076) (INDENT_BLOCK 629 . 685) (NEWLINE 628 . 629) (COLON 627 . 628) (TRY 489 . 492) (AS 623 . 625) (INDENT_BLOCK 416 . 471) (NEWLINE 415 . 416) (COLON 414 . 415) (TRY 289 . 292) (AS 410 . 412)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("playhouse.shortcuts" include nil nil [42 87])
+            ("app.utils.log" include nil nil [89 121])
+            ("app.models.DataBase" include nil nil [122 159])
+            ("get_user" function (:arguments 
+              ( ("user_id" variable nil (reparse-symbol function_parameters) [175 182])
+                ("username" variable nil (reparse-symbol function_parameters) [191 199]))              ) nil [162 523]))          
+      :file "users.py"
+      :pointmax 525
+      :fsize 524
+      :lastmodtime '(23236 45237 931951 260000)
+      :unmatched-syntax '((INDENT_BLOCK 473 . 506) (NEWLINE 472 . 473) (COLON 471 . 472) (TRY 384 . 387) (AS 467 . 469) (INDENT_BLOCK 331 . 359) (NEWLINE 330 . 331) (COLON 329 . 330) (TRY 245 . 248) (AS 325 . 327)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("ast" include nil nil [41 51])
+            ("playhouse.shortcuts" include nil nil [53 98])
+            ("app.utils.log" include nil nil [100 132])
+            ("app.models.DataBase" include nil nil [133 173])
+            ("app.models.DataBase" include nil nil [174 211])
+            ("get_regione" function (:arguments 
+              ( ("user" variable nil (reparse-symbol function_parameters) [230 234]))              ) nil [214 429])
+            ("get_cur_regione" function (:arguments 
+              ( ("user" variable nil (reparse-symbol function_parameters) [451 455]))              ) nil [431 600])
+            ("get_cur_regione_by_id" function (:arguments 
+              ( ("user_id" variable nil (reparse-symbol function_parameters) [627 634]))              ) nil [601 824])
+            ("update_cur_regione" function (:arguments 
+              ( ("user" variable nil (reparse-symbol function_parameters) [849 853])
+                ("cur_regione" variable nil (reparse-symbol function_parameters) [855 866]))              ) nil [826 1076])
+            ("check_is_in_regiones" function (:arguments 
+              ( ("user" variable nil (reparse-symbol function_parameters) [1103 1107])
+                ("cur_regione" variable nil (reparse-symbol function_parameters) [1109 1120]))              ) nil [1078 1329])
+            ("get_all_regiones" function (:arguments 
+              ( ("user" variable nil (reparse-symbol function_parameters) [1352 1356]))              ) nil [1331 1579])
+            ("update_all_regiones" function (:arguments 
+              ( ("user" variable nil (reparse-symbol function_parameters) [1606 1610])
+                ("regiones" variable nil (reparse-symbol function_parameters) [1612 1620]))              ) nil [1582 1829]))          
+      :file "regione.py"
+      :pointmax 1829
+      :fsize 1828
+      :lastmodtime '(23255 9600 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 1784 . 1829) (NEWLINE 1783 . 1784) (COLON 1782 . 1783) (TRY 1627 . 1630) (AS 1778 . 1780) (INDENT_BLOCK 1537 . 1579) (NEWLINE 1511 . 1512) (COLON 1510 . 1511) (TRY 1363 . 1366) (AS 1506 . 1508) (INDENT_BLOCK 1031 . 1076) (NEWLINE 1030 . 1031) (COLON 1029 . 1030) (TRY 873 . 876) (AS 1025 . 1027) (INDENT_BLOCK 782 . 824) (NEWLINE 781 . 782) (COLON 780 . 781) (TRY 641 . 644) (AS 776 . 778) (INDENT_BLOCK 558 . 600) (NEWLINE 557 . 558) (COLON 556 . 557) (TRY 462 . 465) (AS 552 . 554) (INDENT_BLOCK 386 . 410) (NEWLINE 385 . 386) (COLON 384 . 385) (TRY 258 . 261) (AS 380 . 382)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "projects.py"
+      :pointmax 3415
+      :fsize 3414
+      :lastmodtime '(23241 56023 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("ast" include nil nil [42 52])
+            ("playhouse.shortcuts" include nil nil [55 100])
+            ("app.utils.log" include nil nil [102 134])
+            ("app.models.DataBase" include nil nil [135 179])
+            ("get_user_regione_project" function (:arguments 
+              ( ("user" variable nil (reparse-symbol function_parameters) [212 216])
+                ("regione" variable nil (reparse-symbol function_parameters) [218 225]))              ) nil [183 903])
+            ("add_user_projects" function (:arguments 
+              ( ("user" variable nil (reparse-symbol function_parameters) [927 931])
+                ("regione" variable nil (reparse-symbol function_parameters) [933 940])
+                ("projects" variable nil (reparse-symbol function_parameters) [942 950]))              ) nil [905 1285])
+            ("update_user_projects" function (:arguments 
+              ( ("user" variable nil (reparse-symbol function_parameters) [1315 1319])
+                ("regione" variable nil (reparse-symbol function_parameters) [1321 1328])
+                ("projects" variable nil (reparse-symbol function_parameters) [1330 1338]))              ) nil [1290 2805])
+            ("create_or_update_zh_name" function (:arguments 
+              ( ("user" variable nil (reparse-symbol function_parameters) [2840 2844])
+                ("regione" variable nil (reparse-symbol function_parameters) [2846 2853])
+                ("pro" variable nil (reparse-symbol function_parameters) [2855 2858]))              ) nil [2811 3987])
+            ("get_pro_zh_name" function (:arguments 
+              ( ("regione" variable nil (reparse-symbol function_parameters) [4011 4018])
+                ("name" variable nil (reparse-symbol function_parameters) [4020 4024]))              ) nil [3991 4228]))          
+      :file "user_projects.py"
+      :pointmax 4228
+      :fsize 4227
+      :lastmodtime '(23241 53778 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 4187 . 4228) (NEWLINE 4186 . 4187) (COLON 4185 . 4186) (TRY 4031 . 4034) (AS 4181 . 4183) (INDENT_BLOCK 3869 . 3987) (NEWLINE 3868 . 3869) (COLON 3867 . 3868) (TRY 3576 . 3579) (AS 3863 . 3865) (INDENT_BLOCK 3440 . 3558) (NEWLINE 3439 . 3440) (COLON 3438 . 3439) (TRY 3095 . 3098) (AS 3434 . 3436) (INDENT_BLOCK 3042 . 3068) (NEWLINE 3041 . 3042) (COLON 3040 . 3041) (TRY 2865 . 2868) (AS 3036 . 3038) (INDENT_BLOCK 2725 . 2805) (NEWLINE 2724 . 2725) (COLON 2723 . 2724) (TRY 2458 . 2461) (AS 2719 . 2721) (INDENT_BLOCK 2369 . 2432) (NEWLINE 2368 . 2369) (COLON 2367 . 2368) (TRY 2011 . 2014) (AS 2363 . 2365) (INDENT_BLOCK 1947 . 1977) (NEWLINE 1946 . 1947) (COLON 1945 . 1946) (TRY 1707 . 1710) (AS 1941 . 1943) (INDENT_BLOCK 1225 . 1285) (NEWLINE 1224 . 1225) (COLON 1223 . 1224) (TRY 986 . 989) (AS 1219 . 1221))))
+  :file "!home!hhly!python!dashboard!my-backend!app!models!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

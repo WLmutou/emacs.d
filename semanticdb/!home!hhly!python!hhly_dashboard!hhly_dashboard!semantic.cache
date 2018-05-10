@@ -1,0 +1,20 @@
+;; Object hhly_dashboard/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hhly_dashboard/"
+  :tables
+  (list
+    (semanticdb-table "settings.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [43 52])
+            ("BASE_DIR" variable nil nil [54 124])
+            ("print" code nil nil [126 142])
+            ("KEYSTONE_URL" variable nil nil [146 201]))          
+      :file "settings.py"
+      :pointmax 207
+      :fsize 206
+      :lastmodtime '(23013 57475 132947 992000)
+      :unmatched-syntax '((NUMBER_LITERAL 211 . 213) (NUMBER_LITERAL 213 . 215) (COLON 215 . 216) (DIVDIV 206 . 208) (NAME 146 . 158) (NAME 201 . 205) (COLON 205 . 206) ($EOI 205 . 205) (NAME 145 . 148) ($EOI 159 . 159))))
+  :file "!home!hhly!python!hhly_dashboard!hhly_dashboard!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

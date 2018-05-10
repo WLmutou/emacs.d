@@ -10,6 +10,14 @@
       :pointmax 616
       :fsize 615
       :lastmodtime '(22623 37358 816315 820000)
+      :unmatched-syntax nil)
+    (semanticdb-table "mypy.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "mypy.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22779 27789 261477 622000)
       :unmatched-syntax nil))
   :file "!home!wood!ubuntuFile!python3.6!semantic.cache"
   :semantic-tag-version "2.0"

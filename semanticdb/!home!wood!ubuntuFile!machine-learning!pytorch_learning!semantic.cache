@@ -1,0 +1,21 @@
+;; Object pytorch_learning/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pytorch_learning/"
+  :tables
+  (list
+    (semanticdb-table "hogwild.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("torch.multiprocessing" include nil nil [43 77])
+            ("model" include nil nil [78 103])
+            ("train" function (:arguments 
+              ( ("model" variable nil (reparse-symbol function_parameters) [115 120]))              ) nil [105 350])
+            ("if" code nil nil [351 702]))          
+      :file "hogwild.py"
+      :pointmax 702
+      :fsize 701
+      :lastmodtime '(22965 58143 343440 836000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!machine-learning!pytorch_learning!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

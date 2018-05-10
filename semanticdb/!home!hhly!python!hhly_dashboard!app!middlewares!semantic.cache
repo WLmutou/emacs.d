@@ -1,0 +1,99 @@
+;; Object middlewares/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "middlewares/"
+  :tables
+  (list
+    (semanticdb-table "AuthMiddleware.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [42 53])
+            ("requests" include nil nil [54 69])
+            ("falcon" include nil nil [70 83])
+            ("datetime" include nil nil [84 99])
+            ("app.app" include nil nil [101 146])
+            ("app.utils.WriteLog" include nil nil [148 187])
+            ("app.utils.CheckAuth" include nil nil [189 230])
+            ("allow_origin" function (:arguments 
+              ( ("req" variable nil (reparse-symbol function_parameters) [250 253])
+                ("resp" variable nil (reparse-symbol function_parameters) [255 259])
+                ("params" variable nil (reparse-symbol function_parameters) [261 267]))              ) nil [233 493])
+            ("AuthMiddleware" type
+               (:superclasses ("object")
+                :members 
+                  ( ("" code nil (reparse-symbol indented_block_body) [544 558])
+                    ("process_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [583 587])
+                            ("req" variable nil (reparse-symbol function_parameters) [589 592])
+                            ("resp" variable nil (reparse-symbol function_parameters) [594 598]))                          )
+                        (reparse-symbol indented_block_body) [563 1706])
+                    ("" code nil (reparse-symbol indented_block_body) [1724 1738])
+                    ("process_respose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1763 1767])
+                            ("req" variable nil (reparse-symbol function_parameters) [1769 1772])
+                            ("resp" variable nil (reparse-symbol function_parameters) [1774 1778]))                          )
+                        (reparse-symbol indented_block_body) [1743 1794])
+                    ("_token_is_valid" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1838 1842])
+                            ("token" variable nil (reparse-symbol function_parameters) [1844 1849])
+                            ("tenant_id" variable nil (reparse-symbol function_parameters) [1851 1860]))                          )
+                        (reparse-symbol indented_block_body) [1818 2179])
+                    ("request_log" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2201 2205])
+                            ("req" variable nil (reparse-symbol function_parameters) [2207 2210])
+                            ("resp" variable nil (reparse-symbol function_parameters) [2212 2216]))                          )
+                        (reparse-symbol indented_block_body) [2185 2486]))                  
+                :type "class")
+                nil [496 2486]))          
+      :file "AuthMiddleware.py"
+      :pointmax 2486
+      :fsize 2497
+      :lastmodtime '(23029 60157 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "DBMiddleware.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("PeeweeConnectionMiddleware" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [127 151]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [102 106])
+                            ("database" variable nil (reparse-symbol function_parameters) [108 116]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [89 152])
+                    ("process_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [185 189])
+                            ("req" variable nil (reparse-symbol function_parameters) [191 194])
+                            ("resp" variable nil (reparse-symbol function_parameters) [196 200]))                          )
+                        (reparse-symbol indented_block_body) [165 285])
+                    ("process_response" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [311 315])
+                            ("req" variable nil (reparse-symbol function_parameters) [317 320])
+                            ("resp" variable nil (reparse-symbol function_parameters) [322 326])
+                            ("resource" variable nil (reparse-symbol function_parameters) [328 336]))                          )
+                        (reparse-symbol indented_block_body) [290 415]))                  
+                :type "class")
+                nil [43 415]))          
+      :file "DBMiddleware.py"
+      :pointmax 430
+      :fsize 428
+      :lastmodtime '(23029 60157 0 0)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!hhly_dashboard!app!middlewares!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

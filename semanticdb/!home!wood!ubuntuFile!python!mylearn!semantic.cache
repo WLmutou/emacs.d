@@ -1,0 +1,16 @@
+;; Object mylearn/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mylearn/"
+  :tables
+  (list
+    (semanticdb-table "mytestClass.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "mytestClass.py"
+      :pointmax 432
+      :fsize 456
+      :lastmodtime '(22910 8701 192603 831000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python!mylearn!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

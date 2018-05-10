@@ -1,0 +1,40 @@
+;; Object concurrent/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "concurrent/"
+  :tables
+  (list
+    (semanticdb-table "mythread.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("threading" include nil nil [42 70])
+            ("time" include nil nil [72 83])
+            ("CountdownThread" type
+               (:superclasses ("Thread")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [151 169])
+                            ("self" variable nil (reparse-symbol indented_block_body) [178 188]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [133 137])
+                            ("n" variable nil (reparse-symbol function_parameters) [139 140]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [120 189])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [202 206]))                          )
+                        (reparse-symbol indented_block_body) [194 325]))                  
+                :type "class")
+                nil [85 325])
+            ("c" variable nil nil [328 350])
+            ("c" code nil nil [351 360]))          
+      :file "mythread.py"
+      :pointmax 364
+      :fsize 363
+      :lastmodtime '(22969 64512 236256 7000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python3.6!concurrent!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

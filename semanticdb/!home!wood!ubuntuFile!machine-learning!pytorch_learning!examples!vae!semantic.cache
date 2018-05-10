@@ -1,0 +1,97 @@
+;; Object vae/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "vae/"
+  :tables
+  (list
+    (semanticdb-table "main.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [1 38])
+            ("argparse" include nil nil [39 54])
+            ("torch" include nil nil [55 67])
+            ("torch.utils.data" include nil nil [68 91])
+            ("torch.nn" include nil nil [92 113])
+            ("torch.optim" include nil nil [114 141])
+            ("torch.autograd" include nil nil [142 177])
+            ("torchvision" include nil nil [178 222])
+            ("parser" variable nil nil [224 293])
+            ("parser" code nil nil [294 437])
+            ("parser" code nil nil [438 571])
+            ("parser" code nil nil [572 690])
+            ("parser" code nil nil [691 807])
+            ("parser" code nil nil [808 964])
+            ("args" variable nil nil [965 991])
+            ("args" code nil nil [992 1050])
+            ("torch" code nil nil [1053 1081])
+            ("if" code nil nil [1082 1134])
+            ("" code nil nil [1202 1204])
+            ("train_loader" variable nil nil [1205 1414])
+            ("test_loader" variable nil nil [1415 1590])
+            ("VAE" type
+               (:superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1647 1674])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1684 1714])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1723 1753])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1762 1792])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1801 1830])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1839 1869])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1879 1900])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1909 1936]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1632 1636]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1619 1937])
+                    ("encode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1953 1957])
+                            ("x" variable nil (reparse-symbol function_parameters) [1959 1960]))                          )
+                        (reparse-symbol indented_block_body) [1942 2043])
+                    ("reparametrize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2066 2070])
+                            ("mu" variable nil (reparse-symbol function_parameters) [2072 2074])
+                            ("logvar" variable nil (reparse-symbol function_parameters) [2076 2082]))                          )
+                        (reparse-symbol indented_block_body) [2048 2344])
+                    ("decode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2360 2364])
+                            ("z" variable nil (reparse-symbol function_parameters) [2366 2367]))                          )
+                        (reparse-symbol indented_block_body) [2349 2448])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2465 2469])
+                            ("x" variable nil (reparse-symbol function_parameters) [2471 2472]))                          )
+                        (reparse-symbol indented_block_body) [2453 2610]))                  
+                :type "class")
+                nil [1593 2610])
+            ("model" variable nil nil [2612 2625])
+            ("if" code nil nil [2626 2657])
+            ("reconstruction_function" variable nil nil [2658 2696])
+            ("reconstruction_function" variable nil nil [2697 2741])
+            ("loss_function" function (:arguments 
+              ( ("recon_x" variable nil (reparse-symbol function_parameters) [2762 2769])
+                ("x" variable nil (reparse-symbol function_parameters) [2771 2772])
+                ("mu" variable nil (reparse-symbol function_parameters) [2774 2776])
+                ("logvar" variable nil (reparse-symbol function_parameters) [2778 2784]))              ) nil [2744 3173])
+            ("optimizer" variable nil nil [3175 3226])
+            ("train" function (:arguments 
+              ( ("epoch" variable nil (reparse-symbol function_parameters) [3239 3244]))              ) nil [3229 4053])
+            ("test" function (:arguments 
+              ( ("epoch" variable nil (reparse-symbol function_parameters) [4064 4069]))              ) nil [4055 4459])
+            ("for" code nil nil [4461 4534]))          
+      :file "main.py"
+      :pointmax 4534
+      :fsize 4533
+      :lastmodtime '(22965 58416 791441 140000)
+      :unmatched-syntax '((NAME 1136 . 1142) (IF 1184 . 1186) (ELSE 1197 . 1201))))
+  :file "!home!wood!ubuntuFile!machine-learning!pytorch_learning!examples!vae!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

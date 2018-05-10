@@ -1,0 +1,30 @@
+;; Object neural-transfer/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "neural-transfer/"
+  :tables (list 
+   (semanticdb-table "build_model.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("torch.nn" include nil nil [41 62])
+            ("torchvision.models" include nil nil [64 99])
+            ("loss" include nil nil [101 112])
+            ("vgg" variable nil nil [115 159])
+            ("vgg" variable nil nil [161 177])
+            ("content_layers_default" variable nil nil [179 213])
+            ("style_layers_default" variable nil nil [214 287]))          
+    :file "build_model.py"
+    :pointmax 288
+    :fsize 1819
+    :lastmodtime '(23102 63726 204848 572000)
+    :unmatched-syntax '((IMPORT 101 . 107) ($EOI 160 . 160) ($EOI 66 . 66))
+    )
+   (semanticdb-table "loss.py"
+    :file "loss.py"
+    :fsize 1580
+    :lastmodtime '(23102 63726 211852 57000)
+    )
+   )
+  :file "!home!hhly!python!pytorch!learning!neural-transfer!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

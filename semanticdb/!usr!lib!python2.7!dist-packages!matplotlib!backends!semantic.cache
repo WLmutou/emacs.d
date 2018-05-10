@@ -1,0 +1,16 @@
+;; Object backends/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "backends/"
+  :tables
+  (list
+    (semanticdb-table "backend_agg.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "backend_agg.py"
+      :pointmax 21107
+      :fsize 21106
+      :lastmodtime '(21573 38751 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!lib!python2.7!dist-packages!matplotlib!backends!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

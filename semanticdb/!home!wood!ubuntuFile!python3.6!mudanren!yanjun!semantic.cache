@@ -1,0 +1,32 @@
+;; Object yanjun/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "yanjun/"
+  :tables
+  (list
+    (semanticdb-table "jun.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("ReadWord" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [103 107]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [88 92]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [75 108]))                  
+                :type "class")
+                nil [47 108])
+            ("hellostr" variable nil nil [109 170])
+            ("jun" function (:arguments 
+              ( ("inputstr" variable nil (reparse-symbol function_parameters) [181 189]))              ) nil [173 348]))          
+      :file "jun.py"
+      :pointmax 349
+      :fsize 348
+      :lastmodtime '(22782 5826 648962 7000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python3.6!mudanren!yanjun!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

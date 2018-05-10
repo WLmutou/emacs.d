@@ -1,0 +1,438 @@
+;; Object MySQLdb/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "MySQLdb/"
+  :tables
+  (list
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"MySQLdb - A DB API v2.0 compatible interface to MySQL.
+
+This package is a wrapper around _mysql, which mostly implements the
+MySQL C API.
+
+connect() -- connects to server
+
+See the C API specification and the MySQL documentation for more info
+on other items.
+
+For information on how MySQLdb handles type conversion, see the
+MySQLdb.converters module.
+
+\"\"\"" code nil nil [1 358])
+            ("__revision__" variable nil nil [360 404])
+            ("release" include nil nil [405 462])
+            ("_mysql" include nil nil [464 477])
+            ("if" code nil nil [479 657])
+            ("threadsafety" variable nil nil [658 674])
+            ("apilevel" variable nil nil [675 691])
+            ("paramstyle" variable nil nil [692 713])
+            ("_mysql" include nil nil [715 735])
+            ("MySQLdb.constants" include nil nil [736 776])
+            ("MySQLdb.times" include nil nil [777 880])
+            ("try" code nil nil [882 966])
+            ("DBAPISet" type
+               (:documentation "A special type of set for which A == x is true if A is a
+    DBAPISet and x is a member of that set."
+                :superclasses ("frozenset")
+                :members 
+                  ( ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1122 1126])
+                            ("other" variable nil (reparse-symbol function_parameters) [1128 1133]))                          )
+                        (reparse-symbol indented_block_body) [1111 1251]))                  
+                :type "class")
+                nil [967 1251])
+            ("STRING" variable nil nil [1253 1355])
+            ("BINARY" variable nil nil [1356 1484])
+            ("NUMBER" variable nil nil [1485 1696])
+            ("DATE" variable nil nil [1697 1756])
+            ("TIME" variable nil nil [1757 1796])
+            ("TIMESTAMP" variable nil nil [1797 1862])
+            ("DATETIME" variable nil nil [1863 1884])
+            ("ROWID" variable nil nil [1885 1907])
+            ("test_DBAPISet_set_equality" function nil nil [1909 1971])
+            ("test_DBAPISet_set_inequality" function nil nil [1972 2036])
+            ("test_DBAPISet_set_equality_membership" function nil nil [2037 2125])
+            ("test_DBAPISet_set_inequality_membership" function nil nil [2126 2210])
+            ("Binary" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [2222 2223]))              ) nil [2211 2244])
+            ("Connect" function
+               (:documentation "Factory function for connections.Connection."
+                :arguments 
+                  ( ("args" variable nil (reparse-symbol function_parameters) [2257 2262])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [2264 2272]))                  )
+                nil [2245 2408])
+            ("connect" variable nil nil [2409 2439])
+            ("__all__" variable nil nil [2441 3117]))          
+      :file "__init__.py"
+      :pointmax 3122
+      :fsize 3121
+      :lastmodtime '(19481 52500 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "connections.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+
+This module implements connections for MySQLdb. Presently there is
+only one class: Connection. Others are unlikely. However, you might
+want to make your own subclasses. In most cases, you will probably
+override Connection.default_cursor with a non-standard Cursor class.
+
+\"\"\"" code nil nil [1 281])
+            ("cursors" include nil nil [282 296])
+            ("_mysql_exceptions" include nil nil [297 483])
+            ("_mysql" include nil nil [484 504])
+            ("types" include nil nil [484 504])
+            ("re" include nil nil [505 514])
+            ("defaulterrorhandler" function
+               (:documentation "
+
+    If cursor is not None, (errorclass, errorvalue) is appended to
+    cursor.messages; otherwise it is appended to
+    connection.messages. Then errorclass is raised with errorvalue as
+    the value.
+
+    You can override this with your own error handler by assigning it
+    to the instance.
+
+    "
+                :arguments 
+                  ( ("connection" variable nil (reparse-symbol function_parameters) [541 551])
+                    ("cursor" variable nil (reparse-symbol function_parameters) [553 559])
+                    ("errorclass" variable nil (reparse-symbol function_parameters) [561 571])
+                    ("errorvalue" variable nil (reparse-symbol function_parameters) [573 583]))                  )
+                nil [517 1104])
+            ("re_numeric_part" variable nil nil [1105 1144])
+            ("numeric_part" function
+               (:documentation "Returns the leading numeric part of a string.
+    
+    >>> numeric_part(\"20-alpha\")
+    20
+    >>> numeric_part(\"foo\")
+    >>> numeric_part(\"16b\")
+    16
+    "
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [1163 1164]))                  )
+                nil [1146 1431])
+            ("Connection" type
+               (:documentation "MySQL Database Connection Object"
+                :superclasses ("_mysql.connection")
+                :members 
+                  ( ("default_cursor" variable nil (reparse-symbol indented_block_body) [1519 1550])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+
+        Create a connection to the database. It is strongly recommended
+        that you only use keyword parameters. Consult the MySQL C API
+        documentation for more information.
+
+        host
+          string, host to connect
+          
+        user
+          string, user to connect as
+
+        passwd
+          string, password to use
+
+        db
+          string, database to use
+
+        port
+          integer, TCP/IP port to connect to
+
+        unix_socket
+          string, location of unix_socket to use
+
+        conv
+          conversion dictionary, see MySQLdb.converters
+
+        connect_timeout
+          number of seconds to wait before the connection attempt
+          fails.
+
+        compress
+          if set, compression is enabled
+
+        named_pipe
+          if set, a named pipe is used to connect (Windows only)
+
+        init_command
+          command which is run once the connection is created
+
+        read_default_file
+          file from which default client values are read
+
+        read_default_group
+          configuration group to use from the default file
+
+        cursorclass
+          class object, used to create cursors (keyword only)
+
+        use_unicode
+          If True, text-like columns are returned as unicode objects
+          using the connection's character set.  Otherwise, text-like
+          columns are returned as strings.  columns are returned as
+          normal strings. Unicode objects will always be encoded to
+          the connection's character set regardless of this setting.
+
+        charset
+          If supplied, the connection character set will be changed
+          to this character set (MySQL-4.1 and newer). This implies
+          use_unicode=True.
+
+        sql_mode
+          If supplied, the session SQL mode will be changed to this
+          setting (MySQL-4.1 and newer). For more details and legal
+          values, see the MySQL documentation.
+          
+        client_flag
+          integer, flags to use or 0
+          (see MySQL docs or constants/CLIENTS.py)
+
+        ssl
+          dictionary or mapping, contains SSL connection parameters;
+          see the MySQL documentation for more details
+          (mysql_ssl_set()).  If this is set, and the client does not
+          support SSL, NotSupportedError will be raised.
+
+        local_infile
+          integer, non-zero enables LOAD LOCAL INFILE; zero disables
+    
+        There are a number of undocumented, non-standard methods. See the
+        documentation for the MySQL C API for some hints on what they do.
+
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1605 4176])
+                            ("constants" include nil (reparse-symbol indented_block_body) [4185 4225])
+                            ("converters" include nil (reparse-symbol indented_block_body) [4234 4268])
+                            ("weakref" include nil (reparse-symbol indented_block_body) [4277 4323])
+                            ("types" include nil (reparse-symbol indented_block_body) [4341 4353])
+                            ("kwargs2" variable nil (reparse-symbol indented_block_body) [4363 4386])
+                            ("if" code nil (reparse-symbol indented_block_body) [4404 4510])
+                            ("conv2" variable nil (reparse-symbol indented_block_body) [4519 4529])
+                            ("for" code nil (reparse-symbol indented_block_body) [4538 4702])
+                            ("kwargs2" variable nil (reparse-symbol indented_block_body) [4710 4733])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4743 4809])
+                            ("charset" variable nil (reparse-symbol indented_block_body) [4818 4854])
+                            ("if" code nil (reparse-symbol indented_block_body) [4864 4953])
+                            ("use_unicode" variable nil (reparse-symbol indented_block_body) [4974 5027])
+                            ("sql_mode" variable nil (reparse-symbol indented_block_body) [5036 5074])
+                            ("client_flag" variable nil (reparse-symbol indented_block_body) [5084 5126])
+                            ("client_version" variable nil (reparse-symbol indented_block_body) [5135 5227])
+                            ("if" code nil (reparse-symbol indented_block_body) [5236 5316])
+                            ("if" code nil (reparse-symbol indented_block_body) [5324 5401])
+                            ("kwargs2" variable nil (reparse-symbol indented_block_body) [5422 5458])
+                            ("super" code nil (reparse-symbol indented_block_body) [5468 5518])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5528 5638])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5656 5752])
+                            ("db" variable nil (reparse-symbol indented_block_body) [5762 5778])
+                            ("_get_string_literal" function nil (reparse-symbol indented_block_body) [5787 5943])
+                            ("_get_unicode_literal" function nil (reparse-symbol indented_block_body) [5952 6132])
+                            ("_get_string_decoder" function nil (reparse-symbol indented_block_body) [6141 6293])
+                            ("string_literal" variable nil (reparse-symbol indented_block_body) [6310 6348])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6357 6420])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6429 6489])
+                            ("if" code nil (reparse-symbol indented_block_body) [6498 6562])
+                            ("self" code nil (reparse-symbol indented_block_body) [6570 6601])
+                            ("if" code nil (reparse-symbol indented_block_body) [6611 6664])
+                            ("if" code nil (reparse-symbol indented_block_body) [6673 7000])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7009 7057])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7066 7116])
+                            ("self" code nil (reparse-symbol indented_block_body) [7125 7193])
+                            ("if" code nil (reparse-symbol indented_block_body) [7202 7323])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7331 7349]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1573 1577])
+                            ("args" variable nil (reparse-symbol function_parameters) [1579 1584])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [1586 1594]))                          
+                        :documentation "
+
+        Create a connection to the database. It is strongly recommended
+        that you only use keyword parameters. Consult the MySQL C API
+        documentation for more information.
+
+        host
+          string, host to connect
+          
+        user
+          string, user to connect as
+
+        passwd
+          string, password to use
+
+        db
+          string, database to use
+
+        port
+          integer, TCP/IP port to connect to
+
+        unix_socket
+          string, location of unix_socket to use
+
+        conv
+          conversion dictionary, see MySQLdb.converters
+
+        connect_timeout
+          number of seconds to wait before the connection attempt
+          fails.
+
+        compress
+          if set, compression is enabled
+
+        named_pipe
+          if set, a named pipe is used to connect (Windows only)
+
+        init_command
+          command which is run once the connection is created
+
+        read_default_file
+          file from which default client values are read
+
+        read_default_group
+          configuration group to use from the default file
+
+        cursorclass
+          class object, used to create cursors (keyword only)
+
+        use_unicode
+          If True, text-like columns are returned as unicode objects
+          using the connection's character set.  Otherwise, text-like
+          columns are returned as strings.  columns are returned as
+          normal strings. Unicode objects will always be encoded to
+          the connection's character set regardless of this setting.
+
+        charset
+          If supplied, the connection character set will be changed
+          to this character set (MySQL-4.1 and newer). This implies
+          use_unicode=True.
+
+        sql_mode
+          If supplied, the session SQL mode will be changed to this
+          setting (MySQL-4.1 and newer). For more details and legal
+          values, see the MySQL documentation.
+          
+        client_flag
+          integer, flags to use or 0
+          (see MySQL docs or constants/CLIENTS.py)
+
+        ssl
+          dictionary or mapping, contains SSL connection parameters;
+          see the MySQL documentation for more details
+          (mysql_ssl_set()).  If this is set, and the client does not
+          support SSL, NotSupportedError will be raised.
+
+        local_infile
+          integer, non-zero enables LOAD LOCAL INFILE; zero disables
+    
+        There are a number of undocumented, non-standard methods. See the
+        documentation for the MySQL C API for some hints on what they do.
+
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1560 7350])
+                    ("cursor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7374 7378])
+                            ("cursorclass" variable nil (reparse-symbol function_parameters) [7380 7391]))                          
+                        :documentation "
+
+        Create a cursor on which queries may be performed. The
+        optional cursorclass parameter is used to create the
+        Cursor. By default, self.cursorclass=cursors.Cursor is
+        used.
+
+        ")
+                        (reparse-symbol indented_block_body) [7363 7681])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7700 7704]))                          )
+                        (reparse-symbol indented_block_body) [7686 7728])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7750 7754])
+                            ("exc" variable nil (reparse-symbol function_parameters) [7756 7759])
+                            ("value" variable nil (reparse-symbol function_parameters) [7761 7766])
+                            ("tb" variable nil (reparse-symbol function_parameters) [7768 7770]))                          )
+                        (reparse-symbol indented_block_body) [7737 7857])
+                    ("literal" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7886 7890])
+                            ("o" variable nil (reparse-symbol function_parameters) [7892 7893]))                          
+                        :documentation "
+
+        If o is a single object, returns an SQL literal as a string.
+        If o is a non-string sequence, the items of the sequence are
+        converted and returned as a sequence.
+
+        Non-standard. For internal use; do not use this in your
+        applications.
+
+        ")
+                        (reparse-symbol indented_block_body) [7874 8238])
+                    ("begin" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8253 8257]))                          
+                        :documentation "Explicitly begin a connection. Non-standard.
+        DEPRECATED: Will be removed in 1.3.
+        Use an SQL BEGIN statement instead.")
+                        (reparse-symbol indented_block_body) [8243 8572])
+                    ("if" code nil (reparse-symbol indented_block_body) [8585 8979])
+                    ("set_character_set" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9006 9010])
+                            ("charset" variable nil (reparse-symbol function_parameters) [9012 9019]))                          
+                        :documentation "Set the connection character set to charset. The character
+        set can only be changed in MySQL-4.1 and newer. If you try
+        to change the character set from the current value in an
+        older version, NotSupportedError will be raised.")
+                        (reparse-symbol indented_block_body) [8984 9764])
+                    ("set_sql_mode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9786 9790])
+                            ("sql_mode" variable nil (reparse-symbol function_parameters) [9792 9800]))                          
+                        :documentation "Set the connection sql_mode. See MySQL documentation for
+        legal values.")
+                        (reparse-symbol indented_block_body) [9769 10098])
+                    ("show_warnings" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10129 10133]))                          
+                        :documentation "Return detailed information about warnings as a
+        sequence of tuples of (Level, Code, Message). This
+        is only supported in MySQL-4.1 and up. If your server
+        is an earlier version, an empty sequence is returned.")
+                        (reparse-symbol indented_block_body) [10111 10558])
+                    ("Warning" variable nil (reparse-symbol indented_block_body) [10567 10584])
+                    ("Error" variable nil (reparse-symbol indented_block_body) [10589 10602])
+                    ("InterfaceError" variable nil (reparse-symbol indented_block_body) [10607 10638])
+                    ("DatabaseError" variable nil (reparse-symbol indented_block_body) [10643 10672])
+                    ("DataError" variable nil (reparse-symbol indented_block_body) [10677 10698])
+                    ("OperationalError" variable nil (reparse-symbol indented_block_body) [10703 10738])
+                    ("IntegrityError" variable nil (reparse-symbol indented_block_body) [10743 10774])
+                    ("InternalError" variable nil (reparse-symbol indented_block_body) [10779 10808])
+                    ("ProgrammingError" variable nil (reparse-symbol indented_block_body) [10813 10848])
+                    ("NotSupportedError" variable nil (reparse-symbol indented_block_body) [10853 10890])
+                    ("errorhandler" variable nil (reparse-symbol indented_block_body) [10896 10930]))                  
+                :type "class")
+                nil [1433 10931]))          
+      :file "connections.py"
+      :pointmax 10931
+      :fsize 10930
+      :lastmodtime '(19481 52500 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!lib!python2.7!dist-packages!MySQLdb!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

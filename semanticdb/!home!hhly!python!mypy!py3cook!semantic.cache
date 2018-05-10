@@ -1,0 +1,29 @@
+;; Object py3cook/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "py3cook/"
+  :tables (list 
+   (semanticdb-table "thread_event.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("threading" include nil nil [42 77])
+            ("time" include nil nil [78 89])
+            ("countdown" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [106 107])
+                ("start_evt" variable nil (reparse-symbol function_parameters) [109 118]))              ) nil [92 258])
+            ("started_evt" variable nil nil [259 280])
+            ("print" code nil nil [282 311])
+            ("t" variable nil nil [312 364])
+            ("t" code nil nil [365 374])
+            ("started_evt" code nil nil [376 394])
+            ("print" code nil nil [395 425]))          
+    :file "thread_event.py"
+    :pointmax 428
+    :fsize 427
+    :lastmodtime '(23136 19857 7894 804000)
+    :unmatched-syntax '(($EOI 428 . 428) (DEF 92 . 95) ($EOI 125 . 125))
+    )
+   )
+  :file "!home!hhly!python!mypy!py3cook!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

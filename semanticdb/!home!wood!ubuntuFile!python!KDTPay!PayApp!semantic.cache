@@ -83,7 +83,7 @@ def get_code(request):
                   ( ("request" variable nil (reparse-symbol function_parameters) [8069 8076]))                  )
                 nil [8030 8873])
             ("detail" function
-               (:documentation " 账户明细 "
+               (:documentation " 脮脣禄搂脙梅脧赂 "
                 :arguments 
                   ( ("request" variable nil (reparse-symbol function_parameters) [8905 8912]))                  
                 :decorators 
@@ -133,8 +133,8 @@ def get_code(request):
                 nil [12431 12668]))          
       :file "admin.py"
       :pointmax 12673
-      :fsize 12754
-      :lastmodtime '(22657 23178 732751 264000)
+      :fsize 63
+      :lastmodtime '(22689 41293 189695 154000)
       :unmatched-syntax '((NAME 9325 . 9333) (IF 9368 . 9370) (ELSE 9402 . 9406) (NAME 9220 . 9230) (IF 9266 . 9268) (ELSE 9302 . 9306)))
     (semanticdb-table "models.py"
       :major-mode 'python-mode
@@ -143,7 +143,7 @@ def get_code(request):
             ("django.contrib.auth.models" include nil nil [47 91])
             ("django.utils" include nil nil [92 126])
             ("UserProfile" type
-               (:documentation " 扩展User表"
+               (:documentation " 脌漏脮鹿User卤铆"
                 :superclasses ("models.Model")
                 :members 
                   ( ("id" variable nil (reparse-symbol indented_block_body) [212 278])
@@ -162,7 +162,7 @@ def get_code(request):
                 :type "class")
                 nil [156 503])
             ("TradesRecordes" type
-               (:documentation " 交易记录 "
+               (:documentation " 陆禄脪脳录脟脗录 "
                 :superclasses ("models.Model")
                 :members 
                   ( ("id" variable nil (reparse-symbol indented_block_body) [562 635])
@@ -189,7 +189,7 @@ def get_code(request):
                 :type "class")
                 nil [505 1610])
             ("BillDetails" type
-               (:documentation " 账单明细 "
+               (:documentation " 脮脣碌楼脙梅脧赂 "
                 :superclasses ("models.Model")
                 :members 
                   ( ("id" variable nil (reparse-symbol indented_block_body) [1666 1738])
@@ -211,7 +211,7 @@ def get_code(request):
                 :type "class")
                 nil [1612 2235])
             ("BandShop" type
-               (:documentation " 平台账户的绑定 "
+               (:documentation " 脝陆脤篓脮脣禄搂碌脛掳贸露篓 "
                 :superclasses ("models.Model")
                 :members 
                   ( ("id" variable nil (reparse-symbol indented_block_body) [2293 2368])
@@ -238,7 +238,7 @@ def get_code(request):
                 :type "class")
                 nil [2238 3401])
             ("BandCard" type
-               (:documentation " 绑定收益账户，用户的卡 "
+               (:documentation " 掳贸露篓脢脮脪忙脮脣禄搂拢卢脫脙禄搂碌脛驴篓 "
                 :superclasses ("models.Model")
                 :members 
                   ( ("id" variable nil (reparse-symbol indented_block_body) [3461 3539])
@@ -272,7 +272,7 @@ def get_code(request):
                 :type "class")
                 nil [3403 5349])
             ("KDTCards" type
-               (:documentation " 绑定后分配的银行账户"
+               (:documentation " 掳贸露篓潞贸路脰脜盲碌脛脪酶脨脨脮脣禄搂"
                 :superclasses ("models.Model")
                 :members 
                   ( ("id" variable nil (reparse-symbol indented_block_body) [5411 5489])
@@ -303,8 +303,8 @@ def get_code(request):
                 nil [5355 6964]))          
       :file "models.py"
       :pointmax 6965
-      :fsize 8153
-      :lastmodtime '(22657 23178 744751 264000)
+      :fsize 9167
+      :lastmodtime '(22684 25905 755518 146000)
       :unmatched-syntax '((INDENT_BLOCK 6497 . 6964) (NEWLINE 6393 . 6394) ($EOI 6967 . 6967)))
     (semanticdb-table "urls.py"
       :major-mode 'python-mode
@@ -312,12 +312,138 @@ def get_code(request):
         '( ("django.conf.urls" include nil nil [17 68])
             ("os" include nil nil [69 78])
             ("django.conf" include nil nil [79 111])
-            ("urlpatterns" variable nil nil [114 1965]))          
+            ("urlpatterns" variable nil nil [114 3764]))          
       :file "urls.py"
-      :pointmax 1966
-      :fsize 1974
-      :lastmodtime '(22657 23178 792751 264000)
-      :unmatched-syntax nil))
+      :pointmax 3765
+      :fsize 3776
+      :lastmodtime '(22689 41293 289695 154000)
+      :unmatched-syntax nil)
+    (semanticdb-table "views_en.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("json" include nil nil [18 30])
+            ("time" include nil nil [31 43])
+            ("logging" include nil nil [44 58])
+            ("django.contrib" include nil nil [61 99])
+            ("django.contrib.auth.decorators" include nil nil [100 157])
+            ("django.shortcuts" include nil nil [158 228])
+            ("django.contrib.auth.models" include nil nil [229 272])
+            ("django.views.decorators.csrf" include nil nil [273 325])
+            ("models" include nil nil [327 357])
+            ("PayApp.payservice.detailData" include nil nil [359 421])
+            ("PayApp.payservice.detailData" include nil nil [422 474])
+            ("PayApp.payservice.actionShops" include nil nil [475 531])
+            ("PayApp.payservice.actionShops" include nil nil [532 587])
+            ("PayApp.payservice.cardAction" include nil nil [588 655])
+            ("PayApp.payservice.enchashment" include nil nil [657 728])
+            ("PayApp.payservice.userInfo" include nil nil [729 776])
+            ("PayApp.payservice.userRegister" include nil nil [777 860])
+            ("PayApp.payservice" include nil nil [861 899])
+            ("PayApp.payservice.userInfo" include nil nil [900 950])
+            ("PayApp.payservice.KDTCard" include nil nil [980 1026])
+            ("log" variable nil nil [1028 1060])
+            ("user_login" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [1078 1085]))              ) nil [1063 1799])
+            ("user_register" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [1818 1825]))              ) nil [1800 2718])
+            ("user_active" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [2736 2743]))              ) nil [2720 4073])
+            ("forget_password" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [4095 4102]))              ) nil [4075 5237])
+            ("\"\"\"
+def get_code(request):
+    key_time = str(time.time())
+    print \"get_key_time:\", key_time
+    ca = commons.Captcha(request, django_captach_key=key_time)
+    ca.type = 'number'
+    ca.img_width = 150
+    ca.img_height = 30
+    return ca.display()
+\"\"\"" code nil nil [5238 5492])
+            ("user_logout" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [5534 5541]))                  )
+                nil [5502 5606])
+            ("home" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [5633 5640]))                  )
+                nil [5608 6073])
+            ("pay_admin" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [6107 6114]))                  )
+                nil [6077 7301])
+            ("enchashment" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [7337 7344]))                  )
+                nil [7305 8113])
+            ("enchashment_action" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [8153 8160]))                  )
+                nil [8114 8957])
+            ("detail" function
+               (:documentation " 璐︽埛鏄庣粏 "
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [8989 8996]))                  
+                :decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  )
+                nil [8962 9784])
+            ("detail_data" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [9818 9825]))                  )
+                nil [9786 10571])
+            ("user_profile" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [10609 10616]))                  )
+                nil [10576 10856])
+            ("change_password" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [10893 10900]))                  )
+                nil [10857 11138])
+            ("store_banding" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [11173 11180]))                  )
+                nil [11139 11495])
+            ("cart_binding" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [11529 11536]))                  )
+                nil [11496 11879])
+            ("bill_detail_data" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [11921 11928]))                  )
+                nil [11884 12693])
+            ("card_info" function
+               (:decorators 
+                  ( ("login_required" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("request" variable nil (reparse-symbol function_parameters) [12725 12732]))                  )
+                nil [12695 12932]))          
+      :file "views_en.py"
+      :pointmax 12937
+      :fsize 13018
+      :lastmodtime '(22695 8537 906984 127000)
+      :unmatched-syntax '((NAME 9409 . 9417) (IF 9452 . 9454) (ELSE 9486 . 9490) (NAME 9304 . 9314) (IF 9350 . 9352) (ELSE 9386 . 9390))))
   :file "!home!wood!ubuntuFile!python!KDTPay!PayApp!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

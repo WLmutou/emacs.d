@@ -32,8 +32,8 @@
                 nil [118 1467]))          
       :file "userInfo.py"
       :pointmax 1472
-      :fsize 1690
-      :lastmodtime '(22624 27094 413731 231000)
+      :fsize 2096
+      :lastmodtime '(22695 8537 834984 127000)
       :unmatched-syntax nil)
     (semanticdb-table "actionShops.py"
       :major-mode 'python-mode
@@ -58,7 +58,7 @@
             ("PayApp.payservice.data_utils" include nil nil [382 449])
             ("log2" variable nil nil [453 486])
             ("TradesRecordesAction" type
-               (:documentation " ²éÑ¯ÏêÏ¸½»Ò×¼ÇÂ¼ "
+               (:documentation " 查询详细交易记录 "
                 :superclasses ("object")
                 :members 
                   ( ("__init__" function
@@ -76,75 +76,76 @@
                         :arguments 
                           ( ("self" variable nil (reparse-symbol function_parameters) [684 688])
                             ("post_dict" variable nil (reparse-symbol function_parameters) [690 699]))                          )
-                        (reparse-symbol indented_block_body) [661 1808])
+                        (reparse-symbol indented_block_body) [661 3154])
                     ("query_bill_details" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1836 1840]))                          )
-                        (reparse-symbol indented_block_body) [1813 1973])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3182 3186]))                          
+                        :documentation " 导出账单明细 ")
+                        (reparse-symbol indented_block_body) [3159 3342])
                     ("export_recordes" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [1999 2003])
-                            ("post_dict" variable nil (reparse-symbol function_parameters) [2005 2014]))                          
-                        :documentation " µ¼³ö¼ÇÂ¼ ")
-                        (reparse-symbol indented_block_body) [1979 3284])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3368 3372])
+                            ("post_dict" variable nil (reparse-symbol function_parameters) [3374 3383]))                          
+                        :documentation " 导出记录 ")
+                        (reparse-symbol indented_block_body) [3348 4670])
                     ("export_bill_details" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [3313 3317])
-                            ("post_dict" variable nil (reparse-symbol function_parameters) [3319 3328]))                          
-                        :documentation " µ¼³öÕËµ¥Ã÷Ï¸")
-                        (reparse-symbol indented_block_body) [3289 4644]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4699 4703])
+                            ("post_dict" variable nil (reparse-symbol function_parameters) [4705 4714]))                          
+                        :documentation " 导出账单明细")
+                        (reparse-symbol indented_block_body) [4675 6030]))                  
                 :type "class")
-                nil [488 4644])
+                nil [488 6030])
             ("WriteTradesRecordes" type
-               (:documentation " Ð´Èë½»Ò×¼ÇÂ¼ "
+               (:documentation " 写入交易记录 "
                 :superclasses ("object")
                 :members 
                   ( ("__init__" function
                        (:suite 
-                          ( ("self" variable nil (reparse-symbol indented_block_body) [4761 4785])
-                            ("self" variable nil (reparse-symbol indented_block_body) [4794 4832]))                          
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [6147 6171])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6180 6218]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4719 4723])
-                            ("username" variable nil (reparse-symbol function_parameters) [4725 4733])
-                            ("tracde_recordes" variable nil (reparse-symbol function_parameters) [4735 4750]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6105 6109])
+                            ("username" variable nil (reparse-symbol function_parameters) [6111 6119])
+                            ("tracde_recordes" variable nil (reparse-symbol function_parameters) [6121 6136]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [4706 4833])
+                        (reparse-symbol indented_block_body) [6092 6219])
                     ("__call__" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4851 4855])
-                            ("args" variable nil (reparse-symbol function_parameters) [4857 4862])
-                            ("kwargs" variable nil (reparse-symbol function_parameters) [4864 4872]))                          )
-                        (reparse-symbol indented_block_body) [4838 4905])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6237 6241])
+                            ("args" variable nil (reparse-symbol function_parameters) [6243 6248])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [6250 6258]))                          )
+                        (reparse-symbol indented_block_body) [6224 6291])
                     ("write_recordes" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4929 4933]))                          )
-                        (reparse-symbol indented_block_body) [4910 5418])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6315 6319]))                          )
+                        (reparse-symbol indented_block_body) [6296 6867])
                     ("reckon_trade_id" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5443 5447])
-                            ("tracde_recordes" variable nil (reparse-symbol function_parameters) [5449 5464]))                          
-                        :documentation " ¸ù¾Ýuser, store_name, cart_number, trade_date¼ÆËãhashµÃµ½trade_id ")
-                        (reparse-symbol indented_block_body) [5423 5749]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6892 6896])
+                            ("tracde_recordes" variable nil (reparse-symbol function_parameters) [6898 6913]))                          
+                        :documentation " 根据user, store_name, cart_number, trade_date计算hash得到trade_id ")
+                        (reparse-symbol indented_block_body) [6872 7256]))                  
                 :type "class")
-                nil [4648 5749])
+                nil [6034 7256])
             ("json_serial" function
                (:documentation "JSON serializer for objects not serializable by default json code"
                 :arguments 
-                  ( ("obj" variable nil (reparse-symbol function_parameters) [5769 5772]))                  )
-                nil [5753 6052])
+                  ( ("obj" variable nil (reparse-symbol function_parameters) [7276 7279]))                  )
+                nil [7260 7559])
             ("detail_datestr_to_datetime" function (:arguments 
-              ( ("date_str" variable nil (reparse-symbol function_parameters) [6088 6096]))              ) nil [6057 6246]))          
+              ( ("date_str" variable nil (reparse-symbol function_parameters) [7595 7603]))              ) nil [7564 7753]))          
       :file "detailData.py"
-      :pointmax 6246
-      :fsize 6502
-      :lastmodtime '(22679 8532 866209 382000)
+      :pointmax 7753
+      :fsize 7954
+      :lastmodtime '(22695 8537 834984 127000)
       :unmatched-syntax nil)
     (semanticdb-table "enchashment.py"
       :major-mode 'python-mode
@@ -153,192 +154,160 @@
             ("re" include nil nil [35 45])
             ("json" include nil nil [46 57])
             ("django.db.models" include nil nil [59 89])
-            ("PayApp.models" include nil nil [181 215])
-            ("PayApp.models" include nil nil [216 250])
-            ("PayApp.payservice.detailData" include nil nil [316 376])
-            ("PayApp.models" include nil nil [379 424])
-            ("PayApp.payservice.userInfo" include nil nil [425 472])
-            ("log2" variable nil nil [474 507])
+            ("django.utils" include nil nil [90 123])
+            ("datetime" include nil nil [124 139])
+            ("PayApp.models" include nil nil [141 186])
+            ("PayApp.payservice.userInfo" include nil nil [187 234])
+            ("PayApp.payservice.detailData" include nil nil [236 296])
+            ("PayApp.payservice.data_utils" include nil nil [297 369])
+            ("log2" variable nil nil [449 482])
             ("QueryEnchaShment" type
-               (:documentation " ²éÑ¯ÌåÏÖÐÅÏ¢ "
+               (:documentation " 查询体现信息 "
                 :superclasses ("object")
                 :members 
                   ( ("__init__" function
                        (:suite 
-                          ( ("self" variable nil (reparse-symbol indented_block_body) [600 624])
-                            ("self" variable nil (reparse-symbol indented_block_body) [633 663])
-                            ("self" variable nil (reparse-symbol indented_block_body) [672 696]))                          
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [587 611])
+                            ("self" variable nil (reparse-symbol indented_block_body) [620 650])
+                            ("self" variable nil (reparse-symbol indented_block_body) [659 683]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [577 581])
-                            ("username" variable nil (reparse-symbol function_parameters) [583 591])
-                            ("platform" variable nil (reparse-symbol function_parameters) [593 601]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [552 556])
+                            ("username" variable nil (reparse-symbol function_parameters) [558 566])
+                            ("platform" variable nil (reparse-symbol function_parameters) [568 576]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [564 709])
+                        (reparse-symbol indented_block_body) [539 684])
                     ("__call__" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [727 731])
-                            ("args" variable nil (reparse-symbol function_parameters) [733 738])
-                            ("kwargs" variable nil (reparse-symbol function_parameters) [740 748]))                          )
-                        (reparse-symbol indented_block_body) [714 802])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [702 706])
+                            ("args" variable nil (reparse-symbol function_parameters) [708 713])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [715 723]))                          )
+                        (reparse-symbol indented_block_body) [689 777])
                     ("query_kdt_cards" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [827 831]))                          )
-                        (reparse-symbol indented_block_body) [807 1448])
-                    ("find_store_availabel_money" function
+                          ( ("self" variable nil (reparse-symbol function_parameters) [802 806]))                          )
+                        (reparse-symbol indented_block_body) [782 1541])
+                    ("m_kdt_bank_list" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2970 2974])
-                            ("store" variable nil (reparse-symbol function_parameters) [2976 2981])
-                            ("platform" variable nil (reparse-symbol function_parameters) [2983 2991]))                          )
-                        (reparse-symbol indented_block_body) [2939 3834])
-                    ("find_status" function
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1571 1575])
+                            ("kdt_list" variable nil (reparse-symbol function_parameters) [1577 1585])
+                            ("bank_list" variable nil (reparse-symbol function_parameters) [1587 1596]))                          )
+                        (reparse-symbol indented_block_body) [1551 1972])
+                    ("cash_sweep_query" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [3854 3858])
-                            ("store" variable nil (reparse-symbol function_parameters) [3860 3865])
-                            ("platform" variable nil (reparse-symbol function_parameters) [3867 3875]))                          )
-                        (reparse-symbol indented_block_body) [3838 4988]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1999 2003]))                          )
+                        (reparse-symbol indented_block_body) [1978 2734])
+                    ("c_sweep_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2760 2764])
+                            ("kdt_main_card" variable nil (reparse-symbol function_parameters) [2765 2778])
+                            ("kdt_sub_card_list" variable nil (reparse-symbol function_parameters) [2780 2797]))                          )
+                        (reparse-symbol indented_block_body) [2743 3012])
+                    ("transfer_cards" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3037 3041]))                          
+                        :documentation " 转给供应商的卡 查询 ")
+                        (reparse-symbol indented_block_body) [3018 3777]))                  
                 :type "class")
-                nil [509 4988])
+                nil [484 3777])
             ("EnchaShment" type
-               (:documentation " ÌáÏÖ²Ù×÷ "
+               (:documentation " 提现操作 "
                 :superclasses ("object")
                 :members 
                   ( ("__init__" function
                        (:suite 
-                          ( ("self" variable nil (reparse-symbol indented_block_body) [3489 3515])
-                            ("self" variable nil (reparse-symbol indented_block_body) [3524 3548]))                          
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3867 3891])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3900 3930]))                          
                         :parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5051 5055])
-                            ("post_dict" variable nil (reparse-symbol function_parameters) [5057 5066])
-                            ("username" variable nil (reparse-symbol function_parameters) [5069 5077]))                          
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3841 3845])
+                            ("username" variable nil (reparse-symbol function_parameters) [3848 3856]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [5038 5148])
+                        (reparse-symbol indented_block_body) [3828 3931])
                     ("__call__" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5166 5170])
-                            ("args" variable nil (reparse-symbol function_parameters) [5172 5177])
-                            ("kwargs" variable nil (reparse-symbol function_parameters) [5179 5187]))                          )
-                        (reparse-symbol indented_block_body) [5153 5238])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3949 3953])
+                            ("args" variable nil (reparse-symbol function_parameters) [3955 3960])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [3962 3970]))                          )
+                        (reparse-symbol indented_block_body) [3936 4021])
                     ("is_number" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5257 5261])
-                            ("strnum" variable nil (reparse-symbol function_parameters) [5263 5269]))                          
-                        :documentation " ÅÐ¶ÏÊÇ·ñÊÇÕý³£µÄÊý×Ö:²»´ø'-'ºÅ,»òÕßÊÇÕý³£µÄÐ¡Êý")
-                        (reparse-symbol indented_block_body) [5243 5505])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4040 4044])
+                            ("strnum" variable nil (reparse-symbol function_parameters) [4046 4052]))                          
+                        :documentation " 判断是否是正常的数字:不带'-'号,或者是正常的小数")
+                        (reparse-symbol indented_block_body) [4026 4288])
                     ("deal_money" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5525 5529])
-                            ("money_number" variable nil (reparse-symbol function_parameters) [5530 5542]))                          
-                        :documentation " ´¦ÀíÏÂ½ð¶îÊý×Ö£¬´¦ÀíÇ°Ãæ²»´ø0,
-            Èç, 0090 --> 90, 030.03 --> 30.03
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4308 4312])
+                            ("money_number" variable nil (reparse-symbol function_parameters) [4313 4325]))                          
+                        :documentation " 处理下金额数字，处理前面不带0,
+            如, 0090 --> 90, 030.03 --> 30.03
         ")
-                        (reparse-symbol indented_block_body) [5510 5801])
-                    ("enchashment_store_to_cart" function
+                        (reparse-symbol indented_block_body) [4293 4584])
+                    ("cash_sweep" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5836 5840]))                          )
-                        (reparse-symbol indented_block_body) [5806 6666])
-                    ("enchashment_api_action" function
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4604 4608])
+                            ("post_dict" variable nil (reparse-symbol function_parameters) [4610 4619]))                          
+                        :documentation "归结，费用为'0' ")
+                        (reparse-symbol indented_block_body) [4589 5634])
+                    ("cash_sweep_todo" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [6698 6702])
-                            ("platform" variable nil (reparse-symbol function_parameters) [6703 6711])
-                            ("store_name" variable nil (reparse-symbol function_parameters) [6712 6722])
-                            ("cart_number" variable nil (reparse-symbol function_parameters) [6724 6735])
-                            ("money_number" variable nil (reparse-symbol function_parameters) [6736 6748]))                          
-                        :documentation " ÌáÏÖ , ´ÓÆ½Ì¨ÌåÏÖµ½ÒøÐÐ¿¨ ")
-                        (reparse-symbol indented_block_body) [6671 7605])
-                    ("is_arrival_money_and_write_recordes" function
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5660 5664])
+                            ("money_number" variable nil (reparse-symbol function_parameters) [5665 5677])
+                            ("sub_card" variable nil (reparse-symbol function_parameters) [5678 5686])
+                            ("main_card" variable nil (reparse-symbol function_parameters) [5688 5697])
+                            ("trade_date" variable nil (reparse-symbol function_parameters) [5699 5709]))                          
+                        :documentation " 子卡转到主卡 ")
+                        (reparse-symbol indented_block_body) [5640 8041])
+                    ("enchashment" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [7650 7654])
-                            ("platform" variable nil (reparse-symbol function_parameters) [7656 7664])
-                            ("store_name" variable nil (reparse-symbol function_parameters) [7666 7676])
-                            ("cart_number" variable nil (reparse-symbol function_parameters) [7678 7689])
-                            ("money_number" variable nil (reparse-symbol function_parameters) [7691 7703])
-                            ("result_dict" variable nil (reparse-symbol function_parameters) [7705 7716]))                          
-                        :documentation " ÅÐ¶ÏÊÇ·ñÈ¡ÏÖ³É¹¦£¬²¢ÇÒÐ´Èë¼ÇÂ¼ ")
-                        (reparse-symbol indented_block_body) [7610 8829])
-                    ("get_store_key" function
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8067 8071])
+                            ("post_dict" variable nil (reparse-symbol function_parameters) [8073 8082]))                          
+                        :documentation " 提现 到收益账户")
+                        (reparse-symbol indented_block_body) [8051 9069])
+                    ("enchashment_todo" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [9019 9023])
-                            ("platform" variable nil (reparse-symbol function_parameters) [9025 9033])
-                            ("store_name" variable nil (reparse-symbol function_parameters) [9035 9045]))                          )
-                        (reparse-symbol indented_block_body) [9001 9445]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9095 9099])
+                            ("money_number" variable nil (reparse-symbol function_parameters) [9100 9112])
+                            ("income_card" variable nil (reparse-symbol function_parameters) [9114 9125])
+                            ("main_card" variable nil (reparse-symbol function_parameters) [9127 9136])
+                            ("trade_date" variable nil (reparse-symbol function_parameters) [9138 9148]))                          )
+                        (reparse-symbol indented_block_body) [9074 12007])
+                    ("transfer" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12026 12030])
+                            ("post_dict" variable nil (reparse-symbol function_parameters) [12032 12041]))                          
+                        :documentation " 转账 到供应商，即非本公司的卡号 ")
+                        (reparse-symbol indented_block_body) [12013 13036])
+                    ("transfer_todo" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13059 13063])
+                            ("money_number" variable nil (reparse-symbol function_parameters) [13065 13077])
+                            ("income_card" variable nil (reparse-symbol function_parameters) [13079 13090])
+                            ("main_card" variable nil (reparse-symbol function_parameters) [13092 13101])
+                            ("trade_date" variable nil (reparse-symbol function_parameters) [13103 13113]))                          )
+                        (reparse-symbol indented_block_body) [13041 15796]))                  
                 :type "class")
-                nil [4990 9445])
-            ("StoreApiGetMoney" type
-               (:documentation " »ñÈ¡Æ½Ì¨µÄ½ð¶î "
-                :superclasses ("object")
-                :members 
-                  ( ("__init__" function
-                       (:suite 
-                          ( ("self" variable nil (reparse-symbol indented_block_body) [7966 8004])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8013 8046]))                          
-                        :parent "dummy"
-                        :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [9519 9523])
-                            ("store_keys_dict" variable nil (reparse-symbol function_parameters) [9525 9540])
-                            ("money_number" variable nil (reparse-symbol function_parameters) [9542 9554]))                          
-                        :constructor-flag t)
-                        (reparse-symbol indented_block_body) [9506 9646])
-                    ("__call__" function
-                       (:parent "dummy"
-                        :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [9664 9668])
-                            ("args" variable nil (reparse-symbol function_parameters) [9670 9675])
-                            ("kwargs" variable nil (reparse-symbol function_parameters) [9677 9685]))                          )
-                        (reparse-symbol indented_block_body) [9651 9726])
-                    ("store_get_money" function
-                       (:parent "dummy"
-                        :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [9751 9755]))                          )
-                        (reparse-symbol indented_block_body) [9731 9852]))                  
-                :type "class")
-                nil [9450 9852])
-            ("ExtractToBank" type
-               (:documentation " ½«½ð¶îÌá½»µ½ÒøÐÐ "
-                :superclasses ("object")
-                :members 
-                  ( ("__init__" function
-                       (:suite 
-                          ( ("self" variable nil (reparse-symbol indented_block_body) [8363 8389])
-                            ("self" variable nil (reparse-symbol indented_block_body) [8398 8430])
-                            ("pass" code nil (reparse-symbol indented_block_body) [8439 8443]))                          
-                        :parent "dummy"
-                        :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [9922 9926])
-                            ("bank_cart" variable nil (reparse-symbol function_parameters) [9928 9937])
-                            ("money_number" variable nil (reparse-symbol function_parameters) [9939 9951]))                          
-                        :constructor-flag t)
-                        (reparse-symbol indented_block_body) [9909 10043])
-                    ("__call__" function
-                       (:parent "dummy"
-                        :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [10061 10065])
-                            ("args" variable nil (reparse-symbol function_parameters) [10067 10072])
-                            ("kwargs" variable nil (reparse-symbol function_parameters) [10074 10082]))                          )
-                        (reparse-symbol indented_block_body) [10048 10123])
-                    ("extract_to_bank" function
-                       (:parent "dummy"
-                        :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [10148 10152]))                          )
-                        (reparse-symbol indented_block_body) [10128 10249]))                  
-                :type "class")
-                nil [9855 10249]))          
+                nil [3780 15796]))          
       :file "enchashment.py"
-      :pointmax 10249
-      :fsize 14899
-      :lastmodtime '(22679 8532 866209 382000)
+      :pointmax 15809
+      :fsize 16024
+      :lastmodtime '(22700 24433 764019 769000)
       :unmatched-syntax nil)
     (semanticdb-table "cardAction.py"
       :major-mode 'python-mode
@@ -413,8 +382,8 @@
                 nil [2129 2962]))          
       :file "cardAction.py"
       :pointmax 2971
-      :fsize 3066
-      :lastmodtime '(22657 23178 744751 264000)
+      :fsize 3130
+      :lastmodtime '(22684 25905 755518 146000)
       :unmatched-syntax nil)
     (semanticdb-table "userRegister.py"
       :file "userRegister.py"
@@ -580,25 +549,25 @@
             ("hide_str" function (:arguments 
               ( ("query_list" variable nil (reparse-symbol function_parameters) [61 71]))              ) nil [48 325])
             ("hide_one_str" function (:arguments 
-              ( ("kdt_cards" variable nil (reparse-symbol function_parameters) [343 352]))              ) nil [326 473])
+              ( ("kdt_cards" variable nil (reparse-symbol function_parameters) [343 352]))              ) nil [326 514])
             ("hide_recorde_str" function (:arguments 
-              ( ("query_list" variable nil (reparse-symbol function_parameters) [496 506]))              ) nil [475 941])
+              ( ("query_list" variable nil (reparse-symbol function_parameters) [537 547]))              ) nil [516 982])
             ("hide_enchashment_str" function (:arguments 
-              ( ("query_list" variable nil (reparse-symbol function_parameters) [971 981]))              ) nil [946 1380])
+              ( ("query_list" variable nil (reparse-symbol function_parameters) [1012 1022]))              ) nil [987 1421])
             ("create_rand_number" function
                (:documentation " 模拟申请kdt卡 "
                 :arguments 
-                  ( ("randomlength" variable nil (reparse-symbol function_parameters) [1413 1425]))                  )
-                nil [1390 1636])
+                  ( ("randomlength" variable nil (reparse-symbol function_parameters) [1454 1466]))                  )
+                nil [1431 1677])
             ("brokerage_expense" function
-               (:documentation "获取手续费"
+               (:documentation "获取手续费, 最少是3，最多是50"
                 :arguments 
-                  ( ("money_str" variable nil (reparse-symbol function_parameters) [1660 1669]))                  )
-                nil [1638 1866]))          
+                  ( ("money_str" variable nil (reparse-symbol function_parameters) [1701 1710]))                  )
+                nil [1679 1985]))          
       :file "data_utils.py"
-      :pointmax 1866
-      :fsize 1885
-      :lastmodtime '(22663 33003 868937 891000)
+      :pointmax 1985
+      :fsize 2018
+      :lastmodtime '(22700 24859 12020 241000)
       :unmatched-syntax nil))
   :file "!home!wood!ubuntuFile!python!KDTPay!PayApp!payservice!semantic.cache"
   :semantic-tag-version "2.0"

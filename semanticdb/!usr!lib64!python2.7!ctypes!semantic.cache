@@ -1,0 +1,18 @@
+;; Object ctypes/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ctypes/"
+  :tables (list 
+   (semanticdb-table "util.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "util.py"
+    :pointmax 9207
+    :fsize 9206
+    :lastmodtime '(22915 49735 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!usr!lib64!python2.7!ctypes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

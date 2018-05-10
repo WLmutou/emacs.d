@@ -1,0 +1,31 @@
+;; Object 7.1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "7.1/"
+  :tables
+  (list
+    (semanticdb-table "cv2_set_mouse.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cv2" include nil nil [42 52])
+            ("numpy" include nil nil [53 71])
+            ("events" variable nil nil [74 120])
+            ("print" code nil nil [121 133])
+            ("draw_circle" function (:arguments 
+              ( ("event" variable nil (reparse-symbol function_parameters) [151 156])
+                ("x" variable nil (reparse-symbol function_parameters) [158 159])
+                ("y" variable nil (reparse-symbol function_parameters) [161 162])
+                ("flags" variable nil (reparse-symbol function_parameters) [164 169])
+                ("param" variable nil (reparse-symbol function_parameters) [171 176]))              ) nil [135 274])
+            ("img" variable nil nil [275 314])
+            ("cv2" code nil nil [315 339])
+            ("cv2" code nil nil [341 383])
+            ("while" code nil nil [385 475])
+            ("cv2" code nil nil [476 499]))          
+      :file "cv2_set_mouse.py"
+      :pointmax 502
+      :fsize 501
+      :lastmodtime '(22790 37845 748006 139000)
+      :unmatched-syntax '(($EOI 322 . 322) (IF 183 . 185) (NEWLINE 216 . 217) (IF 183 . 185) (NEWLINE 216 . 217) (IF 183 . 185) (NEWLINE 203 . 204) (IF 183 . 185) (NEWLINE 195 . 196) (NAME 53 . 59) ($EOI 75 . 75))))
+  :file "!home!wood!ubuntuFile!python!opencv!7!7.1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

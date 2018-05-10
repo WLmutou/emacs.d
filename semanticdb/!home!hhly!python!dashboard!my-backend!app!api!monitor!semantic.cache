@@ -1,0 +1,105 @@
+;; Object monitor/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "monitor/"
+  :tables (list 
+   (semanticdb-table "chat.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("time" include nil nil [42 53])
+            ("datetime" include nil nil [54 69])
+            ("try" code nil nil [71 150])
+            ("settings.app" include nil nil [153 191])
+            ("app.utils.request" include nil nil [192 233])
+            ("app.api.openstack.API" include nil nil [236 279])
+            ("ChartData" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [357 389])
+                            ("self" variable nil (reparse-symbol indented_block_body) [398 422])
+                            ("self" variable nil (reparse-symbol indented_block_body) [431 461]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [327 331])
+                            ("token_id" variable nil (reparse-symbol function_parameters) [333 341]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [314 462])
+                    ("request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [480 484])
+                            ("suffix" variable nil (reparse-symbol function_parameters) [486 492])
+                            ("method" variable nil (reparse-symbol function_parameters) [494 500])
+                            ("data" variable nil (reparse-symbol function_parameters) [509 513])
+                            ("headers" variable nil (reparse-symbol function_parameters) [536 543])
+                            ("params" variable nil (reparse-symbol function_parameters) [550 556])
+                            ("isjson" variable nil (reparse-symbol function_parameters) [563 569]))                          )
+                        (reparse-symbol indented_block_body) [468 743])
+                    ("suffixTimes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [765 769])
+                            ("suffix" variable nil (reparse-symbol function_parameters) [771 777])
+                            ("start" variable nil (reparse-symbol function_parameters) [778 783])
+                            ("end" variable nil (reparse-symbol function_parameters) [790 793])
+                            ("step" variable nil (reparse-symbol function_parameters) [800 804]))                          )
+                        (reparse-symbol indented_block_body) [749 1260])
+                    ("get_network_transmit_bytes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1297 1301])
+                            ("server_id" variable nil (reparse-symbol function_parameters) [1303 1312])
+                            ("start" variable nil (reparse-symbol function_parameters) [1319 1324])
+                            ("end" variable nil (reparse-symbol function_parameters) [1331 1334])
+                            ("step" variable nil (reparse-symbol function_parameters) [1341 1345]))                          )
+                        (reparse-symbol indented_block_body) [1266 1805])
+                    ("get_network_receive_bytes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1841 1845])
+                            ("server_id" variable nil (reparse-symbol function_parameters) [1847 1856])
+                            ("start" variable nil (reparse-symbol function_parameters) [1863 1868])
+                            ("end" variable nil (reparse-symbol function_parameters) [1875 1878])
+                            ("step" variable nil (reparse-symbol function_parameters) [1885 1889]))                          )
+                        (reparse-symbol indented_block_body) [1811 2346])
+                    ("get_io_write_bytes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2375 2379])
+                            ("server_id" variable nil (reparse-symbol function_parameters) [2381 2390])
+                            ("start" variable nil (reparse-symbol function_parameters) [2397 2402])
+                            ("end" variable nil (reparse-symbol function_parameters) [2409 2412])
+                            ("step" variable nil (reparse-symbol function_parameters) [2419 2423]))                          )
+                        (reparse-symbol indented_block_body) [2352 2864])
+                    ("get_io_read_bytes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2892 2896])
+                            ("server_id" variable nil (reparse-symbol function_parameters) [2898 2907])
+                            ("start" variable nil (reparse-symbol function_parameters) [2914 2919])
+                            ("end" variable nil (reparse-symbol function_parameters) [2926 2929])
+                            ("step" variable nil (reparse-symbol function_parameters) [2936 2940]))                          )
+                        (reparse-symbol indented_block_body) [2870 3377]))                  
+                :type "class")
+                nil [285 3377]))          
+    :file "chat.py"
+    :pointmax 3377
+    :fsize 3376
+    :lastmodtime '(23132 7242 427493 333000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test_chart.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "test_chart.py"
+    :pointmax 0
+    :fsize 1041
+    :lastmodtime '(23137 53238 541281 666000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!hhly!python!dashboard!my-backend!app!api!monitor!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

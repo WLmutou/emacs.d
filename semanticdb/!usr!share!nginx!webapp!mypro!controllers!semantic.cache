@@ -1,0 +1,24 @@
+;; Object controllers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "controllers/"
+  :tables
+  (list
+    (semanticdb-table "auth.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("models.myapp_models" include nil nil [40 80])
+            ("mklog.mklogger" include nil nil [81 116])
+            ("hashlib" include nil nil [117 131])
+            ("token_dict" variable nil nil [134 149])
+            ("authenticate" function (:arguments 
+              ( ("params" variable nil (reparse-symbol function_parameters) [169 177]))              ) nil [152 819])
+            ("checktoken" function (:arguments 
+              ( ("params" variable nil (reparse-symbol function_parameters) [835 843]))              ) nil [820 1044]))          
+      :file "auth.py"
+      :pointmax 1054
+      :fsize 1053
+      :lastmodtime '(23006 64074 925519 204000)
+      :unmatched-syntax nil))
+  :file "!usr!share!nginx!webapp!mypro!controllers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

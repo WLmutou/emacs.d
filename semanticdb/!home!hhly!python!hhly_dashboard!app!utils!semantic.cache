@@ -1,0 +1,22 @@
+;; Object utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utils/"
+  :tables
+  (list
+    (semanticdb-table "writelog.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logging" include nil nil [42 56])
+            ("settings.app" include nil nil [58 91])
+            ("initlog" function nil nil [94 529])
+            ("infohandle" variable nil nil [531 553])
+            ("writelog" function (:arguments 
+              ( ("logstr" variable nil (reparse-symbol function_parameters) [568 574]))              ) nil [555 605]))          
+      :file "writelog.py"
+      :pointmax 606
+      :fsize 669
+      :lastmodtime '(23016 27895 713720 855000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!hhly_dashboard!app!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

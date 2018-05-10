@@ -1,12 +1,26 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with GNU Emacs.
 
-(unless (>= 24 emacs-major-version)
-  (error "monokai-theme requires Emacs 24 or later."))
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+;;(unless (>= 24 emacs-major-version)
+;;  (error "monokai-theme requires Emacs 24 or later."))
 
 (deftheme monokai
   "Monokai color theme")
 
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         
+			 ("marmalade" . "http://marmalade-repo.org/packages/")
+			 ("melpa" . "http://melpa.milkbox.net/packages/")
+			 ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/")
+			 ("elpy" .
+"http://jorgenschaefer.github.io/packages/")))
 
 
 
@@ -75,12 +89,26 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(transient-mark-mode nil))
+ '(Info-additional-directory-list (quote nil))
+ '(ac-ignore-case t)
+ '(ac-modes
+   (quote
+    (slime-repl-mode emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode slime-mode lisp-mode prolog-mode prolog-inferior-mode ciao-mode mercury-mode xsb-mode eclipse-mode)))
+ '(ac-use-menu-map t)
+ '(ac-use-overriding-local-map t)
+ '(ahs-modes
+   (quote
+    (actionscript-mode apache-mode bat-generic-mode c++-mode c-mode csharp-mode css-mode dos-mode emacs-lisp-mode html-mode ini-generic-mode java-mode javascript-mode js-mode lisp-interaction-mode lua-mode latex-mode makefile-mode makefile-gmake-mode markdown-mode moccur-edit-mode nxml-mode nxhtml-mode outline-mode perl-mode cperl-mode php-mode python-mode rc-generic-mode reg-generic-mode ruby-mode sgml-mode sh-mode squirrel-mode text-mode tcl-mode visual-basic-mode slime-mode slime-repl-mode lisp-mode mercury-mode)))
+ '(package-selected-packages
+   (quote
+    (web-mode company-quickhelp flycheck-rust company-racer rust-mode flymake-rust jsx-mode jedi flycheck elpy elnode company-jedi bigint)))
+ '(transient-mark-mode nil)
+ '(truncate-lines t))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 
 ;;========================================
@@ -90,6 +118,10 @@
 (tool-bar-mode -1)
 ;;关闭启动画面
 (setq inhibit-startup-message t)
+
+;;80字符
+(setq-default fill-column 80)
+
 
 ;;========================================
 ;; 键绑定
@@ -143,7 +175,12 @@
 ;;            (setq python-indent 4)))
 
 ;;缩进4字符
-(setq default-tab-width 4);
+;;(setq default-tab-width 4);
+(setq default-tab-width 2);
+(setq tab-width 2)
+
+
+
 ;; 不插入tab字符
 (setq-default indent-tabs-mode nil)
 (setq indent-tabs-mode nil) ;;如果实在需要tab键，则用C-q Tab
@@ -228,11 +265,11 @@
 ;; 必备扩展 
 ;;========================================
 ;;(setq x-select-enable-clipboard t)
-(add-to-list 'load-path "/usr/bin/sbcl") ;;(add-to-list 'load-path "D:/Program Files/sbcl/")
-(add-to-list 'load-path "~/.emacs.d/slime");;(add-to-list 'load-path "D:/Program files/slime/")
-(setq inferior-lisp-program "sbcl")
-(require 'slime-autoloads)
-(slime-setup '(slime-fancy))
+;;(add-to-list 'load-path "/usr/bin/sbcl") ;;(add-to-list 'load-path "D:/Program Files/sbcl/")
+;;(add-to-list 'load-path "~/.emacs.d/slime");;(add-to-list 'load-path "D:/Program files/slime/")
+;;(setq inferior-lisp-program "sbcl")
+;;(require 'slime-autoloads)
+;;(slime-setup '(slime-fancy))
 
 (add-to-list 'load-path "~/.emacs.d/auto-complete/")
 (require 'auto-complete-config)
@@ -271,17 +308,7 @@
 ;;(aced-update-ac-source-etags)
 
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(Info-additional-directory-list (quote nil))
- '(ac-ignore-case t)
- '(ac-modes (quote (slime-repl-mode emacs-lisp-mode lisp-interaction-mode c-mode cc-mode c++-mode java-mode clojure-mode scala-mode scheme-mode ocaml-mode tuareg-mode perl-mode cperl-mode python-mode ruby-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode slime-mode lisp-mode prolog-mode prolog-inferior-mode ciao-mode mercury-mode xsb-mode eclipse-mode)))
- '(ac-use-menu-map t)
- '(ac-use-overriding-local-map t)
- '(ahs-modes (quote (actionscript-mode apache-mode bat-generic-mode c++-mode c-mode csharp-mode css-mode dos-mode emacs-lisp-mode html-mode ini-generic-mode java-mode javascript-mode js-mode lisp-interaction-mode lua-mode latex-mode makefile-mode makefile-gmake-mode markdown-mode moccur-edit-mode nxml-mode nxhtml-mode outline-mode perl-mode cperl-mode php-mode python-mode rc-generic-mode reg-generic-mode ruby-mode sgml-mode sh-mode squirrel-mode text-mode tcl-mode visual-basic-mode slime-mode slime-repl-mode lisp-mode mercury-mode))))
+
  
 ;; '(ahs-suppress-log nil)
 ;; '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
@@ -319,15 +346,15 @@
 ;;;; el-get ;;;
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
+;;(unless (require 'el-get nil 'noerror)
+;;  (with-current-buffer
+;;      (url-retrieve-synchronously
+;;       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
+;;    (goto-char (point-max))
+;;    (eval-print-last-sexp)))
 
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(el-get 'sync)
+;;(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+;;(el-get 'sync)
 
 ;;;;
 
@@ -410,6 +437,9 @@
 
 
 ;; golang mode
+;;代码跳转: C-c C-j
+;;代码释义: C-c C-d
+;;代码返回: M-* (这里即是输入: Alt+shift+8)
 (load "~/.emacs.d/go-mode.el")
 (load "~/.emacs.d/go-mode-autoloads.el")
 (load "~/.emacs.d/site-lisp/go-autocomplete.el")
@@ -521,3 +551,139 @@ Reformat Output*" nil "*Go Reformat Errors*" t))
 (add-hook 'js2-mode-hook 'my-common-mode-auto-pair)    ;;for auto-pair  
 
 
+;;(load "~/.emacs.d/site-lisp/vue-mode/vue-html-mode.el")
+;;(require 'vue-html-mode)
+
+;;(load "~/.emacs.d/mmm-mode/mmm-mode.el")
+;;(load "~/.emacs.d/site-lisp/vue-mode/ssass-mode.el")
+
+
+;;(require 'mmm-mode)
+;;(setq mmm-global-mode 'maybe)
+;;(mmm-add-mode-ext-class 'html-mode)
+
+
+;;(load "~/.emacs.d/site-lisp/vue-mode/vue-mode.el")
+;;(require 'vue-mode)
+
+
+;;react, jsx-mode
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/jsx-mode/src/"))
+
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
+(autoload 'jsx-mode "jsx-mode" "JSX mode" t)
+
+;;(load "~/.emacs.d/site-lisp/jsx-mode/src/jsx-mode.el")
+;;(require 'jsx-mode)
+;;(autoload 'jsx-mode "jsx-mode" "JSX mode" t)
+
+
+
+;;prolog
+(autoload 'run-prolog "prolog" "Start a Prolog sub-process." t)
+(autoload 'prolog-mode "prolog" "Major mode for editing Prolog programs." t)
+(autoload 'mercury-mode "prolog" "Major mode for editing Mercury programs." t)
+(setq prolog-system 'swi)
+(setq auto-mode-alist (append '(("\\.pl$" . prolog-mode)
+                                ("\\.m$" . mercury-mode))
+                              auto-mode-alist))
+
+
+;;
+(toggle-truncate-lines 1)  ;;自动换行
+
+
+;;
+;;rust
+;;
+
+;;(add-hook 'rust-mode-hook #'racer-mode)
+;;(add-hook 'racer-mode-hook #'eldoc-mode)
+
+;(add-hook 'racer-mode-hook #'company-mode)
+
+(require 'rust-mode)
+;;(define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+;;(setq company-tooltip-align-annotations t)
+
+
+;; Enable company globally for all mode
+;;(global-company-mode)
+
+;; Reduce the time after which the company auto completion popup opens
+;;(setq company-idle-delay 0.2)
+
+;; Reduce the number of characters before company kicks in
+;;(setq company-minimum-prefix-length 1)
+;; Set path to racer binary
+;;(setq racer-cmd "/home/hhly/.cargo/bin/racer")
+
+;; Set path to rust src directory
+;;(setq racer-rust-src-path "/home/hhly/.rust/src/")
+
+;; Load rust-mode when you open `.rs` files
+;;(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+
+;; Setting up configurations when you load rust-mode
+
+;;(add-hook 'rust-mode-hook
+
+;;     '(lambda ()
+     ;; Enable racer
+;;        (racer-activate)
+
+     ;; Hook in racer with eldoc to provide documentation
+;;     (racer-turn-on-eldoc)
+
+     ;; Use flycheck-rust in rust-mode
+;;     (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+
+     ;; Use company-racer in rust mode
+;;     (set (make-local-variable 'company-backends) '(company-racer))
+
+     ;; Key binding to jump to method definition
+;;     (local-set-key (kbd "M-.") #'racer-find-definition)
+
+     ;; Key binding to auto complete and indent
+;;     (local-set-key (kbd "TAB") #'racer-complete-or-indent)))
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;;1.先安装 npm install -g vue-language-server
+;;;2.list-packages 安装use-package, lsp-vue, company-lsp, lsp-mode
+;;;
+
+(use-package lsp-vue :ensure)
+(use-package lsp-mode :ensure)
+
+(use-package company-quickhelp :ensure)
+(use-package company-lsp
+  :ensure
+  :config
+  ;; 开启yasnippet支持
+  (setq company-lsp-enable-snippet t))
+
+(use-package company
+  :ensure
+  :config
+  (setq company-minimum-prefix-length 1)
+  (setq company-dabbrev-downcase nil)
+  (setq company-idle-delay 0.5)
+  (setq company-idle-delay 0.5)
+  (add-hook 'company-mode-hook 'company-quickhelp-mode)
+  (add-to-list 'company-backends 'company-lsp))
+
+
+(use-package web-mode
+  :ensure
+  :init
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.vue\\'" . web-mode))
+  :config
+  (add-hook 'web-mode-hook 'company-mode)
+  (add-hook 'web-mode-hook 'lsp-vue-enable))

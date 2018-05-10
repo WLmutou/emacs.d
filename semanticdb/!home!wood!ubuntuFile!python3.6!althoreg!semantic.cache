@@ -1,0 +1,64 @@
+;; Object althoreg/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "althoreg/"
+  :tables
+  (list
+    (semanticdb-table "mysort.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("random" include nil nil [42 55])
+            ("time" include nil nil [57 68])
+            ("GetRunTime" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [136 152]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [115 119])
+                            ("func" variable nil (reparse-symbol function_parameters) [121 125]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [102 153])
+                    ("__exec__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [171 175])
+                            ("args" variable nil (reparse-symbol function_parameters) [177 182])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [184 192]))                          )
+                        (reparse-symbol indented_block_body) [158 230]))                  
+                :type "class")
+                nil [72 230])
+            ("getRunTime" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [260 264])
+                ("args" variable nil (reparse-symbol function_parameters) [266 271])
+                ("kwargs" variable nil (reparse-symbol function_parameters) [273 281]))              ) nil [245 550])
+            ("myqsort" function
+               (:decorators 
+                  ( ("getRunTime" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("L" variable nil (reparse-symbol function_parameters) [575 576]))                  )
+                nil [551 1030])
+            ("quicksort" function
+               (:decorators 
+                  ( ("getRunTime" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("L" variable nil (reparse-symbol function_parameters) [1061 1062]))                  )
+                nil [1031 1194])
+            ("maopao" function
+               (:decorators 
+                  ( ("getRunTime" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("L" variable nil (reparse-symbol function_parameters) [1385 1386]))                  )
+                nil [1362 1525])
+            ("myqsort" code nil nil [1589 1604])
+            ("quicksort" code nil nil [1605 1622])
+            ("maopao" code nil nil [1623 1637]))          
+      :file "mysort.py"
+      :pointmax 1750
+      :fsize 1749
+      :lastmodtime '(22960 26897 820122 390000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python3.6!althoreg!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

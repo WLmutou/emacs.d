@@ -1,0 +1,57 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("hashlib" include nil nil [42 56])
+            ("all_spec_str" variable nil nil [59 91])
+            ("PySha" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [146 150]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [131 135]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [118 151])
+                    ("_g_spec_char" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [177 181])
+                            ("strs" variable nil (reparse-symbol function_parameters) [183 187]))                          )
+                        (reparse-symbol indented_block_body) [160 361])
+                    ("_str2num" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [380 384])
+                            ("strs" variable nil (reparse-symbol function_parameters) [386 390]))                          )
+                        (reparse-symbol indented_block_body) [367 571])
+                    ("_mysha_2" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [590 594])
+                            ("password" variable nil (reparse-symbol function_parameters) [596 604]))                          )
+                        (reparse-symbol indented_block_body) [577 1294])
+                    ("sha" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [1324 1327])
+                            ("password" variable nil (reparse-symbol function_parameters) [1329 1337])
+                            ("salt" variable nil (reparse-symbol function_parameters) [1339 1343]))                          )
+                        (reparse-symbol indented_block_body) [1299 1515]))                  
+                :type "class")
+                nil [93 1515]))          
+      :file "pysha.py"
+      :pointmax 1655
+      :fsize 1654
+      :lastmodtime '(23276 9438 307080 270000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!pysha!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,297 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("falcon" include nil nil [41 54])
+            ("app.utils.log" include nil nil [56 88])
+            ("app.models.DataBase" include nil nil [89 126])
+            ("app.utils.request" include nil nil [127 166])
+            ("app.utils.token" include nil nil [168 205])
+            ("app.api.openstack.API" include nil nil [207 250])
+            ("app.utils.convert" include nil nil [251 289])
+            ("UseResource" type
+               (:superclasses ("object")
+                :members 
+                  ( ("on_get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [333 337])
+                            ("req" variable nil (reparse-symbol function_parameters) [339 342])
+                            ("resp" variable nil (reparse-symbol function_parameters) [344 348]))                          )
+                        (reparse-symbol indented_block_body) [322 1302]))                  
+                :type "class")
+                nil [291 1302])
+            ("ListProjects" type
+               (:members 
+                  ( ("on_get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1341 1345])
+                            ("req" variable nil (reparse-symbol function_parameters) [1347 1350])
+                            ("resp" variable nil (reparse-symbol function_parameters) [1352 1356])
+                            ("params" variable nil (reparse-symbol function_parameters) [1358 1366]))                          )
+                        (reparse-symbol indented_block_body) [1330 2250]))                  
+                :type "class")
+                nil [1304 2250])
+            ("ChangeProject" type
+               (:members 
+                  ( ("on_post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2292 2296])
+                            ("req" variable nil (reparse-symbol function_parameters) [2298 2301])
+                            ("resp" variable nil (reparse-symbol function_parameters) [2303 2307])
+                            ("params" variable nil (reparse-symbol function_parameters) [2309 2317]))                          )
+                        (reparse-symbol indented_block_body) [2280 3229]))                  
+                :type "class")
+                nil [2253 3229]))          
+      :file "dashboard.py"
+      :pointmax 3238
+      :fsize 3237
+      :lastmodtime '(23153 26889 890702 601000)
+      :unmatched-syntax '((INDENT_BLOCK 2646 . 2736) (NEWLINE 2645 . 2646) (COLON 2644 . 2645) (TRY 2557 . 2560) (AS 2640 . 2642) (INDENT_BLOCK 1615 . 1702) (NEWLINE 1614 . 1615) (COLON 1613 . 1614) (TRY 1526 . 1529) (AS 1609 . 1611) (NAME 884 . 893) (IF 899 . 901) (ELSE 935 . 939)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("falcon" include nil nil [41 54])
+            ("playhouse.shortcuts" include nil nil [56 101])
+            ("app.models.DataBase" include nil nil [102 139])
+            ("app.utils.ciphers" include nil nil [140 182])
+            ("ManageUsers" type
+               (:members 
+                  ( ("on_get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [225 229])
+                            ("req" variable nil (reparse-symbol function_parameters) [231 234])
+                            ("resp" variable nil (reparse-symbol function_parameters) [236 240])
+                            ("params" variable nil (reparse-symbol function_parameters) [242 250]))                          
+                        :documentation "
+        @api {get} /manage/users  Request Users
+        @apiHeader {String} X-Auth-Token Users  unique access-key
+
+        @apiName GetUser
+        @apiGroup User
+        @apiSuccess {Json} pagination dict of the pagination
+        @apiSuccess {Json} users  List of the User.
+        @apiSuccess {Number} status 200.
+
+        @apiSuccessExample {json} Success-Response:
+        {
+           \"pagination\":{
+               \"current\" : 1,
+               \"total\"   : 3,
+               \"pageSize\": 10
+            },
+           \"users\": [
+               {\"name\": \"admin\", \"id\": 1, \"project\": \"admin\", \"role\":\"admin\", \"email\": \"admin@admin.com\"},
+               {\"name\": \"user\", \"id\": 2, \"project\": \"testfor\", \"role\":\"user\", \"email\": \"user@testfor.com\"},
+            ]
+           \"status\": 200,
+        }
+        ")
+                        (reparse-symbol indented_block_body) [214 1920])
+                    ("on_post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1939 1943])
+                            ("req" variable nil (reparse-symbol function_parameters) [1945 1948])
+                            ("resp" variable nil (reparse-symbol function_parameters) [1950 1954])
+                            ("params" variable nil (reparse-symbol function_parameters) [1956 1964]))                          
+                        :documentation "
+        @api {post} /manage/users Create User  
+        @apiHeader {String} X-Auth-Token Users  unique access-key
+        @apiName CreatUser
+        @apiGroup User
+        @apiParam {String} name Users name.
+        @apiParam {String} Password default Password.
+        @apiParam {String} Project  project.
+        @apiParam {String} Role    role(user or admin).
+        @apiParam {String} Email   email.
+        @apiParamExample {json} Request-Example:
+        {
+            \"name\"       : \"test\",
+            \"password\"   : \"testPassword\",
+            \"project\"    : \"testfor\",
+            \"role\"       : \"user\",
+            \"email\"      : \"test@test.com\"
+        }
+        @apiSuccess {Number} user id.
+        @apiSuccess {String} Description  Description.
+        @apiSuccess {Number} status 200.
+        @apiSuccessExample {json} Success-Response:
+        {
+            \"id\"         : 3,
+            \"status\"     : 200,
+            \"description\": \"success\",
+        }
+        ")
+                        (reparse-symbol indented_block_body) [1927 3854])
+                    ("on_put" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3870 3874])
+                            ("req" variable nil (reparse-symbol function_parameters) [3876 3879])
+                            ("resp" variable nil (reparse-symbol function_parameters) [3881 3885])
+                            ("params" variable nil (reparse-symbol function_parameters) [3887 3895]))                          
+                        :documentation "
+        @api {put} /manage/users Update User  
+        @apiHeader {String} X-Auth-Token Users  unique access-key
+        @apiName Update User
+        @apiGroup User
+        @apiParam {Number} Id   User Id.
+        @apiParam {String} name Users name.
+        @apiParam {String} Password default Password.
+        @apiParam {String} Project  project.
+        @apiParam {String} Role    role(user or admin).
+        @apiParam {String} Email   email.
+        @apiParamExample {json} Request-Example:
+        {
+            \"id\"         : 5,
+            \"name\"       : \"updateTest\",
+            \"password\"   : \"UpdateTestPassword\",
+            \"project\"    : \"testfor\",
+            \"role\"       : \"user\",
+            \"email\"      : \"test@test.com\"
+        }
+        @apiSuccess {String} Description  Description.
+        @apiSuccess {Number} status 200.
+        @apiSuccessExample {json} Success-Response:
+        {
+            \"status\"     : 200,
+            \"description\": \"success\",
+        }
+        ")
+                        (reparse-symbol indented_block_body) [3859 5869]))                  
+                :type "class")
+                nil [188 5869])
+            ("DeleteUser" type
+               (:members 
+                  ( ("on_post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5925 5929])
+                            ("req" variable nil (reparse-symbol function_parameters) [5931 5934])
+                            ("resp" variable nil (reparse-symbol function_parameters) [5936 5940])
+                            ("params" variable nil (reparse-symbol function_parameters) [5942 5950]))                          
+                        :documentation "
+        @api {post} /manage/users/delete Delete User  
+        @apiHeader {String} X-Auth-Token Users  unique access-key
+        @apiName Delete User
+        @apiGroup User
+        @apiParam {Number} Id   User Id.
+        @apiParamExample {json} Request-Example:
+        {
+            \"id\"         : 5
+        }
+        @apiSuccess {String} Description  Description.
+        @apiSuccess {Number} status 200.
+        @apiSuccessExample {json} Success-Response:
+        {
+            \"status\"     : 200,
+            \"description\": \"success\",
+        }
+        ")
+                        (reparse-symbol indented_block_body) [5913 7418]))                  
+                :type "class")
+                nil [5889 7418]))          
+      :file "users.py"
+      :pointmax 7427
+      :fsize 7434
+      :lastmodtime '(23207 32361 232575 263000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("falcon" include nil nil [41 54])
+            ("json" include nil nil [55 66])
+            ("hashlib" include nil nil [67 81])
+            ("app.models.DataBase" include nil nil [84 121])
+            ("app.utils.log" include nil nil [123 155])
+            ("app.utils.confile" include nil nil [157 191])
+            ("app.utils.token" include nil nil [195 232])
+            ("app.utils.request" include nil nil [233 272])
+            ("app.utils.token" include nil nil [274 312])
+            ("app.utils.ciphers" include nil nil [313 355])
+            ("app.utils.redis_action" include nil nil [357 425])
+            ("app.utils.assertions" include nil nil [427 478])
+            ("LogoutResource" type
+               (:superclasses ("object")
+                :members 
+                  ( ("on_get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [528 532])
+                            ("req" variable nil (reparse-symbol function_parameters) [534 537])
+                            ("resp" variable nil (reparse-symbol function_parameters) [539 543]))                          
+                        :documentation "
+        @api {get} /logout  Auth logout
+        @apiHeader {String} X-Auth-Token Users  unique access-key
+        @apiName Logout
+        @apiGroup Auth
+        @apiSuccess {Number} status 200.
+        @apiSuccessExample {json} Success-Response:
+        {
+           \"status\": 200,
+        }
+        ")
+                        (reparse-symbol indented_block_body) [517 1068]))                  
+                :type "class")
+                nil [483 1068])
+            ("CurrentUser" type
+               (:superclasses ("object")
+                :members 
+                  ( ("on_get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1121 1125])
+                            ("req" variable nil (reparse-symbol function_parameters) [1127 1130])
+                            ("resp" variable nil (reparse-symbol function_parameters) [1132 1136]))                          )
+                        (reparse-symbol indented_block_body) [1110 1588]))                  
+                :type "class")
+                nil [1079 1588])
+            ("AuthResource" type
+               (:superclasses ("object")
+                :members 
+                  ( ("on_post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1636 1640])
+                            ("req" variable nil (reparse-symbol function_parameters) [1642 1645])
+                            ("resp" variable nil (reparse-symbol function_parameters) [1647 1651]))                          
+                        :documentation "
+        @api {post} /auth  User Login
+        @apiName Login
+        @apiGroup Auth
+        @apiParam {String} username User name.
+        @apiParam {String} password user Password.
+        @apiParamExample {json} Request-Example:
+        {
+            \"username\"   : \"name\",
+            \"password\"   : \"Password\",
+        }
+        @apiSuccess {String}  Token token. 
+        @apiSuccess {String}  is_admin  \"admin\" or user.
+        @apiSuccess {Number} status 200.
+        @apiSuccessExample {json} Success-Response:
+        {
+           \"token\"    : \"yJhbGciOiJIUzI1NiIsImV4cCI6MTUyMDkyOTMzMywiaWF0IjoxNTIwOTI1NzMzfQ\",
+           \"is_admin\" : \"admin\",
+           \"status\"   : 200,
+        }        
+        ")
+                        (reparse-symbol indented_block_body) [1624 4764]))                  
+                :type "class")
+                nil [1592 4764]))          
+      :file "auth.py"
+      :pointmax 4788
+      :fsize 4815
+      :lastmodtime '(23207 32320 506606 793000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!dashboard!back!my-backend!app!api!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

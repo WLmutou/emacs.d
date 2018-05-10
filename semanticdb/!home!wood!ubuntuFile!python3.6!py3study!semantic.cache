@@ -1,0 +1,147 @@
+;; Object py3study/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "py3study/"
+  :tables
+  (list
+    (semanticdb-table "pyiteration.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("collections" include nil nil [43 72])
+            ("Node" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [126 145])
+                            ("self" variable nil (reparse-symbol indented_block_body) [154 173]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [104 108])
+                            ("value" variable nil (reparse-symbol function_parameters) [110 115]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [91 174])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [192 196]))                          )
+                        (reparse-symbol indented_block_body) [179 247])
+                    ("add_child" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [266 270])
+                            ("node" variable nil (reparse-symbol function_parameters) [272 276]))                          )
+                        (reparse-symbol indented_block_body) [252 315])
+                    ("__iter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [333 337]))                          )
+                        (reparse-symbol indented_block_body) [320 447])
+                    ("depth_first" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [468 472]))                          )
+                        (reparse-symbol indented_block_body) [452 687]))                  
+                :type "class")
+                nil [75 687])
+            ("node_test" function nil nil [701 1045])
+            ("frange" function (:arguments 
+              ( ("start" variable nil (reparse-symbol function_parameters) [1066 1071])
+                ("stop" variable nil (reparse-symbol function_parameters) [1073 1077])
+                ("increment" variable nil (reparse-symbol function_parameters) [1079 1088]))              ) nil [1055 1166])
+            ("Countdown" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1224 1242]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1202 1206])
+                            ("start" variable nil (reparse-symbol function_parameters) [1208 1213]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1189 1243])
+                    ("__iter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1261 1265]))                          )
+                        (reparse-symbol indented_block_body) [1248 1383])
+                    ("__reversed__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1404 1408]))                          )
+                        (reparse-symbol indented_block_body) [1387 1530]))                  
+                :type "class")
+                nil [1168 1530])
+            ("countdown" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [1559 1560]))              ) nil [1545 1672])
+            ("linehistory" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1750 1768])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1777 1813]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1715 1719])
+                            ("lines" variable nil (reparse-symbol function_parameters) [1721 1726])
+                            ("histlen" variable nil (reparse-symbol function_parameters) [1728 1735]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1702 1814])
+                    ("__iter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1843 1847]))                          )
+                        (reparse-symbol indented_block_body) [1830 1975])
+                    ("clear" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1990 1994]))                          )
+                        (reparse-symbol indented_block_body) [1980 2026]))                  
+                :type "class")
+                nil [1679 2026])
+            ("if" code nil nil [2049 2085]))          
+      :file "pyiteration.py"
+      :pointmax 2095
+      :fsize 2238
+      :lastmodtime '(22961 43229 73560 191000)
+      :unmatched-syntax nil)
+    (semanticdb-table "pythreading.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("time" include nil nil [43 54])
+            ("threading" include nil nil [55 90])
+            ("'''
+def countdown(n):
+    while n > 0:
+        print('T-minus ', n)
+        n -= 1
+        time.sleep(2)
+
+
+t = Thread(target=countdown, args=(10,))
+t.start()
+
+while True:
+    if t.is_alive():
+        print (\"Still running ...\")
+        time.sleep(1)
+    else:
+        print ('Completed ...')
+        break
+
+'''" code nil nil [92 402])
+            ("countdown" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [418 419])
+                ("started_evt" variable nil (reparse-symbol function_parameters) [421 432]))              ) nil [404 573])
+            ("started_evt" variable nil nil [574 595])
+            ("print" code nil nil [596 629])
+            ("t" variable nil nil [630 682])
+            ("t" code nil nil [683 692])
+            ("started_evt" code nil nil [694 712])
+            ("print" code nil nil [713 746]))          
+      :file "pythreading.py"
+      :pointmax 747
+      :fsize 746
+      :lastmodtime '(22961 54107 37572 277000)
+      :unmatched-syntax '((NAME 694 . 705) ($EOI 706 . 706))))
+  :file "!home!wood!ubuntuFile!python3.6!py3study!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

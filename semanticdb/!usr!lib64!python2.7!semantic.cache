@@ -1,0 +1,1607 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "os.py"
+      :pointmax 25770
+      :fsize 25769
+      :lastmodtime '(22915 49734 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("'''SMTP/ESMTP client class.
+
+This should follow RFC 821 (SMTP), RFC 1869 (ESMTP), RFC 2554 (SMTP
+Authentication) and RFC 2487 (Secure SMTP over TLS).
+
+Notes:
+
+Please remember, when doing ESMTP, that the names of the SMTP service
+extensions are NOT the same thing as the option keywords for the RCPT
+and MAIL commands!
+
+Example:
+
+  >>> import smtplib
+  >>> s=smtplib.SMTP(\"localhost\")
+  >>> print s.help()
+  This is Sendmail version 8.8.4
+  Topics:
+      HELO    EHLO    MAIL    RCPT    DATA
+      RSET    NOOP    QUIT    HELP    VRFY
+      EXPN    VERB    ETRN    DSN
+  For more info use \"HELP <topic>\".
+  To report bugs in the implementation send email to
+      sendmail-bugs@sendmail.org.
+  For local information send email to Postmaster at your site.
+  End of HELP info
+  >>> s.putcmd(\"vrfy\",\"someone@here\")
+  >>> s.getreply()
+  (250, \"Somebody OverHere <somebody@here.my.org>\")
+  >>> s.quit()
+'''" code nil nil [25 925])
+            ("socket" include nil nil [1342 1355])
+            ("re" include nil nil [1356 1365])
+            ("email.utils" include nil nil [1366 1384])
+            ("base64" include nil nil [1385 1398])
+            ("hmac" include nil nil [1399 1410])
+            ("email.base64mime" include nil nil [1411 1463])
+            ("sys" include nil nil [1464 1486])
+            ("__all__" variable nil nil [1488 1760])
+            ("SMTP_PORT" variable nil nil [1762 1776])
+            ("SMTP_SSL_PORT" variable nil nil [1777 1796])
+            ("CRLF" variable nil nil [1797 1810])
+            ("_MAXLINE" variable nil nil [1811 1826])
+            ("OLDSTYLE_AUTH" variable nil nil [1875 1921])
+            ("SMTPException" type
+               (:documentation "Base class for all exceptions raised by this module."
+                :superclasses ("Exception")
+                :type "class")
+                nil [1965 2060])
+            ("SMTPServerDisconnected" type
+               (:documentation "Not connected to any SMTP server.
+
+    This exception is raised when the server unexpectedly disconnects,
+    or when an attempt is made to use the SMTP instance before
+    connecting it to a server.
+    "
+                :superclasses ("SMTPException")
+                :type "class")
+                nil [2061 2321])
+            ("SMTPResponseException" type
+               (:documentation "Base class for all exceptions that include an SMTP error code.
+
+    These exceptions are generated in some instances when the SMTP
+    server returns an error code.  The error code is stored in the
+    `smtp_code' attribute of the error, and the `smtp_error' attribute
+    is set to the error message.
+    "
+                :superclasses ("SMTPException")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2727 2748])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2757 2778])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2787 2810]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2701 2705])
+                            ("code" variable nil (reparse-symbol function_parameters) [2707 2711])
+                            ("msg" variable nil (reparse-symbol function_parameters) [2713 2716]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2688 2811]))                  
+                :type "class")
+                nil [2322 2811])
+            ("SMTPSenderRefused" type
+               (:documentation "Sender address refused.
+
+    In addition to the attributes set by on all SMTPResponseException
+    exceptions, this sets `sender' to the string that the SMTP refused.
+    "
+                :superclasses ("SMTPResponseException")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3094 3115])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3124 3145])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3154 3174])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3183 3214]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3060 3064])
+                            ("code" variable nil (reparse-symbol function_parameters) [3066 3070])
+                            ("msg" variable nil (reparse-symbol function_parameters) [3072 3075])
+                            ("sender" variable nil (reparse-symbol function_parameters) [3077 3083]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3047 3215]))                  
+                :type "class")
+                nil [2812 3215])
+            ("SMTPRecipientsRefused" type
+               (:documentation "All recipient addresses refused.
+
+    The errors for each recipient are accessible through the attribute
+    'recipients', which is a dictionary of exactly the same sort as
+    SMTP.sendmail() returns.
+    "
+                :superclasses ("SMTPException")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3522 3550])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3559 3584]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3495 3499])
+                            ("recipients" variable nil (reparse-symbol function_parameters) [3501 3511]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3482 3585]))                  
+                :type "class")
+                nil [3216 3585])
+            ("SMTPDataError" type
+               (:documentation "The SMTP server didn't accept the data."
+                :superclasses ("SMTPResponseException")
+                :type "class")
+                nil [3587 3681])
+            ("SMTPConnectError" type
+               (:documentation "Error during connection establishment."
+                :superclasses ("SMTPResponseException")
+                :type "class")
+                nil [3682 3778])
+            ("SMTPHeloError" type
+               (:documentation "The server refused our HELO reply."
+                :superclasses ("SMTPResponseException")
+                :type "class")
+                nil [3779 3868])
+            ("SMTPAuthenticationError" type
+               (:documentation "Authentication error.
+
+    Most probably the server didn't accept the username/password
+    combination provided.
+    "
+                :superclasses ("SMTPResponseException")
+                :type "class")
+                nil [3869 4052])
+            ("quoteaddr" function
+               (:documentation "Quote a subset of the email addresses defined by RFC 821.
+
+    Should be able to handle anything rfc822.parseaddr can handle.
+    "
+                :arguments 
+                  ( ("addr" variable nil (reparse-symbol function_parameters) [4068 4072]))                  )
+                nil [4054 4599])
+            ("_addr_only" function (:arguments 
+              ( ("addrstring" variable nil (reparse-symbol function_parameters) [4615 4625]))              ) nil [4600 4824])
+            ("quotedata" function
+               (:documentation "Quote data for email.
+
+    Double leading '.', and change Unix newline '\\\\n', or Mac '\\\\r' into
+    Internet CRLF end-of-line.
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [4839 4843]))                  )
+                nil [4825 5077])
+            ("try" code nil nil [5079 5831])
+            ("SMTP" type
+               (:documentation "This class manages a connection to an SMTP or ESMTP server.
+    SMTP Objects:
+        SMTP objects have the following attributes:
+            helo_resp
+                This is the message given by the server in response to the
+                most recent HELO command.
+
+            ehlo_resp
+                This is the message given by the server in response to the
+                most recent EHLO command. This is usually multiline.
+
+            does_esmtp
+                This is a True value _after you do an EHLO command_, if the
+                server supports ESMTP.
+
+            esmtp_features
+                This is a dictionary, which, if the server supports ESMTP,
+                will _after you do an EHLO command_, contain the names of the
+                SMTP service extensions this server supports, and their
+                parameters (if any).
+
+                Note, all extension names are mapped to lower case in the
+                dictionary.
+
+        See each method's docstrings for details.  In general, there is a
+        method of the same name to perform each SMTP command.  There is also a
+        method called 'sendmail' that will do an entire mail transaction.
+        "
+                :members 
+                  ( ("debuglevel" variable nil (reparse-symbol indented_block_body) [7063 7077])
+                    ("file" variable nil (reparse-symbol indented_block_body) [7082 7093])
+                    ("helo_resp" variable nil (reparse-symbol indented_block_body) [7098 7114])
+                    ("ehlo_msg" variable nil (reparse-symbol indented_block_body) [7119 7136])
+                    ("ehlo_resp" variable nil (reparse-symbol indented_block_body) [7141 7157])
+                    ("does_esmtp" variable nil (reparse-symbol indented_block_body) [7162 7176])
+                    ("default_port" variable nil (reparse-symbol indented_block_body) [7181 7205])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Initialize a new instance.
+
+        If specified, `host' is the name of the remote host to which to
+        connect.  If specified, `port' specifies the port to which to connect.
+        By default, smtplib.SMTP_PORT is used.  If a host is specified the
+        connect method is called, and if it returns anything other than
+        a success code an SMTPConnectError is raised.  If specified,
+        `local_hostname` is used as the FQDN of the local host.  By default,
+        the local hostname is found using socket.getfqdn().
+
+        \"\"\"" code nil (reparse-symbol indented_block_body) [7334 7881])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7890 7912])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7921 7945])
+                            ("if" code nil (reparse-symbol indented_block_body) [7954 8092])
+                            ("if" code nil (reparse-symbol indented_block_body) [8100 8867]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7224 7228])
+                            ("host" variable nil (reparse-symbol function_parameters) [7230 7234])
+                            ("port" variable nil (reparse-symbol function_parameters) [7239 7243])
+                            ("local_hostname" variable nil (reparse-symbol function_parameters) [7247 7261])
+                            ("timeout" variable nil (reparse-symbol function_parameters) [7285 7292]))                          
+                        :documentation "Initialize a new instance.
+
+        If specified, `host' is the name of the remote host to which to
+        connect.  If specified, `port' specifies the port to which to connect.
+        By default, smtplib.SMTP_PORT is used.  If a host is specified the
+        connect method is called, and if it returns anything other than
+        a success code an SMTPConnectError is raised.  If specified,
+        `local_hostname` is used as the FQDN of the local host.  By default,
+        the local hostname is found using socket.getfqdn().
+
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7211 8867])
+                    ("set_debuglevel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8891 8895])
+                            ("debuglevel" variable nil (reparse-symbol function_parameters) [8897 8907]))                          
+                        :documentation "Set the debug output level.
+
+        A non-false value results in debug messages for connection and for all
+        messages sent to and received from the server.
+
+        ")
+                        (reparse-symbol indented_block_body) [8872 9134])
+                    ("_get_socket" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9155 9159])
+                            ("host" variable nil (reparse-symbol function_parameters) [9161 9165])
+                            ("port" variable nil (reparse-symbol function_parameters) [9167 9171])
+                            ("timeout" variable nil (reparse-symbol function_parameters) [9173 9180]))                          )
+                        (reparse-symbol indented_block_body) [9139 9456])
+                    ("connect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9473 9477])
+                            ("host" variable nil (reparse-symbol function_parameters) [9479 9483])
+                            ("port" variable nil (reparse-symbol function_parameters) [9497 9501]))                          
+                        :documentation "Connect to a host on a given port.
+
+        If the hostname ends with a colon (`:') followed by a number, and
+        there is no port specified, that suffix will be stripped off and the
+        number interpreted as the port number to use.
+
+        Note: This method is automatically invoked by __init__, if a host is
+        specified during instantiation.
+
+        ")
+                        (reparse-symbol indented_block_body) [9461 10553])
+                    ("send" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10567 10571])
+                            ("str" variable nil (reparse-symbol function_parameters) [10573 10576]))                          
+                        :documentation "Send `str' to the server.")
+                        (reparse-symbol indented_block_body) [10558 11017])
+                    ("putcmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11033 11037])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [11039 11042])
+                            ("args" variable nil (reparse-symbol function_parameters) [11044 11048]))                          
+                        :documentation "Send a command to the server.")
+                        (reparse-symbol indented_block_body) [11022 11245])
+                    ("getreply" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11263 11267]))                          
+                        :documentation "Get a reply from the server.
+
+        Returns a tuple consisting of:
+
+          - server response code (e.g. '250', or such, if all goes well)
+            Note: returns -1 if it can't read response code.
+
+          - server response string corresponding to response code (multiline
+            responses are converted to a single, multiline string).
+
+        Raises SMTPServerDisconnected if end-of-file is reached.
+        ")
+                        (reparse-symbol indented_block_body) [11250 13042])
+                    ("docmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13057 13061])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [13063 13066])
+                            ("args" variable nil (reparse-symbol function_parameters) [13068 13072]))                          
+                        :documentation "Send a command, and return its response code.")
+                        (reparse-symbol indented_block_body) [13047 13200])
+                    ("helo" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13238 13242])
+                            ("name" variable nil (reparse-symbol function_parameters) [13244 13248]))                          
+                        :documentation "SMTP 'helo' command.
+        Hostname to send for this command defaults to the FQDN of the local
+        host.
+        ")
+                        (reparse-symbol indented_block_body) [13229 13539])
+                    ("ehlo" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13553 13557])
+                            ("name" variable nil (reparse-symbol function_parameters) [13559 13563]))                          
+                        :documentation " SMTP 'ehlo' command.
+        Hostname to send for this command defaults to the FQDN of the local
+        host.
+        ")
+                        (reparse-symbol indented_block_body) [13544 15822])
+                    ("has_extn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15840 15844])
+                            ("opt" variable nil (reparse-symbol function_parameters) [15846 15849]))                          
+                        :documentation "Does the server support a given SMTP service extension?")
+                        (reparse-symbol indented_block_body) [15827 15972])
+                    ("help" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15986 15990])
+                            ("args" variable nil (reparse-symbol function_parameters) [15992 15996]))                          
+                        :documentation "SMTP 'help' command.
+        Returns help text from server.")
+                        (reparse-symbol indented_block_body) [15977 16144])
+                    ("rset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16158 16162]))                          
+                        :documentation "SMTP 'rset' command -- resets session.")
+                        (reparse-symbol indented_block_body) [16149 16252])
+                    ("noop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16266 16270]))                          
+                        :documentation "SMTP 'noop' command -- doesn't do anything :>")
+                        (reparse-symbol indented_block_body) [16257 16367])
+                    ("mail" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16381 16385])
+                            ("sender" variable nil (reparse-symbol function_parameters) [16387 16393])
+                            ("options" variable nil (reparse-symbol function_parameters) [16395 16402]))                          
+                        :documentation "SMTP 'mail' command -- begins mail xfer session.")
+                        (reparse-symbol indented_block_body) [16372 16690])
+                    ("rcpt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16704 16708])
+                            ("recip" variable nil (reparse-symbol function_parameters) [16710 16715])
+                            ("options" variable nil (reparse-symbol function_parameters) [16717 16724]))                          
+                        :documentation "SMTP 'rcpt' command -- indicates 1 recipient for this mail.")
+                        (reparse-symbol indented_block_body) [16695 17020])
+                    ("data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17034 17038])
+                            ("msg" variable nil (reparse-symbol function_parameters) [17040 17043]))                          
+                        :documentation "SMTP 'DATA' command -- sends message data to server.
+
+        Automatically quotes lines beginning with a period per rfc821.
+        Raises SMTPDataError if there is an unexpected reply to the
+        DATA command; the return value from this method is the final
+        response code received when the all data is sent.
+        ")
+                        (reparse-symbol indented_block_body) [17025 17927])
+                    ("verify" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17943 17947])
+                            ("address" variable nil (reparse-symbol function_parameters) [17949 17956]))                          
+                        :documentation "SMTP 'verify' command -- checks for address validity.")
+                        (reparse-symbol indented_block_body) [17932 18107])
+                    ("vrfy" variable nil (reparse-symbol indented_block_body) [18124 18137])
+                    ("expn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18152 18156])
+                            ("address" variable nil (reparse-symbol function_parameters) [18158 18165]))                          
+                        :documentation "SMTP 'expn' command -- expands a mailing list.")
+                        (reparse-symbol indented_block_body) [18143 18309])
+                    ("ehlo_or_helo_if_needed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18368 18372]))                          
+                        :documentation "Call self.ehlo() and/or self.helo() if needed.
+
+        If there has been no previous EHLO or HELO command this session, this
+        method tries ESMTP EHLO first.
+
+        This method may raise the following exceptions:
+
+         SMTPHeloError            The server didn't reply properly to
+                                  the helo greeting.
+        ")
+                        (reparse-symbol indented_block_body) [18341 18997])
+                    ("login" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19012 19016])
+                            ("user" variable nil (reparse-symbol function_parameters) [19018 19022])
+                            ("password" variable nil (reparse-symbol function_parameters) [19024 19032]))                          
+                        :documentation "Log in on an SMTP server that requires authentication.
+
+        The arguments are:
+            - user:     The user name to authenticate with.
+            - password: The password for the authentication.
+
+        If there has been no previous EHLO or HELO command this session, this
+        method tries ESMTP EHLO first.
+
+        This method will return normally if the authentication was successful.
+
+        This method may raise the following exceptions:
+
+         SMTPHeloError            The server didn't reply properly to
+                                  the helo greeting.
+         SMTPAuthenticationError  The server didn't accept the username/
+                                  password combination.
+         SMTPException            No suitable authentication method was
+                                  found.
+        ")
+                        (reparse-symbol indented_block_body) [19002 22180])
+                    ("starttls" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22198 22202])
+                            ("keyfile" variable nil (reparse-symbol function_parameters) [22204 22211])
+                            ("certfile" variable nil (reparse-symbol function_parameters) [22218 22226]))                          
+                        :documentation "Puts the connection to the SMTP server into TLS mode.
+
+        If there has been no previous EHLO or HELO command this session, this
+        method tries ESMTP EHLO first.
+
+        If the server supports TLS, this will encrypt the rest of the SMTP
+        session. If you provide the keyfile and certfile parameters,
+        the identity of the SMTP server and client can be checked. This,
+        however, depends on whether the socket module really checks the
+        certificates.
+
+        This method may raise the following exceptions:
+
+         SMTPHeloError            The server didn't reply properly to
+                                  the helo greeting.
+        ")
+                        (reparse-symbol indented_block_body) [22185 23979])
+                    ("sendmail" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23997 24001])
+                            ("from_addr" variable nil (reparse-symbol function_parameters) [24003 24012])
+                            ("to_addrs" variable nil (reparse-symbol function_parameters) [24014 24022])
+                            ("msg" variable nil (reparse-symbol function_parameters) [24024 24027])
+                            ("mail_options" variable nil (reparse-symbol function_parameters) [24029 24041])
+                            ("rcpt_options" variable nil (reparse-symbol function_parameters) [24063 24075]))                          
+                        :documentation "This command performs an entire mail transaction.
+
+        The arguments are:
+            - from_addr    : The address sending this mail.
+            - to_addrs     : A list of addresses to send this mail to.  A bare
+                             string will be treated as a list with 1 address.
+            - msg          : The message to send.
+            - mail_options : List of ESMTP options (such as 8bitmime) for the
+                             mail command.
+            - rcpt_options : List of ESMTP options (such as DSN commands) for
+                             all the rcpt commands.
+
+        If there has been no previous EHLO or HELO command this session, this
+        method tries ESMTP EHLO first.  If the server does ESMTP, message size
+        and each of the specified options will be passed to it.  If EHLO
+        fails, HELO will be tried and ESMTP options suppressed.
+
+        This method will return normally if the mail is accepted for at least
+        one recipient.  It returns a dictionary, with one entry for each
+        recipient that was refused.  Each entry contains a tuple of the SMTP
+        error code and the accompanying error message sent by the server.
+
+        This method may raise the following exceptions:
+
+         SMTPHeloError          The server didn't reply properly to
+                                the helo greeting.
+         SMTPRecipientsRefused  The server rejected ALL recipients
+                                (no mail was sent).
+         SMTPSenderRefused      The server didn't accept the from_addr.
+         SMTPDataError          The server replied with an unexpected
+                                error code (other than a refusal of
+                                a recipient).
+
+        Note: the connection will be open even after an exception is raised.
+
+        Example:
+
+         >>> import smtplib
+         >>> s=smtplib.SMTP(\"localhost\")
+         >>> tolist=[\"one@one.org\",\"two@two.org\",\"three@three.org\",\"four@four.org\"]
+         >>> msg = '''\\\\
+         ... From: Me@my.org
+         ... Subject: testin'...
+         ...
+         ... This is a test '''
+         >>> s.sendmail(\"me@my.org\",tolist,msg)
+         { \"three@three.org\" : ( 550 ,\"User unknown\" ) }
+         >>> s.quit()
+
+        In the above example, the message was accepted for delivery to three
+        of the four addresses, and one was rejected, with the error code
+        550.  If all addresses are accepted, then the method will return an
+        empty dictionary.
+
+        ")
+                        (reparse-symbol indented_block_body) [23984 27782])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27798 27802]))                          
+                        :documentation "Close the connection to the SMTP server.")
+                        (reparse-symbol indented_block_body) [27788 28014])
+                    ("quit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28029 28033]))                          
+                        :documentation "Terminate the SMTP session.")
+                        (reparse-symbol indented_block_body) [28020 28151]))                  
+                :type "class")
+                nil [5832 28151])
+            ("if" code nil nil [28152 29444])
+            ("LMTP_PORT" variable nil nil [29466 29482])
+            ("LMTP" type
+               (:documentation "LMTP - Local Mail Transfer Protocol
+
+    The LMTP protocol, which is very similar to ESMTP, is heavily based
+    on the standard SMTP client. It's common to use Unix sockets for LMTP,
+    so our connect() method must support that as well as a regular
+    host:port server. To specify a Unix socket, you must use an absolute
+    path as the host, starting with a '/'.
+
+    Authentication is supported, using the regular SMTP mechanism. When
+    using a Unix socket, LMTP generally don't support or require any
+    authentication, but your mileage might vary."
+                :superclasses ("SMTP")
+                :members 
+                  ( ("ehlo_msg" variable nil (reparse-symbol indented_block_body) [30075 30092])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Initialize a new instance.\"\"\"" code nil (reparse-symbol indented_block_body) [30172 30204])
+                            ("SMTP" code nil (reparse-symbol indented_block_body) [30213 30260]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30111 30115])
+                            ("host" variable nil (reparse-symbol function_parameters) [30117 30121])
+                            ("port" variable nil (reparse-symbol function_parameters) [30126 30130])
+                            ("local_hostname" variable nil (reparse-symbol function_parameters) [30142 30156]))                          
+                        :documentation "Initialize a new instance."
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [30098 30261])
+                    ("connect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30278 30282])
+                            ("host" variable nil (reparse-symbol function_parameters) [30284 30288])
+                            ("port" variable nil (reparse-symbol function_parameters) [30302 30306]))                          
+                        :documentation "Connect to the LMTP daemon, on either a Unix or a TCP socket.")
+                        (reparse-symbol indented_block_body) [30266 30991]))                  
+                :type "class")
+                nil [29484 30991])
+            ("if" code nil nil [31093 31646]))          
+      :file "smtplib.py"
+      :pointmax 31646
+      :fsize 31645
+      :lastmodtime '(22915 49734 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 11934 . 12098) (NEWLINE 11933 . 11934) (COLON 11932 . 11933) (TRY 11835 . 11838) (AS 11928 . 11930)))
+    (semanticdb-table "semanticdb-table"
+      :file "socket.py"
+      :fsize 20512
+      :lastmodtime '(22915 49734 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "re.py"
+      :pointmax 12960
+      :fsize 12959
+      :lastmodtime '(22915 49734 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "base64.py"
+      :fsize 11357
+      :lastmodtime '(22915 49733 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "hmac.py"
+      :fsize 4588
+      :lastmodtime '(22915 49733 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "collections.py"
+      :fsize 25883
+      :lastmodtime '(22915 49733 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "functools.py"
+      :fsize 4478
+      :lastmodtime '(22915 49733 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "hashlib.py"
+      :fsize 7658
+      :lastmodtime '(22915 49733 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "platform.py"
+      :fsize 53213
+      :lastmodtime '(22915 49734 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "uuid.py"
+      :fsize 21095
+      :lastmodtime '(22915 49734 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "cookielib.py"
+      :fsize 64449
+      :lastmodtime '(22915 49733 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "urlparse.py"
+      :fsize 15127
+      :lastmodtime '(22915 49734 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "__future__.py"
+      :fsize 4380
+      :lastmodtime '(22915 49733 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"The io module provides the Python interfaces to stream handling. The
+builtin open function is defined in this module.
+
+At the top of the I/O hierarchy is the abstract base class IOBase. It
+defines the basic interface to a stream. Note, however, that there is no
+separation between reading and writing to streams; implementations are
+allowed to raise an IOError if they do not support a given operation.
+
+Extending IOBase is RawIOBase which deals simply with the reading and
+writing of raw bytes to a stream. FileIO subclasses RawIOBase to provide
+an interface to OS files.
+
+BufferedIOBase deals with buffering on a raw byte stream (RawIOBase). Its
+subclasses, BufferedWriter, BufferedReader, and BufferedRWPair buffer
+streams that are readable, writable, and both respectively.
+BufferedRandom provides a buffered interface to random access
+streams. BytesIO is a simple stream of in-memory bytes.
+
+Another IOBase subclass, TextIOBase, deals with the encoding and decoding
+of streams into text. TextIOWrapper, which extends it, is a buffered text
+interface to a buffered raw stream (`BufferedIOBase`). Finally, StringIO
+is a in-memory stream for text.
+
+Argument names are not part of the specification, and only the arguments
+of open() are intended to be used as keyword arguments.
+
+data:
+
+DEFAULT_BUFFER_SIZE
+
+   An int containing the default buffer size used by the module's buffered
+   I/O classes. open() uses the file's blksize (as obtained by os.stat) if
+   possible.
+\"\"\"" code nil nil [1 1479])
+            ("__author__" variable nil nil [1523 1860])
+            ("__all__" variable nil nil [1862 2180])
+            ("_io" include nil nil [2183 2193])
+            ("abc" include nil nil [2194 2204])
+            ("" code nil nil [2222 2472])
+            ("OpenWrapper" variable nil nil [2474 2496])
+            ("SEEK_SET" variable nil nil [2542 2554])
+            ("SEEK_CUR" variable nil nil [2555 2567])
+            ("SEEK_END" variable nil nil [2568 2580])
+            ("IOBase" type
+               (:superclasses ("_io._IOBase")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [2757 2784]))                  
+                :type "class")
+                nil [2726 2785])
+            ("RawIOBase" type
+               (:superclasses ("_io._RawIOBase" "IOBase")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [2831 2835]))                  
+                :type "class")
+                nil [2786 2836])
+            ("BufferedIOBase" type
+               (:superclasses ("_io._BufferedIOBase" "IOBase")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [2892 2896]))                  
+                :type "class")
+                nil [2837 2897])
+            ("TextIOBase" type
+               (:superclasses ("_io._TextIOBase" "IOBase")
+                :members 
+                  ( ("pass" code nil (reparse-symbol indented_block_body) [2945 2949]))                  
+                :type "class")
+                nil [2898 2950])
+            ("RawIOBase" code nil nil [2951 2977])
+            ("for" code nil nil [2979 3116])
+            ("for" code nil nil [3117 3188])
+            ("del" code nil nil [3188 3197]))          
+      :file "io.py"
+      :pointmax 3198
+      :fsize 3197
+      :lastmodtime '(22915 49733 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "warnings.py"
+      :fsize 14044
+      :lastmodtime '(22915 49734 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "abc.py"
+      :fsize 7145
+      :lastmodtime '(22915 49733 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "_pyio.py"
+      :pointmax 68858
+      :fsize 68857
+      :lastmodtime '(22915 49733 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "token.py"
+      :pointmax 2947
+      :fsize 2946
+      :lastmodtime '(22915 49734 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"runpy.py - locating and running Python code using the module namespace
+
+Provides support for locating and running Python scripts using the Python
+module namespace instead of the native filesystem.
+
+This allows Python code to play nicely with non-filesystem based PEP 302
+importers when locating support scripts as well as when importing modules.
+\"\"\"" code nil nil [1 353])
+            ("sys" include nil nil [462 472])
+            ("imp" include nil nil [473 483])
+            ("pkgutil" include nil nil [484 513])
+            ("try" code nil nil [514 605])
+            ("__all__" variable nil nil [606 649])
+            ("_TempModule" type
+               (:documentation "Temporarily replace a module in sys.modules with an empty namespace"
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [798 822])
+                            ("self" variable nil (reparse-symbol indented_block_body) [831 869])
+                            ("self" variable nil (reparse-symbol indented_block_body) [878 901]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [773 777])
+                            ("mod_name" variable nil (reparse-symbol function_parameters) [779 787]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [760 902])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [921 925]))                          )
+                        (reparse-symbol indented_block_body) [907 1141])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1159 1163])
+                            ("args" variable nil (reparse-symbol function_parameters) [1165 1170]))                          )
+                        (reparse-symbol indented_block_body) [1146 1356]))                  
+                :type "class")
+                nil [651 1356])
+            ("_ModifiedArgv0" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1426 1444])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1453 1498]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1404 1408])
+                            ("value" variable nil (reparse-symbol function_parameters) [1410 1415]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1391 1499])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1518 1522]))                          )
+                        (reparse-symbol indented_block_body) [1504 1715])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1733 1737])
+                            ("args" variable nil (reparse-symbol function_parameters) [1739 1744]))                          )
+                        (reparse-symbol indented_block_body) [1720 1823]))                  
+                :type "class")
+                nil [1357 1823])
+            ("_run_code" function
+               (:documentation "Helper to run code in nominated namespace"
+                :arguments 
+                  ( ("code" variable nil (reparse-symbol function_parameters) [1838 1842])
+                    ("run_globals" variable nil (reparse-symbol function_parameters) [1844 1855])
+                    ("init_globals" variable nil (reparse-symbol function_parameters) [1857 1869])
+                    ("mod_name" variable nil (reparse-symbol function_parameters) [1890 1898])
+                    ("mod_fname" variable nil (reparse-symbol function_parameters) [1905 1914])
+                    ("mod_loader" variable nil (reparse-symbol function_parameters) [1935 1945])
+                    ("pkg_name" variable nil (reparse-symbol function_parameters) [1952 1960]))                  )
+                nil [1824 2330])
+            ("_run_module_code" function
+               (:documentation "Helper to run code in new namespace with sys modified"
+                :arguments 
+                  ( ("code" variable nil (reparse-symbol function_parameters) [2352 2356])
+                    ("init_globals" variable nil (reparse-symbol function_parameters) [2358 2370])
+                    ("mod_name" variable nil (reparse-symbol function_parameters) [2397 2405])
+                    ("mod_fname" variable nil (reparse-symbol function_parameters) [2412 2421])
+                    ("mod_loader" variable nil (reparse-symbol function_parameters) [2448 2458])
+                    ("pkg_name" variable nil (reparse-symbol function_parameters) [2465 2473]))                  )
+                nil [2331 2924])
+            ("_get_filename" function (:arguments 
+              ( ("loader" variable nil (reparse-symbol function_parameters) [3206 3212])
+                ("mod_name" variable nil (reparse-symbol function_parameters) [3214 3222]))              ) nil [3188 3398])
+            ("_get_module_details" function (:arguments 
+              ( ("mod_name" variable nil (reparse-symbol function_parameters) [3482 3490]))              ) nil [3458 4293])
+            ("_get_main_module_details" function nil nil [4295 4731])
+            ("_run_module_as_main" function
+               (:documentation "Runs the designated module in the __main__ namespace
+
+       Note that the executed module will have full access to the
+       __main__ namespace. If this is not desirable, the run_module()
+       function should be used to run the module code in a fresh namespace.
+
+       At the very least, these variables in __main__ will be overwritten:
+           __name__
+           __file__
+           __loader__
+           __package__
+    "
+                :arguments 
+                  ( ("mod_name" variable nil (reparse-symbol function_parameters) [5051 5059])
+                    ("alter_argv" variable nil (reparse-symbol function_parameters) [5061 5071]))                  )
+                nil [5027 6154])
+            ("run_module" function
+               (:documentation "Execute a module's code without importing it
+
+       Returns the resulting top level namespace dictionary
+    "
+                :arguments 
+                  ( ("mod_name" variable nil (reparse-symbol function_parameters) [6170 6178])
+                    ("init_globals" variable nil (reparse-symbol function_parameters) [6180 6192])
+                    ("run_name" variable nil (reparse-symbol function_parameters) [6214 6222])
+                    ("alter_sys" variable nil (reparse-symbol function_parameters) [6229 6238]))                  )
+                nil [6155 6823])
+            ("_get_importer" function
+               (:documentation "Python version of PyImport_GetImporter C API function"
+                :arguments 
+                  ( ("path_name" variable nil (reparse-symbol function_parameters) [6957 6966]))                  )
+                nil [6939 7915])
+            ("_get_code_from_file" function (:arguments 
+              ( ("fname" variable nil (reparse-symbol function_parameters) [7940 7945]))              ) nil [7916 8233])
+            ("run_path" function
+               (:documentation "Execute code located at the specified filesystem location
+
+       Returns the resulting top level namespace dictionary
+
+       The file path may refer directly to a Python script (i.e.
+       one that could be directly executed with execfile) or else
+       it may refer to a zipfile or directory containing a top
+       level __main__.py script.
+    "
+                :arguments 
+                  ( ("path_name" variable nil (reparse-symbol function_parameters) [8247 8256])
+                    ("init_globals" variable nil (reparse-symbol function_parameters) [8258 8270])
+                    ("run_name" variable nil (reparse-symbol function_parameters) [8277 8285]))                  )
+                nil [8234 10399])
+            ("if" code nil nil [10401 10699]))          
+      :file "runpy.py"
+      :pointmax 10699
+      :fsize 10698
+      :lastmodtime '(22915 49734 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 10068 . 10270) (NEWLINE 10067 . 10068) (COLON 10066 . 10067) (WITH 9979 . 9983) (COMMA 10020 . 10021) (INDENT_BLOCK 5833 . 5907) (NEWLINE 5832 . 5833) (COLON 5831 . 5832) (TRY 5525 . 5528) (AS 5825 . 5827) (INDENT_BLOCK 4566 . 4731) (NEWLINE 4565 . 4566) (COLON 4564 . 4565) (TRY 4484 . 4487) (AS 4558 . 4560) (INDENT_BLOCK 2619 . 2781) (NEWLINE 2618 . 2619) (COLON 2617 . 2618) (WITH 2549 . 2553) (COMMA 2590 . 2591)))
+    (semanticdb-table "semanticdb-table"
+      :file "pkgutil.py"
+      :fsize 20346
+      :lastmodtime '(22915 49734 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"Generic socket server classes.
+
+This module tries to capture the various aspects of defining a server:
+
+For socket-based servers:
+
+- address family:
+        - AF_INET{,6}: IP (Internet Protocol) sockets (default)
+        - AF_UNIX: Unix domain sockets
+        - others, e.g. AF_DECNET are conceivable (see <socket.h>
+- socket type:
+        - SOCK_STREAM (reliable stream, e.g. TCP)
+        - SOCK_DGRAM (datagrams, e.g. UDP)
+
+For request-based servers (including socket-based):
+
+- client address verification before further looking at the request
+        (This is actually a hook for any processing that needs to look
+         at the request before anything else, e.g. logging)
+- how to handle multiple requests:
+        - synchronous (one request is handled at a time)
+        - forking (each request is handled by a new process)
+        - threading (each request is handled by a new thread)
+
+The classes in this module favor the server type that is simplest to
+write: a synchronous TCP/IP server.  This is bad class design, but
+save some typing.  (There's also the issue that a deep class hierarchy
+slows down method lookups.)
+
+There are five classes in an inheritance diagram, four of which represent
+synchronous servers of four types:
+
+        +------------+
+        | BaseServer |
+        +------------+
+              |
+              v
+        +-----------+        +------------------+
+        | TCPServer |------->| UnixStreamServer |
+        +-----------+        +------------------+
+              |
+              v
+        +-----------+        +--------------------+
+        | UDPServer |------->| UnixDatagramServer |
+        +-----------+        +--------------------+
+
+Note that UnixDatagramServer derives from UDPServer, not from
+UnixStreamServer -- the only difference between an IP and a Unix
+stream server is the address family, which is simply repeated in both
+unix server classes.
+
+Forking and threading versions of each type of server can be created
+using the ForkingMixIn and ThreadingMixIn mix-in classes.  For
+instance, a threading UDP server class is created as follows:
+
+        class ThreadingUDPServer(ThreadingMixIn, UDPServer): pass
+
+The Mix-in class must come first, since it overrides a method defined
+in UDPServer! Setting the various member variables also changes
+the behavior of the underlying server mechanism.
+
+To implement a service, you must derive a class from
+BaseRequestHandler and redefine its handle() method.  You can then run
+various versions of the service by combining one of the server classes
+with your request handler class.
+
+The request handler class must be different for datagram or stream
+services.  This can be hidden by using the request handler
+subclasses StreamRequestHandler or DatagramRequestHandler.
+
+Of course, you still have to use your head!
+
+For instance, it makes no sense to use a forking server if the service
+contains state in memory that can be modified by requests (since the
+modifications in the child process would never reach the initial state
+kept in the parent process and passed to each child).  In this case,
+you can use a threading server, but you will probably have to use
+locks to avoid two requests that come in nearly simultaneous to apply
+conflicting changes to the server state.
+
+On the other hand, if you are building e.g. an HTTP server, where all
+data is stored externally (e.g. in the file system), a synchronous
+class will essentially render the service \"deaf\" while one request is
+being handled -- which may be for a very long time if a client is slow
+to read all the data it has requested.  Here a threading or forking
+server is appropriate.
+
+In some cases, it may be appropriate to process part of a request
+synchronously, but to finish processing in a forked child depending on
+the request data.  This can be implemented by using a synchronous
+server and doing an explicit fork in the request handler class
+handle() method.
+
+Another approach to handling multiple simultaneous requests in an
+environment that supports neither threads nor fork (or where these are
+too expensive or inappropriate for the service) is to maintain an
+explicit table of partially finished requests and to use select() to
+decide which request to work on next (or whether to handle a new
+incoming request).  This is particularly important for stream services
+where each client can potentially be connected for a long time (if
+threads or subprocesses cannot be used).
+
+Future work:
+- Standard classes for Sun RPC (which uses either UDP or TCP)
+- Standard mix-in classes to implement various authentication
+  and encryption schemes
+- Standard framework for select-based multiplexing
+
+XXX Open problems:
+- What to do with out-of-band data?
+
+BaseServer:
+- split generic \"request\" functionality out into BaseServer class.
+  Copyright (C) 2000  Luke Kenneth Casson Leighton <lkcl@samba.org>
+
+  example: read entries from a SQL database (requires overriding
+  get_request() to return a table entry from the database).
+  entry is processed by a RequestHandlerClass.
+
+\"\"\"" code nil nil [1 5032])
+            ("__version__" variable nil nil [5268 5287])
+            ("socket" include nil nil [5290 5303])
+            ("select" include nil nil [5304 5317])
+            ("sys" include nil nil [5318 5328])
+            ("os" include nil nil [5329 5338])
+            ("errno" include nil nil [5339 5351])
+            ("try" code nil nil [5352 5438])
+            ("__all__" variable nil nil [5439 5692])
+            ("if" code nil nil [5693 5886])
+            ("_eintr_retry" function
+               (:documentation "restart a system call interrupted by EINTR"
+                :arguments 
+                  ( ("func" variable nil (reparse-symbol function_parameters) [5904 5908])
+                    ("args" variable nil (reparse-symbol function_parameters) [5910 5915]))                  )
+                nil [5887 6139])
+            ("BaseServer" type
+               (:documentation "Base class for server classes.
+
+    Methods for the caller:
+
+    - __init__(server_address, RequestHandlerClass)
+    - serve_forever(poll_interval=0.5)
+    - shutdown()
+    - handle_request()  # if you do not use serve_forever()
+    - fileno() -> int   # for select()
+
+    Methods that may be overridden:
+
+    - server_bind()
+    - server_activate()
+    - get_request() -> request, client_address
+    - handle_timeout()
+    - verify_request(request, client_address)
+    - server_close()
+    - process_request(request, client_address)
+    - shutdown_request(request)
+    - close_request(request)
+    - handle_error()
+
+    Methods for derived classes:
+
+    - finish_request(request, client_address)
+
+    Class variables that may be overridden by derived classes or
+    instances:
+
+    - timeout
+    - address_family
+    - socket_type
+    - allow_reuse_address
+
+    Instance variables:
+
+    - RequestHandlerClass
+    - socket
+
+    "
+                :members 
+                  ( ("timeout" variable nil (reparse-symbol indented_block_body) [7103 7117])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Constructor.  May be extended, do not override.\"\"\"" code nil (reparse-symbol indented_block_body) [7188 7241])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7250 7286])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7295 7341])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7350 7389])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7398 7429]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7136 7140])
+                            ("server_address" variable nil (reparse-symbol function_parameters) [7142 7156])
+                            ("RequestHandlerClass" variable nil (reparse-symbol function_parameters) [7158 7177]))                          
+                        :documentation "Constructor.  May be extended, do not override."
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7123 7430])
+                    ("server_activate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7455 7459]))                          
+                        :documentation "Called by constructor to activate the server.
+
+        May be overridden.
+
+        ")
+                        (reparse-symbol indented_block_body) [7435 7573])
+                    ("serve_forever" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7596 7600])
+                            ("poll_interval" variable nil (reparse-symbol function_parameters) [7602 7615]))                          
+                        :documentation "Handle one request at a time until shutdown.
+
+        Polls for shutdown every poll_interval seconds. Ignores
+        self.timeout. If you need to do periodic tasks, do them in
+        another thread.
+        ")
+                        (reparse-symbol indented_block_body) [7578 8518])
+                    ("shutdown" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8536 8540]))                          
+                        :documentation "Stops the serve_forever loop.
+
+        Blocks until the loop has finished. This must be called while
+        serve_forever() is running in another thread, or it will
+        deadlock.
+        ")
+                        (reparse-symbol indented_block_body) [8523 8824])
+                    ("handle_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9419 9423]))                          
+                        :documentation "Handle one request, possibly blocking.
+
+        Respects self.timeout.
+        ")
+                        (reparse-symbol indented_block_body) [9400 10028])
+                    ("_handle_request_noblock" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10061 10065]))                          
+                        :documentation "Handle one request, without blocking.
+
+        I assume that select.select has returned that the socket is
+        readable before this function was called, so there should be
+        no risk of blocking in get_request().
+        ")
+                        (reparse-symbol indented_block_body) [10033 10693])
+                    ("handle_timeout" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10717 10721]))                          
+                        :documentation "Called if no new request arrives within self.timeout.
+
+        Overridden by ForkingMixIn.
+        ")
+                        (reparse-symbol indented_block_body) [10698 10851])
+                    ("verify_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10875 10879])
+                            ("request" variable nil (reparse-symbol function_parameters) [10881 10888])
+                            ("client_address" variable nil (reparse-symbol function_parameters) [10890 10904]))                          
+                        :documentation "Verify the request.  May be overridden.
+
+        Return True if we should proceed with this request.
+
+        ")
+                        (reparse-symbol indented_block_body) [10856 11052])
+                    ("process_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11077 11081])
+                            ("request" variable nil (reparse-symbol function_parameters) [11083 11090])
+                            ("client_address" variable nil (reparse-symbol function_parameters) [11092 11106]))                          
+                        :documentation "Call finish_request.
+
+        Overridden by ForkingMixIn and ThreadingMixIn.
+
+        ")
+                        (reparse-symbol indented_block_body) [11057 11302])
+                    ("server_close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11324 11328]))                          
+                        :documentation "Called to clean-up the server.
+
+        May be overridden.
+
+        ")
+                        (reparse-symbol indented_block_body) [11307 11427])
+                    ("finish_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11451 11455])
+                            ("request" variable nil (reparse-symbol function_parameters) [11457 11464])
+                            ("client_address" variable nil (reparse-symbol function_parameters) [11466 11480]))                          
+                        :documentation "Finish one request by instantiating RequestHandlerClass.")
+                        (reparse-symbol indented_block_body) [11432 11618])
+                    ("shutdown_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11644 11648])
+                            ("request" variable nil (reparse-symbol function_parameters) [11650 11657]))                          
+                        :documentation "Called to shutdown and close an individual request.")
+                        (reparse-symbol indented_block_body) [11623 11762])
+                    ("close_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11785 11789])
+                            ("request" variable nil (reparse-symbol function_parameters) [11791 11798]))                          
+                        :documentation "Called to clean up an individual request.")
+                        (reparse-symbol indented_block_body) [11767 11870])
+                    ("handle_error" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11892 11896])
+                            ("request" variable nil (reparse-symbol function_parameters) [11898 11905])
+                            ("client_address" variable nil (reparse-symbol function_parameters) [11907 11921]))                          
+                        :documentation "Handle an error gracefully.  May be overridden.
+
+        The default is to print a traceback and continue.
+
+        ")
+                        (reparse-symbol indented_block_body) [11875 12282]))                  
+                :type "class")
+                nil [6140 12282])
+            ("TCPServer" type
+               (:documentation "Base class for various socket-based server classes.
+
+    Defaults to synchronous IP stream (i.e., TCP).
+
+    Methods for the caller:
+
+    - __init__(server_address, RequestHandlerClass, bind_and_activate=True)
+    - serve_forever(poll_interval=0.5)
+    - shutdown()
+    - handle_request()  # if you don't use serve_forever()
+    - fileno() -> int   # for select()
+
+    Methods that may be overridden:
+
+    - server_bind()
+    - server_activate()
+    - get_request() -> request, client_address
+    - handle_timeout()
+    - verify_request(request, client_address)
+    - process_request(request, client_address)
+    - shutdown_request(request)
+    - close_request(request)
+    - handle_error()
+
+    Methods for derived classes:
+
+    - finish_request(request, client_address)
+
+    Class variables that may be overridden by derived classes or
+    instances:
+
+    - timeout
+    - address_family
+    - socket_type
+    - request_queue_size (only for stream sockets)
+    - allow_reuse_address
+
+    Instance variables:
+
+    - server_address
+    - RequestHandlerClass
+    - socket
+
+    "
+                :superclasses ("BaseServer")
+                :members 
+                  ( ("address_family" variable nil (reparse-symbol indented_block_body) [13405 13436])
+                    ("socket_type" variable nil (reparse-symbol indented_block_body) [13442 13474])
+                    ("request_queue_size" variable nil (reparse-symbol indented_block_body) [13480 13502])
+                    ("allow_reuse_address" variable nil (reparse-symbol indented_block_body) [13508 13535])
+                    ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Constructor.  May be extended, do not override.\"\"\"" code nil (reparse-symbol indented_block_body) [13630 13683])
+                            ("BaseServer" code nil (reparse-symbol indented_block_body) [13692 13754])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13763 13865])
+                            ("if" code nil (reparse-symbol indented_block_body) [13874 13962]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13554 13558])
+                            ("server_address" variable nil (reparse-symbol function_parameters) [13560 13574])
+                            ("RequestHandlerClass" variable nil (reparse-symbol function_parameters) [13576 13595])
+                            ("bind_and_activate" variable nil (reparse-symbol function_parameters) [13597 13614]))                          
+                        :documentation "Constructor.  May be extended, do not override."
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13541 13962])
+                    ("server_bind" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13983 13987]))                          
+                        :documentation "Called by constructor to bind the socket.
+
+        May be overridden.
+
+        ")
+                        (reparse-symbol indented_block_body) [13967 14301])
+                    ("server_activate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14326 14330]))                          
+                        :documentation "Called by constructor to activate the server.
+
+        May be overridden.
+
+        ")
+                        (reparse-symbol indented_block_body) [14306 14483])
+                    ("server_close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14505 14509]))                          
+                        :documentation "Called to clean-up the server.
+
+        May be overridden.
+
+        ")
+                        (reparse-symbol indented_block_body) [14488 14623])
+                    ("fileno" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14639 14643]))                          
+                        :documentation "Return socket file number.
+
+        Interface required by select().
+
+        ")
+                        (reparse-symbol indented_block_body) [14628 14774])
+                    ("get_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14795 14799]))                          
+                        :documentation "Get the request and client address from the socket.
+
+        May be overridden.
+
+        ")
+                        (reparse-symbol indented_block_body) [14779 14942])
+                    ("shutdown_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14968 14972])
+                            ("request" variable nil (reparse-symbol function_parameters) [14974 14981]))                          
+                        :documentation "Called to shutdown and close an individual request.")
+                        (reparse-symbol indented_block_body) [14947 15366])
+                    ("close_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15389 15393])
+                            ("request" variable nil (reparse-symbol function_parameters) [15395 15402]))                          
+                        :documentation "Called to clean up an individual request.")
+                        (reparse-symbol indented_block_body) [15371 15485]))                  
+                :type "class")
+                nil [12284 15485])
+            ("UDPServer" type
+               (:documentation "UDP server class."
+                :superclasses ("TCPServer")
+                :members 
+                  ( ("allow_reuse_address" variable nil (reparse-symbol indented_block_body) [15549 15576])
+                    ("socket_type" variable nil (reparse-symbol indented_block_body) [15582 15613])
+                    ("max_packet_size" variable nil (reparse-symbol indented_block_body) [15619 15641])
+                    ("get_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15663 15667]))                          )
+                        (reparse-symbol indented_block_body) [15647 15789])
+                    ("server_activate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15814 15818]))                          )
+                        (reparse-symbol indented_block_body) [15794 15878])
+                    ("shutdown_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15904 15908])
+                            ("request" variable nil (reparse-symbol function_parameters) [15910 15917]))                          )
+                        (reparse-symbol indented_block_body) [15883 15996])
+                    ("close_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16019 16023])
+                            ("request" variable nil (reparse-symbol function_parameters) [16025 16032]))                          )
+                        (reparse-symbol indented_block_body) [16001 16085]))                  
+                :type "class")
+                nil [15487 16085])
+            ("ForkingMixIn" type
+               (:documentation "Mix-in class to handle each request in a new process."
+                :members 
+                  ( ("timeout" variable nil (reparse-symbol indented_block_body) [16176 16189])
+                    ("active_children" variable nil (reparse-symbol indented_block_body) [16194 16216])
+                    ("max_children" variable nil (reparse-symbol indented_block_body) [16221 16238])
+                    ("collect_children" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16265 16269]))                          
+                        :documentation "Internal routine to wait for children that have exited.")
+                        (reparse-symbol indented_block_body) [16244 17672])
+                    ("handle_timeout" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17696 17700]))                          
+                        :documentation "Wait for zombies after self.timeout seconds of inactivity.
+
+        May be extended, do not override.
+        ")
+                        (reparse-symbol indented_block_body) [17677 17860])
+                    ("process_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17885 17889])
+                            ("request" variable nil (reparse-symbol function_parameters) [17891 17898])
+                            ("client_address" variable nil (reparse-symbol function_parameters) [17900 17914]))                          
+                        :documentation "Fork a new subprocess to process the request.")
+                        (reparse-symbol indented_block_body) [17865 18765]))                  
+                :type "class")
+                nil [16086 18765])
+            ("ThreadingMixIn" type
+               (:documentation "Mix-in class to handle each request in a new thread."
+                :members 
+                  ( ("daemon_threads" variable nil (reparse-symbol indented_block_body) [18935 18957])
+                    ("process_request_thread" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18990 18994])
+                            ("request" variable nil (reparse-symbol function_parameters) [18996 19003])
+                            ("client_address" variable nil (reparse-symbol function_parameters) [19005 19019]))                          
+                        :documentation "Same as in BaseServer but as a thread.
+
+        In addition, exception handling is done here.
+
+        ")
+                        (reparse-symbol indented_block_body) [18963 19367])
+                    ("process_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19392 19396])
+                            ("request" variable nil (reparse-symbol function_parameters) [19398 19405])
+                            ("client_address" variable nil (reparse-symbol function_parameters) [19407 19421]))                          
+                        :documentation "Start a new thread to process the request.")
+                        (reparse-symbol indented_block_body) [19372 19668]))                  
+                :type "class")
+                nil [18767 19668])
+            ("ForkingUDPServer" type
+               (:superclasses ("ForkingMixIn" "UDPServer")
+                :members 
+                  ( ("pass" code nil nil nil))                  
+                :type "class")
+                nil [19670 19724])
+            ("ForkingTCPServer" type
+               (:superclasses ("ForkingMixIn" "TCPServer")
+                :members 
+                  ( ("pass" code nil nil nil))                  
+                :type "class")
+                nil [19724 19778])
+            ("ThreadingUDPServer" type
+               (:superclasses ("ThreadingMixIn" "UDPServer")
+                :members 
+                  ( ("pass" code nil nil nil))                  
+                :type "class")
+                nil [19779 19837])
+            ("ThreadingTCPServer" type
+               (:superclasses ("ThreadingMixIn" "TCPServer")
+                :members 
+                  ( ("pass" code nil nil nil))                  
+                :type "class")
+                nil [19837 19895])
+            ("if" code nil nil [19896 20247])
+            ("BaseRequestHandler" type
+               (:documentation "Base class for request handler classes.
+
+    This class is instantiated for each request to be handled.  The
+    constructor sets the instance variables request, client_address
+    and server, and then calls the handle() method.  To implement a
+    specific service, all you need to do is to derive a class which
+    defines a handle() method.
+
+    The handle() method can find the request as self.request, the
+    client address as self.client_address, and the server (in case it
+    needs access to per-server information) as self.server.  Since a
+    separate instance is created for each request, the handle() method
+    can define arbitrary other instance variariables.
+
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [21032 21054])
+                            ("self" variable nil (reparse-symbol indented_block_body) [21063 21099])
+                            ("self" variable nil (reparse-symbol indented_block_body) [21108 21128])
+                            ("self" code nil (reparse-symbol indented_block_body) [21137 21149])
+                            ("try" code nil (reparse-symbol indented_block_body) [21158 21232]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20984 20988])
+                            ("request" variable nil (reparse-symbol function_parameters) [20990 20997])
+                            ("client_address" variable nil (reparse-symbol function_parameters) [20999 21013])
+                            ("server" variable nil (reparse-symbol function_parameters) [21015 21021]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [20971 21232])
+                    ("setup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21247 21251]))                          )
+                        (reparse-symbol indented_block_body) [21237 21267])
+                    ("handle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21283 21287]))                          )
+                        (reparse-symbol indented_block_body) [21272 21303])
+                    ("finish" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21319 21323]))                          )
+                        (reparse-symbol indented_block_body) [21308 21339]))                  
+                :type "class")
+                nil [20248 21339])
+            ("StreamRequestHandler" type
+               (:documentation "Define self.rfile and self.wfile for stream sockets."
+                :superclasses ("BaseRequestHandler")
+                :members 
+                  ( ("rbufsize" code nil (reparse-symbol indented_block_body) [22193 22206])
+                    ("wbufsize" variable nil (reparse-symbol indented_block_body) [22211 22223])
+                    ("timeout" variable nil (reparse-symbol indented_block_body) [22290 22304])
+                    ("disable_nagle_algorithm" variable nil (reparse-symbol indented_block_body) [22425 22456])
+                    ("setup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22472 22476]))                          )
+                        (reparse-symbol indented_block_body) [22462 22907])
+                    ("finish" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22923 22927]))                          )
+                        (reparse-symbol indented_block_body) [22912 23244]))                  
+                :type "class")
+                nil [21681 23244])
+            ("DatagramRequestHandler" type
+               (:documentation "Define self.rfile and self.wfile for datagram sockets."
+                :superclasses ("BaseRequestHandler")
+                :members 
+                  ( ("setup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23500 23504]))                          )
+                        (reparse-symbol indented_block_body) [23490 23756])
+                    ("finish" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23772 23776]))                          )
+                        (reparse-symbol indented_block_body) [23761 23850]))                  
+                :type "class")
+                nil [23246 23850]))          
+      :file "SocketServer.py"
+      :pointmax 23850
+      :fsize 23849
+      :lastmodtime '(23184 55561 704377 234000)
+      :unmatched-syntax '((INDENT_BLOCK 6076 . 6139) (NEWLINE 6075 . 6076) (COLON 6074 . 6075) (TRY 5995 . 5998) (AS 6070 . 6072)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "commands.py"
+      :pointmax 2546
+      :fsize 2545
+      :lastmodtime '(22915 49733 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!lib64!python2.7!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

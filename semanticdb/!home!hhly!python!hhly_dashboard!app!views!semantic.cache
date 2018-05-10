@@ -1,0 +1,127 @@
+;; Object views/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "views/"
+  :tables
+  (list
+    (semanticdb-table "Tickets.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("datetime" include nil nil [41 56])
+            ("json" include nil nil [57 68])
+            ("falcon" include nil nil [69 82])
+            ("playhouse.shortcuts" include nil nil [85 130])
+            ("playhouse.shortcuts" include nil nil [131 176])
+            ("app.models.DataBase" include nil nil [178 217])
+            ("app.models.DataBase" include nil nil [218 263])
+            ("app.models.DataBase" include nil nil [264 316])
+            ("app.utils.CheckAuth" include nil nil [318 357])
+            ("TicketsResource" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [425 447])
+                            ("self" variable nil (reparse-symbol indented_block_body) [456 490]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [410 414]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [397 491])
+                    ("on_get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [507 511])
+                            ("req" variable nil (reparse-symbol function_parameters) [513 516])
+                            ("resp" variable nil (reparse-symbol function_parameters) [518 522]))                          )
+                        (reparse-symbol indented_block_body) [496 1758])
+                    ("on_post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1776 1780])
+                            ("req" variable nil (reparse-symbol function_parameters) [1782 1785])
+                            ("resp" variable nil (reparse-symbol function_parameters) [1787 1791]))                          )
+                        (reparse-symbol indented_block_body) [1764 3061])
+                    ("on_put" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3078 3082])
+                            ("req" variable nil (reparse-symbol function_parameters) [3084 3087])
+                            ("resp" variable nil (reparse-symbol function_parameters) [3089 3093]))                          )
+                        (reparse-symbol indented_block_body) [3067 3963]))                  
+                :type "class")
+                nil [361 3963])
+            ("TicketsIDResource" type
+               (:superclasses ("object")
+                :members 
+                  ( ("on_get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4013 4017])
+                            ("req" variable nil (reparse-symbol function_parameters) [4019 4022])
+                            ("resp" variable nil (reparse-symbol function_parameters) [4024 4028])
+                            ("params" variable nil (reparse-symbol function_parameters) [4030 4038]))                          )
+                        (reparse-symbol indented_block_body) [4002 4765]))                  
+                :type "class")
+                nil [3965 4765])
+            ("TicketsDetailsResource" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [4838 4860])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4869 4917]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4823 4827]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4810 4918])
+                    ("on_get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4934 4938])
+                            ("req" variable nil (reparse-symbol function_parameters) [4940 4943])
+                            ("resp" variable nil (reparse-symbol function_parameters) [4945 4949]))                          )
+                        (reparse-symbol indented_block_body) [4923 5436]))                  
+                :type "class")
+                nil [4768 5436]))          
+      :file "Tickets.py"
+      :pointmax 5436
+      :fsize 5435
+      :lastmodtime '(23026 55317 637347 987000)
+      :unmatched-syntax '((INDENT_BLOCK 3245 . 3287) (NEWLINE 3244 . 3245) (COLON 3243 . 3244) (TRY 3105 . 3108) (AS 3239 . 3241) (INDENT_BLOCK 1942 . 1984) (NEWLINE 1941 . 1942) (COLON 1940 . 1941) (TRY 1802 . 1805) (AS 1936 . 1938)))
+    (semanticdb-table "Auth.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("requests" include nil nil [42 57])
+            ("falcon" include nil nil [58 71])
+            ("json" include nil nil [72 83])
+            ("settings.app" include nil nil [85 115])
+            ("settings.app" include nil nil [116 152])
+            ("settings.app" include nil nil [153 189])
+            ("AuthResource" type
+               (:superclasses ("object")
+                :members 
+                  ( ("on_post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [236 240])
+                            ("req" variable nil (reparse-symbol function_parameters) [242 245])
+                            ("resp" variable nil (reparse-symbol function_parameters) [247 251]))                          )
+                        (reparse-symbol indented_block_body) [224 1099])
+                    ("_authentification" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1127 1131])
+                            ("username" variable nil (reparse-symbol function_parameters) [1133 1141])
+                            ("password" variable nil (reparse-symbol function_parameters) [1143 1151]))                          )
+                        (reparse-symbol indented_block_body) [1105 1969]))                  
+                :type "class")
+                nil [192 1969]))          
+      :file "Auth.py"
+      :pointmax 1969
+      :fsize 1894
+      :lastmodtime '(23026 54604 37671 415000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!hhly_dashboard!app!views!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

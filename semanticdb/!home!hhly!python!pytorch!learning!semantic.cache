@@ -1,0 +1,156 @@
+;; Object learning/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "learning/"
+  :tables (list 
+   (semanticdb-table "torch_net.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("torch" include nil nil [41 53])
+            ("torch.autograd" include nil nil [55 90])
+            ("torch.nn" include nil nil [91 112])
+            ("torch.nn.functional" include nil nil [114 146])
+            ("Net" type
+               (:superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [204 231])
+                            ("self" variable nil (reparse-symbol indented_block_body) [240 271])
+                            ("self" variable nil (reparse-symbol indented_block_body) [280 312])
+                            ("self" variable nil (reparse-symbol indented_block_body) [321 360])
+                            ("self" variable nil (reparse-symbol indented_block_body) [369 400])
+                            ("self" variable nil (reparse-symbol indented_block_body) [409 439]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [189 193]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [176 440])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [457 461])
+                            ("x" variable nil (reparse-symbol function_parameters) [463 464]))                          )
+                        (reparse-symbol indented_block_body) [445 730])
+                    ("num_flat_features" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [758 762])
+                            ("x" variable nil (reparse-symbol function_parameters) [764 765]))                          )
+                        (reparse-symbol indented_block_body) [736 904]))                  
+                :type "class")
+                nil [150 904])
+            ("net" variable nil nil [905 916])
+            ("print" code nil nil [917 927])
+            ("params" variable nil nil [930 961])
+            ("print" code nil nil [962 981])
+            ("print" code nil nil [982 1006])
+            ("my_input" variable nil nil [1008 1054])
+            ("out" variable nil nil [1055 1074])
+            ("print" code nil nil [1075 1086])
+            ("print" code nil nil [1089 1112])
+            ("out" code nil nil [1113 1145]))          
+    :file "torch_net.py"
+    :pointmax 1146
+    :fsize 1145
+    :lastmodtime '(23099 2513 805640 490000)
+    :unmatched-syntax '(($EOI 1087 . 1087))
+    )
+   (semanticdb-table "pic.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("torch" include nil nil [41 53])
+            ("torch.nn" include nil nil [55 76])
+            ("Content_Loss" type
+               (:superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [158 194])
+                            ("self" variable nil (reparse-symbol indented_block_body) [203 223])
+                            ("self" code nil (reparse-symbol indented_block_body) [232 275])
+                            ("self" variable nil (reparse-symbol indented_block_body) [284 313]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [127 131])
+                            ("target" variable nil (reparse-symbol function_parameters) [133 139])
+                            ("weight" variable nil (reparse-symbol function_parameters) [141 147]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [114 314])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [339 343])
+                            ("input" variable nil (reparse-symbol function_parameters) [345 350]))                          )
+                        (reparse-symbol indented_block_body) [327 469])
+                    ("backward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [487 491])
+                            ("retain_variables" variable nil (reparse-symbol function_parameters) [493 509]))                          )
+                        (reparse-symbol indented_block_body) [474 605]))                  
+                :type "class")
+                nil [79 605])
+            ("Gram" type
+               (:documentation "
+    gram 
+    "
+                :superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [692 720]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [677 681]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [664 721])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [738 742])
+                            ("input" variable nil (reparse-symbol function_parameters) [744 749]))                          )
+                        (reparse-symbol indented_block_body) [726 926]))                  
+                :type "class")
+                nil [611 926])
+            ("Style_Loss" type
+               (:superclasses ("nn.Module")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [1004 1038])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1047 1067])
+                            ("self" code nil (reparse-symbol indented_block_body) [1076 1121])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1130 1148])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1157 1186]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [974 978])
+                            ("target" variable nil (reparse-symbol function_parameters) [979 985])
+                            ("weight" variable nil (reparse-symbol function_parameters) [987 993]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [961 1187])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1204 1208])
+                            ("input" variable nil (reparse-symbol function_parameters) [1210 1215]))                          )
+                        (reparse-symbol indented_block_body) [1192 1359])
+                    ("backward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1376 1380])
+                            ("retain_variables" variable nil (reparse-symbol function_parameters) [1382 1398]))                          )
+                        (reparse-symbol indented_block_body) [1363 1494]))                  
+                :type "class")
+                nil [928 1494]))          
+    :file "pic.py"
+    :pointmax 1495
+    :fsize 1494
+    :lastmodtime '(23102 63397 879474 617000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!hhly!python!pytorch!learning!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,18 @@
+;; Object templates/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "templates/"
+  :tables
+  (list
+    (semanticdb-table "index.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("mytest image" section nil nil [21 62])
+            ("" section nil nil [62 180]))          
+      :file "index.html"
+      :pointmax 180
+      :fsize 179
+      :lastmodtime '(22730 46421 62777 896000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python!mpldjango!mpl!templates!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

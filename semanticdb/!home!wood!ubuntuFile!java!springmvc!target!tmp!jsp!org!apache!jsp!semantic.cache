@@ -1,0 +1,44 @@
+;; Object jsp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "jsp/"
+  :tables
+  (list
+    (semanticdb-table "index_jsp.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("org.apache.jsp" package nil nil [1 24])
+            ("javax.servlet.*" include nil nil [26 49])
+            ("javax.servlet.http.*" include nil nil [50 78])
+            ("javax.servlet.jsp.*" include nil nil [79 106])
+            ("index_jsp" type
+               (:typemodifiers ("public" "final")
+                :interfaces ("org.apache.jasper.runtime.JspSourceDependent")
+                :superclasses "org.apache.jasper.runtime.HttpJspBase"
+                :members 
+                  ( ("_jspxFactory" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "JspFactory")
+                        (reparse-symbol class_member_declaration) [248 326])
+                    ("_jspx_resourceInjector" variable
+                       (:typemodifiers ("private")
+                        :type "org.glassfish.jsp.api.ResourceInjector")
+                        (reparse-symbol class_member_declaration) [389 459])
+                    ("getDependants" function (:constructor-flag t) (reparse-symbol class_member_declaration) [493 543])
+                    ("_jspService" function
+                       (:throws ("java.io.IOException" "ServletException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("request" variable (:type "HttpServletRequest") (reparse-symbol formal_parameters) [571 597])
+                            ("response" variable (:type "HttpServletResponse") (reparse-symbol formal_parameters) [599 627]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [547 2053]))                  
+                :type "class")
+                nil [108 2055]))          
+      :file "index_jsp.java"
+      :pointmax 2056
+      :fsize 2055
+      :lastmodtime '(22633 4704 541897 669000)
+      :unmatched-syntax '((GT 491 . 492) (PUBLIC 463 . 469) (LT 484 . 485) (SEMICOLON 384 . 385) (GT 366 . 367) (PRIVATE 330 . 337) (LT 359 . 360))))
+  :file "!home!wood!ubuntuFile!java!springmvc!target!tmp!jsp!org!apache!jsp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

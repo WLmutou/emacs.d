@@ -1,0 +1,50 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("app.api.auth" include nil nil [41 78])
+            ("app.api.auth" include nil nil [79 115])
+            ("app.api.auth" include nil nil [116 155])
+            ("app.api.dashboard" include nil nil [158 199])
+            ("app.api.dashboard" include nil nil [200 242])
+            ("app.api.dashboard" include nil nil [243 286])
+            ("app.api.compute" include nil nil [288 333])
+            ("app.api.compute" include nil nil [334 385])
+            ("app.api.compute" include nil nil [386 428])
+            ("app.api.compute" include nil nil [429 473])
+            ("app.api.compute" include nil nil [474 518])
+            ("app.api.compute" include nil nil [519 560])
+            ("app.api.compute" include nil nil [561 609])
+            ("app.api.storage" include nil nil [611 656])
+            ("app.api.tickets" include nil nil [658 701])
+            ("app.api.tickets" include nil nil [702 752])
+            ("app.api.tickets" include nil nil [753 794])
+            ("app.api.manage" include nil nil [796 837])
+            ("app.api.manage" include nil nil [838 878])
+            ("app.api.manage" include nil nil [879 919])
+            ("app.api.manage" include nil nil [920 960])
+            ("app.api.manage" include nil nil [961 1002])
+            ("app.api.manage" include nil nil [1003 1049])
+            ("app.api.manage" include nil nil [1050 1095])
+            ("app.api.config_regione" include nil nil [1098 1146])
+            ("app.api.config_regione" include nil nil [1147 1193])
+            ("app.api.test_regione" include nil nil [1194 1238])
+            ("app.api.charge" include nil nil [1243 1285])
+            ("app.api.chart" include nil nil [1287 1348])
+            ("app.api.cas_client" include nil nil [1350 1388])
+            ("app.api.users" include nil nil [1389 1438])
+            ("app.api.globals" include nil nil [1480 1516])
+            ("route" function (:arguments 
+              ( ("api" variable nil (reparse-symbol function_parameters) [1531 1534]))              ) nil [1521 4228]))          
+      :file "routers.py"
+      :pointmax 4228
+      :fsize 4227
+      :lastmodtime '(23257 40853 589741 53000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!dashboard!my-backend!app!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

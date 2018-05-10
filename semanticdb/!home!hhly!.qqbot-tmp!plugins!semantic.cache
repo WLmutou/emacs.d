@@ -1,0 +1,125 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("sqlite3" include nil nil [41 55])
+            ("GetJoke" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"joke.db\"" code nil (reparse-symbol indented_block_body) [162 171])
+                            ("self" variable nil (reparse-symbol indented_block_body) [180 223]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [98 102])
+                            ("jokedb" variable nil (reparse-symbol function_parameters) [104 110]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [85 224])
+                    ("set_count" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [243 247])
+                            ("n" variable nil (reparse-symbol function_parameters) [249 250]))                          )
+                        (reparse-symbol indented_block_body) [229 319])
+                    ("get_count" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [338 342]))                          )
+                        (reparse-symbol indented_block_body) [324 510])
+                    ("get_jokes" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [546 549]))                          )
+                        (reparse-symbol indented_block_body) [515 1072]))                  
+                :type "class")
+                nil [58 1072]))          
+      :file "joke_sample.py"
+      :pointmax 1086
+      :fsize 1097
+      :lastmodtime '(23280 65383 943610 532000)
+      :unmatched-syntax '((INDENT_BLOCK 850 . 901) (NEWLINE 849 . 850) (COLON 847 . 848) (TRY 693 . 696) (AS 843 . 845) (NAME 126 . 130) (IF 147 . 149) (ELSE 157 . 161) (INDENT_BLOCK 850 . 901) (NEWLINE 849 . 850) (COLON 847 . 848) (TRY 693 . 696) (AS 843 . 845) (NAME 126 . 130) (IF 147 . 149) (ELSE 157 . 161) (INDENT_BLOCK 850 . 901) (NEWLINE 849 . 850) (COLON 847 . 848) (TRY 693 . 696) (AS 843 . 845) (NAME 126 . 130) (IF 147 . 149) (ELSE 157 . 161) (NAME 126 . 130) (IF 147 . 149) (ELSE 157 . 161)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("time" include nil nil [41 52])
+            ("requests" include nil nil [53 68])
+            ("random" include nil nil [72 85])
+            ("multiprocessing" include nil nil [88 110])
+            ("qqbot" include nil nil [131 159])
+            ("qqbot" include nil nil [160 189])
+            ("joke_sample" include nil nil [193 224])
+            ("groupList" variable nil nil [226 276])
+            ("uin" variable nil nil [277 294])
+            ("global" code nil nil [296 313])
+            ("time_start" variable nil nil [314 338])
+            ("global" code nil nil [340 351])
+            ("qqOn" variable nil nil [352 362])
+            ("get_status" function nil nil [365 639])
+            ("" code nil nil [652 675])
+            ("good_morning" function (:arguments 
+              ( ("bot" variable nil (reparse-symbol function_parameters) [693 696]))              ) nil [676 878])
+            ("" code nil nil [904 928])
+            ("good_night" function (:arguments 
+              ( ("bot" variable nil (reparse-symbol function_parameters) [944 947]))              ) nil [929 1129])
+            ("onQQMessage" function (:arguments 
+              ( ("bot" variable nil (reparse-symbol function_parameters) [1172 1175])
+                ("contact" variable nil (reparse-symbol function_parameters) [1177 1184])
+                ("member" variable nil (reparse-symbol function_parameters) [1186 1192])
+                ("content" variable nil (reparse-symbol function_parameters) [1194 1201]))              ) nil [1156 1655])
+            ("qqsend" function (:arguments 
+              ( ("bot" variable nil (reparse-symbol function_parameters) [1676 1679])
+                ("contact" variable nil (reparse-symbol function_parameters) [1681 1688])
+                ("member" variable nil (reparse-symbol function_parameters) [1690 1696])
+                ("content" variable nil (reparse-symbol function_parameters) [1698 1705]))              ) nil [1665 1888])
+            ("start_loop" function (:arguments 
+              ( ("bot" variable nil (reparse-symbol function_parameters) [1904 1907]))              ) nil [1889 1936])
+            ("SendJoke" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1989 2003]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1978 1982])
+                            ("bot" variable nil (reparse-symbol function_parameters) [1984 1987]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1965 2014])
+                    ("send" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2028 2032])
+                            ("content" variable nil (reparse-symbol function_parameters) [2034 2041]))                          )
+                        (reparse-symbol indented_block_body) [2019 2277])
+                    ("get_content" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2298 2302]))                          )
+                        (reparse-symbol indented_block_body) [2282 2414])
+                    ("start" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2429 2433]))                          )
+                        (reparse-symbol indented_block_body) [2419 2461])
+                    ("loopCheck" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2480 2484]))                          )
+                        (reparse-symbol indented_block_body) [2466 2903]))                  
+                :type "class")
+                nil [1937 2903])
+            ("if" code nil nil [2917 3423]))          
+      :file "sample.py"
+      :pointmax 3424
+      :fsize 4748
+      :lastmodtime '(23281 1226 302990 827000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!.qqbot-tmp!plugins!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

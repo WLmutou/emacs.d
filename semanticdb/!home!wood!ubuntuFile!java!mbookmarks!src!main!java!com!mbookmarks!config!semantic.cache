@@ -3,8 +3,6 @@
 (semanticdb-project-database-file "config/"
   :tables
   (list
-
-
     (semanticdb-table "ApplicationConfig.java"
       :major-mode 'java-mode
       :tags 
@@ -32,32 +30,23 @@
       :fsize 1472
       :lastmodtime '(22633 15145 9909 268000)
       :unmatched-syntax nil)
-    (semanticdb-table "WebApplicationInitializer.java"
+
+    (semanticdb-table "WebMvcConfig.java"
       :major-mode 'java-mode
       :tags 
-        '( ("javax.servlet.ServletContext" include nil nil [2 38])
-            ("javax.servlet.ServletException" include nil nil [39 77])
-            ("javax.servlet.ServletRegistration.Dynamic" include nil nil [78 127])
-            ("org.springframework.web.WebApplicationInitializer" include nil nil [129 186])
-            ("org.springframework.web.context.support.AnnotationConfigWebApplicationContext" include nil nil [187 272])
-            ("org.springframework.web.servlet.DispatcherServlet" include nil nil [273 330])
-            ("GetBookmarksWebApplicationInitializer" type
+        '( ("org.springframework.context.annotation.Bean" include nil nil [2 53])
+            ("org.springframework.context.annotation.Configuration" include nil nil [54 114])
+            ("org.springframework.web.servlet.config.annotation.EnableWebMvc" include nil nil [115 185])
+            ("org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter" include nil nil [186 267])
+            ("org.springframework.web.servlet.view.json.MappingJacksonJsonView" include nil nil [268 340])
+            ("WebMvcConfig" type
                (:typemodifiers ("public")
-                :interfaces ("WebApplicationInitializer")
-                :members 
-                  ( ("onStartup" function
-                       (:throws ("ServletException")
-                        :typemodifiers ("public")
-                        :arguments 
-                          ( ("servletContext" variable (:type "SerletContext") (reparse-symbol formal_parameters) [467 495]))                          
-                        :type "void")
-                        (reparse-symbol class_member_declaration) [445 925]))                  
                 :type "class")
-                nil [332 927]))          
-      :file "WebApplicationInitializer.java"
-      :pointmax 930
-      :fsize 929
-      :lastmodtime '(22633 15996 217910 214000)
+                nil [434 463]))          
+      :file "WebMvcConfig.java"
+      :pointmax 465
+      :fsize 464
+      :lastmodtime '(22706 42622 666716 119000)
       :unmatched-syntax nil))
   :file "!home!wood!ubuntuFile!java!mbookmarks!src!main!java!com!mbookmarks!config!semantic.cache"
   :semantic-tag-version "2.0"

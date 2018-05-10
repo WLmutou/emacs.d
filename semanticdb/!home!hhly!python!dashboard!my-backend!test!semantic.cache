@@ -1,0 +1,35 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [41 50])
+            ("sys" include nil nil [51 61])
+            ("time" include nil nil [63 74])
+            ("unittestp" include nil nil [76 92])
+            ("lib" include nil nil [93 123])
+            ("createsuitel" function (:arguments 
+              ( ("lists" variable nil (reparse-symbol function_parameters) [144 149]))              ) nil [127 444])
+            ("list_1" variable nil nil [445 470])
+            ("alltestnames" variable nil nil [471 506])
+            ("report_dir" variable nil nil [518 544])
+            ("report_dir_list" variable nil nil [546 585])
+            ("report_dir_p" variable nil nil [586 603])
+            ("for" code nil nil [604 759])
+            ("now" variable nil nil [765 834])
+            ("filename" code nil nil [835 878])
+            ("fp" variable nil nil [879 904])
+            ("runner" variable nil nil [905 1088])
+            ("if" code nil nil [1090 1156]))          
+      :file "test.py"
+      :pointmax 1158
+      :fsize 1157
+      :lastmodtime '(23243 16524 33860 566000)
+      :unmatched-syntax '(($EOI 1158 . 1158) ($EOI 1159 . 1159) ($EOI 1158 . 1158) ($EOI 1147 . 1147)))
+)
+  :file "!home!hhly!python!dashboard!my-backend!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

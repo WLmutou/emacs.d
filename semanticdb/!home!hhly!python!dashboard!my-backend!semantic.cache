@@ -1,0 +1,67 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [42 51])
+            ("falcon" include nil nil [53 66])
+            ("app.middlewares.JSONTranslator" include nil nil [69 126])
+            ("app.middlewares.DBMiddleware" include nil nil [127 194])
+            ("app.middlewares.AuthMiddleware" include nil nil [195 252])
+            ("app.models.DataBase" include nil nil [254 294])
+            ("app.models.DataBase" include nil nil [297 336])
+            ("app.models.DataBase" include nil nil [337 374])
+            ("app.models.DataBase" include nil nil [375 418])
+            ("app.models.DataBase" include nil nil [419 460])
+            ("app.models.DataBase" include nil nil [461 505])
+            ("app.models.DataBase" include nil nil [506 546])
+            ("app.models.DataBase" include nil nil [547 591])
+            ("app.routers" include nil nil [597 626])
+            ("settings.app" include nil nil [628 666])
+            ("create_api" function (:documentation "
+    ") nil [674 869])
+            ("create_app" function nil nil [872 914])
+            ("init_openstack" function nil nil [916 963])
+            ("init_db" function nil nil [966 1191])
+            ("init_users" function nil nil [1193 1989])
+            ("init_user_projects" function (:arguments 
+              ( ("projects" variable nil (reparse-symbol function_parameters) [2021 2029])
+                ("user" variable nil (reparse-symbol function_parameters) [2031 2035]))              ) nil [1998 2461])
+            ("if" code nil nil [2465 2571]))          
+      :file "main.py"
+      :pointmax 2574
+      :fsize 2573
+      :lastmodtime '(23230 5956 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 2245 . 2461) (NEWLINE 2244 . 2245) (COLON 2243 . 2244) (TRY 2113 . 2116) (AS 2239 . 2241) (INDENT_BLOCK 1873 . 1989) (NEWLINE 1872 . 1873) (COLON 1871 . 1872) (TRY 1779 . 1782) (AS 1867 . 1869) (INDENT_BLOCK 1168 . 1191) (NEWLINE 1167 . 1168) (COLON 1166 . 1167) (TRY 1085 . 1088) (AS 1162 . 1164)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [41 50])
+            ("sys" include nil nil [51 61])
+            ("time" include nil nil [63 74])
+            ("unittest" include nil nil [76 91])
+            ("lib" include nil nil [92 122])
+            ("createsuitel" function (:arguments 
+              ( ("lists" variable nil (reparse-symbol function_parameters) [143 148]))              ) nil [126 443])
+            ("list_1" variable nil nil [444 473])
+            ("alltestnames" variable nil nil [474 509])
+            ("report_dir" variable nil nil [520 546])
+            ("report_dir_list" variable nil nil [548 587])
+            ("report_dir_p" variable nil nil [588 605])
+            ("for" code nil nil [606 761])
+            ("now" variable nil nil [767 836])
+            ("filename" code nil nil [837 880])
+            ("fp" variable nil nil [929 954])
+            ("runner" variable nil nil [955 1138])
+            ("if" code nil nil [1140 1206]))          
+      :file "test.py"
+      :pointmax 1208
+      :fsize 1207
+      :lastmodtime '(23243 17754 607082 554000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!dashboard!my-backend!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

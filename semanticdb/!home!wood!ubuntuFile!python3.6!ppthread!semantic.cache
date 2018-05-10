@@ -1,0 +1,39 @@
+;; Object ppthread/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ppthread/"
+  :tables
+  (list
+    (semanticdb-table "pptest.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("time" include nil nil [42 64])
+            ("sys" include nil nil [42 64])
+            ("math" include nil nil [42 64])
+            ("pp" include nil nil [65 74])
+            ("IsPrime" function
+               (:documentation "返回 n 是否是素数"
+                :arguments 
+                  ( ("n" variable nil (reparse-symbol function_parameters) [87 88]))                  )
+                nil [75 437])
+            ("SumPrimes" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [451 452]))              ) nil [437 615])
+            ("inputs" variable nil nil [615 688])
+            ("start_time" variable nil nil [689 713])
+            ("for" code nil nil [714 762])
+            ("print" code nil nil [762 810])
+            ("ppservers" variable nil nil [866 880])
+            ("if" code nil nil [908 1181])
+            ("print" code nil nil [1181 1238])
+            ("start_time" variable nil nil [1239 1263])
+            ("jobs" variable nil nil [1264 1362])
+            ("for" code nil nil [1363 1439])
+            ("print" code nil nil [1439 1488])
+            ("job_server" code nil nil [1489 1513]))          
+      :file "pptest.py"
+      :pointmax 1514
+      :fsize 1607
+      :lastmodtime '(22965 61261 239444 300000)
+      :unmatched-syntax nil))
+  :file "!home!wood!ubuntuFile!python3.6!ppthread!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

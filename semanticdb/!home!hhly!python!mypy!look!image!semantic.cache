@@ -1,0 +1,19 @@
+;; Object image/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "image/"
+  :tables (list 
+   (semanticdb-table "image.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("falcon" include nil nil [41 54]))          
+    :file "image.py"
+    :pointmax 56
+    :fsize 55
+    :lastmodtime '(23115 11962 186110 651000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!hhly!python!mypy!look!image!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

@@ -1,0 +1,29 @@
+;; Object tmp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tmp/"
+  :tables (list 
+   (semanticdb-table "send_test.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("smtplib" include nil nil [45 59])
+            ("email.mime.text" include nil nil [60 96])
+            ("email.header" include nil nil [97 128])
+            ("receivers" variable nil nil [143 175])
+            ("mail_msg" variable nil nil [203 295])
+            ("message" variable nil nil [296 341])
+            ("message" variable nil nil [342 383])
+            ("message" variable nil nil [384 422])
+            ("subject" variable nil nil [425 453])
+            ("message" variable nil nil [454 499])
+            ("try" code nil nil [504 685]))          
+    :file "send_test.py"
+    :pointmax 700
+    :fsize 790
+    :lastmodtime '(23123 19710 888644 359000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!tmp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

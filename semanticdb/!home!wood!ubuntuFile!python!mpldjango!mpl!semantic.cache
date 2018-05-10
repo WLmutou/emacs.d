@@ -1,0 +1,25 @@
+;; Object mpl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mpl/"
+  :tables
+  (list
+    (semanticdb-table "views.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("django.shortcuts" include nil nil [1 36])
+            ("django.http" include nil nil [37 73])
+            ("matplotlib.backends.backend_agg" include nil nil [101 182])
+            ("matplotlib.figure" include nil nil [183 219])
+            ("numpy" include nil nil [221 239])
+            ("mplimage" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [254 261]))              ) nil [241 527])
+            ("index" function (:arguments 
+              ( ("request" variable nil (reparse-symbol function_parameters) [538 545]))              ) nil [528 599]))          
+      :file "views.py"
+      :pointmax 609
+      :fsize 608
+      :lastmodtime '(22730 45981 498767 445000)
+      :unmatched-syntax '((PERIOD 410 . 411) (AS 408 . 410) (PERIOD 410 . 411) (AS 408 . 410) ($EOI 462 . 462) ($EOI 454 . 454) ($EOI 451 . 451) (FROM 37 . 41) ($EOI 451 . 451) ($EOI 429 . 429) ($EOI 428 . 428) ($EOI 400 . 400) ($EOI 346 . 346) ($EOI 339 . 339) ($EOI 318 . 318) ($EOI 307 . 307) ($EOI 304 . 304) ($EOI 291 . 291) (DEF 123 . 126) ($EOI 151 . 151))))
+  :file "!home!wood!ubuntuFile!python!mpldjango!mpl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

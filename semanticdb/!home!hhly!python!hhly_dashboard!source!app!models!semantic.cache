@@ -1,0 +1,18 @@
+;; Object models/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "models/"
+  :tables
+  (list
+    (semanticdb-table "DataBase.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("peewee" include nil nil [42 62])
+            ("database" variable nil nil [65 111]))          
+      :file "DataBase.py"
+      :pointmax 112
+      :fsize 111
+      :lastmodtime '(23012 23830 356594 921000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!hhly_dashboard!source!app!models!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,21 @@
+;; Object bin/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bin/"
+  :tables (list 
+   (semanticdb-table "nova-compute"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [56 66])
+            ("nova.cmd.compute" include nil nil [68 101])
+            ("if" code nil nil [104 152]))          
+    :file "nova-compute"
+    :pointmax 152
+    :fsize 151
+    :lastmodtime '(23145 10656 327811 82000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!usr!bin!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

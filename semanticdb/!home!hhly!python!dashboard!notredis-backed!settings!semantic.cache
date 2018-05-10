@@ -1,0 +1,18 @@
+;; Object settings/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "settings/"
+  :tables (list 
+   (semanticdb-table "app.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "app.py"
+    :pointmax 2057
+    :fsize 2059
+    :lastmodtime '(23136 19328 86629 222000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!hhly!python!dashboard!notredis-backed!settings!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

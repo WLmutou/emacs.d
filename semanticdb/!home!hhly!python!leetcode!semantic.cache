@@ -1,0 +1,44 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("Solution" type
+               (:members 
+                  ( ("findMedianSortedArrays" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [90 94])
+                            ("nums1" variable nil (reparse-symbol function_parameters) [96 101])
+                            ("nums2" variable nil (reparse-symbol function_parameters) [103 108]))                          
+                        :documentation "
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: float
+        ")
+                        (reparse-symbol indented_block_body) [63 491]))                  
+                :type "class")
+                nil [43 491])
+            ("nums1" variable nil nil [498 512])
+            ("nums2" variable nil nil [513 524])
+            ("pass1" variable nil nil [526 535])
+            ("print" code nil nil [537 601])
+            ("nums1" variable nil nil [604 618])
+            ("nums2" variable nil nil [619 633])
+            ("pass1" variable nil nil [635 646])
+            ("print" code nil nil [648 711])
+            ("nums1" variable nil nil [714 736])
+            ("nums2" variable nil nil [737 763])
+            ("print" code nil nil [765 773])
+            ("print" code nil nil [775 831]))          
+      :file "findMedianSortedArray.py"
+      :pointmax 832
+      :fsize 831
+      :lastmodtime '(23236 10381 587600 573000)
+      :unmatched-syntax nil))
+  :file "!home!hhly!python!leetcode!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
