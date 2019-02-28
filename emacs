@@ -687,3 +687,50 @@ Reformat Output*" nil "*Go Reformat Errors*" t))
   :config
   (add-hook 'web-mode-hook 'company-mode)
   (add-hook 'web-mode-hook 'lsp-vue-enable))
+
+
+
+
+
+
+
+;;
+;; go autoload
+;;
+
+(load "~/.emacs.d/autoload/go-projects.el")
+
+(add-to-list 'load-path "~/.emacs.d/autoload")
+
+;;(require 'go-mode-autoloads)
+(require 'popup)
+
+(add-to-list 'load-path "~/.emacs.d/autocomplete")
+(require 'auto-complete-config)
+(ac-config-default)
+
+
+(add-to-list 'load-path "~/gopath/src/github.com/dougm/goflymake")
+(require 'go-flymake)
+
+
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+(ac-config-default)
+
+
+
+(setq ac-use-menu-map t)
+(define-key ac-menu-map "\C-n" 'ac-next)
+(define-key ac-menu-map "\C-p" 'ac-previous)
+
+(add-hook 'go-mode-hook #'(lambda() (setq ac-sources '(ac-source-go ac-source-abbrev ac-source-dictionary))))
+
+
+
+
+
+
+
+
+
